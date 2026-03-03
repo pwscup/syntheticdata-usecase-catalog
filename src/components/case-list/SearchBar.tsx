@@ -38,7 +38,7 @@ export default function SearchBar({ value, onChange }: SearchBarProps) {
     <div className="relative">
       <input
         type="text"
-        placeholder="キーワードで検索..."
+        placeholder="キーワードで事例名・企業名を検索"
         value={localValue}
         onChange={handleChange}
         className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"

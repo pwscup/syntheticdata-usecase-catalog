@@ -28,6 +28,6 @@ describe('SearchBar', () => {
 
   it('プレースホルダーが表示される', () => {
     renderSearchBar()
-    expect(screen.getByPlaceholderText('キーワードで検索...')).toBeInTheDocument()
+    expect(screen.getByPlaceholderText('キーワードで事例名・企業名を検索')).toBeInTheDocument()
   })
 })

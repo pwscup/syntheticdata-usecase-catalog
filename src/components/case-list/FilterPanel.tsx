@@ -1,11 +1,17 @@
 import { useState } from 'react'
+import type { Case } from '../../types'
 import type { FilterState } from '../../hooks/useFilter'
 
 interface FilterPanelProps {
   filters: FilterState
   filterOptions: Record<string, string[]>
+  filteredCases: Case[]
   onToggle: (key: keyof Omit<FilterState, 'query' | 'sortBy'>, value: string) => void
   onClear: () => void
+}
+
+function countByFieldValue(cases: Case[], field: string, value: string): number {
+  return cases.filter(c => c[field as keyof Case] === value).length
 }
 
 const filterSections: { key: keyof Omit<FilterState, 'query' | 'sortBy'>; label: string }[] = [
@@ -14,7 +20,7 @@ const filterSections: { key: keyof Omit<FilterState, 'query' | 'sortBy'>; label:
   { key: 'usecase_category', label: 'ユースケース分類' },
 ]
 
-export default function FilterPanel({ filters, filterOptions, onToggle, onClear }: FilterPanelProps) {
+export default function FilterPanel({ filters, filterOptions, filteredCases, onToggle, onClear }: FilterPanelProps) {
   const [isOpen, setIsOpen] = useState(false)
 
   const hasActiveFilters =
@@ -31,19 +37,31 @@ export default function FilterPanel({ filters, filterOptions, onToggle, onClear 
 
         return (
           <div key={section.key}>
-            <h3 className="text-sm font-semibold text-gray-700 mb-2">{section.label}</h3>
+            <h3 className="text-sm font-semibold text-gray-700 mb-2">
+              {section.label}
+              <span className="ml-1 text-gray-400 font-normal">({filteredCases.length})</span>
+            </h3>
             <div className="space-y-1">
-              {options.map((option) => (
-                <label key={option} className="flex items-center gap-2 text-sm cursor-pointer">
-                  <input
-                    type="checkbox"
-                    checked={selected.includes(option)}
-                    onChange={() => onToggle(section.key, option)}
-                    className="rounded border-gray-300"
-                  />
-                  <span>{option}</span>
-                </label>
-              ))}
+              {options.map((option) => {
+                const count = countByFieldValue(filteredCases, section.key, option)
+                const isChecked = selected.includes(option)
+                const isZero = count === 0 && !isChecked
+                return (
+                  <label
+                    key={option}
+                    className={`flex items-center gap-2 text-sm cursor-pointer${isZero ? ' opacity-40' : ''}`}
+                  >
+                    <input
+                      type="checkbox"
+                      checked={isChecked}
+                      onChange={() => onToggle(section.key, option)}
+                      className="rounded border-gray-300"
+                    />
+                    <span className="flex-1">{option}</span>
+                    <span className="text-xs text-gray-400">{count}</span>
+                  </label>
+                )
+              })}
             </div>
           </div>
         )

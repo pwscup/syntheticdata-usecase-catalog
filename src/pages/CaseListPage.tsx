@@ -4,6 +4,7 @@ import CaseCard from '../components/case-list/CaseCard'
 import SearchBar from '../components/case-list/SearchBar'
 import FilterPanel from '../components/case-list/FilterPanel'
 import SortSelect from '../components/case-list/SortSelect'
+import SummaryPanel from '../components/case-list/SummaryPanel'
 
 export default function CaseListPage() {
   const { cases, loading, error } = useCases()
@@ -23,19 +24,31 @@ export default function CaseListPage() {
 
   return (
     <div>
-      <div className="flex flex-col sm:flex-row gap-4 mb-6">
-        <div className="flex-1">
+      {/* Summary area - primary first view */}
+      <SummaryPanel filteredCases={filteredCases} totalCases={cases.length} filters={filters} onToggleFilter={toggleFilter} />
+
+      {/* Search & sort - secondary controls */}
+      <div className="flex flex-col sm:flex-row gap-3 mb-4">
+        <div className="flex-1 max-w-md">
           <SearchBar value={filters.query} onChange={setQuery} />
         </div>
         <SortSelect value={filters.sortBy} onChange={setSortBy} />
       </div>
 
-      <p className="text-sm text-gray-600 mb-4">
-        {cases.length}件中 {filteredCases.length}件表示
+      <p className="text-sm text-gray-500 mb-4">
+        {filteredCases.length === cases.length
+          ? `${cases.length}件の事例`
+          : `${cases.length}件中 ${filteredCases.length}件表示`}
       </p>
 
       <div className="flex gap-6">
-        <FilterPanel filters={filters} filterOptions={filterOptions} onToggle={toggleFilter} onClear={clearFilters} />
+        <FilterPanel
+          filters={filters}
+          filterOptions={filterOptions}
+          filteredCases={filteredCases}
+          onToggle={toggleFilter}
+          onClear={clearFilters}
+        />
 
         <div className="flex-1">
           {filteredCases.length === 0 ? (
