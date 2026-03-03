@@ -25,7 +25,13 @@ export function countByField(
 
   for (const c of cases) {
     const value = c[field]
-    counts.set(value, (counts.get(value) ?? 0) + 1)
+    if (Array.isArray(value)) {
+      for (const v of value) {
+        counts.set(v, (counts.get(v) ?? 0) + 1)
+      }
+    } else {
+      counts.set(value, (counts.get(value) ?? 0) + 1)
+    }
   }
 
   return Array.from(counts.entries())

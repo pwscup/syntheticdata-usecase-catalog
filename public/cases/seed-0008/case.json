@@ -1,6 +1,6 @@
 {
   "id": "seed-0008",
-  "title": "COVID-19分析で合成データを使用し実データとほぼ同等の結果（生成: KDE / 安全: DP）",
+  "title": "COVID-19分析での合成データ活用と実データ同等の結果確認",
   "region": "国外",
   "domain": "医療",
   "organization": "MDClone",
