@@ -38,53 +38,32 @@
       "data": {
         "nodes": [
           {
-            "id": "src",
-            "label": "がん臨床データ（実データ）",
+            "id": "s1",
+            "label": "がん臨床データ",
             "category": "source"
           },
           {
-            "id": "issue",
+            "id": "s2",
             "label": "申請・審査に時間がかかる",
             "category": "constraint"
           },
           {
-            "id": "gen",
-            "label": "100万人超の合成データ生成",
+            "id": "p1",
+            "label": "100万人超の合成データを生成",
             "category": "process"
           },
           {
-            "id": "use",
-            "label": "合成データの一般配布",
+            "id": "a1",
+            "label": "審査不要で一般配布",
             "category": "application"
           },
           {
-            "id": "val",
-            "label": "審査不要で研究準備に即着手可能",
+            "id": "a2",
+            "label": "即座に研究準備・プログラム開発に着手可能",
             "category": "outcome"
           }
         ],
-        "edges": [
-          {
-            "from": "src",
-            "to": "issue",
-            "label": "制約"
-          },
-          {
-            "from": "issue",
-            "to": "gen",
-            "label": "代替手段"
-          },
-          {
-            "from": "gen",
-            "to": "use",
-            "label": "オープン配布"
-          },
-          {
-            "from": "use",
-            "to": "val",
-            "label": "成果"
-          }
-        ]
+        "edges": []
       },
       "note": ""
     }

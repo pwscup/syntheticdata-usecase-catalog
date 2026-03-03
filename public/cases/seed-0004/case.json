@@ -36,53 +36,32 @@
       "data": {
         "nodes": [
           {
-            "id": "src",
-            "label": "保険顧客データ（実データ）",
+            "id": "s1",
+            "label": "保険顧客データ",
             "category": "source"
           },
           {
-            "id": "issue",
+            "id": "s2",
             "label": "第三者提供の承認に最大6カ月",
             "category": "constraint"
           },
           {
-            "id": "gen",
-            "label": "合成データ生成",
+            "id": "p1",
+            "label": "統計情報と関係性を保持した合成データを生成",
             "category": "process"
           },
           {
-            "id": "use",
-            "label": "Fintech連携ツールのテスト",
+            "id": "a1",
+            "label": "Fintech連携ツールのテストデータとして提供",
             "category": "application"
           },
           {
-            "id": "val",
-            "label": "承認期間を6カ月→3日に短縮",
+            "id": "a2",
+            "label": "承認期間を6カ月から3日に短縮",
             "category": "outcome"
           }
         ],
-        "edges": [
-          {
-            "from": "src",
-            "to": "issue",
-            "label": "制約"
-          },
-          {
-            "from": "issue",
-            "to": "gen",
-            "label": "代替手段"
-          },
-          {
-            "from": "gen",
-            "to": "use",
-            "label": "テストデータ提供"
-          },
-          {
-            "from": "use",
-            "to": "val",
-            "label": "成果"
-          }
-        ]
+        "edges": []
       },
       "note": ""
     }

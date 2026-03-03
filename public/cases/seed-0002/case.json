@@ -34,53 +34,32 @@
       "data": {
         "nodes": [
           {
-            "id": "src",
-            "label": "金融取引データ（実データ）",
+            "id": "s1",
+            "label": "金融取引データ",
             "category": "source"
           },
           {
-            "id": "issue",
-            "label": "機密性が高く学習データ不足",
+            "id": "s2",
+            "label": "機密性が高く学習用データが不足",
             "category": "constraint"
           },
           {
-            "id": "gen",
-            "label": "合成金融データ生成アルゴリズム開発",
+            "id": "p1",
+            "label": "リアルな合成金融データの生成アルゴリズムを開発",
             "category": "process"
           },
           {
-            "id": "use",
-            "label": "AIモデル訓練",
+            "id": "a1",
+            "label": "AIモデルの訓練データとして活用",
             "category": "application"
           },
           {
-            "id": "val",
-            "label": "訓練データ不足の解消",
+            "id": "a2",
+            "label": "訓練データ不足を解消",
             "category": "outcome"
           }
         ],
-        "edges": [
-          {
-            "from": "src",
-            "to": "issue",
-            "label": "制約"
-          },
-          {
-            "from": "issue",
-            "to": "gen",
-            "label": "研究開発"
-          },
-          {
-            "from": "gen",
-            "to": "use",
-            "label": "学習データ提供"
-          },
-          {
-            "from": "use",
-            "to": "val",
-            "label": "成果"
-          }
-        ]
+        "edges": []
       },
       "note": ""
     }

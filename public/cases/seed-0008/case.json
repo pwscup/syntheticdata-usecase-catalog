@@ -36,53 +36,37 @@
       "data": {
         "nodes": [
           {
-            "id": "src",
-            "label": "COVID-19 診療データ（実データ）",
+            "id": "s1",
+            "label": "COVID-19患者の診療データ",
             "category": "source"
           },
           {
-            "id": "issue",
-            "label": "患者プライバシー保護が必要",
+            "id": "s2",
+            "label": "厳しいプライバシー保護の対象",
             "category": "constraint"
           },
           {
-            "id": "gen",
-            "label": "KDE + 差分プライバシーで生成",
+            "id": "p1",
+            "label": "カーネル密度推定（KDE）で生成",
             "category": "process"
           },
           {
-            "id": "use",
-            "label": "COVID-19 データ分析",
+            "id": "p2",
+            "label": "差分プライバシー（DP）で安全性確保",
+            "category": "process"
+          },
+          {
+            "id": "a1",
+            "label": "COVID-19データ分析に使用",
             "category": "application"
           },
           {
-            "id": "val",
-            "label": "実データとほぼ同等の結果確認",
+            "id": "a2",
+            "label": "実データとほぼ同等の分析結果を確認",
             "category": "outcome"
           }
         ],
-        "edges": [
-          {
-            "from": "src",
-            "to": "issue",
-            "label": "制約"
-          },
-          {
-            "from": "issue",
-            "to": "gen",
-            "label": "代替手段"
-          },
-          {
-            "from": "gen",
-            "to": "use",
-            "label": "分析データ提供"
-          },
-          {
-            "from": "use",
-            "to": "val",
-            "label": "成果"
-          }
-        ]
+        "edges": []
       },
       "note": ""
     }

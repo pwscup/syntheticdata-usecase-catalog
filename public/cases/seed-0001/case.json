@@ -34,53 +34,32 @@
       "data": {
         "nodes": [
           {
-            "id": "src",
-            "label": "顧客データ（実データ）",
+            "id": "s1",
+            "label": "銀行の顧客データ",
             "category": "source"
           },
           {
-            "id": "issue",
-            "label": "プライバシー制約で入手困難",
+            "id": "s2",
+            "label": "プライバシー制約で本番データ入手困難",
             "category": "constraint"
           },
           {
-            "id": "gen",
-            "label": "合成データ生成",
+            "id": "p1",
+            "label": "合成データで顧客データを代替生成",
             "category": "process"
           },
           {
-            "id": "use",
-            "label": "銀行アプリ開発・テスト",
+            "id": "a1",
+            "label": "銀行アプリの開発・テストに使用",
             "category": "application"
           },
           {
-            "id": "val",
-            "label": "個人情報なしで開発推進",
+            "id": "a2",
+            "label": "個人情報を含まずにアプリ開発を推進",
             "category": "outcome"
           }
         ],
-        "edges": [
-          {
-            "from": "src",
-            "to": "issue",
-            "label": "制約"
-          },
-          {
-            "from": "issue",
-            "to": "gen",
-            "label": "代替手段"
-          },
-          {
-            "from": "gen",
-            "to": "use",
-            "label": "テストデータ提供"
-          },
-          {
-            "from": "use",
-            "to": "val",
-            "label": "成果"
-          }
-        ]
+        "edges": []
       },
       "note": ""
     }

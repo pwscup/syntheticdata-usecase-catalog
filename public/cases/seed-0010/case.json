@@ -36,53 +36,32 @@
       "data": {
         "nodes": [
           {
-            "id": "src",
-            "label": "退役軍人の医療データ（実データ）",
+            "id": "s1",
+            "label": "退役軍人の医療データ",
             "category": "source"
           },
           {
-            "id": "issue",
+            "id": "s2",
             "label": "品質管理・IRBレビューがボトルネック",
             "category": "constraint"
           },
           {
-            "id": "gen",
-            "label": "合成データ生成",
+            "id": "p1",
+            "label": "合成データを生成",
             "category": "process"
           },
           {
-            "id": "use",
-            "label": "分析用データ提供",
+            "id": "a1",
+            "label": "審査を省略してデータ提供",
             "category": "application"
           },
           {
-            "id": "val",
-            "label": "審査省略でデータ提供を簡略化",
+            "id": "a2",
+            "label": "データ提供プロセスを簡略化",
             "category": "outcome"
           }
         ],
-        "edges": [
-          {
-            "from": "src",
-            "to": "issue",
-            "label": "制約"
-          },
-          {
-            "from": "issue",
-            "to": "gen",
-            "label": "代替手段"
-          },
-          {
-            "from": "gen",
-            "to": "use",
-            "label": "審査不要で提供"
-          },
-          {
-            "from": "use",
-            "to": "val",
-            "label": "成果"
-          }
-        ]
+        "edges": []
       },
       "note": ""
     }

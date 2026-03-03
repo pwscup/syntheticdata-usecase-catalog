@@ -35,53 +35,32 @@
       "data": {
         "nodes": [
           {
-            "id": "src",
-            "label": "人流データ（移動軌跡）",
+            "id": "s1",
+            "label": "人流データ（個人の移動軌跡）",
             "category": "source"
           },
           {
-            "id": "issue",
-            "label": "プライバシー上外部提供困難",
+            "id": "s2",
+            "label": "プライバシー上、集計データに限定されていた",
             "category": "constraint"
           },
           {
-            "id": "gen",
-            "label": "人流合成データ生成",
+            "id": "p1",
+            "label": "人流合成データを生成",
             "category": "process"
           },
           {
-            "id": "use",
-            "label": "第三者向け分析プラットフォーム",
+            "id": "a1",
+            "label": "第三者向け分析プラットフォームで提供",
             "category": "application"
           },
           {
-            "id": "val",
-            "label": "トリップ単位データの外部提供実現",
+            "id": "a2",
+            "label": "トリップ単位の詳細データを外部提供可能に",
             "category": "outcome"
           }
         ],
-        "edges": [
-          {
-            "from": "src",
-            "to": "issue",
-            "label": "制約"
-          },
-          {
-            "from": "issue",
-            "to": "gen",
-            "label": "代替手段"
-          },
-          {
-            "from": "gen",
-            "to": "use",
-            "label": "プラットフォーム搭載"
-          },
-          {
-            "from": "use",
-            "to": "val",
-            "label": "成果"
-          }
-        ]
+        "edges": []
       },
       "note": ""
     }

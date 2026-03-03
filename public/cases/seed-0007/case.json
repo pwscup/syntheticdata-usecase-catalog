@@ -35,53 +35,32 @@
       "data": {
         "nodes": [
           {
-            "id": "src",
-            "label": "ゲノムデータ（実データ）",
+            "id": "s1",
+            "label": "ゲノムデータ",
             "category": "source"
           },
           {
-            "id": "issue",
-            "label": "機密性が高くデータ共有制限",
+            "id": "s2",
+            "label": "機密性が高くデータ共有が制限される",
             "category": "constraint"
           },
           {
-            "id": "gen",
-            "label": "Timeseries DGAN で合成データ生成",
+            "id": "p1",
+            "label": "Timeseries DGANで合成データを生成",
             "category": "process"
           },
           {
-            "id": "use",
-            "label": "マウスゲノム分析研究",
-            "category": "application"
+            "id": "p2",
+            "label": "差分プライバシー等で安全性を確保",
+            "category": "process"
           },
           {
-            "id": "val",
-            "label": "合成データでの研究実施",
-            "category": "outcome"
+            "id": "a1",
+            "label": "マウスゲノム分析の研究に活用",
+            "category": "application"
           }
         ],
-        "edges": [
-          {
-            "from": "src",
-            "to": "issue",
-            "label": "制約"
-          },
-          {
-            "from": "issue",
-            "to": "gen",
-            "label": "代替手段"
-          },
-          {
-            "from": "gen",
-            "to": "use",
-            "label": "研究データ提供"
-          },
-          {
-            "from": "use",
-            "to": "val",
-            "label": "成果"
-          }
-        ]
+        "edges": []
       },
       "note": ""
     }

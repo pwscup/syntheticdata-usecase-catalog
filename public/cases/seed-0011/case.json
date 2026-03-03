@@ -38,53 +38,32 @@
       "data": {
         "nodes": [
           {
-            "id": "src",
-            "label": "COVID-19 診療データ（実データ）",
+            "id": "s1",
+            "label": "COVID-19の診療データ",
             "category": "source"
           },
           {
-            "id": "issue",
-            "label": "患者プライバシーで外部配布困難",
+            "id": "s2",
+            "label": "患者プライバシーで外部配布が困難",
             "category": "constraint"
           },
           {
-            "id": "gen",
-            "label": "合成データ生成",
+            "id": "p1",
+            "label": "合成データを生成して外部共有",
             "category": "process"
           },
           {
-            "id": "use",
-            "label": "外部共有・下流タスク検証",
+            "id": "a1",
+            "label": "入院リスク予測・流行曲線予測に活用",
             "category": "application"
           },
           {
-            "id": "val",
-            "label": "入院リスク予測等で有用性確認",
+            "id": "a2",
+            "label": "実データとほぼ同等の有用性を確認",
             "category": "outcome"
           }
         ],
-        "edges": [
-          {
-            "from": "src",
-            "to": "issue",
-            "label": "制約"
-          },
-          {
-            "from": "issue",
-            "to": "gen",
-            "label": "代替手段"
-          },
-          {
-            "from": "gen",
-            "to": "use",
-            "label": "外部研究者に共有"
-          },
-          {
-            "from": "use",
-            "to": "val",
-            "label": "成果"
-          }
-        ]
+        "edges": []
       },
       "note": ""
     }

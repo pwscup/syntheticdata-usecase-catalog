@@ -36,53 +36,32 @@
       "data": {
         "nodes": [
           {
-            "id": "src",
-            "label": "保険顧客データ（実データ）",
+            "id": "s1",
+            "label": "保険顧客データ",
             "category": "source"
           },
           {
-            "id": "issue",
-            "label": "プライバシーリスク評価に長時間",
+            "id": "s2",
+            "label": "プライバシーリスク評価に長期間を要する",
             "category": "constraint"
           },
           {
-            "id": "gen",
-            "label": "合成データ生成（有用性97%）",
+            "id": "p1",
+            "label": "実データの代替として合成データを生成（有用性97%）",
             "category": "process"
           },
           {
-            "id": "use",
-            "label": "社内データ共有",
+            "id": "a1",
+            "label": "社内の各部門でデータ共有",
             "category": "application"
           },
           {
-            "id": "val",
-            "label": "評価3カ月短縮・入手4週間短縮",
+            "id": "a2",
+            "label": "評価期間3カ月短縮、入手4週間短縮",
             "category": "outcome"
           }
         ],
-        "edges": [
-          {
-            "from": "src",
-            "to": "issue",
-            "label": "制約"
-          },
-          {
-            "from": "issue",
-            "to": "gen",
-            "label": "代替手段"
-          },
-          {
-            "from": "gen",
-            "to": "use",
-            "label": "迅速な共有"
-          },
-          {
-            "from": "use",
-            "to": "val",
-            "label": "成果"
-          }
-        ]
+        "edges": []
       },
       "note": ""
     }

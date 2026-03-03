@@ -35,53 +35,32 @@
       "data": {
         "nodes": [
           {
-            "id": "src",
-            "label": "金融データ（実データ）",
+            "id": "s1",
+            "label": "金融データ",
             "category": "source"
           },
           {
-            "id": "issue",
-            "label": "社外への実データ提供が困難",
+            "id": "s2",
+            "label": "社外の分析者に実データ提供が困難",
             "category": "constraint"
           },
           {
-            "id": "gen",
-            "label": "人工金融データ作成",
+            "id": "p1",
+            "label": "人工的に金融データを作成",
             "category": "process"
           },
           {
-            "id": "use",
-            "label": "外部分析コンペ開催",
+            "id": "a1",
+            "label": "外部分析コンペを開催（1,658名参加）",
             "category": "application"
           },
           {
-            "id": "val",
-            "label": "1,658名参加・新知見獲得",
+            "id": "a2",
+            "label": "社内では得られなかった分析知見を獲得",
             "category": "outcome"
           }
         ],
-        "edges": [
-          {
-            "from": "src",
-            "to": "issue",
-            "label": "制約"
-          },
-          {
-            "from": "issue",
-            "to": "gen",
-            "label": "代替手段"
-          },
-          {
-            "from": "gen",
-            "to": "use",
-            "label": "コンペ用データ"
-          },
-          {
-            "from": "use",
-            "to": "val",
-            "label": "成果"
-          }
-        ]
+        "edges": []
       },
       "note": ""
     }

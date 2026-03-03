@@ -34,53 +34,32 @@
       "data": {
         "nodes": [
           {
-            "id": "src",
-            "label": "ヘルスケアデータ（実データ）",
+            "id": "s1",
+            "label": "ヘルスケアデータ",
             "category": "source"
           },
           {
-            "id": "issue",
-            "label": "規制が厳しく組織間共有困難",
+            "id": "s2",
+            "label": "規制が厳しく組織間共有が困難",
             "category": "constraint"
           },
           {
-            "id": "gen",
-            "label": "合成データ生成",
+            "id": "p1",
+            "label": "合成データを生成",
             "category": "process"
           },
           {
-            "id": "use",
-            "label": "データ交換プラットフォーム公開",
+            "id": "a1",
+            "label": "データ交換プラットフォームで公開",
             "category": "application"
           },
           {
-            "id": "val",
-            "label": "外部協業による知見発見・製品高度化",
+            "id": "a2",
+            "label": "外部パートナーとの協業による知見発見",
             "category": "outcome"
           }
         ],
-        "edges": [
-          {
-            "from": "src",
-            "to": "issue",
-            "label": "制約"
-          },
-          {
-            "from": "issue",
-            "to": "gen",
-            "label": "代替手段"
-          },
-          {
-            "from": "gen",
-            "to": "use",
-            "label": "プラットフォーム搭載"
-          },
-          {
-            "from": "use",
-            "to": "val",
-            "label": "成果"
-          }
-        ]
+        "edges": []
       },
       "note": ""
     }
