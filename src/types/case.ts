@@ -82,6 +82,7 @@ export interface Case {
   title: string;
   region?: Region;
   domain: string;
+  domain_sub?: string;
   organization: string;
   usecase_category: string[];
   image?: string;
@@ -91,6 +92,7 @@ export interface Case {
   safety_evaluation_method: string;
   utility_evaluation_method: string;
   tags: string[];
+  editorial_notes?: string[];
   sources: Source[];
   figures: Figure[];
   status: CaseStatus;

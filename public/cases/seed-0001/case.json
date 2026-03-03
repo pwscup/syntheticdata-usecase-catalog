@@ -13,11 +13,8 @@
   "safety_evaluation_method": "調査中",
   "utility_evaluation_method": "調査中",
   "tags": [
-    "finance",
-    "data-sharing",
-    "app-development",
-    "region:overseas",
-    "source:JRI"
+    "データ共有",
+    "アプリ開発"
   ],
   "sources": [
     {
@@ -27,7 +24,43 @@
       "note": "Accentureの事例として言及"
     }
   ],
-  "figures": [],
+  "figures": [
+    {
+      "type": "data_flow",
+      "title": "銀行アプリ開発における合成データ活用フロー",
+      "data": {
+        "nodes": [
+          {
+            "id": "s1",
+            "label": "銀行の顧客データ",
+            "category": "source"
+          },
+          {
+            "id": "s2",
+            "label": "プライバシー制約で本番データ入手困難",
+            "category": "constraint"
+          },
+          {
+            "id": "p1",
+            "label": "合成データで顧客データを代替生成",
+            "category": "process"
+          },
+          {
+            "id": "a1",
+            "label": "銀行アプリの開発・テストに使用",
+            "category": "application"
+          },
+          {
+            "id": "a2",
+            "label": "個人情報を含まずにアプリ開発を推進",
+            "category": "outcome"
+          }
+        ],
+        "edges": []
+      },
+      "note": ""
+    }
+  ],
   "status": "seed",
   "created_at": "2026-02-26T00:00:00+09:00",
   "updated_at": "2026-02-26T00:00:00+09:00"

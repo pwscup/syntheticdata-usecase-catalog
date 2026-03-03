@@ -94,6 +94,7 @@ export const caseSchema = z.object({
   title: z.string().default(""),
   region: z.enum(["国内", "国外"]).optional(),
   domain: z.string().default(""),
+  domain_sub: z.string().optional(),
   organization: z.string().default(""),
   usecase_category: z.union([
     z.array(z.string()),
@@ -106,6 +107,7 @@ export const caseSchema = z.object({
   safety_evaluation_method: z.string().default("調査中"),
   utility_evaluation_method: z.string().default("調査中"),
   tags: z.array(z.string()).default([]),
+  editorial_notes: z.array(z.string()).optional(),
   sources: z.array(sourceSchema).min(1),
   figures: z.array(figureSchema).default([]),
   status: z
@@ -120,6 +122,7 @@ export const caseFormSchema = z.object({
   title: z.string().default(''),
   region: z.enum(['国内', '国外']).optional(),
   domain: z.string().default(''),
+  domain_sub: z.string().optional(),
   organization: z.string().default(''),
   usecase_category: z.array(z.string()).default([]),
   summary: z.string().default(''),

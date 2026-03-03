@@ -12,13 +12,10 @@
   "synthetic_generation_method": "調査中",
   "safety_evaluation_method": "調査中",
   "utility_evaluation_method": "調査中",
+  "domain_sub": "人流",
   "tags": [
-    "sub:人流",
-    "mobility",
-    "synthetic-data",
-    "platform",
-    "region:domestic",
-    "source:JRI"
+    "合成データ",
+    "プラットフォーム"
   ],
   "sources": [
     {
@@ -28,7 +25,43 @@
       "note": "GEOTRAの提供形態に言及"
     }
   ],
-  "figures": [],
+  "figures": [
+    {
+      "type": "data_flow",
+      "title": "人流合成データのプラットフォーム提供フロー",
+      "data": {
+        "nodes": [
+          {
+            "id": "s1",
+            "label": "人流データ（個人の移動軌跡）",
+            "category": "source"
+          },
+          {
+            "id": "s2",
+            "label": "プライバシー上、集計データに限定",
+            "category": "constraint"
+          },
+          {
+            "id": "p1",
+            "label": "人流合成データを生成",
+            "category": "process"
+          },
+          {
+            "id": "a1",
+            "label": "第三者向け分析プラットフォームで提供",
+            "category": "application"
+          },
+          {
+            "id": "a2",
+            "label": "詳細データの外部提供が可能に",
+            "category": "outcome"
+          }
+        ],
+        "edges": []
+      },
+      "note": ""
+    }
+  ],
   "status": "seed",
   "created_at": "2026-02-26T00:00:00+09:00",
   "updated_at": "2026-02-26T00:00:00+09:00"

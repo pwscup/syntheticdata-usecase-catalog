@@ -105,4 +105,20 @@ describe('CaseListPage', () => {
 
     expect(screen.getByText('エラー: テストエラー')).toBeInTheDocument()
   })
+
+  it('ツールバーに件数表示がある', () => {
+    mockedUseCases.mockReturnValue({
+      cases: mockCases,
+      loading: false,
+      error: null,
+    })
+
+    render(
+      <MemoryRouter>
+        <CaseListPage />
+      </MemoryRouter>,
+    )
+
+    expect(screen.getByText('2件の事例')).toBeInTheDocument()
+  })
 })

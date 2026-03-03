@@ -3,15 +3,15 @@ import FigureRenderer from '../components/figures/FigureRenderer'
 import type { Figure, DataFlowData, RiskMatrixData, UtilityChartData } from '../types'
 
 describe('FigureRenderer', () => {
-  it('data_flow typeのFigureでDataFlowDiagramが描画される', () => {
+  it('data_flow typeのFigureで3列レイアウトが描画される', () => {
     const data: DataFlowData = {
       nodes: [
-        { id: 'n1', label: '元データ', category: 'データソース' },
-        { id: 'n2', label: '合成データ', category: '出力' },
+        { id: 'n1', label: '元データ', category: 'source' },
+        { id: 'n2', label: 'プライバシー制約', category: 'constraint' },
+        { id: 'n3', label: 'GAN で生成', category: 'process' },
+        { id: 'n4', label: '分析に活用', category: 'application' },
       ],
-      edges: [
-        { from: 'n1', to: 'n2', label: '生成' },
-      ],
+      edges: [],
     }
     const figure: Figure = {
       type: 'data_flow',
@@ -22,10 +22,14 @@ describe('FigureRenderer', () => {
 
     render(<FigureRenderer figure={figure} />)
     expect(screen.getByText('データフロー図')).toBeInTheDocument()
+    // 3列ヘッダー
+    expect(screen.getByText('収集')).toBeInTheDocument()
+    expect(screen.getByText('合成')).toBeInTheDocument()
+    expect(screen.getByText('活用')).toBeInTheDocument()
+    // ノードラベル
     expect(screen.getByText('元データ')).toBeInTheDocument()
-    expect(screen.getByText('合成データ')).toBeInTheDocument()
-    expect(screen.getByText('データソース')).toBeInTheDocument()
-    expect(screen.getByText(/n1 → n2/)).toBeInTheDocument()
+    expect(screen.getByText('プライバシー制約')).toBeInTheDocument()
+    expect(screen.getByText('分析に活用')).toBeInTheDocument()
     expect(screen.getByText('テスト注記')).toBeInTheDocument()
   })
 
@@ -86,7 +90,7 @@ describe('FigureRenderer', () => {
 
   it('noteが空の場合は注記が表示されない', () => {
     const data: DataFlowData = {
-      nodes: [{ id: 'n1', label: 'ノード', category: 'cat' }],
+      nodes: [{ id: 'n1', label: 'ノード', category: 'source' }],
       edges: [],
     }
     const figure: Figure = {

@@ -43,6 +43,7 @@ export default function CaseForm({ defaultValues, onSubmit, submitLabel }: CaseF
       title: defaultValues?.title ?? '',
       region: defaultValues?.region,
       domain: defaultValues?.domain ?? '',
+      domain_sub: defaultValues?.domain_sub ?? '',
       organization: defaultValues?.organization ?? '',
       usecase_category: defaultValues?.usecase_category ?? [],
       summary: defaultValues?.summary ?? '',
@@ -83,6 +84,18 @@ export default function CaseForm({ defaultValues, onSubmit, submitLabel }: CaseF
               <option key={opt} value={opt}>{opt}</option>
             ))}
           </select>
+        </div>
+
+        {/* サブ分野（任意） */}
+        <div>
+          <label htmlFor="domain_sub" className="block text-sm font-medium">サブ分野</label>
+          <input
+            id="domain_sub"
+            type="text"
+            {...methods.register('domain_sub')}
+            placeholder="例: 保険、COVID-19"
+            className="mt-1 block w-full rounded border border-gray-300 px-3 py-2"
+          />
         </div>
 
         {/* カテゴリ */}

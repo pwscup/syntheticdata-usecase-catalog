@@ -12,14 +12,10 @@
   "synthetic_generation_method": "カーネル密度推定（ベンダ一覧に記載）",
   "safety_evaluation_method": "差分プライバシー（ベンダ一覧に記載）",
   "utility_evaluation_method": "実データとの分析結果比較（同等と記載）",
+  "domain_sub": "COVID-19",
   "tags": [
-    "sub:COVID-19",
-    "healthcare",
-    "covid19",
-    "kde",
-    "dp",
-    "region:overseas",
-    "source:JRI"
+    "KDE",
+    "差分プライバシー"
   ],
   "sources": [
     {
@@ -29,7 +25,48 @@
       "note": "COVID-19分析の記載＋ベンダ一覧の記載"
     }
   ],
-  "figures": [],
+  "figures": [
+    {
+      "type": "data_flow",
+      "title": "COVID-19分析における合成データ活用フロー",
+      "data": {
+        "nodes": [
+          {
+            "id": "s1",
+            "label": "COVID-19患者の診療データ",
+            "category": "source"
+          },
+          {
+            "id": "s2",
+            "label": "厳しいプライバシー保護の対象",
+            "category": "constraint"
+          },
+          {
+            "id": "p1",
+            "label": "カーネル密度推定（KDE）で生成",
+            "category": "process"
+          },
+          {
+            "id": "p2",
+            "label": "差分プライバシー（DP）で安全性確保",
+            "category": "process"
+          },
+          {
+            "id": "a1",
+            "label": "COVID-19データ分析に使用",
+            "category": "application"
+          },
+          {
+            "id": "a2",
+            "label": "実データとほぼ同等の分析結果を確認",
+            "category": "outcome"
+          }
+        ],
+        "edges": []
+      },
+      "note": ""
+    }
+  ],
   "status": "seed",
   "created_at": "2026-02-26T00:00:00+09:00",
   "updated_at": "2026-02-26T00:00:00+09:00"

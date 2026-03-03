@@ -13,11 +13,8 @@
   "safety_evaluation_method": "調査中",
   "utility_evaluation_method": "調査中",
   "tags": [
-    "finance",
-    "rnd",
-    "synthetic-data",
-    "region:overseas",
-    "source:JRI"
+    "研究開発",
+    "合成データ"
   ],
   "sources": [
     {
@@ -27,7 +24,43 @@
       "note": "J.P. Morganの取組として言及"
     }
   ],
-  "figures": [],
+  "figures": [
+    {
+      "type": "data_flow",
+      "title": "金融AI向け合成データ生成の研究フロー",
+      "data": {
+        "nodes": [
+          {
+            "id": "s1",
+            "label": "金融取引データ",
+            "category": "source"
+          },
+          {
+            "id": "s2",
+            "label": "機密性が高く学習用データが不足",
+            "category": "constraint"
+          },
+          {
+            "id": "p1",
+            "label": "合成金融データの生成手法を開発",
+            "category": "process"
+          },
+          {
+            "id": "a1",
+            "label": "AIモデルの訓練データとして活用",
+            "category": "application"
+          },
+          {
+            "id": "a2",
+            "label": "訓練データ不足を解消",
+            "category": "outcome"
+          }
+        ],
+        "edges": []
+      },
+      "note": ""
+    }
+  ],
   "status": "seed",
   "created_at": "2026-02-26T00:00:00+09:00",
   "updated_at": "2026-02-26T00:00:00+09:00"

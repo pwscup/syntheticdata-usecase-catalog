@@ -12,14 +12,10 @@
   "synthetic_generation_method": "統計情報と複雑な関係を学習し、元情報を含まない合成データセットを作成（手法名は調査中）",
   "safety_evaluation_method": "調査中",
   "utility_evaluation_method": "調査中",
+  "domain_sub": "保険",
   "tags": [
-    "sub:保険",
-    "insurance",
-    "fintech",
-    "test-data",
-    "approval-leadtime",
-    "region:overseas",
-    "source:JRI"
+    "フィンテック",
+    "テストデータ"
   ],
   "sources": [
     {
@@ -29,7 +25,43 @@
       "note": "Nationwideの短縮効果と生成の説明に言及"
     }
   ],
-  "figures": [],
+  "figures": [
+    {
+      "type": "data_flow",
+      "title": "Fintech連携テストの合成データ活用フロー",
+      "data": {
+        "nodes": [
+          {
+            "id": "s1",
+            "label": "保険顧客データ",
+            "category": "source"
+          },
+          {
+            "id": "s2",
+            "label": "第三者提供の承認に最大6カ月",
+            "category": "constraint"
+          },
+          {
+            "id": "p1",
+            "label": "統計的関係性を保持し合成データ生成",
+            "category": "process"
+          },
+          {
+            "id": "a1",
+            "label": "Fintech連携のテストデータに活用",
+            "category": "application"
+          },
+          {
+            "id": "a2",
+            "label": "承認期間を6カ月から3日に短縮",
+            "category": "outcome"
+          }
+        ],
+        "edges": []
+      },
+      "note": ""
+    }
+  ],
   "status": "seed",
   "created_at": "2026-02-26T00:00:00+09:00",
   "updated_at": "2026-02-26T00:00:00+09:00"

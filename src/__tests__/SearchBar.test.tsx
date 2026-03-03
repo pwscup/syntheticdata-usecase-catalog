@@ -5,11 +5,13 @@ import SearchBar from '../components/case-list/SearchBar'
 
 function renderSearchBar(props: { value?: string; onChange?: (v: string) => void } = {}) {
   const defaultOnChange = vi.fn()
-  return render(
+  const onChange = props.onChange ?? defaultOnChange
+  render(
     <MemoryRouter>
-      <SearchBar value={props.value ?? ''} onChange={props.onChange ?? defaultOnChange} />
+      <SearchBar value={props.value ?? ''} onChange={onChange} />
     </MemoryRouter>,
   )
+  return { onChange }
 }
 
 describe('SearchBar', () => {
@@ -29,5 +31,23 @@ describe('SearchBar', () => {
   it('プレースホルダーが表示される', () => {
     renderSearchBar()
     expect(screen.getByPlaceholderText('キーワードで事例名・企業名を検索')).toBeInTheDocument()
+  })
+
+  it('値がある時にクリアボタンが表示される', () => {
+    renderSearchBar({ value: 'テスト' })
+    expect(screen.getByLabelText('検索をクリア')).toBeInTheDocument()
+  })
+
+  it('値が空の時にクリアボタンが非表示', () => {
+    renderSearchBar({ value: '' })
+    expect(screen.queryByLabelText('検索をクリア')).not.toBeInTheDocument()
+  })
+
+  it('クリアボタンクリックでonChange("")が呼ばれる', async () => {
+    const user = userEvent.setup()
+    const onChange = vi.fn()
+    renderSearchBar({ value: 'テスト', onChange })
+    await user.click(screen.getByLabelText('検索をクリア'))
+    expect(onChange).toHaveBeenCalledWith('')
   })
 })

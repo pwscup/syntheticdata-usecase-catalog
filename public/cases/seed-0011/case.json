@@ -12,16 +12,10 @@
   "synthetic_generation_method": "調査中",
   "safety_evaluation_method": "調査中",
   "utility_evaluation_method": "下流タスクでの比較評価（特徴探索、入院リスク予測、流行曲線予測などで合成前後比較）",
+  "domain_sub": "COVID-19",
+  "editorial_notes": ["記事本文では方式名の明示なし", "本文記載は主に有用性側"],
   "tags": [
-    "sub:COVID-19",
-    "note:記事本文では方式名の明示なし",
-    "note:本文記載は主に有用性側",
-    "healthcare",
-    "covid19",
-    "data-sharing",
-    "utility:downstream",
-    "region:overseas",
-    "source:NSSOL"
+    "データ共有"
   ],
   "sources": [
     {
@@ -31,7 +25,43 @@
       "note": "米ワシントン大学の事例として、下流タスクでの比較に言及"
     }
   ],
-  "figures": [],
+  "figures": [
+    {
+      "type": "data_flow",
+      "title": "COVID-19診療データの合成データ外部共有フロー",
+      "data": {
+        "nodes": [
+          {
+            "id": "s1",
+            "label": "COVID-19の診療データ",
+            "category": "source"
+          },
+          {
+            "id": "s2",
+            "label": "患者プライバシーで外部配布が困難",
+            "category": "constraint"
+          },
+          {
+            "id": "p1",
+            "label": "合成データを生成して外部共有",
+            "category": "process"
+          },
+          {
+            "id": "a1",
+            "label": "入院リスク予測・流行曲線予測に活用",
+            "category": "application"
+          },
+          {
+            "id": "a2",
+            "label": "実データとほぼ同等の有用性を確認",
+            "category": "outcome"
+          }
+        ],
+        "edges": []
+      },
+      "note": ""
+    }
+  ],
   "status": "seed",
   "created_at": "2026-02-26T00:00:00+09:00",
   "updated_at": "2026-02-26T00:00:00+09:00"

@@ -16,7 +16,8 @@ const mockCase: Case = {
   synthetic_generation_method: 'GAN',
   safety_evaluation_method: '調査中',
   utility_evaluation_method: 'ベンチマーク評価',
-  tags: ['healthcare', 'sub:研究'],
+  domain_sub: '研究',
+  tags: ['ゲノミクス'],
   sources: [
     { source_type: 'web', title: '出典1', url: 'https://example.com', note: 'メモ' },
   ],
@@ -92,10 +93,23 @@ describe('CaseDetailPage', () => {
     expect(screen.getByText('準備中')).toBeInTheDocument()
   })
 
-  it('タグが#形式で表示される', () => {
+  it('関連タグセクションが表示される', () => {
     renderWithRoute('case-001')
-    expect(screen.getByText('#healthcare')).toBeInTheDocument()
-    expect(screen.getByText('#sub:研究')).toBeInTheDocument()
+    expect(screen.getByText('関連タグ')).toBeInTheDocument()
+  })
+
+  it('domain_subがteal系ピルで表示される', () => {
+    renderWithRoute('case-001')
+    const subTag = screen.getByText('研究')
+    expect(subTag).toBeInTheDocument()
+    expect(subTag.closest('a')).toHaveAttribute('href', '/?q=%E7%A0%94%E7%A9%B6')
+  })
+
+  it('tagsがslate系ピルで表示されクリックで遷移する', () => {
+    renderWithRoute('case-001')
+    const tag = screen.getByText('ゲノミクス')
+    expect(tag).toBeInTheDocument()
+    expect(tag.closest('a')).toHaveAttribute('href', '/?q=%E3%82%B2%E3%83%8E%E3%83%9F%E3%82%AF%E3%82%B9')
   })
 
   it('出典がフッターに表示される', () => {

@@ -12,13 +12,10 @@
   "synthetic_generation_method": "調査中",
   "safety_evaluation_method": "調査中",
   "utility_evaluation_method": "調査中",
+  "editorial_notes": ["人工的に作成とのみ"],
   "tags": [
-    "note:人工的に作成とのみ",
-    "finance",
-    "competition",
-    "external-analysts",
-    "region:domestic",
-    "source:JRI"
+    "コンペティション",
+    "外部分析者"
   ],
   "sources": [
     {
@@ -28,7 +25,43 @@
       "note": "FDUAの外部コンペに言及"
     }
   ],
-  "figures": [],
+  "figures": [
+    {
+      "type": "data_flow",
+      "title": "外部コンペにおける合成金融データ活用フロー",
+      "data": {
+        "nodes": [
+          {
+            "id": "s1",
+            "label": "金融データ",
+            "category": "source"
+          },
+          {
+            "id": "s2",
+            "label": "社外の分析者に実データ提供が困難",
+            "category": "constraint"
+          },
+          {
+            "id": "p1",
+            "label": "人工的に金融データを作成",
+            "category": "process"
+          },
+          {
+            "id": "a1",
+            "label": "外部分析コンペを開催（1,658名参加）",
+            "category": "application"
+          },
+          {
+            "id": "a2",
+            "label": "社内では得られなかった分析知見を獲得",
+            "category": "outcome"
+          }
+        ],
+        "edges": []
+      },
+      "note": ""
+    }
+  ],
   "status": "seed",
   "created_at": "2026-02-26T00:00:00+09:00",
   "updated_at": "2026-02-26T00:00:00+09:00"

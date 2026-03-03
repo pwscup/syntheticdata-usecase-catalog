@@ -13,11 +13,8 @@
   "safety_evaluation_method": "調査中",
   "utility_evaluation_method": "調査中",
   "tags": [
-    "healthcare",
-    "platform",
-    "external-analysts",
-    "region:overseas",
-    "source:JRI"
+    "プラットフォーム",
+    "外部分析者"
   ],
   "sources": [
     {
@@ -27,7 +24,43 @@
       "note": "Humanaのプラットフォーム公開に言及"
     }
   ],
-  "figures": [],
+  "figures": [
+    {
+      "type": "data_flow",
+      "title": "ヘルスケアデータ交換プラットフォームのフロー",
+      "data": {
+        "nodes": [
+          {
+            "id": "s1",
+            "label": "ヘルスケアデータ",
+            "category": "source"
+          },
+          {
+            "id": "s2",
+            "label": "規制が厳しく組織間共有が困難",
+            "category": "constraint"
+          },
+          {
+            "id": "p1",
+            "label": "合成データを生成",
+            "category": "process"
+          },
+          {
+            "id": "a1",
+            "label": "データ交換プラットフォームで公開",
+            "category": "application"
+          },
+          {
+            "id": "a2",
+            "label": "外部パートナーとの協業による知見発見",
+            "category": "outcome"
+          }
+        ],
+        "edges": []
+      },
+      "note": ""
+    }
+  ],
   "status": "seed",
   "created_at": "2026-02-26T00:00:00+09:00",
   "updated_at": "2026-02-26T00:00:00+09:00"

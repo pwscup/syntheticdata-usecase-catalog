@@ -12,13 +12,9 @@
   "synthetic_generation_method": "Timeseries DGAN（ベンダ一覧に記載）",
   "safety_evaluation_method": "差分プライバシー／過剰適合防止／類似性フィルター／外れ値フィルター（ベンダ一覧に記載）",
   "utility_evaluation_method": "調査中",
+  "domain_sub": "研究",
   "tags": [
-    "sub:研究",
-    "healthcare",
-    "genomics",
-    "vendor",
-    "region:overseas",
-    "source:JRI"
+    "ゲノミクス"
   ],
   "sources": [
     {
@@ -28,7 +24,43 @@
       "note": "研究事例およびベンダ一覧の記載"
     }
   ],
-  "figures": [],
+  "figures": [
+    {
+      "type": "data_flow",
+      "title": "ゲノム研究における合成データ活用フロー",
+      "data": {
+        "nodes": [
+          {
+            "id": "s1",
+            "label": "ゲノムデータ",
+            "category": "source"
+          },
+          {
+            "id": "s2",
+            "label": "機密性が高くデータ共有が制限される",
+            "category": "constraint"
+          },
+          {
+            "id": "p1",
+            "label": "DGAN で合成データを生成",
+            "category": "process"
+          },
+          {
+            "id": "p2",
+            "label": "差分プライバシー等で安全性を確保",
+            "category": "process"
+          },
+          {
+            "id": "a1",
+            "label": "マウスゲノム分析の研究に活用",
+            "category": "application"
+          }
+        ],
+        "edges": []
+      },
+      "note": ""
+    }
+  ],
   "status": "seed",
   "created_at": "2026-02-26T00:00:00+09:00",
   "updated_at": "2026-02-26T00:00:00+09:00"

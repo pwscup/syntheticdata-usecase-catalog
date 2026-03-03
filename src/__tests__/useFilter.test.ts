@@ -1,5 +1,5 @@
 import type { Case } from '../types'
-import { applyFilters, applySorting, collectFilterOptions, type FilterState } from '../hooks/useFilter'
+import { applyFilters, applySorting, collectFilterOptions, parseFiltersFromParams, filtersToParams, ITEMS_PER_PAGE, type FilterState } from '../hooks/useFilter'
 
 function makeCase(overrides: Partial<Case> = {}): Case {
   return {
@@ -21,7 +21,7 @@ function makeCase(overrides: Partial<Case> = {}): Case {
     created_at: '2026-01-01T00:00:00Z',
     updated_at: '2026-01-01T00:00:00Z',
     ...overrides,
-  }
+  } as Case
 }
 
 function defaultFilters(overrides: Partial<FilterState> = {}): FilterState {
@@ -30,7 +30,8 @@ function defaultFilters(overrides: Partial<FilterState> = {}): FilterState {
     region: [],
     domain: [],
     usecase_category: [],
-    sortBy: 'title',
+    sortBy: 'updated_at_desc',
+    page: 1,
     ...overrides,
   }
 }
@@ -106,6 +107,16 @@ describe('useFilter - applyFilters', () => {
     const result = applyFilters(testCases, defaultFilters({ query: '自動運転' }))
     expect(result).toHaveLength(1)
     expect(result[0].id).toBe('case-003')
+  })
+
+  it('フリーワード検索: domain_subで絞り込める', () => {
+    const casesWithSub = [
+      makeCase({ id: 'case-sub', title: 'テスト', domain_sub: '保険', tags: [] }),
+      makeCase({ id: 'case-nosub', title: 'その他', tags: [] }),
+    ]
+    const result = applyFilters(casesWithSub, defaultFilters({ query: '保険' }))
+    expect(result).toHaveLength(1)
+    expect(result[0].id).toBe('case-sub')
   })
 
   it('フリーワード検索: 大文字小文字を区別しない', () => {
@@ -190,5 +201,46 @@ describe('useFilter - collectFilterOptions', () => {
       const sorted = [...options[key]].sort()
       expect(options[key]).toEqual(sorted)
     }
+  })
+})
+
+describe('useFilter - parseFiltersFromParams / filtersToParams', () => {
+  it('デフォルトのsortByがupdated_at_descである', () => {
+    const params = new URLSearchParams()
+    const filters = parseFiltersFromParams(params)
+    expect(filters.sortBy).toBe('updated_at_desc')
+    expect(filters.page).toBe(1)
+  })
+
+  it('pageパラメータをパースできる', () => {
+    const params = new URLSearchParams('page=3')
+    const filters = parseFiltersFromParams(params)
+    expect(filters.page).toBe(3)
+  })
+
+  it('page=1の時はURLパラメータに含まれない', () => {
+    const params = filtersToParams(defaultFilters({ page: 1 }))
+    expect(params.get('page')).toBeNull()
+  })
+
+  it('page>1の時はURLパラメータに含まれる', () => {
+    const params = filtersToParams(defaultFilters({ page: 3 }))
+    expect(params.get('page')).toBe('3')
+  })
+
+  it('sortByがupdated_at_descの時はURLパラメータに含まれない', () => {
+    const params = filtersToParams(defaultFilters({ sortBy: 'updated_at_desc' }))
+    expect(params.get('sortBy')).toBeNull()
+  })
+
+  it('sortByがtitleの時はURLパラメータに含まれる', () => {
+    const params = filtersToParams(defaultFilters({ sortBy: 'title' }))
+    expect(params.get('sortBy')).toBe('title')
+  })
+})
+
+describe('useFilter - ITEMS_PER_PAGE', () => {
+  it('ITEMS_PER_PAGEが12である', () => {
+    expect(ITEMS_PER_PAGE).toBe(12)
   })
 })

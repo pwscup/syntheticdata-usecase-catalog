@@ -2,21 +2,27 @@ import { useMemo, useCallback } from 'react'
 import { useSearchParams } from 'react-router-dom'
 import type { Case } from '../types'
 
+export const ITEMS_PER_PAGE = 12
+
 export interface FilterState {
   query: string
   region: string[]
   domain: string[]
   usecase_category: string[]
   sortBy: 'title' | 'updated_at_desc' | 'updated_at_asc' | 'domain'
+  page: number
 }
 
 export interface UseFilterResult {
   filters: FilterState
   setQuery: (q: string) => void
-  toggleFilter: (key: keyof Omit<FilterState, 'query' | 'sortBy'>, value: string) => void
+  toggleFilter: (key: keyof Omit<FilterState, 'query' | 'sortBy' | 'page'>, value: string) => void
   clearFilters: () => void
   setSortBy: (sort: FilterState['sortBy']) => void
+  setPage: (page: number) => void
   filteredCases: Case[]
+  paginatedCases: Case[]
+  totalPages: number
   filterOptions: Record<string, string[]>
 }
 
@@ -32,7 +38,8 @@ function parseFiltersFromParams(params: URLSearchParams): FilterState {
     region: [],
     domain: [],
     usecase_category: [],
-    sortBy: 'title',
+    sortBy: 'updated_at_desc',
+    page: parseInt(params.get('page') ?? '1', 10),
   }
 
   for (const key of ARRAY_FILTER_KEYS) {
@@ -63,8 +70,12 @@ function filtersToParams(filters: FilterState): URLSearchParams {
     }
   }
 
-  if (filters.sortBy !== 'title') {
+  if (filters.sortBy !== 'updated_at_desc') {
     params.set('sortBy', filters.sortBy)
+  }
+
+  if (filters.page > 1) {
+    params.set('page', String(filters.page))
   }
 
   return params
@@ -99,6 +110,7 @@ function matchesQuery(c: Case, query: string): boolean {
     c.title.toLowerCase().includes(q) ||
     c.summary.toLowerCase().includes(q) ||
     c.organization.toLowerCase().includes(q) ||
+    (c.domain_sub?.toLowerCase().includes(q) ?? false) ||
     c.tags.some((tag) => tag.toLowerCase().includes(q))
   )
 }
@@ -158,17 +170,17 @@ export function useFilter(cases: Case[]): UseFilterResult {
 
   const setQuery = useCallback(
     (q: string) => {
-      const newFilters = { ...filters, query: q }
+      const newFilters = { ...filters, query: q, page: 1 }
       updateParams(newFilters)
     },
     [filters, updateParams],
   )
 
   const toggleFilter = useCallback(
-    (key: keyof Omit<FilterState, 'query' | 'sortBy'>, value: string) => {
+    (key: keyof Omit<FilterState, 'query' | 'sortBy' | 'page'>, value: string) => {
       const current = filters[key] as string[]
       const next = current.includes(value) ? current.filter((v) => v !== value) : [...current, value]
-      const newFilters = { ...filters, [key]: next }
+      const newFilters = { ...filters, [key]: next, page: 1 }
       updateParams(newFilters)
     },
     [filters, updateParams],
@@ -180,18 +192,34 @@ export function useFilter(cases: Case[]): UseFilterResult {
       region: [],
       domain: [],
       usecase_category: [],
-      sortBy: 'title',
+      sortBy: 'updated_at_desc',
+      page: 1,
     }
     updateParams(newFilters)
   }, [updateParams])
 
   const setSortBy = useCallback(
     (sort: FilterState['sortBy']) => {
-      const newFilters = { ...filters, sortBy: sort }
+      const newFilters = { ...filters, sortBy: sort, page: 1 }
       updateParams(newFilters)
     },
     [filters, updateParams],
   )
+
+  const setPage = useCallback(
+    (page: number) => {
+      const newFilters = { ...filters, page }
+      updateParams(newFilters)
+    },
+    [filters, updateParams],
+  )
+
+  const totalPages = Math.max(1, Math.ceil(filteredCases.length / ITEMS_PER_PAGE))
+
+  const paginatedCases = useMemo(() => {
+    const start = (filters.page - 1) * ITEMS_PER_PAGE
+    return filteredCases.slice(start, start + ITEMS_PER_PAGE)
+  }, [filteredCases, filters.page])
 
   return {
     filters,
@@ -199,7 +227,10 @@ export function useFilter(cases: Case[]): UseFilterResult {
     toggleFilter,
     clearFilters,
     setSortBy,
+    setPage,
     filteredCases,
+    paginatedCases,
+    totalPages,
     filterOptions,
   }
 }

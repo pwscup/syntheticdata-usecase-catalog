@@ -9,7 +9,8 @@ const defaultFilters: FilterState = {
   region: [],
   domain: [],
   usecase_category: [],
-  sortBy: 'title',
+  sortBy: 'updated_at_desc',
+  page: 1,
 }
 
 const filterOptions: Record<string, string[]> = {

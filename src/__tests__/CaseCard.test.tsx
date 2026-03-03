@@ -23,10 +23,10 @@ const mockCase: Case = {
   updated_at: '2026-01-01T00:00:00Z',
 }
 
-function renderCard() {
+function renderCard(caseItem: Case = mockCase) {
   return render(
     <MemoryRouter>
-      <CaseCard caseItem={mockCase} />
+      <CaseCard caseItem={caseItem} />
     </MemoryRouter>,
   )
 }
@@ -61,5 +61,24 @@ describe('CaseCard', () => {
     renderCard()
     const link = screen.getByRole('link')
     expect(link).toHaveAttribute('href', '/cases/case-001')
+  })
+
+  it('tagsが最大2件まで表示される', () => {
+    renderCard({ ...mockCase, tags: ['tagA', 'tagB'] })
+    expect(screen.getByText('tagA')).toBeInTheDocument()
+    expect(screen.getByText('tagB')).toBeInTheDocument()
+  })
+
+  it('tagsが3件以上の場合+N表示', () => {
+    renderCard({ ...mockCase, tags: ['tagA', 'tagB', 'tagC', 'tagD'] })
+    expect(screen.getByText('tagA')).toBeInTheDocument()
+    expect(screen.getByText('tagB')).toBeInTheDocument()
+    expect(screen.queryByText('tagC')).not.toBeInTheDocument()
+    expect(screen.getByText('+2')).toBeInTheDocument()
+  })
+
+  it('tagsが空の場合はタグバッジが表示されない', () => {
+    renderCard({ ...mockCase, tags: [] })
+    expect(screen.queryByText('+0')).not.toBeInTheDocument()
   })
 })

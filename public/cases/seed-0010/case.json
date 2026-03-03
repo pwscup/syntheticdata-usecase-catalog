@@ -12,14 +12,10 @@
   "synthetic_generation_method": "調査中",
   "safety_evaluation_method": "調査中",
   "utility_evaluation_method": "調査中",
+  "domain_sub": "医療",
   "tags": [
-    "sub:医療",
-    "public",
-    "healthcare",
-    "data-sharing",
-    "irb",
-    "region:overseas",
-    "source:JRI"
+    "データ共有",
+    "IRB"
   ],
   "sources": [
     {
@@ -29,7 +25,43 @@
       "note": "VHAの記載に言及"
     }
   ],
-  "figures": [],
+  "figures": [
+    {
+      "type": "data_flow",
+      "title": "退役軍人医療データの合成データ活用フロー",
+      "data": {
+        "nodes": [
+          {
+            "id": "s1",
+            "label": "退役軍人の医療データ",
+            "category": "source"
+          },
+          {
+            "id": "s2",
+            "label": "品質管理・IRBレビューがボトルネック",
+            "category": "constraint"
+          },
+          {
+            "id": "p1",
+            "label": "合成データを生成",
+            "category": "process"
+          },
+          {
+            "id": "a1",
+            "label": "審査を省略してデータ提供",
+            "category": "application"
+          },
+          {
+            "id": "a2",
+            "label": "データ提供プロセスを簡略化",
+            "category": "outcome"
+          }
+        ],
+        "edges": []
+      },
+      "note": ""
+    }
+  ],
   "status": "seed",
   "created_at": "2026-02-26T00:00:00+09:00",
   "updated_at": "2026-02-26T00:00:00+09:00"

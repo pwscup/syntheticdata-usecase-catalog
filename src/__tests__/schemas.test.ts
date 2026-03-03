@@ -80,6 +80,30 @@ describe("caseSchema", () => {
     expect(result.title).toBe("");
   });
 
+  it("domain_subがオプションで受け入れられる", () => {
+    const input = validCaseInput({ domain_sub: "保険" });
+    const result = caseSchema.parse(input);
+    expect(result.domain_sub).toBe("保険");
+  });
+
+  it("domain_subが未指定でも通る", () => {
+    const input = validCaseInput();
+    const result = caseSchema.parse(input);
+    expect(result.domain_sub).toBeUndefined();
+  });
+
+  it("editorial_notesがオプションで受け入れられる", () => {
+    const input = validCaseInput({ editorial_notes: ["メモ1", "メモ2"] });
+    const result = caseSchema.parse(input);
+    expect(result.editorial_notes).toEqual(["メモ1", "メモ2"]);
+  });
+
+  it("editorial_notesが未指定でも通る", () => {
+    const input = validCaseInput();
+    const result = caseSchema.parse(input);
+    expect(result.editorial_notes).toBeUndefined();
+  });
+
   it("regionが不正値の場合にバリデーションエラー", () => {
     const input = validCaseInput({ region: "海外" });
     expect(() => caseSchema.parse(input)).toThrow();

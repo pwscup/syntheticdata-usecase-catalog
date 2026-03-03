@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { Link } from 'react-router-dom'
 import type { Case } from '../../types'
 import FigureRenderer from '../figures/FigureRenderer'
 
@@ -11,6 +12,7 @@ function TechValue({ value }: { value: string }) {
 
 export default function CaseDetailView({ caseData }: { caseData: Case }) {
   const [techOpen, setTechOpen] = useState(false)
+  const [modalFigure, setModalFigure] = useState<number | null>(null)
 
   return (
     <>
@@ -100,12 +102,30 @@ export default function CaseDetailView({ caseData }: { caseData: Case }) {
               )}
             </section>
 
-            {/* タグ */}
-            {caseData.tags.length > 0 && (
+            {/* 関連タグ */}
+            {(caseData.domain_sub || caseData.tags.length > 0) && (
               <section>
+                <h2 className="flex items-center gap-2 text-base font-bold mb-2">
+                  <span className="inline-block w-1 h-5 bg-slate-800 rounded-full" />
+                  関連タグ
+                </h2>
                 <div className="flex flex-wrap gap-1.5">
+                  {caseData.domain_sub && (
+                    <Link
+                      to={`/?q=${encodeURIComponent(caseData.domain_sub)}`}
+                      className="text-xs bg-teal-50 border border-teal-200 text-teal-700 px-2.5 py-0.5 rounded-full hover:bg-teal-100 transition-colors"
+                    >
+                      {caseData.domain_sub}
+                    </Link>
+                  )}
                   {caseData.tags.map((tag) => (
-                    <span key={tag} className="text-xs bg-gray-100 text-gray-500 px-2 py-0.5 rounded">#{tag}</span>
+                    <Link
+                      key={tag}
+                      to={`/?q=${encodeURIComponent(tag)}`}
+                      className="text-xs bg-slate-100 text-slate-600 px-2.5 py-0.5 rounded-full hover:bg-slate-200 transition-colors"
+                    >
+                      {tag}
+                    </Link>
                   ))}
                 </div>
               </section>
@@ -121,7 +141,17 @@ export default function CaseDetailView({ caseData }: { caseData: Case }) {
             {caseData.figures.length > 0 ? (
               <div className="space-y-4">
                 {caseData.figures.map((figure, i) => (
-                  <FigureRenderer key={i} figure={figure} />
+                  <div
+                    key={i}
+                    className="cursor-pointer hover:ring-2 hover:ring-blue-300 rounded transition-shadow"
+                    onClick={() => setModalFigure(i)}
+                    role="button"
+                    tabIndex={0}
+                    onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') setModalFigure(i) }}
+                    title="クリックで拡大"
+                  >
+                    <FigureRenderer figure={figure} caseData={caseData} />
+                  </div>
                 ))}
               </div>
             ) : (
@@ -157,6 +187,30 @@ export default function CaseDetailView({ caseData }: { caseData: Case }) {
               {source.note && <span className="text-gray-400 ml-1">- {source.note}</span>}
             </div>
           ))}
+        </div>
+      )}
+
+      {/* ===== Figure modal ===== */}
+      {modalFigure !== null && (
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 p-8"
+          onClick={() => setModalFigure(null)}
+          data-testid="figure-modal-overlay"
+        >
+          <div
+            className="bg-white rounded-lg shadow-xl max-w-2xl w-full mx-4 p-6 relative"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <button
+              type="button"
+              className="absolute top-3 right-3 text-gray-400 hover:text-gray-600 text-2xl leading-none z-10"
+              onClick={() => setModalFigure(null)}
+              data-testid="figure-modal-close"
+            >
+              ✕
+            </button>
+            <FigureRenderer figure={caseData.figures[modalFigure]} caseData={caseData} />
+          </div>
         </div>
       )}
     </>

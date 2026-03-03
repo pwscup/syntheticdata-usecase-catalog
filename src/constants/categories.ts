@@ -1,3 +1,5 @@
+export const REGION_OPTIONS = ['国内', '国外'] as const
+
 export const DOMAIN_OPTIONS = ['金融', '医療', '公共', '通信'] as const
 
 export const USECASE_CATEGORY_OPTIONS = [

@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useCallback } from 'react'
 import type { Case } from '../../types'
 import type { FilterState } from '../../hooks/useFilter'
 
@@ -6,7 +6,7 @@ interface FilterPanelProps {
   filters: FilterState
   filterOptions: Record<string, string[]>
   filteredCases: Case[]
-  onToggle: (key: keyof Omit<FilterState, 'query' | 'sortBy'>, value: string) => void
+  onToggle: (key: keyof Omit<FilterState, 'query' | 'sortBy' | 'page'>, value: string) => void
   onClear: () => void
 }
 
@@ -14,7 +14,7 @@ function countByFieldValue(cases: Case[], field: string, value: string): number 
   return cases.filter(c => c[field as keyof Case] === value).length
 }
 
-const filterSections: { key: keyof Omit<FilterState, 'query' | 'sortBy'>; label: string }[] = [
+const filterSections: { key: keyof Omit<FilterState, 'query' | 'sortBy' | 'page'>; label: string }[] = [
   { key: 'region', label: '地域' },
   { key: 'domain', label: '分野' },
   { key: 'usecase_category', label: 'ユースケース分類' },
@@ -28,7 +28,23 @@ export default function FilterPanel({ filters, filterOptions, filteredCases, onT
     filters.domain.length > 0 ||
     filters.usecase_category.length > 0
 
-  const content = (
+  const handleMobileToggle = useCallback(
+    (key: keyof Omit<FilterState, 'query' | 'sortBy' | 'page'>, value: string) => {
+      onToggle(key, value)
+      setIsOpen(false)
+    },
+    [onToggle],
+  )
+
+  const handleMobileClear = useCallback(() => {
+    onClear()
+    setIsOpen(false)
+  }, [onClear])
+
+  const renderContent = (
+    toggleFn: (key: keyof Omit<FilterState, 'query' | 'sortBy' | 'page'>, value: string) => void,
+    clearFn: () => void,
+  ) => (
     <div className="space-y-4">
       {filterSections.map((section) => {
         const options = filterOptions[section.key] ?? []
@@ -54,7 +70,7 @@ export default function FilterPanel({ filters, filterOptions, filteredCases, onT
                     <input
                       type="checkbox"
                       checked={isChecked}
-                      onChange={() => onToggle(section.key, option)}
+                      onChange={() => toggleFn(section.key, option)}
                       className="rounded border-gray-300"
                     />
                     <span className="flex-1">{option}</span>
@@ -69,7 +85,7 @@ export default function FilterPanel({ filters, filterOptions, filteredCases, onT
 
       {hasActiveFilters && (
         <button
-          onClick={onClear}
+          onClick={clearFn}
           className="w-full px-3 py-2 text-sm text-red-600 border border-red-300 rounded-lg hover:bg-red-50"
           data-testid="clear-filters"
         >
@@ -93,10 +109,16 @@ export default function FilterPanel({ filters, filterOptions, filteredCases, onT
       </div>
 
       {/* Mobile panel */}
-      {isOpen && <div className="md:hidden mb-4 p-4 bg-white rounded-lg shadow">{content}</div>}
+      {isOpen && (
+        <div className="md:hidden mb-4 p-4 bg-white rounded-lg shadow">
+          {renderContent(handleMobileToggle, handleMobileClear)}
+        </div>
+      )}
 
       {/* Desktop sidebar */}
-      <div className="hidden md:block w-64 shrink-0 p-4 bg-white rounded-lg shadow">{content}</div>
+      <div className="hidden md:block w-64 shrink-0 p-4 bg-white rounded-lg shadow">
+        {renderContent(onToggle, onClear)}
+      </div>
     </>
   )
 }
