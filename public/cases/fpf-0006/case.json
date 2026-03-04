@@ -1,0 +1,79 @@
+{
+  "id": "fpf-0006",
+  "title": "モバイルネットワークデータを用いた公式統計作成の大規模検証",
+  "region": "国外",
+  "domain": "公共",
+  "domain_sub": "統計",
+  "organization": "Eurostat / Cybernetica",
+  "usecase_category": [
+    "フィージビリティ検証"
+  ],
+  "summary": "EUの統計機関Eurostatが、携帯電話の位置情報データを用いた人口移動統計の作成を検証するため、最大1億人規模のモバイルユーザーを模した合成データを生成した事例。セキュリティ技術（信頼実行環境）とプライバシー保護ソフトウェアを組み合わせ、大規模データ処理の実現可能性を実証した。",
+  "value_proposition": "携帯電話会社が保有する個人の位置情報データを直接共有することなく、1億人規模の人口移動統計を作成できることを実証。個人のプライバシーを保護しながら公式統計に活用する新たなアプローチの可能性を示した。",
+  "synthetic_generation_method": "携帯電話の通話データ記録（CDR）やシグナリングデータをもとに、「匿名化されたユーザーID・時刻・位置」の形式で最大1億人分のモバイルユーザーデータを合成的に生成。",
+  "safety_evaluation_method": "ユーザーの仮名IDは24時間ごとに自動変更し、長期間の追跡を防止。分析結果はk-匿名性（一定人数以上のグループにしか集計しない手法）に準拠した集計データのみを出力。すべての分析処理はセキュアエンクレーブ（隔離された安全な計算環境）内で実行され、生データへの直接アクセスは不可能。法的な評価も並行して実施。",
+  "utility_evaluation_method": "Intel SGXハードウェアとSharemind HIプライバシーソフトウェアによるセキュアな実行環境で、データ処理速度とメモリ使用量の観点からスケーラビリティを検証。1億人規模のデータ処理が現実的な時間内に完了することを確認。",
+  "tags": [
+    "モバイルネットワーク",
+    "公式統計",
+    "1億人規模",
+    "TEE",
+    "Sharemind",
+    "k-匿名性",
+    "EU"
+  ],
+  "sources": [
+    {
+      "source_type": "web",
+      "title": "UN Statistics Wiki: Eurostat - Processing of longitudinal mobile network operator data",
+      "url": "https://unstats.un.org/wiki/display/UGTTOPPT/3.+Eurostat%3A+Processing+of+longitudinal+mobile+network+operator+data",
+      "note": "国連PETsケーススタディリポジトリの詳細ページ"
+    },
+    {
+      "source_type": "web",
+      "title": "GOV.UK: Repository of PETs Use Cases - National Statistics, Education and Transport",
+      "url": "https://www.gov.uk/guidance/repository-of-privacy-enhancing-technologies-pets-use-cases/national-statistics-education-and-transport",
+      "note": "UK政府PETsリポジトリにおけるEurostat事例"
+    }
+  ],
+  "figures": [
+    {
+      "type": "data_flow",
+      "title": "大規模モバイルデータの合成・統計作成検証フロー",
+      "data": {
+        "nodes": [
+          {
+            "id": "s1",
+            "label": "MNOの通話データ記録（1億人規模）",
+            "category": "source"
+          },
+          {
+            "id": "s2",
+            "label": "個人データの直接共有は不可",
+            "category": "constraint"
+          },
+          {
+            "id": "p1",
+            "label": "1億人規模の合成モバイルデータを生成",
+            "category": "process"
+          },
+          {
+            "id": "a1",
+            "label": "TEE（Intel SGX + Sharemind HI）上で統計処理を実行",
+            "category": "application"
+          },
+          {
+            "id": "a2",
+            "label": "大規模処理のスケーラビリティを実証・k-匿名性準拠の集計を出力",
+            "category": "outcome"
+          }
+        ],
+        "edges": []
+      },
+      "note": ""
+    }
+  ],
+  "status": "draft",
+  "created_at": "2026-03-05T00:00:00+09:00",
+  "updated_at": "2026-03-05T00:00:00+09:00"
+}

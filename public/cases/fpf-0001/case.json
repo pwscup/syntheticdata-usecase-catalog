@@ -1,0 +1,76 @@
+{
+  "id": "fpf-0001",
+  "title": "金融サービスにおける脆弱顧客検知システムの有効性検証への合成データ活用",
+  "region": "国外",
+  "domain": "金融",
+  "organization": "ICO / Hazy / Nationwide Building Society",
+  "usecase_category": [
+    "フィージビリティ検証"
+  ],
+  "summary": "英国の大手銀行が、生活困窮者など支援が必要な顧客を検知するシステムの有効性を評価するために合成データを活用した事例。約5万人の顧客・5,000万件の取引データを模した合成データを生成し、実際の顧客データを使わずにシステム評価を実施した。ICO（英国情報コミッショナー）の監督のもと、Nationwide Building Societyと連携して実施。",
+  "value_proposition": "実際の顧客データを使うことなく、支援が必要な顧客を検知するシステムの精度を検証できた。データ準備期間の大幅な短縮と、プライバシーリスク・ガバナンス上の障壁の回避を同時に実現。",
+  "synthetic_generation_method": "Hazy社の技術を用い、2種類の機械学習モデルを組み合わせて合成データを生成。口座・顧客情報にはベイジアンネットワーク、取引履歴の時系列データには自己回帰モデルを使用。さらに差分プライバシー（ε=5）を適用し、統計的なノイズを加えることで個人の特定リスクを低減した。",
+  "safety_evaluation_method": "元の顧客IDはすべて合成IDに置き換え、差分プライバシーにより統計的な保護を実施。データ処理はすべてオンプレミス（銀行内部のサーバー）で行い、外部にデータが流出しない環境を構築。契約上も顧客の再識別を禁止する条項を設定。",
+  "utility_evaluation_method": "実データと合成データの間で、属性の分布、変数間の相関、分類タスクの精度、属性の重要度ランキング、時系列の自己相関パターンを比較し、合成データが分析に十分な品質を持つことを確認。",
+  "tags": [
+    "脆弱顧客検知",
+    "差分プライバシー",
+    "Open Banking",
+    "ベイジアンネットワーク",
+    "時系列データ"
+  ],
+  "sources": [
+    {
+      "source_type": "web",
+      "title": "ICO: Synthetic data to test the effectiveness of a vulnerable person's detection system in financial services",
+      "url": "https://ico.org.uk/for-organisations/uk-gdpr-guidance-and-resources/data-sharing/privacy-enhancing-technologies/case-studies/synthetic-data-to-test-the-effectiveness-of-a-vulnerable-persons-detection-system-in-financial-services/",
+      "note": "ICOによる詳細なケーススタディ"
+    },
+    {
+      "source_type": "web",
+      "title": "FPF: Repository for Privacy Enhancing Technologies (PETs)",
+      "url": "https://fpf.org/global/repository-for-privacy-enhancing-technologies-pets/",
+      "note": "FPF PETsリポジトリでの掲載"
+    }
+  ],
+  "figures": [
+    {
+      "type": "data_flow",
+      "title": "脆弱顧客検知システム検証における合成データ活用フロー",
+      "data": {
+        "nodes": [
+          {
+            "id": "s1",
+            "label": "大手銀行の顧客・取引データ（5万人・5,000万件）",
+            "category": "source"
+          },
+          {
+            "id": "s2",
+            "label": "プライバシー規制によるデータ共有制約",
+            "category": "constraint"
+          },
+          {
+            "id": "p1",
+            "label": "ベイジアンネットワーク＋自己回帰モデルで合成データ生成（ε=5）",
+            "category": "process"
+          },
+          {
+            "id": "a1",
+            "label": "支援が必要な顧客の検知システムの有効性評価",
+            "category": "application"
+          },
+          {
+            "id": "a2",
+            "label": "実データなしでシステム評価を完了・データ準備期間を短縮",
+            "category": "outcome"
+          }
+        ],
+        "edges": []
+      },
+      "note": ""
+    }
+  ],
+  "status": "draft",
+  "created_at": "2026-03-05T00:00:00+09:00",
+  "updated_at": "2026-03-05T00:00:00+09:00"
+}

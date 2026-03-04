@@ -1,0 +1,78 @@
+{
+  "id": "fpf-0005",
+  "title": "統計機関におけるハッカソン・トレーニング用合成データの提供",
+  "region": "国外",
+  "domain": "公共",
+  "organization": "Statistics Canada",
+  "usecase_category": [
+    "外部分析者活用",
+    "R&D"
+  ],
+  "summary": "カナダ統計局が、国勢調査と死亡登録・がん登録をリンクしたデータセットから合成データを生成し、ハッカソンやデータ分析トレーニングに提供した事例。通常は共有できない33〜47変数のセンシティブなリンクデータの代替として、高い分析価値を維持しつつ個人情報の開示リスクを抑えた合成データを作成した。",
+  "value_proposition": "通常はプライバシー上の制約で外部共有できない国勢調査・死亡登録等のリンクデータを、合成データとして安全にハッカソンやトレーニングに提供。2018年・2019年の2回のハッカソンで、参加者の分析スキル向上と個人情報保護の両立を実証した。",
+  "synthetic_generation_method": "統計的な手法（Fully Conditional Specification: FCS）に決定木（CART）や回帰モデルを組み合わせ、元データの統計的パターンを再現しつつ個人が特定できない合成データを生成。いわゆる「大量代入法」と呼ばれるアプローチで、変数間の複雑な関係性も保持。",
+  "safety_evaluation_method": "生成した合成データを、公開用ミクロデータ（PUMFs）と同等の厳格な基準で開示リスクを評価。架空のデータであっても実在の回答者が含まれるかのように慎重に評価し、個人特定のリスクが十分に低いことを確認。ハッカソン参加者にはデータの外部共有を禁止する同意書への署名を義務付け。",
+  "utility_evaluation_method": "2回のハッカソン（2018年・2019年）で参加者が合成データを用いて実際に分析を実施し、実データでの分析結果と比較して合成データの分析精度が実用に十分であることを確認。",
+  "tags": [
+    "ハッカソン",
+    "トレーニング",
+    "国勢調査",
+    "FCS",
+    "CART",
+    "カナダ"
+  ],
+  "sources": [
+    {
+      "source_type": "web",
+      "title": "UN Statistics Wiki: Statistics Canada - Trialling the use of synthetic data",
+      "url": "https://unstats.un.org/wiki/display/UGTTOPPT/10.+Statistics+Canada%3A+Trialling+the+use+of+synthetic+data",
+      "note": "国連PETsケーススタディリポジトリの詳細ページ"
+    },
+    {
+      "source_type": "web",
+      "title": "GOV.UK: Repository of PETs Use Cases - National Statistics, Education and Transport",
+      "url": "https://www.gov.uk/guidance/repository-of-privacy-enhancing-technologies-pets-use-cases/national-statistics-education-and-transport",
+      "note": "UK政府PETsリポジトリにおけるStatistics Canada事例"
+    }
+  ],
+  "figures": [
+    {
+      "type": "data_flow",
+      "title": "ハッカソン・トレーニング用合成データ提供フロー",
+      "data": {
+        "nodes": [
+          {
+            "id": "s1",
+            "label": "国勢調査＋死亡登録・がん登録リンクデータ（33〜47変数）",
+            "category": "source"
+          },
+          {
+            "id": "s2",
+            "label": "センシティブなリンクデータの共有制約",
+            "category": "constraint"
+          },
+          {
+            "id": "p1",
+            "label": "FCS＋CART/回帰手法で合成データを大量代入",
+            "category": "process"
+          },
+          {
+            "id": "a1",
+            "label": "ハッカソン・トレーニングでの分析演習に使用",
+            "category": "application"
+          },
+          {
+            "id": "a2",
+            "label": "分析スキル向上と開示リスク低減を両立",
+            "category": "outcome"
+          }
+        ],
+        "edges": []
+      },
+      "note": ""
+    }
+  ],
+  "status": "draft",
+  "created_at": "2026-03-05T00:00:00+09:00",
+  "updated_at": "2026-03-05T00:00:00+09:00"
+}

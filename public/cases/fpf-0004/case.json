@@ -1,0 +1,77 @@
+{
+  "id": "fpf-0004",
+  "title": "研究用合成医療記録データの生成と公開",
+  "region": "国外",
+  "domain": "医療",
+  "organization": "Replica Analytics / University of Alberta / Health Cities",
+  "usecase_category": [
+    "外部分析者活用",
+    "R&D"
+  ],
+  "summary": "カナダ・アルバータ州で、非営利団体Health Cities、アルバータ大学、製薬会社Merck Canada、Replica Analyticsが連携し、10万件の医療記録から合成医療データを生成した事例。プライバシー規制により共有が難しい医療データの代替として、学生や研究者が安全にデータサイエンス研究を行える環境を整備した。",
+  "value_proposition": "通常はプライバシー規制で共有できない医療データを合成データで代替し、学生・研究者の医療データ分析の学習・研究機会を大幅に拡大。実データと同等の統計的特性を持つデータにより、研究の質も維持。製品レベルとして運用段階に到達した実績あり。",
+  "synthetic_generation_method": "Replica Analytics社の合成データ技術を使用。アルバータ州の10万件の医療記録を学習データとし、実在の患者情報を一切含まない合成医療記録を機械学習モデルにより生成。",
+  "safety_evaluation_method": "合成データはAIが新たに生成した架空の記録であり、実在の患者とは一対一で対応しないため、個人の特定は原理的に不可能。さらにアルバータ州情報・プライバシーコミッショナーが助言役として参画し、プライバシー保護の妥当性を第三者の立場から確認。",
+  "utility_evaluation_method": "生成した合成データの統計的特性（疾患の分布、年齢構成、治療パターンなど）を元の医療記録と比較し、研究目的に十分な精度を持つことを検証。製品レベル（Product）として運用段階に到達。",
+  "tags": [
+    "医療記録",
+    "研究データ",
+    "人口健康",
+    "Replica Analytics",
+    "カナダ"
+  ],
+  "sources": [
+    {
+      "source_type": "web",
+      "title": "GOV.UK: Repository of PETs Use Cases - Health and Social Care",
+      "url": "https://www.gov.uk/guidance/repository-of-privacy-enhancing-technologies-pets-use-cases/health-and-social-care",
+      "note": "UK政府PETsリポジトリにおけるReplica Analytics事例"
+    },
+    {
+      "source_type": "web",
+      "title": "FPF: Repository for Privacy Enhancing Technologies (PETs)",
+      "url": "https://fpf.org/global/repository-for-privacy-enhancing-technologies-pets/",
+      "note": "FPF PETsリポジトリでの掲載"
+    }
+  ],
+  "figures": [
+    {
+      "type": "data_flow",
+      "title": "合成医療記録データの生成・公開フロー",
+      "data": {
+        "nodes": [
+          {
+            "id": "s1",
+            "label": "アルバータ州の医療記録データ（10万件）",
+            "category": "source"
+          },
+          {
+            "id": "s2",
+            "label": "プライバシー規制による医療データ共有制約",
+            "category": "constraint"
+          },
+          {
+            "id": "p1",
+            "label": "Replica Analyticsで合成医療記録を生成",
+            "category": "process"
+          },
+          {
+            "id": "a1",
+            "label": "学生・研究者がデータサイエンス研究に活用",
+            "category": "application"
+          },
+          {
+            "id": "a2",
+            "label": "医療データ分析の学習・研究機会を拡大",
+            "category": "outcome"
+          }
+        ],
+        "edges": []
+      },
+      "note": ""
+    }
+  ],
+  "status": "draft",
+  "created_at": "2026-03-05T00:00:00+09:00",
+  "updated_at": "2026-03-05T00:00:00+09:00"
+}

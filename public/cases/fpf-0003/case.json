@@ -1,0 +1,78 @@
+{
+  "id": "fpf-0003",
+  "title": "保険分野における合成データを用いた予測分析の最適化",
+  "region": "国外",
+  "domain": "金融",
+  "domain_sub": "保険",
+  "organization": "Provinzial / Statice",
+  "usecase_category": [
+    "組織内データ共有",
+    "R&D"
+  ],
+  "summary": "ドイツの保険会社Provinzialが、Statice社の合成データプラットフォームを活用し、顧客に最適な保険商品を提案する「next best offer」推薦エンジン等の予測分析モデルを最適化した事例。合成データの利用により、プライバシーリスク評価に要する期間を3か月以上短縮した。",
+  "value_proposition": "従来は実データを使う際に必要だった長期間のプライバシーリスク評価プロセスを合成データで代替し、3か月以上の開発期間短縮を実現。顧客のプライバシー保護と事業効率化を両立した。",
+  "synthetic_generation_method": "Statice社の合成データプラットフォームを使用。保険顧客の属性・契約情報・行動データの統計的特性を保持した合成データを自動生成し、機械学習モデルの学習データとして使用。",
+  "safety_evaluation_method": "合成データには実在の顧客情報が含まれないため、モデル開発時の実データに対するプライバシーリスク評価が不要に。Staticeプラットフォームに組み込まれたプライバシー保護機能により、元データからの個人特定を防止。",
+  "utility_evaluation_method": "合成データで学習したnext best offer推薦エンジン等の予測モデルの精度を、実データで学習したモデルの精度と比較し、実用に十分な分析精度が維持されていることを検証。",
+  "tags": [
+    "保険",
+    "推薦エンジン",
+    "予測分析",
+    "3か月短縮",
+    "Statice"
+  ],
+  "sources": [
+    {
+      "source_type": "web",
+      "title": "GOV.UK: Repository of PETs Use Cases - Finance and Insurance",
+      "url": "https://www.gov.uk/guidance/repository-of-privacy-enhancing-technologies-pets-use-cases/finance-and-insurance",
+      "note": "UK政府PETsリポジトリにおけるStatice/Provinzial事例"
+    },
+    {
+      "source_type": "web",
+      "title": "FPF: Repository for Privacy Enhancing Technologies (PETs)",
+      "url": "https://fpf.org/global/repository-for-privacy-enhancing-technologies-pets/",
+      "note": "FPF PETsリポジトリでの掲載"
+    }
+  ],
+  "figures": [
+    {
+      "type": "data_flow",
+      "title": "保険予測分析における合成データ活用フロー",
+      "data": {
+        "nodes": [
+          {
+            "id": "s1",
+            "label": "保険顧客データ",
+            "category": "source"
+          },
+          {
+            "id": "s2",
+            "label": "プライバシーリスク評価に長期間が必要",
+            "category": "constraint"
+          },
+          {
+            "id": "p1",
+            "label": "Staticeプラットフォームで合成データを生成",
+            "category": "process"
+          },
+          {
+            "id": "a1",
+            "label": "next best offer推薦エンジン等の予測モデル最適化",
+            "category": "application"
+          },
+          {
+            "id": "a2",
+            "label": "プライバシー評価期間を3か月以上短縮",
+            "category": "outcome"
+          }
+        ],
+        "edges": []
+      },
+      "note": ""
+    }
+  ],
+  "status": "draft",
+  "created_at": "2026-03-05T00:00:00+09:00",
+  "updated_at": "2026-03-05T00:00:00+09:00"
+}
