@@ -48,6 +48,11 @@ export default function CaseCard({ caseItem }: CaseCardProps) {
         <p className="text-xs text-gray-500 mb-3">{categoryText}</p>
       )}
 
+      {/* Updated at */}
+      <p className="text-xs text-gray-400 mb-3">
+        更新: {new Date(caseItem.updated_at).toLocaleDateString('ja-JP')}
+      </p>
+
       {/* Tags */}
       <div className="flex flex-wrap gap-1.5">
         {caseItem.region && (
