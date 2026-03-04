@@ -11,7 +11,7 @@
   ],
   "summary": "がん臨床データの利用には申請・審査が必要で、研究企画の検討やプログラム開発の着手までに時間がかかっていた。NHS Digitalは100万人超の合成データを配布し、審査不要で即座に研究準備に取り掛かれる環境を提供した。",
   "value_proposition": "申請・審査不要で研究準備に着手可能に。分析プログラムの作成を迅速化。",
-  "synthetic_generation_method": "調査中",
+  "synthetic_generation_method": "調査中（https://simulacrum.healthdatainsight.org.uk/wp/wp-content/uploads/2018/11/Methodology-Overview-Nov18.pdf）",
   "safety_evaluation_method": "調査中",
   "utility_evaluation_method": "調査中",
   "tags": [
@@ -29,6 +29,12 @@
       "source_type": "web",
       "title": "プライバシー保護合成データの活用事例：Simulacrumを用いて実施された研究の事例調査",
       "url": "https://qiita.com/gg_hatano/items/4b36cd51b5064cbd0bb4",
+      "note": ""
+    },
+    {
+      "source_type": "web",
+      "title": "NHS Digital Simulacrum",
+      "url": "https://simulacrum.healthdatainsight.org.uk/available-data/",
       "note": ""
     }
   ],
@@ -72,5 +78,5 @@
   ],
   "status": "seed",
   "created_at": "2026-02-26T00:00:00+09:00",
-  "updated_at": "2026-03-04T00:52:32.192Z"
+  "updated_at": "2026-03-04T01:30:21.941Z"
 }
