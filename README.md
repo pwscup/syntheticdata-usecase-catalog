@@ -8,7 +8,6 @@
 
 ```
 public/cases/
-├── index.json          ← 事例IDの一覧（ここに追加しないと表示されません）
 ├── seed-0001/
 │   └── case.json       ← 事例データ本体
 ├── seed-0002/
@@ -16,12 +15,22 @@ public/cases/
 └── ...
 ```
 
+> **Note**: `index.json`（事例ID一覧）はビルド時にViteプラグインが自動生成します。手動での管理は不要です。
+
 ### 新しい事例を追加する手順
 
 1. `public/cases/` に新しいディレクトリを作る（例: `seed-0013/`）
 2. `case.json` を作成する（後述のテンプレートを参照）
-3. `public/cases/index.json` の `cases` 配列にIDを追加する
-4. ブラウザで表示を確認する（`npm run dev`）
+3. ブラウザで表示を確認する（`npm run dev`）
+
+> GitHub上で直接追加する場合は、`public/cases/<id>/case.json` としてファイルを作成し、PRを出してください。mainにマージされると自動でデプロイされます。
+
+### 事例を削除する手順
+
+1. `public/cases/<id>/` ディレクトリごと削除する
+2. PRを出してmainにマージする（デプロイ時に自動で一覧から除外されます）
+
+> GitHub上で直接削除する場合は、該当ディレクトリ内のファイルを削除してください。ディレクトリが空になれば自動的に一覧から除外されます。
 
 ### case.json のテンプレート
 
@@ -171,7 +180,7 @@ npm run dev      # 開発サーバーを起動
 文献（PDF・Webページ）からAI（Claude等）を使って `case.json` を生成できます。以下のプロンプトテンプレートを用意しています。
 
 - **[文献から新規事例を作成する](docs/prompts/create-case.md)** — 文献URLやPDFを渡して case.json のドラフトを生成
-- **[既存事例を追加文献で補完する](docs/prompts/enrich-case.md)** — 「調査中」の項目を追加文献の情報で埋める
+- **[既存事例を追加文献で補完・改善する](docs/prompts/enrich-case.md)** — 追加文献の情報で事例の内容をより正確・詳細に改善
 
 ---
 
