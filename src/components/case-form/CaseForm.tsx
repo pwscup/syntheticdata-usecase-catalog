@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useCallback } from 'react'
 import { useForm, FormProvider } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { caseFormSchema, type CaseFormData } from '../../schemas/case.schema'
@@ -9,6 +9,7 @@ import TechFields from './TechFields'
 import SourceFields from './SourceFields'
 import TagInput from './TagInput'
 import CategoryCheckboxes from './CategoryCheckboxes'
+import AiAssistPanel from './AiAssistPanel'
 
 function CollapsibleSection({ title, badge, children }: { title: string; badge?: string; children: React.ReactNode }) {
   const [open, setOpen] = useState(false)
@@ -56,6 +57,17 @@ export default function CaseForm({ defaultValues, onSubmit, submitLabel }: CaseF
     },
   })
 
+  const handleAiImport = useCallback(
+    (data: CaseFormData) => {
+      methods.reset(data)
+    },
+    [methods],
+  )
+
+  const currentCaseJson = isEdit
+    ? JSON.stringify(defaultValues, null, 2)
+    : undefined
+
   function handleSubmit(formData: CaseFormData) {
     const now = new Date().toISOString()
     const fullCase: Case = {
@@ -72,6 +84,13 @@ export default function CaseForm({ defaultValues, onSubmit, submitLabel }: CaseF
   return (
     <FormProvider {...methods}>
       <form onSubmit={methods.handleSubmit((data) => handleSubmit(data as CaseFormData))} className="space-y-6">
+        {/* AIアシスト */}
+        <AiAssistPanel
+          mode={isEdit ? 'edit' : 'create'}
+          currentCaseJson={currentCaseJson}
+          onImport={handleAiImport}
+        />
+
         {/* 出典（必須） */}
         <SourceFields />
 
