@@ -166,6 +166,13 @@ npm run dev      # 開発サーバーを起動
 
 事例データはZodスキーマでバリデーションされます。必須フィールドが欠けているとコンソールにエラーが表示されます。
 
+### AIを使った事例作成
+
+文献（PDF・Webページ）からAI（Claude等）を使って `case.json` を生成できます。以下のプロンプトテンプレートを用意しています。
+
+- **[文献から新規事例を作成する](docs/prompts/create-case.md)** — 文献URLやPDFを渡して case.json のドラフトを生成
+- **[既存事例を追加文献で補完する](docs/prompts/enrich-case.md)** — 「調査中」の項目を追加文献の情報で埋める
+
 ---
 
 開発者向けの技術情報は [docs/CONTRIBUTING.md](docs/CONTRIBUTING.md) を参照してください。
