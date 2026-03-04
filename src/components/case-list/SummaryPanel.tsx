@@ -2,10 +2,13 @@ import { useMemo } from 'react'
 import type { Case } from '../../types'
 import { buildSummary, type CountItem } from '../../lib/summary'
 import { REGION_OPTIONS, DOMAIN_OPTIONS, USECASE_CATEGORY_OPTIONS } from '../../constants/categories'
+import type { FilterState } from '../../hooks/useFilter'
 
 interface SummaryPanelProps {
   filteredCases: Case[]
   totalCases: number
+  filters: FilterState
+  onToggleFilter: (key: 'region' | 'domain' | 'usecase_category', value: string) => void
 }
 
 function mergeWithAllLabels(items: CountItem[], allLabels: readonly string[]): CountItem[] {
@@ -16,9 +19,13 @@ function mergeWithAllLabels(items: CountItem[], allLabels: readonly string[]): C
 function StackedBar({
   items,
   colorMap,
+  activeValues,
+  onToggle,
 }: {
   items: CountItem[]
   colorMap: Record<string, string>
+  activeValues: string[]
+  onToggle: (value: string) => void
 }) {
   if (items.length === 0) return null
 
@@ -27,26 +34,40 @@ function StackedBar({
       {/* Stacked bar */}
       <div className="flex h-7 rounded-full overflow-hidden bg-gray-100">
         {items.map((item) => (
-          <div
+          <button
             key={item.label}
+            type="button"
             title={`${item.label}: ${item.count}件 (${item.percentage}%)`}
-            className={`h-full transition-all duration-150 ${colorMap[item.label] ?? 'bg-gray-400'}`}
+            onClick={() => onToggle(item.label)}
+            className={`h-full transition-all duration-150 hover:brightness-110 ${colorMap[item.label] ?? 'bg-gray-400'}`}
             style={{ width: `${item.percentage}%`, minWidth: item.percentage > 0 ? '4px' : '0' }}
           />
         ))}
       </div>
       {/* Legend */}
       <div className="flex flex-wrap gap-x-1 gap-y-1 mt-2">
-        {items.map((item) => (
-          <span
-            key={item.label}
-            className={`flex items-center gap-1 text-xs rounded-md px-1.5 py-0.5 ${item.count === 0 ? 'opacity-40 pointer-events-none' : ''} text-gray-600`}
-          >
-            <span className={`inline-block w-2.5 h-2.5 rounded-sm shrink-0 ${colorMap[item.label] ?? 'bg-gray-400'}`} />
-            {item.label}
-            <span className="text-gray-400">{item.count}</span>
-          </span>
-        ))}
+        {items.map((item) => {
+          const isActive = activeValues.includes(item.label)
+          return (
+            <button
+              key={item.label}
+              type="button"
+              onClick={() => onToggle(item.label)}
+              className={`flex items-center gap-1 text-xs rounded-md px-1.5 py-0.5 transition-colors ${
+                item.count === 0
+                  ? 'opacity-40 cursor-default'
+                  : isActive
+                    ? 'bg-gray-200 ring-1 ring-gray-400 text-gray-900'
+                    : 'hover:bg-gray-100 text-gray-600 cursor-pointer'
+              }`}
+              disabled={item.count === 0}
+            >
+              <span className={`inline-block w-2.5 h-2.5 rounded-sm shrink-0 ${colorMap[item.label] ?? 'bg-gray-400'}`} />
+              {item.label}
+              <span className="text-gray-400">{item.count}</span>
+            </button>
+          )
+        })}
       </div>
     </div>
   )
@@ -73,7 +94,7 @@ const categoryColors: Record<string, string> = {
   'フィージビリティ検証': 'bg-orange-500',
 }
 
-export default function SummaryPanel({ filteredCases, totalCases }: SummaryPanelProps) {
+export default function SummaryPanel({ filteredCases, totalCases, filters, onToggleFilter }: SummaryPanelProps) {
   const summary = useMemo(() => buildSummary(filteredCases), [filteredCases])
 
   const regionItems = useMemo(
@@ -109,27 +130,41 @@ export default function SummaryPanel({ filteredCases, totalCases }: SummaryPanel
           {/* Mini stacked bar for region */}
           <div className="flex h-5 flex-1 max-w-48 rounded-full overflow-hidden bg-gray-100">
             {regionItems.map((r) => (
-              <div
+              <button
                 key={r.label}
+                type="button"
                 title={`${r.label}: ${r.count}件 (${r.percentage}%)`}
-                className={`h-full transition-all duration-150 ${regionColors[r.label] ?? 'bg-gray-400'}`}
+                onClick={() => onToggleFilter('region', r.label)}
+                className={`h-full transition-all duration-150 hover:brightness-110 ${regionColors[r.label] ?? 'bg-gray-400'}`}
                 style={{ width: `${r.percentage}%`, minWidth: r.percentage > 0 ? '4px' : '0' }}
               />
             ))}
           </div>
           {/* Region labels */}
           <div className="flex gap-1">
-            {regionItems.map((r) => (
-              <span
-                key={r.label}
-                className={`flex items-center gap-1 text-xs rounded-md px-1.5 py-0.5 ${r.count === 0 ? 'opacity-40' : ''} text-gray-600`}
-              >
-                <span className={`inline-block w-2.5 h-2.5 rounded-sm shrink-0 ${regionColors[r.label] ?? 'bg-gray-400'}`} />
-                {r.label}
-                <span className="font-semibold text-gray-800">{r.count}</span>
-                <span className="text-gray-400">({r.percentage}%)</span>
-              </span>
-            ))}
+            {regionItems.map((r) => {
+              const isActive = filters.region.includes(r.label)
+              return (
+                <button
+                  key={r.label}
+                  type="button"
+                  onClick={() => onToggleFilter('region', r.label)}
+                  className={`flex items-center gap-1 text-xs rounded-md px-1.5 py-0.5 transition-colors ${
+                    r.count === 0
+                      ? 'opacity-40 cursor-default'
+                      : isActive
+                        ? 'bg-gray-200 ring-1 ring-gray-400 text-gray-900'
+                        : 'hover:bg-gray-100 text-gray-600 cursor-pointer'
+                  }`}
+                  disabled={r.count === 0}
+                >
+                  <span className={`inline-block w-2.5 h-2.5 rounded-sm shrink-0 ${regionColors[r.label] ?? 'bg-gray-400'}`} />
+                  {r.label}
+                  <span className="font-semibold text-gray-800">{r.count}</span>
+                  <span className="text-gray-400">({r.percentage}%)</span>
+                </button>
+              )
+            })}
           </div>
         </div>
       </div>
@@ -141,6 +176,8 @@ export default function SummaryPanel({ filteredCases, totalCases }: SummaryPanel
           <StackedBar
             items={domainItems}
             colorMap={domainColors}
+            activeValues={filters.domain}
+            onToggle={(v) => onToggleFilter('domain', v)}
           />
         </div>
 
@@ -149,6 +186,8 @@ export default function SummaryPanel({ filteredCases, totalCases }: SummaryPanel
           <StackedBar
             items={categoryItems}
             colorMap={categoryColors}
+            activeValues={filters.usecase_category}
+            onToggle={(v) => onToggleFilter('usecase_category', v)}
           />
         </div>
       </div>

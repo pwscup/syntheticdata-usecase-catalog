@@ -44,7 +44,7 @@ export default function CaseListPage() {
   return (
     <div>
       {/* Summary area - primary first view */}
-      <SummaryPanel filteredCases={filteredCases} totalCases={cases.length} />
+      <SummaryPanel filteredCases={filteredCases} totalCases={cases.length} filters={filters} onToggleFilter={toggleFilter} />
 
       {/* Toolbar: count + search + sort in one row */}
       <div className="flex flex-col sm:flex-row sm:items-center gap-3 mb-3">
