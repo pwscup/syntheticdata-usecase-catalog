@@ -2,6 +2,7 @@ import { useState } from 'react'
 import type { CaseFormData } from '../../schemas/case.schema'
 import { generateCreatePrompt, generateEnrichPrompt } from '../../constants/prompts'
 import { parseCaseFromAiOutput } from '../../lib/import-case'
+import { useCopiedState } from '../../hooks/useCopiedState'
 
 interface AiAssistPanelProps {
   mode: 'create' | 'edit'
@@ -12,7 +13,7 @@ interface AiAssistPanelProps {
 export default function AiAssistPanel({ mode, currentCaseJson, onImport }: AiAssistPanelProps) {
   const [isOpen, setIsOpen] = useState(false)
   const [isPromptExpanded, setIsPromptExpanded] = useState(false)
-  const [copied, setCopied] = useState(false)
+  const { copied, markCopied } = useCopiedState()
   const [importText, setImportText] = useState('')
   const [importStatus, setImportStatus] = useState<
     { type: 'success' } | { type: 'error'; message: string } | null
@@ -24,8 +25,7 @@ export default function AiAssistPanel({ mode, currentCaseJson, onImport }: AiAss
 
   async function handleCopy() {
     await navigator.clipboard.writeText(prompt)
-    setCopied(true)
-    setTimeout(() => setCopied(false), 2000)
+    markCopied()
   }
 
   function handleImport() {

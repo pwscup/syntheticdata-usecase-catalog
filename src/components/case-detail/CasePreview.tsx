@@ -1,22 +1,22 @@
 import { useState } from 'react'
 import type { Case } from '../../types'
 import { exportCases } from '../../lib/export-import'
+import { useCopiedState } from '../../hooks/useCopiedState'
 import CaseDetailView from './CaseDetailView'
 
 const GITHUB_REPO_URL = 'https://github.com/pwscup/syntheticdata-usecase-catalog'
 
 export default function CasePreview({ caseData, onBack }: { caseData: Case; onBack: () => void }) {
   const [showGuide, setShowGuide] = useState(false)
-  const [copied, setCopied] = useState(false)
+  const { copied, markCopied } = useCopiedState(3000)
 
   const suggestedPath = `public/cases/${caseData.id}/case.json`
 
   const handleGitHub = async () => {
     const json = JSON.stringify(caseData, null, 2)
     await navigator.clipboard.writeText(json)
-    setCopied(true)
+    markCopied()
     setShowGuide(true)
-    setTimeout(() => setCopied(false), 3000)
   }
 
   return (

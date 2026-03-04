@@ -1,4 +1,4 @@
-import { useState, useCallback } from 'react'
+import { useState, useCallback, useMemo } from 'react'
 import type { Case } from '../../types'
 import type { FilterState } from '../../hooks/useFilter'
 
@@ -10,8 +10,20 @@ interface FilterPanelProps {
   onClear: () => void
 }
 
-function countByFieldValue(cases: Case[], field: string, value: string): number {
-  return cases.filter(c => c[field as keyof Case] === value).length
+/** Build counts for all field values in a single pass */
+function buildFieldCounts(cases: Case[], field: string): Map<string, number> {
+  const counts = new Map<string, number>()
+  for (const c of cases) {
+    const value = c[field as keyof Case]
+    if (Array.isArray(value)) {
+      for (const v of value) {
+        if (typeof v === 'string') counts.set(v, (counts.get(v) ?? 0) + 1)
+      }
+    } else if (typeof value === 'string' && value) {
+      counts.set(value, (counts.get(value) ?? 0) + 1)
+    }
+  }
+  return counts
 }
 
 const filterSections: { key: keyof Omit<FilterState, 'query' | 'sortBy' | 'page'>; label: string }[] = [
@@ -22,6 +34,15 @@ const filterSections: { key: keyof Omit<FilterState, 'query' | 'sortBy' | 'page'
 
 export default function FilterPanel({ filters, filterOptions, filteredCases, onToggle, onClear }: FilterPanelProps) {
   const [isOpen, setIsOpen] = useState(false)
+
+  // Pre-compute counts per field in a single pass (instead of N+1 per option)
+  const fieldCounts = useMemo(() => {
+    const counts: Record<string, Map<string, number>> = {}
+    for (const section of filterSections) {
+      counts[section.key] = buildFieldCounts(filteredCases, section.key)
+    }
+    return counts
+  }, [filteredCases])
 
   const hasActiveFilters =
     filters.region.length > 0 ||
@@ -59,7 +80,7 @@ export default function FilterPanel({ filters, filterOptions, filteredCases, onT
             </h3>
             <div className="space-y-1">
               {options.map((option) => {
-                const count = countByFieldValue(filteredCases, section.key, option)
+                const count = fieldCounts[section.key]?.get(option) ?? 0
                 const isChecked = selected.includes(option)
                 const isZero = count === 0 && !isChecked
                 return (

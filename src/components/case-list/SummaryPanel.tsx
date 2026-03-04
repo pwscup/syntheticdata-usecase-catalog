@@ -2,6 +2,7 @@ import { useMemo } from 'react'
 import type { Case } from '../../types'
 import { buildSummary, type CountItem } from '../../lib/summary'
 import { REGION_OPTIONS, DOMAIN_OPTIONS, USECASE_CATEGORY_OPTIONS } from '../../constants/categories'
+import { DOMAIN_COLORS, REGION_COLORS, CATEGORY_COLORS } from '../../constants/styles'
 import type { FilterState } from '../../hooks/useFilter'
 
 interface SummaryPanelProps {
@@ -73,42 +74,24 @@ function StackedBar({
   )
 }
 
-const regionColors: Record<string, string> = {
-  '国内': 'bg-blue-500',
-  '国外': 'bg-amber-500',
-}
-
-const domainColors: Record<string, string> = {
-  '金融': 'bg-emerald-500',
-  '医療': 'bg-rose-500',
-  '公共': 'bg-indigo-500',
-  '通信': 'bg-cyan-500',
-}
-
-const categoryColors: Record<string, string> = {
-  '組織内データ共有': 'bg-violet-500',
-  '組織間データ共有': 'bg-purple-500',
-  '外部分析者活用': 'bg-fuchsia-500',
-  'R&D': 'bg-sky-500',
-  'データ販売': 'bg-teal-500',
-  'フィージビリティ検証': 'bg-orange-500',
-}
+// Derived flat color maps for StackedBar (bg only)
+const regionColorMap = Object.fromEntries(
+  Object.entries(REGION_COLORS).map(([k, v]) => [k, v.bg]),
+)
+const domainColorMap = Object.fromEntries(
+  Object.entries(DOMAIN_COLORS).map(([k, v]) => [k, v.bg]),
+)
 
 export default function SummaryPanel({ filteredCases, totalCases, filters, onToggleFilter }: SummaryPanelProps) {
-  const summary = useMemo(() => buildSummary(filteredCases), [filteredCases])
-
-  const regionItems = useMemo(
-    () => mergeWithAllLabels(summary.byRegion, REGION_OPTIONS),
-    [summary],
-  )
-  const domainItems = useMemo(
-    () => mergeWithAllLabels(summary.byDomain, DOMAIN_OPTIONS),
-    [summary],
-  )
-  const categoryItems = useMemo(
-    () => mergeWithAllLabels(summary.byUsecaseCategory, USECASE_CATEGORY_OPTIONS),
-    [summary],
-  )
+  const { summary, regionItems, domainItems, categoryItems } = useMemo(() => {
+    const s = buildSummary(filteredCases)
+    return {
+      summary: s,
+      regionItems: mergeWithAllLabels(s.byRegion, REGION_OPTIONS),
+      domainItems: mergeWithAllLabels(s.byDomain, DOMAIN_OPTIONS),
+      categoryItems: mergeWithAllLabels(s.byUsecaseCategory, USECASE_CATEGORY_OPTIONS),
+    }
+  }, [filteredCases])
 
   const isFiltered = filteredCases.length !== totalCases
 
@@ -135,7 +118,7 @@ export default function SummaryPanel({ filteredCases, totalCases, filters, onTog
                 type="button"
                 title={`${r.label}: ${r.count}件 (${r.percentage}%)`}
                 onClick={() => onToggleFilter('region', r.label)}
-                className={`h-full transition-all duration-150 hover:brightness-110 ${regionColors[r.label] ?? 'bg-gray-400'}`}
+                className={`h-full transition-all duration-150 hover:brightness-110 ${regionColorMap[r.label] ?? 'bg-gray-400'}`}
                 style={{ width: `${r.percentage}%`, minWidth: r.percentage > 0 ? '4px' : '0' }}
               />
             ))}
@@ -158,7 +141,7 @@ export default function SummaryPanel({ filteredCases, totalCases, filters, onTog
                   }`}
                   disabled={r.count === 0}
                 >
-                  <span className={`inline-block w-2.5 h-2.5 rounded-sm shrink-0 ${regionColors[r.label] ?? 'bg-gray-400'}`} />
+                  <span className={`inline-block w-2.5 h-2.5 rounded-sm shrink-0 ${regionColorMap[r.label] ?? 'bg-gray-400'}`} />
                   {r.label}
                   <span className="font-semibold text-gray-800">{r.count}</span>
                   <span className="text-gray-400">({r.percentage}%)</span>
@@ -175,7 +158,7 @@ export default function SummaryPanel({ filteredCases, totalCases, filters, onTog
           <h3 className="text-sm font-semibold text-gray-700 mb-2">分野別</h3>
           <StackedBar
             items={domainItems}
-            colorMap={domainColors}
+            colorMap={domainColorMap}
             activeValues={filters.domain}
             onToggle={(v) => onToggleFilter('domain', v)}
           />
@@ -185,7 +168,7 @@ export default function SummaryPanel({ filteredCases, totalCases, filters, onTog
           <h3 className="text-sm font-semibold text-gray-700 mb-2">ユースケース分類別</h3>
           <StackedBar
             items={categoryItems}
-            colorMap={categoryColors}
+            colorMap={CATEGORY_COLORS}
             activeValues={filters.usecase_category}
             onToggle={(v) => onToggleFilter('usecase_category', v)}
           />

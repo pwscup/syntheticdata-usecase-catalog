@@ -1,31 +1,14 @@
 import { Link } from 'react-router-dom'
 import type { Case } from '../../types'
+import { DOMAIN_COLORS, REGION_COLORS } from '../../constants/styles'
 
 interface CaseCardProps {
   caseItem: Case
 }
 
-const domainBorderColors: Record<string, string> = {
-  '金融': 'border-l-emerald-500',
-  '医療': 'border-l-rose-500',
-  '公共': 'border-l-indigo-500',
-  '通信': 'border-l-cyan-500',
-}
-
-const regionStyles: Record<string, string> = {
-  '国内': 'bg-blue-50 text-blue-700 ring-1 ring-blue-200',
-  '国外': 'bg-amber-50 text-amber-700 ring-1 ring-amber-200',
-}
-
-const domainStyles: Record<string, string> = {
-  '金融': 'bg-emerald-50 text-emerald-700 ring-1 ring-emerald-200',
-  '医療': 'bg-rose-50 text-rose-700 ring-1 ring-rose-200',
-  '公共': 'bg-indigo-50 text-indigo-700 ring-1 ring-indigo-200',
-  '通信': 'bg-cyan-50 text-cyan-700 ring-1 ring-cyan-200',
-}
-
 export default function CaseCard({ caseItem }: CaseCardProps) {
-  const borderColor = domainBorderColors[caseItem.domain] ?? 'border-l-gray-400'
+  const domainStyle = DOMAIN_COLORS[caseItem.domain as keyof typeof DOMAIN_COLORS]
+  const borderColor = domainStyle?.border ?? 'border-l-gray-400'
   const categoryText = Array.isArray(caseItem.usecase_category)
     ? caseItem.usecase_category.join(', ')
     : caseItem.usecase_category
@@ -56,11 +39,11 @@ export default function CaseCard({ caseItem }: CaseCardProps) {
       {/* Tags */}
       <div className="flex flex-wrap gap-1.5">
         {caseItem.region && (
-          <span className={`text-xs font-medium px-2 py-0.5 rounded-full ${regionStyles[caseItem.region] ?? 'bg-gray-100 text-gray-600'}`}>
+          <span className={`text-xs font-medium px-2 py-0.5 rounded-full ${REGION_COLORS[caseItem.region]?.badge ?? 'bg-gray-100 text-gray-600'}`}>
             {caseItem.region}
           </span>
         )}
-        <span className={`text-xs font-medium px-2 py-0.5 rounded-full ${domainStyles[caseItem.domain] ?? 'bg-gray-100 text-gray-600'}`}>
+        <span className={`text-xs font-medium px-2 py-0.5 rounded-full ${domainStyle?.badge ?? 'bg-gray-100 text-gray-600'}`}>
           {caseItem.domain}
         </span>
         {caseItem.tags.slice(0, 2).map((tag) => (
