@@ -25,3 +25,6 @@ dist-ssr
 
 # develop
 gitworktree
+
+# ビルド時に自動生成
+public/cases/index.json
