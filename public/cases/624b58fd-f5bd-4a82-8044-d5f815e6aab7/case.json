@@ -1,40 +1,35 @@
 {
-  "schema_version": "1.0",
-  "cases": [
+  "title": "大学PBL講義における合成データ提供",
+  "region": "国内",
+  "domain": "金融",
+  "domain_sub": "学術",
+  "organization": "三井住友銀行",
+  "usecase_category": [
+    "組織間データ共有"
+  ],
+  "summary": "金融データの分析にはビジネス理解とデータサイエンスの両方の知識が必要だが、プライバシーの観点から大学教育の場に実データを提供するのは困難だった。三井住友銀行と日本総研は、合成データ生成技術（PETs）を活用して個人特定不可能な疑似データを作成し、一橋大学ソーシャル・データサイエンス学部のPBL演習に提供。受講生が実務に近いデータ分析を実践的に学ぶことを可能にした",
+  "value_proposition": "プライバシーを保護しながらも実世界の特徴を反映した疑似データにより、大学教育の場で実践的なデータサイエンス演習を実現。次世代のデータサイエンティスト育成に貢献するとともに、受講生がPETs（プライバシー強化技術）の重要性を体験的に学ぶ機会を創出した。",
+  "synthetic_generation_method": "調査中",
+  "safety_evaluation_method": "調査中",
+  "utility_evaluation_method": "調査中",
+  "tags": [],
+  "sources": [
     {
-      "title": "大学PBL講義における合成データ提供",
-      "region": "国内",
-      "domain": "金融",
-      "domain_sub": "学術、",
-      "organization": "三井住友銀行",
-      "usecase_category": [
-        "組織間データ共有"
-      ],
-      "summary": "金融データの分析にはビジネス理解とデータサイエンスの両方の知識が必要だが、プライバシーの観点から大学教育の場に実データを提供するのは困難だった。三井住友銀行と日本総研は、合成データ生成技術（PETs）を活用して個人特定不可能な疑似データを作成し、一橋大学ソーシャル・データサイエンス学部のPBL演習に提供。受講生が実務に近いデータ分析を実践的に学ぶことを可能にした",
-      "value_proposition": "プライバシーを保護しながらも実世界の特徴を反映した疑似データにより、大学教育の場で実践的なデータサイエンス演習を実現。次世代のデータサイエンティスト育成に貢献するとともに、受講生がPETs（プライバシー強化技術）の重要性を体験的に学ぶ機会を創出した。",
-      "synthetic_generation_method": "調査中",
-      "safety_evaluation_method": "調査中",
-      "utility_evaluation_method": "調査中",
-      "tags": [],
-      "sources": [
-        {
-          "source_type": "pdf",
-          "title": "一橋大学におけるデータサイエンス教育強化の産学連携 PBL（Project-Based Learning）演習の実施について",
-          "url": "https://www.smbc.co.jp/news/pdf/j20241226_01.pdf",
-          "note": ""
-        },
-        {
-          "source_type": "web",
-          "title": "一橋大学におけるデータサイエンス教育強化の産学連携 PBL（Project-Based-Learning）演習の実施について",
-          "url": "https://www.jri.co.jp/page.jsp?id=109678",
-          "note": ""
-        }
-      ],
-      "id": "f01905ed-0e80-4597-8551-db460987e2e8",
-      "figures": [],
-      "status": "user",
-      "created_at": "2026-03-04T01:40:14.931Z",
-      "updated_at": "2026-03-04T01:40:14.931Z"
+      "source_type": "pdf",
+      "title": "一橋大学におけるデータサイエンス教育強化の産学連携 PBL（Project-Based Learning）演習の実施について",
+      "url": "https://www.smbc.co.jp/news/pdf/j20241226_01.pdf",
+      "note": ""
+    },
+    {
+      "source_type": "web",
+      "title": "一橋大学におけるデータサイエンス教育強化の産学連携 PBL（Project-Based-Learning）演習の実施について",
+      "url": "https://www.jri.co.jp/page.jsp?id=109678",
+      "note": ""
     }
-  ]
+  ],
+  "id": "624b58fd-f5bd-4a82-8044-d5f815e6aab7",
+  "figures": [],
+  "status": "user",
+  "created_at": "2026-03-04T01:40:14.931Z",
+  "updated_at": "2026-03-04T01:40:14.931Z"
 }
