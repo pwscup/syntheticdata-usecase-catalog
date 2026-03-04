@@ -15,7 +15,13 @@ export async function fetchSeedCases(basePath = "."): Promise<Case[]> {
         try {
           const res = await fetch(`${basePath}/cases/${id}/case.json`)
           if (!res.ok) return null
-          return (await res.json()) as Case
+          const data: unknown = await res.json()
+          // case.json が不正な構造（配列ラッパー等）の場合はスキップ
+          if (typeof data !== 'object' || data === null || !('title' in data) || !('id' in data)) {
+            console.warn(`[data-loader] Skipping invalid case: ${id}`)
+            return null
+          }
+          return data as Case
         } catch {
           return null
         }
