@@ -1,5 +1,4 @@
 {
-  "id": "seed-0011",
   "title": "COVID-19診療データの合成データによる外部共有と有用性検証",
   "region": "国外",
   "domain": "医療",
@@ -12,57 +11,28 @@
   "synthetic_generation_method": "調査中",
   "safety_evaluation_method": "調査中",
   "utility_evaluation_method": "下流タスクでの比較評価（特徴探索、入院リスク予測、流行曲線予測などで合成前後比較）",
-  "domain_sub": "COVID-19",
-  "editorial_notes": ["記事本文では方式名の明示なし", "本文記載は主に有用性側"],
   "tags": [
-    "データ共有"
+    "sub:COVID-19",
+    "note:記事本文では方式名の明示なし",
+    "note:本文記載は主に有用性側",
+    "healthcare",
+    "covid19",
+    "data-sharing",
+    "utility:downstream",
+    "region:overseas",
+    "source:NSSOL"
   ],
   "sources": [
     {
       "source_type": "web",
-      "title": "＜技術動向＞「プライバシー保護合成データ」でヘルスケアデータ活用の新時代を開く 〜新しいプライバシー強化技術に大きな期待～",
-      "url": "https://www.nssol.nipponsteel.com/future/stories/trends2023-12.html",
+      "title": "The National COVID Cohort Collaborative: Analyses of Original and Computationally Derived Electronic Health Record Data",
+      "url": "https://www.jmir.org/2021/10/e30697/PDF",
       "note": "米ワシントン大学の事例として、下流タスクでの比較に言及"
     }
   ],
-  "figures": [
-    {
-      "type": "data_flow",
-      "title": "COVID-19診療データの合成データ外部共有フロー",
-      "data": {
-        "nodes": [
-          {
-            "id": "s1",
-            "label": "COVID-19の診療データ",
-            "category": "source"
-          },
-          {
-            "id": "s2",
-            "label": "患者プライバシーで外部配布が困難",
-            "category": "constraint"
-          },
-          {
-            "id": "p1",
-            "label": "合成データを生成して外部共有",
-            "category": "process"
-          },
-          {
-            "id": "a1",
-            "label": "入院リスク予測・流行曲線予測に活用",
-            "category": "application"
-          },
-          {
-            "id": "a2",
-            "label": "実データとほぼ同等の有用性を確認",
-            "category": "outcome"
-          }
-        ],
-        "edges": []
-      },
-      "note": ""
-    }
-  ],
+  "id": "seed-0011",
+  "figures": [],
   "status": "seed",
   "created_at": "2026-02-26T00:00:00+09:00",
-  "updated_at": "2026-02-26T00:00:00+09:00"
+  "updated_at": "2026-03-04T00:49:07.565Z"
 }
