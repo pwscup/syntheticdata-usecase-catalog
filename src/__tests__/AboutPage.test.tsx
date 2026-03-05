@@ -19,16 +19,29 @@ describe('AboutPage', () => {
       </MemoryRouter>,
     )
     expect(screen.getByText('免責事項')).toBeInTheDocument()
-    expect(screen.getByText(/情報提供を目的としており/)).toBeInTheDocument()
+    expect(screen.getByText(/正確性、完全性、最新性について保証するものではありません/)).toBeInTheDocument()
   })
 
-  it('機微情報警告が表示される', () => {
+  it('機微情報の取り扱いについてが表示される', () => {
     render(
       <MemoryRouter>
         <AboutPage />
       </MemoryRouter>,
     )
-    expect(screen.getByText('機微情報に関する警告')).toBeInTheDocument()
-    expect(screen.getByText(/個人情報、顧客識別情報等の機微情報を入力しないでください/)).toBeInTheDocument()
+    expect(screen.getByText('機微情報の取り扱いについて')).toBeInTheDocument()
+    expect(screen.getByText(/機微情報を入力しないでください/)).toBeInTheDocument()
+  })
+
+  it('問い合わせ先が表示される', () => {
+    render(
+      <MemoryRouter>
+        <AboutPage />
+      </MemoryRouter>,
+    )
+    expect(screen.getByText('ご要望・お問い合わせ')).toBeInTheDocument()
+    expect(screen.getByRole('link', { name: 'Issue' })).toHaveAttribute(
+      'href',
+      'https://github.com/pwscup/syntheticdata-usecase-catalog/issues',
+    )
   })
 })
