@@ -1,0 +1,52 @@
+{
+  "id": "rpt-0009",
+  "title": "GDPR準拠の合成データによる自動車保険AIモデル開発",
+  "region": "国外",
+  "domain": "金融",
+  "domain_sub": "保険",
+  "organization": "BeRebel / Aindo",
+  "usecase_category": [
+    "R&D"
+  ],
+  "summary": "イタリアの自動車保険会社BeRebelが、Aindo社の合成データプラットフォームを用い、IVASS（イタリア保険規制当局）のレギュラトリーサンドボックス内でGDPR準拠のAIモデルを開発した事例。合成データで学習したモデルの精度は実データ比99%を達成し、データ準備期間は75%以上短縮された。",
+  "value_proposition": "GDPRと保険業界固有の規制の両方に準拠しつつ、実データに匹敵する精度（99%）のAIモデルを開発。データ準備期間を75%以上短縮し、規制サンドボックスでの検証も完了。",
+  "synthetic_generation_method": "Aindo社の合成データ生成プラットフォームを使用。保険関連の表形式データから、統計的特性を保持した合成データを生成。",
+  "safety_evaluation_method": "GDPR準拠およびイタリア保険規制（IVASS）のレギュラトリーサンドボックス内で検証。合成データがプライバシー保護要件を満たすことを規制当局の枠組みの下で確認。",
+  "utility_evaluation_method": "合成データで学習したAIモデルの精度を実データで学習したモデルと比較。99%の精度一致を達成。また、データ準備期間（time-to-data）が75%以上短縮されたことを計測。",
+  "tags": [
+    "自動車保険",
+    "GDPR",
+    "規制サンドボックス",
+    "99%精度",
+    "Aindo",
+    "PETs"
+  ],
+  "sources": [
+    {
+      "source_type": "web",
+      "title": "Aindo: New case study about synthetic data in insurance - BeRebel",
+      "url": "https://www.aindo.com/news/berebelcasestudy/",
+      "note": "AindoによるBeRebel事例紹介"
+    }
+  ],
+  "figures": [
+    {
+      "type": "data_flow",
+      "title": "GDPR準拠の合成データによる保険AIモデル開発フロー",
+      "data": {
+        "nodes": [
+          { "id": "s1", "label": "BeRebelの自動車保険データ", "category": "source" },
+          { "id": "s2", "label": "GDPR・保険規制によるデータ利用制約", "category": "constraint" },
+          { "id": "p1", "label": "Aindoプラットフォームで合成データを生成", "category": "process" },
+          { "id": "a1", "label": "IVASSサンドボックスでAIモデルを開発・検証", "category": "application" },
+          { "id": "a2", "label": "実データ比99%精度・データ準備75%短縮を実現", "category": "outcome" }
+        ],
+        "edges": []
+      },
+      "note": ""
+    }
+  ],
+  "status": "draft",
+  "created_at": "2026-03-06T00:00:00+09:00",
+  "updated_at": "2026-03-06T00:00:00+09:00"
+}

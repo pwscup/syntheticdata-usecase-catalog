@@ -1,0 +1,52 @@
+{
+  "id": "rpt-0007",
+  "title": "1,600万件の合成患者記録によるML モデル学習基盤の構築",
+  "region": "国外",
+  "domain": "医療",
+  "organization": "大手医療機関（2,000以上の拠点） / Gretel",
+  "usecase_category": [
+    "組織内データ共有",
+    "R&D"
+  ],
+  "summary": "米国の2,000以上の拠点を持つ大規模病院ネットワークが、Gretel社のプラットフォームを用いて分娩関連の合成患者記録を1,600万件以上生成し、患者予測やオペレーション最適化のための機械学習モデルの学習データとして活用した事例。",
+  "value_proposition": "実際の患者データを使わずに1,600万件規模の合成データを生成し、MLモデルの学習に活用。患者プライバシーを保護しつつ、患者予測精度の向上と病院運営の効率化を実現。",
+  "synthetic_generation_method": "Gretel社の合成データ生成プラットフォームを使用。分娩関連の患者記録の統計的特性を保持した1,600万件以上の合成レコードを生成。",
+  "safety_evaluation_method": "合成データには実在の患者情報が含まれず、個人の特定は不可能。実患者データを一切外部に露出させずにMLモデルの学習を実現。",
+  "utility_evaluation_method": "合成データで学習したMLモデルの患者予測精度と病院運営改善効果を検証。",
+  "tags": [
+    "ML学習データ",
+    "患者予測",
+    "大規模生成",
+    "分娩",
+    "Gretel",
+    "PETs"
+  ],
+  "sources": [
+    {
+      "source_type": "web",
+      "title": "Gretel Customer Case Study: Major Healthcare Institution",
+      "url": "https://info.gretel.ai/case-study-major-healthcare-institution",
+      "note": "Gretelによる大手医療機関事例紹介"
+    }
+  ],
+  "figures": [
+    {
+      "type": "data_flow",
+      "title": "大規模合成患者データによるML学習フロー",
+      "data": {
+        "nodes": [
+          { "id": "s1", "label": "病院ネットワークの患者記録（分娩関連）", "category": "source" },
+          { "id": "s2", "label": "患者プライバシーによるML学習データの制約", "category": "constraint" },
+          { "id": "p1", "label": "Gretelで1,600万件超の合成患者記録を生成", "category": "process" },
+          { "id": "a1", "label": "患者予測・オペレーション最適化のMLモデル学習", "category": "application" },
+          { "id": "a2", "label": "プライバシー保護とML精度向上を両立", "category": "outcome" }
+        ],
+        "edges": []
+      },
+      "note": ""
+    }
+  ],
+  "status": "draft",
+  "created_at": "2026-03-06T00:00:00+09:00",
+  "updated_at": "2026-03-06T00:00:00+09:00"
+}

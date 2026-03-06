@@ -1,0 +1,51 @@
+{
+  "id": "rpt-0003",
+  "title": "退役軍人医療機関における合成データ基盤の導入",
+  "region": "国外",
+  "domain": "医療",
+  "organization": "VHA (Veterans Health Administration) / MDClone",
+  "usecase_category": [
+    "組織内データ共有"
+  ],
+  "summary": "米国最大の統合医療システムであるVHA（退役軍人保健局: 1,298施設・900万人以上の退役軍人に医療提供）が、MDClone社の合成データ生成基盤を導入した事例。200万人の患者コホートからオンデマンドで合成データを生成し、IRB審査なしで心不全再入院予測や自殺予防などの分析・ML開発を推進。",
+  "value_proposition": "従来は数か月かかっていたIRB審査や情報アクセス承認を経ずに、医療従事者が必要なデータに即座にアクセス可能に。ケアパス分析や業務改善のスピードを大幅に向上させた。",
+  "synthetic_generation_method": "MDClone社の合成データ生成プラットフォームを使用。実患者データの統計的特性を保持した高品質な合成データを自動生成。",
+  "safety_evaluation_method": "合成データには実在の患者情報が含まれないため、IRB審査なしでの利用が可能。MDCloneプラットフォームの品質保証機能により、個人特定リスクを排除。",
+  "utility_evaluation_method": "合成データでMLモデルを構築し、実データで検証する方式で精度を確認。心不全再入院予測アルゴリズムの開発、自殺予防施策（10%削減目標）のデータ分析に活用し、実務的有用性を実証。",
+  "tags": [
+    "退役軍人",
+    "迅速アクセス",
+    "IRB不要",
+    "業務改善",
+    "MDClone",
+    "PETs"
+  ],
+  "sources": [
+    {
+      "source_type": "web",
+      "title": "MDClone: Using High-Quality Synthetic Data to Support Rapid Innovation - VHA Innovation",
+      "url": "https://mdclone.com/customer-story/using-high-quality-synthetic-data-to-support-rapid-innovation-vha-innovation/",
+      "note": "MDCloneによるVHA事例紹介"
+    }
+  ],
+  "figures": [
+    {
+      "type": "data_flow",
+      "title": "VHAにおける合成データ基盤活用フロー",
+      "data": {
+        "nodes": [
+          { "id": "s1", "label": "VHA患者データ", "category": "source" },
+          { "id": "s2", "label": "IRB審査・情報アクセス承認に長期間", "category": "constraint" },
+          { "id": "p1", "label": "MDCloneで合成患者データを即座に生成", "category": "process" },
+          { "id": "a1", "label": "ケアパス分析・業務改善に活用", "category": "application" },
+          { "id": "a2", "label": "審査不要で迅速なデータアクセスを実現", "category": "outcome" }
+        ],
+        "edges": []
+      },
+      "note": ""
+    }
+  ],
+  "status": "draft",
+  "created_at": "2026-03-06T00:00:00+09:00",
+  "updated_at": "2026-03-06T00:00:00+09:00"
+}

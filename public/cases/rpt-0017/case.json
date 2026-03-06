@@ -1,0 +1,52 @@
+{
+  "id": "rpt-0017",
+  "title": "欧州高級ブランドにおける合成データによるVIPコンバージョン改善",
+  "region": "国外",
+  "domain": "金融",
+  "domain_sub": "小売/マーケティング",
+  "organization": "欧州高級ブランド / Betterdata",
+  "usecase_category": [
+    "R&D"
+  ],
+  "summary": "欧州の著名な高級ブランドが、顧客データが疎でパーソナライズが困難な状況において、Betterdata社の合成データ拡張技術を用いてプロペンシティモデリングを補強し、VIPコンバージョンを約5%改善した事例。データ不足の課題を合成データで解決したマーケティング活用例。",
+  "value_proposition": "実在の顧客データが少なくパーソナライズが困難だった課題を、合成データによるデータ拡張で解決。VIPコンバージョンを約5%改善し、高価値顧客とのエンゲージメントを強化。",
+  "synthetic_generation_method": "Betterdata社の合成データ拡張型プロペンシティモデリング技術を使用。疎な実データセットを合成レコードで補強し、モデルの学習データ量を増加。",
+  "safety_evaluation_method": "合成データ生成プロセスにおいて新たな実在の個人情報は作成されず、既存の顧客データのプライバシーを維持。",
+  "utility_evaluation_method": "VIPコンバージョン率の改善（約5%向上）というビジネス指標で成果を計測。",
+  "tags": [
+    "マーケティング",
+    "データ拡張",
+    "VIP",
+    "プロペンシティモデル",
+    "Betterdata",
+    "PETs"
+  ],
+  "sources": [
+    {
+      "source_type": "web",
+      "title": "Betterdata: Iconic European Luxury Brand",
+      "url": "https://www.betterdata.ai/case-study/iconic-european-luxury-brand",
+      "note": "Betterdataによる欧州高級ブランド事例紹介"
+    }
+  ],
+  "figures": [
+    {
+      "type": "data_flow",
+      "title": "合成データ拡張によるVIPコンバージョン改善フロー",
+      "data": {
+        "nodes": [
+          { "id": "s1", "label": "高級ブランドの顧客行動・取引データ（疎）", "category": "source" },
+          { "id": "s2", "label": "顧客データが疎でパーソナライズ困難", "category": "constraint" },
+          { "id": "p1", "label": "Betterdataで合成データを拡張生成しモデルを補強", "category": "process" },
+          { "id": "a1", "label": "VIP向けプロペンシティモデリング", "category": "application" },
+          { "id": "a2", "label": "VIPコンバージョン約5%改善", "category": "outcome" }
+        ],
+        "edges": []
+      },
+      "note": ""
+    }
+  ],
+  "status": "draft",
+  "created_at": "2026-03-06T00:00:00+09:00",
+  "updated_at": "2026-03-06T00:00:00+09:00"
+}

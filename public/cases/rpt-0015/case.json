@@ -1,0 +1,53 @@
+{
+  "id": "rpt-0015",
+  "title": "スマートビルにおける合成データ活用による同意要件の簡素化",
+  "region": "国外",
+  "domain": "通信",
+  "domain_sub": "建設/IoT",
+  "organization": "鹿島建設 / Betterdata",
+  "usecase_category": [
+    "組織内データ共有"
+  ],
+  "summary": "鹿島建設がスマートビル領域において、建物利用者の個別同意取得が重くデータ活用が非効率だった課題に対し、Betterdata社の合成データ基盤を導入した事例。個別同意を不要化し、運用コストを60%削減しながら規制準拠を維持。",
+  "value_proposition": "スマートビルの利用者データについて個別の同意取得を不要とし、運用コストを60%削減。規制準拠を維持しつつ、データ活用のスピードと効率性を大幅に改善。",
+  "synthetic_generation_method": "Betterdata社のセルフサービス型合成データ生成プラットフォームを使用。スマートビルのセンサー・利用者データの統計的特性を保持した合成データを生成。",
+  "safety_evaluation_method": "合成データは実在の利用者情報を含まないため、個別の同意取得が不要に。規制準拠を維持した上でデータ活用が可能な環境を構築。",
+  "utility_evaluation_method": "合成データを用いたスマートビル運用の分析・最適化の精度を検証し、運用コスト60%削減の効果を計測。",
+  "tags": [
+    "スマートビル",
+    "IoT",
+    "同意不要化",
+    "60%コスト削減",
+    "鹿島建設",
+    "Betterdata",
+    "PETs"
+  ],
+  "sources": [
+    {
+      "source_type": "web",
+      "title": "Betterdata: Kajima Corporation",
+      "url": "https://www.betterdata.ai/case-study/kajima-corporation",
+      "note": "Betterdataによる鹿島建設事例紹介"
+    }
+  ],
+  "figures": [
+    {
+      "type": "data_flow",
+      "title": "スマートビルにおける合成データ活用フロー",
+      "data": {
+        "nodes": [
+          { "id": "s1", "label": "スマートビルのセンサー・利用者データ", "category": "source" },
+          { "id": "s2", "label": "利用者ごとの個別同意取得が重く非効率", "category": "constraint" },
+          { "id": "p1", "label": "Betterdataで合成データを生成", "category": "process" },
+          { "id": "a1", "label": "ビル運用の分析・最適化に活用", "category": "application" },
+          { "id": "a2", "label": "個別同意不要化・運用コスト60%削減を実現", "category": "outcome" }
+        ],
+        "edges": []
+      },
+      "note": ""
+    }
+  ],
+  "status": "draft",
+  "created_at": "2026-03-06T00:00:00+09:00",
+  "updated_at": "2026-03-06T00:00:00+09:00"
+}

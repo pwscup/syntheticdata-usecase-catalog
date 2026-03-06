@@ -1,0 +1,50 @@
+{
+  "id": "rpt-0010",
+  "title": "大手アジア銀行における部門横断の即時合成データ生成基盤",
+  "region": "国外",
+  "domain": "金融",
+  "organization": "大手アジア銀行（Tier 1） / Betterdata",
+  "usecase_category": [
+    "組織内データ共有"
+  ],
+  "summary": "データ利用承認に数か月を要していたアジアの大手銀行が、Betterdata社のオンプレミス合成データ生成プラットフォームを導入し、部門横断での即時データ生成を実現した事例。実データの露出をゼロにしつつ、承認サイクルを数か月から毎日・即時へと短縮。データ漏洩時のレコードあたりコスト（最大6ドル）のリスクも解消。",
+  "value_proposition": "データアクセス承認に数か月かかっていた状態から、即時の合成データ生成を実現。全部門で実データ露出ゼロを達成し、データ漏洩リスクに伴うコスト（レコードあたり最大6ドル）を解消。セキュリティとスピードを同時に改善。",
+  "synthetic_generation_method": "Betterdata社のプログラマティック合成データ生成プラットフォームを使用。完全オンプレミスで稼働し、銀行の各部門が必要に応じて即座に合成データを生成。",
+  "safety_evaluation_method": "完全オンプレミス環境で稼働し、実データが銀行の境界外に流出するリスクをゼロに。全部門で実データの露出なしに分析・テストを実施可能。",
+  "utility_evaluation_method": "各部門のデータ活用ニーズに対し、合成データが分析・テスト目的に十分な品質を持つことを運用で確認。",
+  "tags": [
+    "オンプレミス",
+    "即時生成",
+    "データ民主化",
+    "Betterdata",
+    "PETs"
+  ],
+  "sources": [
+    {
+      "source_type": "web",
+      "title": "Betterdata: Tier 1 Asian Bank",
+      "url": "https://www.betterdata.ai/case-study/tier-1-asian-bank",
+      "note": "Betterdataによる大手アジア銀行事例紹介"
+    }
+  ],
+  "figures": [
+    {
+      "type": "data_flow",
+      "title": "部門横断の即時合成データ生成フロー",
+      "data": {
+        "nodes": [
+          { "id": "s1", "label": "銀行の各部門のデータ", "category": "source" },
+          { "id": "s2", "label": "データ利用承認に数か月・漏洩リスク（6ドル/件）", "category": "constraint" },
+          { "id": "p1", "label": "Betterdataでオンプレミス即時合成データ生成", "category": "process" },
+          { "id": "a1", "label": "全部門でのデータ分析・テストに活用", "category": "application" },
+          { "id": "a2", "label": "実データ露出ゼロ・承認を即時化", "category": "outcome" }
+        ],
+        "edges": []
+      },
+      "note": ""
+    }
+  ],
+  "status": "draft",
+  "created_at": "2026-03-06T00:00:00+09:00",
+  "updated_at": "2026-03-06T00:00:00+09:00"
+}

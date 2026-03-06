@@ -1,0 +1,50 @@
+{
+  "id": "rpt-0004",
+  "title": "合成データの精度検証と患者プライバシー保護の両立",
+  "region": "国外",
+  "domain": "医療",
+  "organization": "Washington University in St. Louis / MDClone",
+  "usecase_category": [
+    "R&D"
+  ],
+  "summary": "ワシントン大学セントルイス校が、MDClone社と連携して3つのパイロットプロジェクトを実施し、合成データの精度と患者プライバシー保護の両立を検証した事例。従来の脱識別化（de-identification）では研究価値が低下するという課題に対し、合成データが有効な代替手段であることを実証。",
+  "value_proposition": "従来の脱識別化手法では研究に必要な情報が失われる問題を解決。合成データにより、患者プライバシーを保護しつつ、研究に必要な複雑なデータ構造と統計的特性を維持できることを3つのパイロットで実証。",
+  "synthetic_generation_method": "MDClone社の合成データ生成プラットフォームを使用。複雑な患者データの統計的特性を保持した合成データを生成。",
+  "safety_evaluation_method": "3つのパイロットプロジェクトを通じて、合成データから実在の患者を特定できないことを体系的に検証。従来の脱識別化と比較した安全性評価を実施。",
+  "utility_evaluation_method": "3つのパイロット（頭部外傷重症度予測、敗血症予測、性感染症分析）で、合成データで学習したMLモデルが実データに適用した際の性能を検証。査読付き論文（Frontiers in Digital Health）での心不全死亡率予測にも合成データを使用し、学術的有用性も実証。",
+  "tags": [
+    "パイロット検証",
+    "脱識別化代替",
+    "研究データ",
+    "MDClone",
+    "PETs"
+  ],
+  "sources": [
+    {
+      "source_type": "web",
+      "title": "MDClone: Three Pilot Projects Ensure Synthetic Data Accuracy - Washington University",
+      "url": "https://mdclone.com/customer-story/three-pilot-projects-ensure-synthetic-data-accuracy-and-maintained-patient-privacy-washington-university/",
+      "note": "MDCloneによるワシントン大学事例紹介"
+    }
+  ],
+  "figures": [
+    {
+      "type": "data_flow",
+      "title": "合成データ精度検証のパイロットフロー",
+      "data": {
+        "nodes": [
+          { "id": "s1", "label": "ワシントン大学の患者データ", "category": "source" },
+          { "id": "s2", "label": "脱識別化では研究価値が低下", "category": "constraint" },
+          { "id": "p1", "label": "MDCloneで合成データを生成", "category": "process" },
+          { "id": "a1", "label": "3つのパイロットで精度と安全性を検証", "category": "application" },
+          { "id": "a2", "label": "プライバシー保護と研究価値の両立を実証", "category": "outcome" }
+        ],
+        "edges": []
+      },
+      "note": ""
+    }
+  ],
+  "status": "draft",
+  "created_at": "2026-03-06T00:00:00+09:00",
+  "updated_at": "2026-03-06T00:00:00+09:00"
+}

@@ -1,0 +1,50 @@
+{
+  "id": "rpt-0001",
+  "title": "肺がん死亡リスク予測モデル開発のための合成データ活用",
+  "region": "国外",
+  "domain": "医療",
+  "organization": "HRA (Health Research Authority) / ICO",
+  "usecase_category": [
+    "R&D"
+  ],
+  "summary": "NHSが、肺がん死亡リスク予測モデルの開発可能性を検証するため、実患者データからGAN（敵対的生成ネットワーク）を用いて合成データを生成した事例。モデル性能だけでなく、残余識別リスクや匿名化の判断基準も検討しており、医療分野での合成データ活用のガバナンスを包括的に扱っている。",
+  "value_proposition": "患者の個人情報を保護しつつ、実データと同等の統計特性を持つ合成データで予測モデルの開発・検証を実施。匿名化判断やガバナンス上の考慮事項を体系化し、医療分野での合成データ活用の指針を示した。",
+  "synthetic_generation_method": "GAN（敵対的生成ネットワーク）を使用して、実患者データから合成データを生成。",
+  "safety_evaluation_method": "k-匿名性指標と多様性指標で匿名性を評価。リンケージ攻撃や属性推論攻撃による再識別リスクを検証。認定研究者のみにデータアクセス契約を通じたアクセスを許可し、ISO認証されたセキュア環境で管理。",
+  "utility_evaluation_method": "Wasserstein距離やJensen-Shannon距離で統計的類似性を評価。Alpha-precision/Beta-recall指標で統計的特性の保持を確認。合成データで構築したリスク予測モデルの識別精度が実データ同等であることを実証。",
+  "tags": [
+    "肺がん",
+    "GAN",
+    "予測モデル",
+    "ガバナンス",
+    "PETs"
+  ],
+  "sources": [
+    {
+      "source_type": "web",
+      "title": "NHS: Governance Considerations for the Use of Synthetic Data in Health and Care Research",
+      "url": "https://www.digitalregulations.innovation.nhs.uk/case-studies/governance-considerations-for-the-use-of-synthetic-data-in-health-and-care-research/",
+      "note": "NHSによる合成データガバナンスのケーススタディ"
+    }
+  ],
+  "figures": [
+    {
+      "type": "data_flow",
+      "title": "肺がんリスク予測のための合成データ活用フロー",
+      "data": {
+        "nodes": [
+          { "id": "s1", "label": "実患者データ（肺がん関連）", "category": "source" },
+          { "id": "s2", "label": "患者プライバシー保護の要件", "category": "constraint" },
+          { "id": "p1", "label": "GANにより合成患者データを生成", "category": "process" },
+          { "id": "a1", "label": "肺がん死亡リスク予測モデルの開発・検証", "category": "application" },
+          { "id": "a2", "label": "モデル性能と残余識別リスクの評価を両立", "category": "outcome" }
+        ],
+        "edges": []
+      },
+      "note": ""
+    }
+  ],
+  "status": "draft",
+  "created_at": "2026-03-06T00:00:00+09:00",
+  "updated_at": "2026-03-06T00:00:00+09:00"
+}
