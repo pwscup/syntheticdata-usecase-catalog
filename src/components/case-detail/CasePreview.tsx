@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 import type { Case } from '../../types'
 import { exportCases } from '../../lib/export-import'
 import { useCopiedState } from '../../hooks/useCopiedState'
@@ -7,7 +8,9 @@ import CaseDetailView from './CaseDetailView'
 const GITHUB_REPO_URL = 'https://github.com/pwscup/syntheticdata-usecase-catalog'
 
 export default function CasePreview({ caseData, onBack }: { caseData: Case; onBack: () => void }) {
-  const [showGuide, setShowGuide] = useState(false)
+  const navigate = useNavigate()
+  const [showGitHubGuide, setShowGitHubGuide] = useState(false)
+  const [showDownloadGuide, setShowDownloadGuide] = useState(false)
   const { copied, markCopied } = useCopiedState(3000)
 
   const suggestedPath = `public/cases/${caseData.id}/case.json`
@@ -16,7 +19,14 @@ export default function CasePreview({ caseData, onBack }: { caseData: Case; onBa
     const json = JSON.stringify(caseData, null, 2)
     await navigator.clipboard.writeText(json)
     markCopied()
-    setShowGuide(true)
+    setShowGitHubGuide(true)
+    setShowDownloadGuide(false)
+  }
+
+  const handleDownload = () => {
+    exportCases([caseData])
+    setShowDownloadGuide(true)
+    setShowGitHubGuide(false)
   }
 
   return (
@@ -27,23 +37,28 @@ export default function CasePreview({ caseData, onBack }: { caseData: Case; onBa
 
       {/* Action area */}
       <div className="mt-6 rounded-lg border border-gray-200 bg-white p-6 space-y-4">
-        <p className="text-sm text-gray-600">
-          リポジトリに反映するには、JSONをダウンロードまたはGitHubで直接PRを作成してください。
-        </p>
+        <div className="space-y-2">
+          <p className="text-sm font-medium text-gray-800">
+            カタログに事例を登録するには、以下のいずれかの方法で提出してください。
+          </p>
+          <p className="text-xs text-gray-500">
+            「GitHubで提出」を使うと、ブラウザ上の操作だけで完了できます（推奨）。
+          </p>
+        </div>
         <div className="flex flex-wrap gap-3">
           <button
             type="button"
-            onClick={() => exportCases([caseData])}
-            className="rounded bg-blue-600 px-5 py-2.5 text-sm font-medium text-white hover:bg-blue-700"
+            onClick={handleGitHub}
+            className="rounded bg-gray-800 px-5 py-2.5 text-sm font-medium text-white hover:bg-gray-900 ring-2 ring-gray-800 ring-offset-2"
           >
-            JSONをダウンロード
+            GitHubで提出（推奨）
           </button>
           <button
             type="button"
-            onClick={handleGitHub}
-            className="rounded bg-gray-800 px-5 py-2.5 text-sm font-medium text-white hover:bg-gray-900"
+            onClick={handleDownload}
+            className="rounded border border-gray-300 bg-white px-5 py-2.5 text-sm font-medium text-gray-700 hover:bg-gray-50"
           >
-            GitHubで作成
+            JSONをダウンロード
           </button>
           <button
             type="button"
@@ -56,7 +71,7 @@ export default function CasePreview({ caseData, onBack }: { caseData: Case; onBa
       </div>
 
       {/* GitHub guide panel */}
-      {showGuide && (
+      {showGitHubGuide && (
         <div className="mt-4 rounded-lg border border-blue-200 bg-blue-50 p-6 text-sm space-y-4">
           {copied && (
             <div className="flex items-center gap-2 text-green-700 font-medium">
@@ -69,19 +84,25 @@ export default function CasePreview({ caseData, onBack }: { caseData: Case; onBa
 
           <p className="font-bold text-gray-800">GitHub でPRを作成する手順</p>
 
-          <ol className="list-decimal ml-5 space-y-2 text-gray-700">
+          <ol className="list-decimal ml-5 space-y-3 text-gray-700">
             <li>
-              以下のボタンで GitHub リポジトリを開きます
+              下の<strong>「GitHubを開く」</strong>ボタンをクリックして、GitHubリポジトリを新しいタブで開きます
             </li>
             <li>
               ファイルパス <code className="bg-white px-1.5 py-0.5 rounded border border-gray-200 text-xs">{suggestedPath}</code>
-              {' '}が自動入力されます
+              {' '}が自動入力されています
             </li>
             <li>
-              エディタにクリップボードの内容をペースト（Ctrl+V / Cmd+V）してください
+              エディタの入力欄にクリップボードの内容をペーストしてください（<kbd className="bg-white border border-gray-300 rounded px-1 py-0.5 text-xs">Ctrl+V</kbd> / <kbd className="bg-white border border-gray-300 rounded px-1 py-0.5 text-xs">Cmd+V</kbd>）
             </li>
             <li>
-              「Commit changes...」をクリックし、「Create a new branch」を選択してPRを作成してください
+              右上の<strong>「Commit changes...」</strong>ボタンをクリックします
+            </li>
+            <li>
+              ダイアログが表示されたら、Commit messageはそのままでOKです。<strong>「Propose changes」</strong>ボタンをクリックしてください
+            </li>
+            <li>
+              PRの作成画面が表示されます。メッセージはそのままで<strong>「Create pull request」</strong>ボタンをクリックすれば完了です
             </li>
           </ol>
 
@@ -95,12 +116,43 @@ export default function CasePreview({ caseData, onBack }: { caseData: Case; onBa
             </button>
             <button
               type="button"
-              onClick={() => setShowGuide(false)}
-              className="rounded border border-gray-300 bg-white px-4 py-2 text-sm text-gray-600 hover:bg-gray-50"
+              onClick={() => navigate('/')}
+              className="rounded bg-blue-600 px-4 py-2 text-sm font-medium text-white hover:bg-blue-700"
             >
-              閉じる
+              完了（トップページへ）
             </button>
           </div>
+        </div>
+      )}
+
+      {/* Download guide panel */}
+      {showDownloadGuide && (
+        <div className="mt-4 rounded-lg border border-gray-200 bg-gray-50 p-6 text-sm space-y-4">
+          <p className="font-bold text-gray-800">ダウンロード後の手順</p>
+
+          <ol className="list-decimal ml-5 space-y-2 text-gray-700">
+            <li>
+              ダウンロードされたJSONファイルの中身から、該当する事例のJSONを取り出してください
+            </li>
+            <li>
+              GitHubリポジトリの <code className="bg-white px-1.5 py-0.5 rounded border border-gray-200 text-xs">{suggestedPath}</code> にファイルを配置し、PRを作成してください
+            </li>
+            <li>
+              または、管理者にJSONファイルを送付してください
+            </li>
+          </ol>
+
+          <p className="text-xs text-gray-500">
+            GitHubの操作に慣れていない場合は、上の「GitHubで提出（推奨）」を使うと、より簡単に提出できます。
+          </p>
+
+          <button
+            type="button"
+            onClick={() => navigate('/')}
+            className="rounded bg-blue-600 px-4 py-2 text-sm font-medium text-white hover:bg-blue-700"
+          >
+            完了（トップページへ）
+          </button>
         </div>
       )}
     </div>

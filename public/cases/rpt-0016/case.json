@@ -1,0 +1,52 @@
+{
+  "id": "rpt-0016",
+  "title": "テレメトリパイプラインの20倍規模シミュレーションによるQA効率化",
+  "region": "国外",
+  "domain": "通信",
+  "domain_sub": "IT",
+  "organization": "Fortune 500 データストレージ企業 / Betterdata",
+  "usecase_category": [
+    "フィージビリティ検証"
+  ],
+  "summary": "Fortune 500に名を連ねるデータストレージ企業が、本番データの利用が困難なQA環境において、Betterdata社の合成データ技術を活用し、テレメトリパイプラインの20倍規模シミュレーションとQA準備時間40%削減を実現した事例。",
+  "value_proposition": "本番データを使わずに、実環境の20倍のスケールでテレメトリパイプラインをシミュレーション可能に。QA準備時間を40%削減し、より高速かつ信頼性の高いシステムテストを実現。",
+  "synthetic_generation_method": "Betterdata社の合成データ生成プラットフォームを使用。サブスクリプションシステムのテレメトリデータを模した合成データを生成し、実環境の20倍規模のシミュレーションに使用。",
+  "safety_evaluation_method": "合成データの使用により、本番の顧客テレメトリデータをQA環境に持ち込むリスクを解消。",
+  "utility_evaluation_method": "QAスループットとシミュレーション規模で評価。20倍規模のシミュレーション実行とQA準備時間40%削減を実測。",
+  "tags": [
+    "QA",
+    "テレメトリ",
+    "大規模テスト",
+    "40%時間削減",
+    "Betterdata",
+    "PETs"
+  ],
+  "sources": [
+    {
+      "source_type": "web",
+      "title": "Betterdata: Fortune 500 Data Storage Provider",
+      "url": "https://www.betterdata.ai/case-study/fortune-500-data-storage-provider",
+      "note": "BetterdataによるFortune 500企業事例紹介"
+    }
+  ],
+  "figures": [
+    {
+      "type": "data_flow",
+      "title": "QA用合成テレメトリデータ活用フロー",
+      "data": {
+        "nodes": [
+          { "id": "s1", "label": "サブスクリプションシステムのテレメトリデータ", "category": "source" },
+          { "id": "s2", "label": "本番データをQA環境で使用困難", "category": "constraint" },
+          { "id": "p1", "label": "Betterdataで合成テレメトリデータを生成", "category": "process" },
+          { "id": "a1", "label": "20倍規模のパイプラインシミュレーション・QA", "category": "application" },
+          { "id": "a2", "label": "QA準備時間40%削減・信頼性向上", "category": "outcome" }
+        ],
+        "edges": []
+      },
+      "note": ""
+    }
+  ],
+  "status": "draft",
+  "created_at": "2026-03-06T00:00:00+09:00",
+  "updated_at": "2026-03-06T00:00:00+09:00"
+}

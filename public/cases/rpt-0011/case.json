@@ -1,0 +1,53 @@
+{
+  "id": "rpt-0011",
+  "title": "5,500万行の国勢調査・死亡登録連結データの合成化",
+  "region": "国外",
+  "domain": "公共",
+  "domain_sub": "統計",
+  "organization": "ONS (英国国家統計局) / Alan Turing Institute",
+  "usecase_category": [
+    "外部分析者活用",
+    "R&D"
+  ],
+  "summary": "英国国家統計局（ONS）とアラン・チューリング研究所が共同で、2011年国勢調査と死亡登録を連結した約5,500万行・60列の機密データセットを差分プライバシーの枠組みの下で合成化した事例。大規模かつ連結データの合成化の代表的な取り組み。",
+  "value_proposition": "通常は厳格なアクセス制限のある機密連結データを、差分プライバシーを適用した合成データとして広く研究者に提供。性別・民族別の平均余命分析など、既存の公表済み分析結果を合成データでも再現できることを実証。",
+  "synthetic_generation_method": "最大全域木（MST）アルゴリズムを使用した3段階パイプライン: (1) 保持する相互作用の選択、(2) ノイズを加えた周辺分布の測定、(3) Private-PGMによるデータ生成。250万行ずつのバッチ処理でスケーラビリティを確保。国勢調査のみのレコードと死亡登録連結レコードを分離して合成。",
+  "safety_evaluation_method": "差分プライバシーを適用（Renyiパラメータ ε=1, δ=10^-8）。ONSの既存の最小カウント閾値（σ≧10）と整合させ、形式的なDP保証と組織の既存リスク基準を橋渡し。",
+  "utility_evaluation_method": "一般的有用性: 単変量忠実度（カバレッジ・類似度、多くの列で0.95超）、二変量忠実度（ペア相関）、識別性スコア（SPECKSメソッド、約0.8）。特定有用性: 性別・民族別の平均余命分析の公表済み結果を再現。世帯階層や併存疾患構造では課題も報告。",
+  "tags": [
+    "差分プライバシー",
+    "国勢調査",
+    "大規模データ",
+    "Private-PGM",
+    "ONS",
+    "PETs"
+  ],
+  "sources": [
+    {
+      "source_type": "web",
+      "title": "ONS Data Science Campus: Synthesising the linked 2011 Census and deaths dataset",
+      "url": "https://datasciencecampus.ons.gov.uk/synthesising-the-linked-2011-census-and-deaths-dataset-while-preserving-its-confidentiality/",
+      "note": "ONS Data Science Campusによる詳細レポート"
+    }
+  ],
+  "figures": [
+    {
+      "type": "data_flow",
+      "title": "大規模連結データの合成化フロー",
+      "data": {
+        "nodes": [
+          { "id": "s1", "label": "2011年国勢調査＋死亡登録連結データ（5,500万行・60列）", "category": "source" },
+          { "id": "s2", "label": "機密データへの厳格なアクセス制限", "category": "constraint" },
+          { "id": "p1", "label": "MSTアルゴリズム＋差分プライバシーで合成データを生成", "category": "process" },
+          { "id": "a1", "label": "研究者への安全なデータ提供", "category": "application" },
+          { "id": "a2", "label": "平均余命分析の再現を実証・単変量忠実度0.95超", "category": "outcome" }
+        ],
+        "edges": []
+      },
+      "note": ""
+    }
+  ],
+  "status": "draft",
+  "created_at": "2026-03-06T00:00:00+09:00",
+  "updated_at": "2026-03-06T00:00:00+09:00"
+}

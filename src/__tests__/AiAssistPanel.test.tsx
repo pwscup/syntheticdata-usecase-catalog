@@ -91,7 +91,7 @@ describe('AiAssistPanel', () => {
     await waitFor(() => {
       expect(onImport).toHaveBeenCalledTimes(1)
     })
-    expect(screen.getByText(/インポートしました/)).toBeInTheDocument()
+    expect(screen.getByText(/フォームに反映しました/)).toBeInTheDocument()
   })
 
   it('無効なJSONでエラーが表示されること', async () => {
