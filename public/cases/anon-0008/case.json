@@ -1,0 +1,35 @@
+{
+  "id": "anon-0008",
+  "title": "NEC：仮名加工情報を用いたライフログデータによるAI研究開発",
+  "region": "国内",
+  "domain": "IT",
+  "organization": "NEC",
+  "usecase_category": [
+    "R&D"
+  ],
+  "technology_category": [
+    "anonymization"
+  ],
+  "review_status": "ai_generated",
+  "summary": "健康ポイントサービスアプリで取得した個人情報から仮名加工情報を作成し、ライフログデータを用いたAI技術の研究開発に利用。仮名加工情報制度の社内分析・研究開発利用の実例。",
+  "value_proposition": "調査中",
+  "synthetic_generation_method": "調査中",
+  "safety_evaluation_method": "調査中",
+  "utility_evaluation_method": "調査中",
+  "tags": [
+    "仮名加工情報",
+    "AI研究開発",
+    "ライフログ"
+  ],
+  "sources": [
+    {
+      "source_type": "web",
+      "title": "NEC 匿名加工情報",
+      "url": "https://jpn.nec.com/site/AnonymousData/index.html"
+    }
+  ],
+  "figures": [],
+  "status": "seed",
+  "created_at": "2026-03-07T00:00:00+09:00",
+  "updated_at": "2026-03-07T00:00:00+09:00"
+}

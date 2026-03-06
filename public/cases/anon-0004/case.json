@@ -1,0 +1,35 @@
+{
+  "id": "anon-0004",
+  "title": "MSD健康保険組合：レセプト・健診データの匿名加工情報による保健事業評価",
+  "region": "国内",
+  "domain": "医療",
+  "organization": "MSD健康保険組合",
+  "usecase_category": [
+    "組織間データ共有"
+  ],
+  "technology_category": [
+    "anonymization"
+  ],
+  "review_status": "ai_generated",
+  "summary": "健診データ、レセプトデータ、保健事業データを匿名加工情報に加工し、IQVIAソリューションズジャパンへ提供。他組合比較を含む保健事業の企画・評価に活用している。",
+  "value_proposition": "調査中",
+  "synthetic_generation_method": "調査中",
+  "safety_evaluation_method": "調査中",
+  "utility_evaluation_method": "調査中",
+  "tags": [
+    "匿名加工情報",
+    "レセプトデータ",
+    "健康保険組合"
+  ],
+  "sources": [
+    {
+      "source_type": "pdf",
+      "title": "MSD健康保険組合 個人情報の利用目的",
+      "url": "https://www.msdkenpo.or.jp/member/info/files/privacy-policy_h.pdf"
+    }
+  ],
+  "figures": [],
+  "status": "seed",
+  "created_at": "2026-03-07T00:00:00+09:00",
+  "updated_at": "2026-03-07T00:00:00+09:00"
+}

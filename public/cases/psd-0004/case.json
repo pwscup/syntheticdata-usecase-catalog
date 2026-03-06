@@ -1,0 +1,27 @@
+{
+  "id": "psd-0004",
+  "title": "英国国家統計局：国勢調査・死亡データ連結の合成データ化",
+  "region": "国外",
+  "domain": "公共",
+  "organization": "ONS (Office for National Statistics)",
+  "usecase_category": ["公的利用"],
+  "technology_category": ["synthetic_data"],
+  "review_status": "ai_generated",
+  "summary": "英国ONSが2011年国勢調査と死亡登録を結合した大規模機密データを合成化。複数データソースの結合後に、公開・分析用の合成版を作成する事例として、高機微データの安全な公開手法を示している。",
+  "value_proposition": "調査中",
+  "synthetic_generation_method": "調査中",
+  "safety_evaluation_method": "調査中",
+  "utility_evaluation_method": "調査中",
+  "tags": ["合成データ", "公的統計", "データ連結"],
+  "sources": [
+    {
+      "source_type": "web",
+      "title": "Synthesising the linked 2011 Census and Deaths dataset",
+      "url": "https://datasciencecampus.ons.gov.uk/synthesising-the-linked-2011-census-and-deaths-dataset-while-preserving-its-confidentiality/"
+    }
+  ],
+  "figures": [],
+  "status": "seed",
+  "created_at": "2026-03-07T00:00:00+09:00",
+  "updated_at": "2026-03-07T00:00:00+09:00"
+}

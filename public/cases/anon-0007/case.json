@@ -1,0 +1,35 @@
+{
+  "id": "anon-0007",
+  "title": "個人情報保護委員会：ICカード乗降履歴の匿名加工による商圏分析事例",
+  "region": "国内",
+  "domain": "モビリティ",
+  "organization": "個人情報保護委員会",
+  "usecase_category": [
+    "公的利用"
+  ],
+  "technology_category": [
+    "anonymization"
+  ],
+  "review_status": "ai_generated",
+  "summary": "鉄道会社が保有するICカード乗降履歴を匿名加工し、一般事業者へ提供して商圏分析やターゲティング広告に用いるユースケース。個人情報保護委員会の想定事例として整理されている。",
+  "value_proposition": "調査中",
+  "synthetic_generation_method": "調査中",
+  "safety_evaluation_method": "調査中",
+  "utility_evaluation_method": "調査中",
+  "tags": [
+    "匿名加工情報",
+    "乗降履歴",
+    "商圏分析"
+  ],
+  "sources": [
+    {
+      "source_type": "pdf",
+      "title": "仮名加工情報・匿名加工情報 事例編",
+      "url": "https://www.ppc.go.jp/files/pdf/report_office_zirei2205.pdf"
+    }
+  ],
+  "figures": [],
+  "status": "seed",
+  "created_at": "2026-03-07T00:00:00+09:00",
+  "updated_at": "2026-03-07T00:00:00+09:00"
+}

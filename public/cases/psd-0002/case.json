@@ -1,0 +1,32 @@
+{
+  "id": "psd-0002",
+  "title": "米国国勢調査局：OnTheMap/LODESによる就業地・居住地データの部分合成公開",
+  "region": "国外",
+  "domain": "公共",
+  "organization": "U.S. Census Bureau",
+  "usecase_category": ["公的利用"],
+  "technology_category": ["synthetic_data"],
+  "review_status": "ai_generated",
+  "summary": "就業地と居住地の地理的分布を示すOnTheMap/LODESデータセットで、居住地側の秘匿保護のために部分合成データ手法を使用。全件をfully syntheticにするのではなく、公開困難な部分だけを合成化して地理分析を可能にしている。",
+  "value_proposition": "調査中",
+  "synthetic_generation_method": "調査中",
+  "safety_evaluation_method": "調査中",
+  "utility_evaluation_method": "調査中",
+  "tags": ["部分合成データ", "地理情報", "雇用統計"],
+  "sources": [
+    {
+      "source_type": "web",
+      "title": "OnTheMap Help and Documentation",
+      "url": "https://lehd.ces.census.gov/applications/help/onthemap.html"
+    },
+    {
+      "source_type": "pdf",
+      "title": "OnTheMap Synthetic Data",
+      "url": "https://lehd.ces.census.gov/doc/help/OTMSyntheticData%2005262009-jma.pdf"
+    }
+  ],
+  "figures": [],
+  "status": "seed",
+  "created_at": "2026-03-07T00:00:00+09:00",
+  "updated_at": "2026-03-07T00:00:00+09:00"
+}
