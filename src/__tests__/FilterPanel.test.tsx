@@ -119,6 +119,18 @@ describe('FilterPanel', () => {
     expect(screen.getByText('R&D')).toBeInTheDocument()
   })
 
+  it('技術カテゴリフィルタが表示される', () => {
+    renderPanel()
+    expect(screen.getByText('技術カテゴリ')).toBeInTheDocument()
+    expect(screen.getByText('合成データ')).toBeInTheDocument()
+  })
+
+  it('レビュー状態フィルタが表示される', () => {
+    renderPanel()
+    expect(screen.getByText('レビュー状態')).toBeInTheDocument()
+    expect(screen.getByText('AI生成')).toBeInTheDocument()
+  })
+
   it('各選択肢に件数が表示される', () => {
     renderPanel()
     // Each option should have its count displayed
