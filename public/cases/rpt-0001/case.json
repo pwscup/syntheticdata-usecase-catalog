@@ -7,6 +7,10 @@
   "usecase_category": [
     "R&D"
   ],
+  "technology_category": [
+    "synthetic_data"
+  ],
+  "review_status": "ai_generated",
   "summary": "NHSが、肺がん死亡リスク予測モデルの開発可能性を検証するため、実患者データからGAN（敵対的生成ネットワーク）を用いて合成データを生成した事例。モデル性能だけでなく、残余識別リスクや匿名化の判断基準も検討しており、医療分野での合成データ活用のガバナンスを包括的に扱っている。",
   "value_proposition": "患者の個人情報を保護しつつ、実データと同等の統計特性を持つ合成データで予測モデルの開発・検証を実施。匿名化判断やガバナンス上の考慮事項を体系化し、医療分野での合成データ活用の指針を示した。",
   "synthetic_generation_method": "GAN（敵対的生成ネットワーク）を使用して、実患者データから合成データを生成。",
@@ -33,11 +37,31 @@
       "title": "肺がんリスク予測のための合成データ活用フロー",
       "data": {
         "nodes": [
-          { "id": "s1", "label": "実患者データ（肺がん関連）", "category": "source" },
-          { "id": "s2", "label": "患者プライバシー保護の要件", "category": "constraint" },
-          { "id": "p1", "label": "GANにより合成患者データを生成", "category": "process" },
-          { "id": "a1", "label": "肺がん死亡リスク予測モデルの開発・検証", "category": "application" },
-          { "id": "a2", "label": "モデル性能と残余識別リスクの評価を両立", "category": "outcome" }
+          {
+            "id": "s1",
+            "label": "実患者データ（肺がん関連）",
+            "category": "source"
+          },
+          {
+            "id": "s2",
+            "label": "患者プライバシー保護の要件",
+            "category": "constraint"
+          },
+          {
+            "id": "p1",
+            "label": "GANにより合成患者データを生成",
+            "category": "process"
+          },
+          {
+            "id": "a1",
+            "label": "肺がん死亡リスク予測モデルの開発・検証",
+            "category": "application"
+          },
+          {
+            "id": "a2",
+            "label": "モデル性能と残余識別リスクの評価を両立",
+            "category": "outcome"
+          }
         ],
         "edges": []
       },

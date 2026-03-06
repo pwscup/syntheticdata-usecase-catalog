@@ -7,12 +7,18 @@
   "usecase_category": [
     "外部分析者活用"
   ],
+  "technology_category": [
+    "synthetic_data"
+  ],
+  "review_status": "human_reviewed",
   "summary": "金融データの分析には専門知識が必要だが、社外の分析者に実データを提供するのは困難だった。FDUAは人工的に作成した金融データを用いて外部コンペを開催し、1,658名の分析者から新たな知見を獲得した。",
   "value_proposition": "延べ1,658名の外部分析者が参加し、社内では得られなかったデータ分析の新知見を獲得。",
   "synthetic_generation_method": "調査中",
   "safety_evaluation_method": "調査中",
   "utility_evaluation_method": "調査中",
-  "editorial_notes": ["人工的に作成とのみ"],
+  "editorial_notes": [
+    "人工的に作成とのみ"
+  ],
   "tags": [
     "コンペティション",
     "外部分析者"

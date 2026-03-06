@@ -7,6 +7,10 @@
   "usecase_category": [
     "組織間データ共有"
   ],
+  "technology_category": [
+    "synthetic_data"
+  ],
+  "review_status": "human_reviewed",
   "summary": "Fintech連携のテスト時、実データを第三者に提供するには煩雑な準備・承認プロセスが必要で最大6カ月を要していた。Nationwideは合成データをテスト用データとして活用し、承認プロセスを大幅に簡略化した。",
   "value_proposition": "データ準備・承認期間を最大6カ月から3日に短縮。",
   "synthetic_generation_method": "統計情報と複雑な関係を学習し、元情報を含まない合成データセットを作成（手法名は調査中）",

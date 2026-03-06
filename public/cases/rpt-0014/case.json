@@ -8,6 +8,10 @@
   "usecase_category": [
     "フィージビリティ検証"
   ],
+  "technology_category": [
+    "synthetic_data"
+  ],
+  "review_status": "ai_generated",
   "summary": "米国国土安全保障省（DHS）が、プライバシー・セキュリティ上の制約で実データ共有ができない環境において、Betterdata社のTFMベースの合成データ技術を用いてサイバー防御訓練と異常検知向けのデータサンドボックスを構築した事例。",
   "value_proposition": "機密データを一切外部に出さずに、リアルなサイバー防御訓練と異常検知の演習環境を構築。訓練の加速と実践的なシミュレーションを、セキュリティリスクなしに実現。",
   "synthetic_generation_method": "Betterdata社のTFM（Tabular Foundation Model）ベースのプライバシー保護合成データ生成技術を使用。サイバーセキュリティおよびネットワークデータの合成データを生成。",
@@ -35,11 +39,31 @@
       "title": "サイバー防御訓練向け合成データ活用フロー",
       "data": {
         "nodes": [
-          { "id": "s1", "label": "DHSのサイバーセキュリティ・ネットワークデータ", "category": "source" },
-          { "id": "s2", "label": "機密データのセキュリティ制約による共有不可", "category": "constraint" },
-          { "id": "p1", "label": "TFMベースで合成サイバーデータを生成", "category": "process" },
-          { "id": "a1", "label": "サイバー防御訓練・異常検知シミュレーション", "category": "application" },
-          { "id": "a2", "label": "実データ露出ゼロで実践的な訓練環境を構築", "category": "outcome" }
+          {
+            "id": "s1",
+            "label": "DHSのサイバーセキュリティ・ネットワークデータ",
+            "category": "source"
+          },
+          {
+            "id": "s2",
+            "label": "機密データのセキュリティ制約による共有不可",
+            "category": "constraint"
+          },
+          {
+            "id": "p1",
+            "label": "TFMベースで合成サイバーデータを生成",
+            "category": "process"
+          },
+          {
+            "id": "a1",
+            "label": "サイバー防御訓練・異常検知シミュレーション",
+            "category": "application"
+          },
+          {
+            "id": "a2",
+            "label": "実データ露出ゼロで実践的な訓練環境を構築",
+            "category": "outcome"
+          }
         ],
         "edges": []
       },

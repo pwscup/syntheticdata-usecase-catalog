@@ -7,6 +7,10 @@
   "usecase_category": [
     "組織内データ共有"
   ],
+  "technology_category": [
+    "synthetic_data"
+  ],
+  "review_status": "human_reviewed",
   "summary": "保険領域では社内のデータ共有にプライバシーリスク評価が必要で、データ入手までに長い時間がかかっていた。Provinzialは合成データを実データの代替として活用し、評価プロセスの迅速化とデータ入手リードタイムの短縮を実現した。",
   "value_proposition": "プライバシーリスク評価を最大3カ月短縮。データ入手までの時間を4週間短縮。合成データの有用性は元データの97%を達成。",
   "synthetic_generation_method": "調査中",

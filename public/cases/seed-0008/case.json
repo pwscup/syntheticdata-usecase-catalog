@@ -7,6 +7,10 @@
   "usecase_category": [
     "外部分析者活用"
   ],
+  "technology_category": [
+    "synthetic_data"
+  ],
+  "review_status": "human_reviewed",
   "summary": "COVID-19の分析では迅速なデータ共有が求められたが、患者の診療データは厳しいプライバシー保護の対象だった。MDCloneの合成データを使用して分析を行い、実データとほぼ同等の分析結果が得られることを確認した。",
   "value_proposition": "合成データによる分析結果が実データとほぼ同等であることを確認。",
   "synthetic_generation_method": "カーネル密度推定（ベンダ一覧に記載）",

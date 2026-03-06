@@ -7,6 +7,10 @@
   "usecase_category": [
     "組織間データ共有"
   ],
+  "technology_category": [
+    "synthetic_data"
+  ],
+  "review_status": "human_reviewed",
   "summary": "退役軍人の医療データを分析に活用する際、品質管理やIRB（倫理委員会）レビューなどのプロセスがボトルネックだった。米退役軍人保健局は合成データを活用し、これらの審査を省略してデータ提供を可能にした。",
   "value_proposition": "品質管理・IRBレビューのプロセスを省略し、データ提供を簡略化。",
   "synthetic_generation_method": "調査中",

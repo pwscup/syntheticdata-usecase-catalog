@@ -7,6 +7,10 @@
   "usecase_category": [
     "外部分析者活用"
   ],
+  "technology_category": [
+    "synthetic_data"
+  ],
+  "review_status": "human_reviewed",
   "summary": "ヘルスケアデータは規制が厳しく、組織間での共有・活用が進みにくい。Humanaは合成データの交換プラットフォームを公開し、外部の分析者やパートナーとの協業による知見発見と製品高度化を目指している。",
   "value_proposition": "調査中",
   "synthetic_generation_method": "調査中",

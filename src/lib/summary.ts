@@ -13,12 +13,14 @@ export interface CaseSummary {
   byRegion: CountItem[]
   byDomain: CountItem[]
   byUsecaseCategory: CountItem[]
+  byTechnologyCategory: CountItem[]
+  byReviewStatus: CountItem[]
 }
 
 /** Count cases grouped by a specific field */
 export function countByField(
   cases: Case[],
-  field: 'region' | 'domain' | 'usecase_category',
+  field: 'region' | 'domain' | 'usecase_category' | 'technology_category' | 'review_status',
 ): CountItem[] {
   const total = cases.length
   const counts = new Map<string, number>()
@@ -50,5 +52,7 @@ export function buildSummary(cases: Case[]): CaseSummary {
     byRegion: countByField(cases, 'region'),
     byDomain: countByField(cases, 'domain'),
     byUsecaseCategory: countByField(cases, 'usecase_category'),
+    byTechnologyCategory: countByField(cases, 'technology_category'),
+    byReviewStatus: countByField(cases, 'review_status'),
   }
 }

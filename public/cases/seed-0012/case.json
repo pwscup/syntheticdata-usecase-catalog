@@ -9,6 +9,10 @@
     "外部分析者活用",
     "R&D"
   ],
+  "technology_category": [
+    "synthetic_data"
+  ],
+  "review_status": "human_reviewed",
   "summary": "がん臨床データの利用には申請・審査が必要で、研究企画の検討やプログラム開発の着手までに時間がかかっていた。NHS Digitalは100万人超の合成データを配布し、審査不要で即座に研究準備に取り掛かれる環境を提供した。",
   "value_proposition": "申請・審査不要で研究準備に着手可能に。分析プログラムの作成を迅速化。",
   "synthetic_generation_method": "調査中（https://simulacrum.healthdatainsight.org.uk/wp/wp-content/uploads/2018/11/Methodology-Overview-Nov18.pdf）",

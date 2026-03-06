@@ -39,6 +39,8 @@ export default function CaseListPage() {
     filters.region.length > 0 ||
     filters.domain.length > 0 ||
     filters.usecase_category.length > 0 ||
+    filters.technology_category.length > 0 ||
+    filters.review_status.length > 0 ||
     filters.query !== ''
 
   return (

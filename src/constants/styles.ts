@@ -21,3 +21,20 @@ export const CATEGORY_COLORS: Record<string, string> = {
   'データ販売': 'bg-teal-500',
   'フィージビリティ検証': 'bg-orange-500',
 }
+
+/** 技術カテゴリごとの色定義 */
+export const TECHNOLOGY_CATEGORY_COLORS: Record<string, string> = {
+  synthetic_data: 'bg-lime-500',
+  differential_privacy: 'bg-violet-500',
+  anonymization: 'bg-amber-500',
+  federated_learning: 'bg-sky-500',
+  secure_computation: 'bg-rose-500',
+}
+
+/** レビュー状態ごとの色定義 */
+export const REVIEW_STATUS_COLORS: Record<string, { bg: string; badge: string }> = {
+  ai_generated: { bg: 'bg-yellow-500', badge: 'bg-yellow-50 text-yellow-700 ring-1 ring-yellow-300' },
+  human_reviewed: { bg: 'bg-green-500', badge: 'bg-green-50 text-green-700 ring-1 ring-green-300' },
+  flagged: { bg: 'bg-red-500', badge: 'bg-red-50 text-red-700 ring-1 ring-red-300' },
+  under_review: { bg: 'bg-blue-500', badge: 'bg-blue-50 text-blue-700 ring-1 ring-blue-300' },
+}

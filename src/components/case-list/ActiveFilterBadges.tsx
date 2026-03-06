@@ -1,4 +1,5 @@
 import type { FilterState } from '../../hooks/useFilter'
+import { TECHNOLOGY_CATEGORY_LABELS, REVIEW_STATUS_LABELS } from '../../constants/categories'
 
 type FilterKey = keyof Omit<FilterState, 'query' | 'sortBy' | 'page'>
 
@@ -12,10 +13,17 @@ const filterLabels: Record<FilterKey, string> = {
   region: '地域',
   domain: '分野',
   usecase_category: '分類',
+  technology_category: '技術',
+  review_status: '状態',
+}
+
+const VALUE_LABELS: Record<string, Record<string, string>> = {
+  technology_category: TECHNOLOGY_CATEGORY_LABELS,
+  review_status: REVIEW_STATUS_LABELS,
 }
 
 export default function ActiveFilterBadges({ filters, onToggleFilter, onClearFilters }: ActiveFilterBadgesProps) {
-  const keys: FilterKey[] = ['region', 'domain', 'usecase_category']
+  const keys: FilterKey[] = ['technology_category', 'region', 'domain', 'usecase_category', 'review_status']
   const badges: { key: FilterKey; value: string }[] = []
 
   for (const key of keys) {
@@ -34,7 +42,7 @@ export default function ActiveFilterBadges({ filters, onToggleFilter, onClearFil
           className="inline-flex items-center gap-1 text-xs bg-blue-50 text-blue-700 ring-1 ring-blue-200 rounded-full px-2.5 py-1"
         >
           <span className="text-blue-400">{filterLabels[key]}:</span>
-          {value}
+          {VALUE_LABELS[key]?.[value] ?? value}
           <button
             type="button"
             onClick={() => onToggleFilter(key, value)}

@@ -9,6 +9,8 @@ export interface FilterState {
   region: string[]
   domain: string[]
   usecase_category: string[]
+  technology_category: string[]
+  review_status: string[]
   sortBy: 'title' | 'updated_at_desc' | 'updated_at_asc' | 'domain'
   page: number
 }
@@ -30,6 +32,8 @@ const ARRAY_FILTER_KEYS = [
   'region',
   'domain',
   'usecase_category',
+  'technology_category',
+  'review_status',
 ] as const
 
 function parseFiltersFromParams(params: URLSearchParams): FilterState {
@@ -38,6 +42,8 @@ function parseFiltersFromParams(params: URLSearchParams): FilterState {
     region: [],
     domain: [],
     usecase_category: [],
+    technology_category: [],
+    review_status: [],
     sortBy: 'updated_at_desc',
     page: parseInt(params.get('page') ?? '1', 10),
   }
@@ -86,6 +92,8 @@ function collectFilterOptions(cases: Case[]): Record<string, string[]> {
     region: new Set<string>(),
     domain: new Set<string>(),
     usecase_category: new Set<string>(),
+    technology_category: new Set<string>(),
+    review_status: new Set<string>(),
   }
 
   for (const c of cases) {
@@ -94,6 +102,12 @@ function collectFilterOptions(cases: Case[]): Record<string, string[]> {
     for (const cat of c.usecase_category) {
       options.usecase_category.add(cat)
     }
+    if (c.technology_category) {
+      for (const tech of c.technology_category) {
+        options.technology_category.add(tech)
+      }
+    }
+    if (c.review_status) options.review_status.add(c.review_status)
   }
 
   const result: Record<string, string[]> = {}
@@ -126,6 +140,8 @@ function applyFilters(cases: Case[], filters: FilterState): Case[] {
     if (!matchesArrayFilter(c.region ?? '', filters.region)) return false
     if (!matchesArrayFilter(c.domain, filters.domain)) return false
     if (filters.usecase_category.length > 0 && !c.usecase_category.some(cat => filters.usecase_category.includes(cat))) return false
+    if (filters.technology_category.length > 0 && !(c.technology_category ?? []).some(tech => filters.technology_category.includes(tech))) return false
+    if (!matchesArrayFilter(c.review_status ?? '', filters.review_status)) return false
     return true
   })
 }
@@ -192,6 +208,8 @@ export function useFilter(cases: Case[]): UseFilterResult {
       region: [],
       domain: [],
       usecase_category: [],
+      technology_category: [],
+      review_status: [],
       sortBy: 'updated_at_desc',
       page: 1,
     }

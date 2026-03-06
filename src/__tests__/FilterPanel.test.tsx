@@ -9,6 +9,8 @@ const defaultFilters: FilterState = {
   region: [],
   domain: [],
   usecase_category: [],
+  technology_category: [],
+  review_status: [],
   sortBy: 'updated_at_desc',
   page: 1,
 }
@@ -17,6 +19,8 @@ const filterOptions: Record<string, string[]> = {
   region: ['国内', '国外'],
   domain: ['医療', '金融'],
   usecase_category: ['組織内データ共有', 'R&D'],
+  technology_category: ['synthetic_data'],
+  review_status: ['ai_generated'],
 }
 
 const mockCases: Case[] = [
@@ -26,7 +30,9 @@ const mockCases: Case[] = [
     region: '国内',
     domain: '医療',
     organization: 'テスト組織',
-    usecase_category: '組織内データ共有',
+    usecase_category: ['組織内データ共有'],
+    technology_category: ['synthetic_data'],
+    review_status: 'ai_generated',
     summary: '',
     value_proposition: '',
     synthetic_generation_method: '',
@@ -45,7 +51,9 @@ const mockCases: Case[] = [
     region: '国外',
     domain: '金融',
     organization: 'テスト組織2',
-    usecase_category: 'R&D',
+    usecase_category: ['R&D'],
+    technology_category: ['synthetic_data'],
+    review_status: 'ai_generated',
     summary: '',
     value_proposition: '',
     synthetic_generation_method: '',

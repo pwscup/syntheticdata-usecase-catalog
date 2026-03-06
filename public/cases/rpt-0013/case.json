@@ -7,6 +7,10 @@
   "usecase_category": [
     "組織内データ共有"
   ],
+  "technology_category": [
+    "synthetic_data"
+  ],
+  "review_status": "ai_generated",
   "summary": "スイスの国営郵便事業Swiss Postが、MOSTLY AI社の合成データプラットフォーム（AWS基盤）を導入し、センシティブデータを安全に活用しながらデータサイロの解消を実現した事例。公共性の高い組織として厳格なプライバシー・データ保護基準を維持しつつ、モデルの説明可能性や性能向上に合成データを活用。",
   "value_proposition": "公共性の高い組織で蓄積していたデータサイロを合成データにより安全に解消。従来の匿名化手法では困難だった組織横断のデータ連携を実現し、モデルの説明可能性と性能を向上。",
   "synthetic_generation_method": "MOSTLY AI社の合成データ生成プラットフォームを使用。AWS基盤で稼働し、センシティブなデータの統計的特性を保持した合成データを生成。",
@@ -33,11 +37,31 @@
       "title": "Swiss Postにおけるデータサイロ解消フロー",
       "data": {
         "nodes": [
-          { "id": "s1", "label": "Swiss Postの各部門の業務データ", "category": "source" },
-          { "id": "s2", "label": "データサイロと厳格なプライバシー基準", "category": "constraint" },
-          { "id": "p1", "label": "MOSTLY AIで合成データを生成（AWS基盤）", "category": "process" },
-          { "id": "a1", "label": "組織横断のデータ活用・モデル開発", "category": "application" },
-          { "id": "a2", "label": "データサイロ解消とモデル性能向上を両立", "category": "outcome" }
+          {
+            "id": "s1",
+            "label": "Swiss Postの各部門の業務データ",
+            "category": "source"
+          },
+          {
+            "id": "s2",
+            "label": "データサイロと厳格なプライバシー基準",
+            "category": "constraint"
+          },
+          {
+            "id": "p1",
+            "label": "MOSTLY AIで合成データを生成（AWS基盤）",
+            "category": "process"
+          },
+          {
+            "id": "a1",
+            "label": "組織横断のデータ活用・モデル開発",
+            "category": "application"
+          },
+          {
+            "id": "a2",
+            "label": "データサイロ解消とモデル性能向上を両立",
+            "category": "outcome"
+          }
         ],
         "edges": []
       },
