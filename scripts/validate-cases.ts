@@ -76,6 +76,44 @@ function validateCase(caseId: string, filePath: string): string[] {
   return errors
 }
 
+function validateIndexJson(caseDirs: string[]): string[] {
+  const errors: string[] = []
+  const indexPath = join(casesDir, 'index.json')
+
+  if (!existsSync(indexPath)) {
+    // index.json はビルド時に自動生成されるため、存在しなくてもエラーではない
+    // ただし存在する場合は整合性をチェック
+    return errors
+  }
+
+  let index: { cases: string[] }
+  try {
+    index = JSON.parse(readFileSync(indexPath, 'utf-8'))
+  } catch {
+    errors.push('index.json: JSON parse error')
+    return errors
+  }
+
+  if (!Array.isArray(index.cases)) {
+    errors.push('index.json: "cases" field is not an array')
+    return errors
+  }
+
+  // index.json に含まれるが実際にはディレクトリがない事例
+  const missingDirs = index.cases.filter((id) => !caseDirs.includes(id))
+  if (missingDirs.length > 0) {
+    errors.push(`index.json contains entries without matching directories: ${missingDirs.join(', ')}`)
+  }
+
+  // ディレクトリは存在するが index.json に含まれていない事例
+  const missingInIndex = caseDirs.filter((id) => !index.cases.includes(id))
+  if (missingInIndex.length > 0) {
+    errors.push(`Directories not listed in index.json: ${missingInIndex.join(', ')}`)
+  }
+
+  return errors
+}
+
 function main() {
   if (!existsSync(casesDir)) {
     console.error(`Error: ${casesDir} does not exist`)
@@ -87,16 +125,24 @@ function main() {
 
   const failures: ValidationError[] = []
   let total = 0
+  const caseDirNames: string[] = []
 
   for (const dir of dirs) {
     const filePath = join(casesDir, dir.name, 'case.json')
     if (!existsSync(filePath)) continue
 
     total++
+    caseDirNames.push(dir.name)
     const errors = validateCase(dir.name, filePath)
     if (errors.length > 0) {
       failures.push({ caseId: dir.name, errors })
     }
+  }
+
+  // index.json の整合性チェック
+  const indexErrors = validateIndexJson(caseDirNames)
+  if (indexErrors.length > 0) {
+    failures.push({ caseId: 'index.json', errors: indexErrors })
   }
 
   // 結果出力

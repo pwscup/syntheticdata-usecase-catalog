@@ -93,6 +93,79 @@ describe("fetchSeedCases", () => {
     const result = await fetchSeedCases()
     expect(result).toEqual([case1])
   })
+
+  it("不正な構造のcase.json（配列ラッパー等）はスキップする", async () => {
+    const case1 = makeCase({ id: "seed-1" })
+    const warnSpy = vi.spyOn(console, "warn").mockImplementation(() => {})
+
+    const mockFetch = vi.fn().mockImplementation((url: string) => {
+      if (url.endsWith("/cases/index.json")) {
+        return Promise.resolve({
+          ok: true,
+          json: () =>
+            Promise.resolve({ cases: ["seed-1", "seed-wrapped", "seed-null"] }),
+        })
+      }
+      if (url.endsWith("/cases/seed-1/case.json")) {
+        return Promise.resolve({
+          ok: true,
+          json: () => Promise.resolve(case1),
+        })
+      }
+      if (url.endsWith("/cases/seed-wrapped/case.json")) {
+        // 配列ラッパー（よくある間違い）
+        return Promise.resolve({
+          ok: true,
+          json: () => Promise.resolve([case1]),
+        })
+      }
+      if (url.endsWith("/cases/seed-null/case.json")) {
+        // null
+        return Promise.resolve({
+          ok: true,
+          json: () => Promise.resolve(null),
+        })
+      }
+      return Promise.resolve({ ok: false })
+    })
+    vi.stubGlobal("fetch", mockFetch)
+
+    const result = await fetchSeedCases()
+    expect(result).toEqual([case1])
+    expect(warnSpy).toHaveBeenCalledWith(
+      "[data-loader] Skipping invalid case: seed-wrapped"
+    )
+    expect(warnSpy).toHaveBeenCalledWith(
+      "[data-loader] Skipping invalid case: seed-null"
+    )
+    warnSpy.mockRestore()
+  })
+
+  it("index.jsonが空の場合、空配列を返す", async () => {
+    const mockFetch = vi.fn().mockImplementation((url: string) => {
+      if (url.endsWith("/cases/index.json")) {
+        return Promise.resolve({
+          ok: true,
+          json: () => Promise.resolve({ cases: [] }),
+        })
+      }
+      return Promise.resolve({ ok: false })
+    })
+    vi.stubGlobal("fetch", mockFetch)
+
+    const result = await fetchSeedCases()
+    expect(result).toEqual([])
+  })
+
+  it("index.jsonが404の場合、空配列を返す", async () => {
+    vi.stubGlobal(
+      "fetch",
+      vi.fn().mockResolvedValue({ ok: false, status: 404 })
+    )
+
+    const result = await fetchSeedCases()
+    expect(result).toEqual([])
+  })
 })
 
 describe("loadAllCases", () => {
