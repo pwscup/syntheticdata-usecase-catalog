@@ -7,6 +7,10 @@
   "usecase_category": [
     "組織内データ共有"
   ],
+  "technology_category": [
+    "synthetic_data"
+  ],
+  "review_status": "ai_generated",
   "summary": "米国最大の統合医療システムであるVHA（退役軍人保健局: 1,298施設・900万人以上の退役軍人に医療提供）が、MDClone社の合成データ生成基盤を導入した事例。200万人の患者コホートからオンデマンドで合成データを生成し、IRB審査なしで心不全再入院予測や自殺予防などの分析・ML開発を推進。",
   "value_proposition": "従来は数か月かかっていたIRB審査や情報アクセス承認を経ずに、医療従事者が必要なデータに即座にアクセス可能に。ケアパス分析や業務改善のスピードを大幅に向上させた。",
   "synthetic_generation_method": "MDClone社の合成データ生成プラットフォームを使用。実患者データの統計的特性を保持した高品質な合成データを自動生成。",
@@ -34,11 +38,31 @@
       "title": "VHAにおける合成データ基盤活用フロー",
       "data": {
         "nodes": [
-          { "id": "s1", "label": "VHA患者データ", "category": "source" },
-          { "id": "s2", "label": "IRB審査・情報アクセス承認に長期間", "category": "constraint" },
-          { "id": "p1", "label": "MDCloneで合成患者データを即座に生成", "category": "process" },
-          { "id": "a1", "label": "ケアパス分析・業務改善に活用", "category": "application" },
-          { "id": "a2", "label": "審査不要で迅速なデータアクセスを実現", "category": "outcome" }
+          {
+            "id": "s1",
+            "label": "VHA患者データ",
+            "category": "source"
+          },
+          {
+            "id": "s2",
+            "label": "IRB審査・情報アクセス承認に長期間",
+            "category": "constraint"
+          },
+          {
+            "id": "p1",
+            "label": "MDCloneで合成患者データを即座に生成",
+            "category": "process"
+          },
+          {
+            "id": "a1",
+            "label": "ケアパス分析・業務改善に活用",
+            "category": "application"
+          },
+          {
+            "id": "a2",
+            "label": "審査不要で迅速なデータアクセスを実現",
+            "category": "outcome"
+          }
         ],
         "edges": []
       },

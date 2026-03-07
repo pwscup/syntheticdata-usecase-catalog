@@ -100,6 +100,13 @@ export const caseSchema = z.object({
     z.array(z.string()),
     z.string().transform((s) => (s ? [s] : [])),
   ]).default([]),
+  technology_category: z.union([
+    z.array(z.enum(["synthetic_data", "differential_privacy", "anonymization", "federated_learning", "secure_computation"])),
+    z.enum(["synthetic_data", "differential_privacy", "anonymization", "federated_learning", "secure_computation"]).transform((s) => [s]),
+  ]).default(["synthetic_data"]),
+  review_status: z
+    .enum(["ai_generated", "human_reviewed", "flagged", "under_review"])
+    .default("ai_generated"),
   image: z.string().optional(),
   summary: z.string().default(""),
   value_proposition: z.string().default("調査中"),
@@ -125,6 +132,8 @@ export const caseFormSchema = z.object({
   domain_sub: z.string().optional(),
   organization: z.string().default(''),
   usecase_category: z.array(z.string()).default([]),
+  technology_category: z.array(z.enum(['synthetic_data', 'differential_privacy', 'anonymization', 'federated_learning', 'secure_computation'])).default(['synthetic_data']),
+  review_status: z.enum(['ai_generated', 'human_reviewed', 'flagged', 'under_review']).default('ai_generated'),
   summary: z.string().default(''),
   value_proposition: z.string().default(''),
   synthetic_generation_method: z.string().default('調査中'),

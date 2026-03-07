@@ -1,0 +1,27 @@
+{
+  "id": "psd-0006",
+  "title": "日本統計学会：部分合成・疑似データを用いた統計的マッチング手法",
+  "region": "国内",
+  "domain": "公共",
+  "organization": "日本マーケティング・リサーチ協会",
+  "usecase_category": ["R&D"],
+  "technology_category": ["synthetic_data"],
+  "review_status": "ai_generated",
+  "summary": "公的統計系資料において、本物のデータを一部欠損させて補完する手法と、統計的マッチングやパネルデータ作成による情報量増加が整理されている。共通変数を接着剤として、異なるデータソースを疑似的に結合する手法の研究事例。",
+  "value_proposition": "調査中",
+  "synthetic_generation_method": "調査中",
+  "safety_evaluation_method": "調査中",
+  "utility_evaluation_method": "調査中",
+  "tags": ["部分合成データ", "統計的マッチング", "疑似結合"],
+  "sources": [
+    {
+      "source_type": "pdf",
+      "title": "Synthetic Data（合成データ）の概要と調査業務・公的統計への応用",
+      "url": "https://www.jmra-net.or.jp/Portals/0/committee/statistics/nenji2024_material_2.pdf"
+    }
+  ],
+  "figures": [],
+  "status": "seed",
+  "created_at": "2026-03-07T00:00:00+09:00",
+  "updated_at": "2026-03-07T00:00:00+09:00"
+}

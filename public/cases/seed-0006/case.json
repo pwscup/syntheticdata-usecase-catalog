@@ -7,6 +7,10 @@
   "usecase_category": [
     "データ販売"
   ],
+  "technology_category": [
+    "synthetic_data"
+  ],
+  "review_status": "human_reviewed",
   "summary": "人流データは個人の移動軌跡を含むためプライバシーの観点から外部提供が難しく、集計データに限定されていた。GEOTRAは人流合成データを生成し、集計前のトリップ単位データを第三者向け分析プラットフォームで提供可能にした。",
   "value_proposition": "従来は提供困難だった集計前のトリップデータを外部分析者に提供可能に。",
   "synthetic_generation_method": "調査中",

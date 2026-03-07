@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
 import type { Case } from '../../types'
-import { DOMAIN_COLORS, REGION_COLORS } from '../../constants/styles'
+import { DOMAIN_COLORS, REGION_COLORS, REVIEW_STATUS_COLORS } from '../../constants/styles'
+import { TECHNOLOGY_CATEGORY_LABELS, REVIEW_STATUS_LABELS } from '../../constants/categories'
 
 interface CaseCardProps {
   caseItem: Case
@@ -18,6 +19,20 @@ export default function CaseCard({ caseItem }: CaseCardProps) {
       to={`/cases/${caseItem.id}`}
       className={`block bg-white rounded-lg shadow-sm border border-gray-100 border-l-4 ${borderColor} p-4 transition-all duration-150 hover:shadow-md hover:-translate-y-0.5`}
     >
+      {/* Review status + Technology badges */}
+      <div className="flex flex-wrap items-center gap-1.5 mb-1.5">
+        {caseItem.review_status && (
+          <span className={`text-[10px] font-medium px-1.5 py-0.5 rounded-full ${REVIEW_STATUS_COLORS[caseItem.review_status]?.badge ?? 'bg-gray-100 text-gray-600'}`}>
+            {REVIEW_STATUS_LABELS[caseItem.review_status] ?? caseItem.review_status}
+          </span>
+        )}
+        {caseItem.technology_category?.map((tech) => (
+          <span key={tech} className="text-[10px] font-medium px-1.5 py-0.5 rounded-full bg-slate-100 text-slate-600">
+            {TECHNOLOGY_CATEGORY_LABELS[tech] ?? tech}
+          </span>
+        ))}
+      </div>
+
       {/* Title */}
       <h2 className="text-base font-semibold text-gray-900 mb-1.5 line-clamp-2 leading-snug">
         {caseItem.title}

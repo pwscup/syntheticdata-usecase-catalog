@@ -8,6 +8,10 @@
     "組織内データ共有",
     "R&D"
   ],
+  "technology_category": [
+    "synthetic_data"
+  ],
+  "review_status": "ai_generated",
   "summary": "南オーストラリア州の公的医療システムが、Gretel社のプラットフォームを用いて実電子カルテ（EHR）から合成データを生成し、患者プライバシーを保護しながら臨床研究や患者ケアの改善に活用している事例。州全体レベルでの公的医療システムにおける合成データ導入事例。",
   "value_proposition": "州全体の公的医療システムで、患者のプライバシーを保護しながら臨床研究やケア改善に必要なデータを広く活用可能に。部門間のデータ共有障壁を低減し、医療サービスの質の向上を推進。",
   "synthetic_generation_method": "Gretel社の合成データ生成プラットフォームを使用。実電子カルテ（EHR）データの統計的特性を保持した合成データを生成。",
@@ -34,11 +38,31 @@
       "title": "州全体レベルの合成EHRデータ活用フロー",
       "data": {
         "nodes": [
-          { "id": "s1", "label": "南オーストラリア州の電子カルテ（EHR）", "category": "source" },
-          { "id": "s2", "label": "患者プライバシーによるデータ共有制約", "category": "constraint" },
-          { "id": "p1", "label": "Gretelで合成EHRデータを生成", "category": "process" },
-          { "id": "a1", "label": "臨床研究・患者ケア改善に活用", "category": "application" },
-          { "id": "a2", "label": "州全体で安全なデータ活用環境を構築", "category": "outcome" }
+          {
+            "id": "s1",
+            "label": "南オーストラリア州の電子カルテ（EHR）",
+            "category": "source"
+          },
+          {
+            "id": "s2",
+            "label": "患者プライバシーによるデータ共有制約",
+            "category": "constraint"
+          },
+          {
+            "id": "p1",
+            "label": "Gretelで合成EHRデータを生成",
+            "category": "process"
+          },
+          {
+            "id": "a1",
+            "label": "臨床研究・患者ケア改善に活用",
+            "category": "application"
+          },
+          {
+            "id": "a2",
+            "label": "州全体で安全なデータ活用環境を構築",
+            "category": "outcome"
+          }
         ],
         "edges": []
       },

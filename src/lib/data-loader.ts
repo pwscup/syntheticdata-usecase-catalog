@@ -21,7 +21,12 @@ export async function fetchSeedCases(basePath = "."): Promise<Case[]> {
             console.warn(`[data-loader] Skipping invalid case: ${id}`)
             return null
           }
-          return data as Case
+          const obj = data as Record<string, unknown>
+          return {
+            ...obj,
+            technology_category: obj.technology_category ?? ['synthetic_data'],
+            review_status: obj.review_status ?? 'ai_generated',
+          } as Case
         } catch {
           return null
         }

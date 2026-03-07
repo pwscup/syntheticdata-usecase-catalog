@@ -10,6 +10,21 @@ export type FigureType = "data_flow" | "risk_matrix" | "utility_chart";
 // Case status
 export type CaseStatus = "seed" | "user" | "draft" | "published" | "archived";
 
+// Technology category (PETs)
+export type TechnologyCategory =
+  | "synthetic_data"
+  | "differential_privacy"
+  | "anonymization"
+  | "federated_learning"
+  | "secure_computation";
+
+// Review status
+export type ReviewStatus =
+  | "ai_generated"
+  | "human_reviewed"
+  | "flagged"
+  | "under_review";
+
 // Source
 export interface Source {
   source_type: SourceType;
@@ -85,6 +100,8 @@ export interface Case {
   domain_sub?: string;
   organization: string;
   usecase_category: string[];
+  technology_category: TechnologyCategory[];
+  review_status: ReviewStatus;
   image?: string;
   summary: string;
   value_proposition: string;

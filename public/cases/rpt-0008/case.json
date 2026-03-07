@@ -9,6 +9,10 @@
     "外部分析者活用",
     "データ販売"
   ],
+  "technology_category": [
+    "synthetic_data"
+  ],
+  "review_status": "ai_generated",
   "summary": "全米第3位の医療保険会社Humanaが、MOSTLY AI社の技術を用いて150万件の合成患者レコードを生成し、外部開発者やデータサイエンティストが本番に近い環境で検証できるデータサンドボックスを公開した事例。人口統計、保険適用、医療・薬局請求、診断コード等を含む包括的なデータセット。",
   "value_proposition": "規制が厳しい医療保険業界において、実データを外部に出さずに外部開発者やパートナーがリアルなデータ環境で製品検証できるサンドボックスを構築。製品開発サイクルの高速化と外部エコシステムとの連携を実現。",
   "synthetic_generation_method": "MOSTLY AI社のAI合成データ生成技術を使用。150万件の合成患者レコードを生成し、変数間の相関や関係性を保持。ダッシュボードでの即時アクセス、サンプルデータのダウンロード、データ辞書を備えたサンドボックスとして提供。",
@@ -35,11 +39,31 @@
       "title": "Humana合成データサンドボックスのフロー",
       "data": {
         "nodes": [
-          { "id": "s1", "label": "Humana会員の医療保険データ（人口統計・請求・診断）", "category": "source" },
-          { "id": "s2", "label": "医療保険の規制による外部データ共有制約", "category": "constraint" },
-          { "id": "p1", "label": "MOSTLY AIで150万件の合成患者レコードを生成", "category": "process" },
-          { "id": "a1", "label": "外部開発者・データサイエンティスト向けサンドボックスとして公開", "category": "application" },
-          { "id": "a2", "label": "安全なデータ環境で製品検証・開発を加速", "category": "outcome" }
+          {
+            "id": "s1",
+            "label": "Humana会員の医療保険データ（人口統計・請求・診断）",
+            "category": "source"
+          },
+          {
+            "id": "s2",
+            "label": "医療保険の規制による外部データ共有制約",
+            "category": "constraint"
+          },
+          {
+            "id": "p1",
+            "label": "MOSTLY AIで150万件の合成患者レコードを生成",
+            "category": "process"
+          },
+          {
+            "id": "a1",
+            "label": "外部開発者・データサイエンティスト向けサンドボックスとして公開",
+            "category": "application"
+          },
+          {
+            "id": "a2",
+            "label": "安全なデータ環境で製品検証・開発を加速",
+            "category": "outcome"
+          }
         ],
         "edges": []
       },

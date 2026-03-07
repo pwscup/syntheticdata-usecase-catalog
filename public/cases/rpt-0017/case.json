@@ -8,6 +8,10 @@
   "usecase_category": [
     "R&D"
   ],
+  "technology_category": [
+    "synthetic_data"
+  ],
+  "review_status": "ai_generated",
   "summary": "欧州の著名な高級ブランドが、顧客データが疎でパーソナライズが困難な状況において、Betterdata社の合成データ拡張技術を用いてプロペンシティモデリングを補強し、VIPコンバージョンを約5%改善した事例。データ不足の課題を合成データで解決したマーケティング活用例。",
   "value_proposition": "実在の顧客データが少なくパーソナライズが困難だった課題を、合成データによるデータ拡張で解決。VIPコンバージョンを約5%改善し、高価値顧客とのエンゲージメントを強化。",
   "synthetic_generation_method": "Betterdata社の合成データ拡張型プロペンシティモデリング技術を使用。疎な実データセットを合成レコードで補強し、モデルの学習データ量を増加。",
@@ -35,11 +39,31 @@
       "title": "合成データ拡張によるVIPコンバージョン改善フロー",
       "data": {
         "nodes": [
-          { "id": "s1", "label": "高級ブランドの顧客行動・取引データ（疎）", "category": "source" },
-          { "id": "s2", "label": "顧客データが疎でパーソナライズ困難", "category": "constraint" },
-          { "id": "p1", "label": "Betterdataで合成データを拡張生成しモデルを補強", "category": "process" },
-          { "id": "a1", "label": "VIP向けプロペンシティモデリング", "category": "application" },
-          { "id": "a2", "label": "VIPコンバージョン約5%改善", "category": "outcome" }
+          {
+            "id": "s1",
+            "label": "高級ブランドの顧客行動・取引データ（疎）",
+            "category": "source"
+          },
+          {
+            "id": "s2",
+            "label": "顧客データが疎でパーソナライズ困難",
+            "category": "constraint"
+          },
+          {
+            "id": "p1",
+            "label": "Betterdataで合成データを拡張生成しモデルを補強",
+            "category": "process"
+          },
+          {
+            "id": "a1",
+            "label": "VIP向けプロペンシティモデリング",
+            "category": "application"
+          },
+          {
+            "id": "a2",
+            "label": "VIPコンバージョン約5%改善",
+            "category": "outcome"
+          }
         ],
         "edges": []
       },

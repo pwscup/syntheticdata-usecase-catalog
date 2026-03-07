@@ -9,7 +9,7 @@ interface SummaryPanelProps {
   filteredCases: Case[]
   totalCases: number
   filters: FilterState
-  onToggleFilter: (key: 'region' | 'domain' | 'usecase_category', value: string) => void
+  onToggleFilter: (key: 'region' | 'domain' | 'usecase_category' | 'technology_category' | 'review_status', value: string) => void
 }
 
 function mergeWithAllLabels(items: CountItem[], allLabels: readonly string[]): CountItem[] {
@@ -22,11 +22,13 @@ function StackedBar({
   colorMap,
   activeValues,
   onToggle,
+  labelMap,
 }: {
   items: CountItem[]
   colorMap: Record<string, string>
   activeValues: string[]
   onToggle: (value: string) => void
+  labelMap?: Record<string, string>
 }) {
   if (items.length === 0) return null
 
@@ -38,7 +40,7 @@ function StackedBar({
           <button
             key={item.label}
             type="button"
-            title={`${item.label}: ${item.count}件 (${item.percentage}%)`}
+            title={`${labelMap?.[item.label] ?? item.label}: ${item.count}件 (${item.percentage}%)`}
             onClick={() => onToggle(item.label)}
             className={`h-full transition-all duration-150 hover:brightness-110 ${colorMap[item.label] ?? 'bg-gray-400'}`}
             style={{ width: `${item.percentage}%`, minWidth: item.percentage > 0 ? '4px' : '0' }}
@@ -64,7 +66,7 @@ function StackedBar({
               disabled={item.count === 0}
             >
               <span className={`inline-block w-2.5 h-2.5 rounded-sm shrink-0 ${colorMap[item.label] ?? 'bg-gray-400'}`} />
-              {item.label}
+              {labelMap?.[item.label] ?? item.label}
               <span className="text-gray-400">{item.count}</span>
             </button>
           )

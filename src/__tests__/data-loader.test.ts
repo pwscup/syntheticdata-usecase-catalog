@@ -17,6 +17,8 @@ function makeCase(overrides: Partial<Case> = {}): Case {
     tags: ["tag1"],
     sources: [],
     figures: [],
+    technology_category: ["synthetic_data"],
+    review_status: "ai_generated",
     status: "seed",
     created_at: "2025-01-01T00:00:00Z",
     updated_at: "2025-01-01T00:00:00Z",

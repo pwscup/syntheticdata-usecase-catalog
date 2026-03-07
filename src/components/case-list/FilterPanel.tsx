@@ -1,6 +1,7 @@
 import { useState, useCallback, useMemo } from 'react'
 import type { Case } from '../../types'
 import type { FilterState } from '../../hooks/useFilter'
+import { TECHNOLOGY_CATEGORY_LABELS, REVIEW_STATUS_LABELS } from '../../constants/categories'
 
 interface FilterPanelProps {
   filters: FilterState
@@ -26,10 +27,17 @@ function buildFieldCounts(cases: Case[], field: string): Map<string, number> {
   return counts
 }
 
+const LABEL_MAPS: Record<string, Record<string, string>> = {
+  technology_category: TECHNOLOGY_CATEGORY_LABELS,
+  review_status: REVIEW_STATUS_LABELS,
+}
+
 const filterSections: { key: keyof Omit<FilterState, 'query' | 'sortBy' | 'page'>; label: string }[] = [
+  { key: 'technology_category', label: '技術カテゴリ' },
   { key: 'region', label: '地域' },
   { key: 'domain', label: '分野' },
   { key: 'usecase_category', label: 'ユースケース分類' },
+  { key: 'review_status', label: 'レビュー状態' },
 ]
 
 export default function FilterPanel({ filters, filterOptions, filteredCases, onToggle, onClear }: FilterPanelProps) {
@@ -47,7 +55,9 @@ export default function FilterPanel({ filters, filterOptions, filteredCases, onT
   const hasActiveFilters =
     filters.region.length > 0 ||
     filters.domain.length > 0 ||
-    filters.usecase_category.length > 0
+    filters.usecase_category.length > 0 ||
+    filters.technology_category.length > 0 ||
+    filters.review_status.length > 0
 
   const handleMobileToggle = useCallback(
     (key: keyof Omit<FilterState, 'query' | 'sortBy' | 'page'>, value: string) => {
@@ -94,7 +104,7 @@ export default function FilterPanel({ filters, filterOptions, filteredCases, onT
                       onChange={() => toggleFn(section.key, option)}
                       className="rounded border-gray-300"
                     />
-                    <span className="flex-1">{option}</span>
+                    <span className="flex-1">{LABEL_MAPS[section.key]?.[option] ?? option}</span>
                     <span className="text-xs text-gray-400">{count}</span>
                   </label>
                 )

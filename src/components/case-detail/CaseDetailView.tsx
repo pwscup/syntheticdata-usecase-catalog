@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import type { Case } from '../../types'
 import FigureRenderer from '../figures/FigureRenderer'
+import { TECHNOLOGY_CATEGORY_LABELS, REVIEW_STATUS_LABELS } from '../../constants/categories'
 
 function TechValue({ value }: { value: string }) {
   if (value === '調査中') {
@@ -26,6 +27,27 @@ export default function CaseDetailView({ caseData }: { caseData: Case }) {
           </h1>
           {/* Right: metadata badges */}
           <div className="flex flex-wrap gap-2 shrink-0">
+            {caseData.review_status && (
+              <span
+                className={`rounded-full px-3 py-0.5 text-xs font-medium ${
+                  caseData.review_status === 'human_reviewed'
+                    ? 'bg-green-500/30 border border-green-400/50 text-green-200'
+                    : caseData.review_status === 'flagged'
+                      ? 'bg-red-500/30 border border-red-400/50 text-red-200'
+                      : caseData.review_status === 'under_review'
+                        ? 'bg-blue-500/30 border border-blue-400/50 text-blue-200'
+                        : 'bg-yellow-500/30 border border-yellow-400/50 text-yellow-200'
+                }`}
+                data-testid="review-status-badge"
+              >
+                {REVIEW_STATUS_LABELS[caseData.review_status] ?? caseData.review_status}
+              </span>
+            )}
+            {caseData.technology_category?.map((tech) => (
+              <span key={tech} className="rounded-full bg-slate-500/30 border border-slate-400/50 px-3 py-0.5 text-xs text-slate-200">
+                {TECHNOLOGY_CATEGORY_LABELS[tech] ?? tech}
+              </span>
+            ))}
             <span className="rounded-full bg-blue-500/30 border border-blue-400/50 px-3 py-0.5 text-xs text-blue-200">
               {caseData.region}
             </span>
@@ -47,6 +69,24 @@ export default function CaseDetailView({ caseData }: { caseData: Case }) {
           {caseData.organization}
         </div>
       </div>
+
+      {/* ===== Review status alert ===== */}
+      {caseData.review_status === 'ai_generated' && (
+        <div className="bg-yellow-50 border border-t-0 border-yellow-200 px-5 py-2.5 flex items-start gap-2" data-testid="review-alert">
+          <span className="text-yellow-600 text-sm mt-0.5">&#9888;</span>
+          <p className="text-xs text-yellow-700">
+            この事例はAIにより生成されました。内容の正確性は人間によるレビュー前です。
+          </p>
+        </div>
+      )}
+      {caseData.review_status === 'flagged' && (
+        <div className="bg-red-50 border border-t-0 border-red-200 px-5 py-2.5 flex items-start gap-2" data-testid="review-alert">
+          <span className="text-red-600 text-sm mt-0.5">&#9888;</span>
+          <p className="text-xs text-red-700">
+            この事例には確認が必要な内容が含まれている可能性があります。
+          </p>
+        </div>
+      )}
 
       {/* ===== Body: 2-column (directly connected to header) ===== */}
       <div className="border border-t-0 border-gray-200 rounded-b-lg bg-white">

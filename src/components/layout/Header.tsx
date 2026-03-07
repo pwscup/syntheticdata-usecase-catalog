@@ -9,6 +9,7 @@ export default function Header() {
         </Link>
         <nav className="flex gap-4">
           <Link to="/" className="hover:underline">一覧</Link>
+          <Link to="/stats" className="hover:underline">統計</Link>
           <Link to="/cases/new" className="hover:underline">新規作成</Link>
           <Link to="/settings" className="hover:underline">設定</Link>
           <Link to="/about" className="hover:underline">About</Link>
