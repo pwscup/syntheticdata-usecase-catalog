@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 import type { Case } from '../../types'
-import { DOMAIN_COLORS, REGION_COLORS, REVIEW_STATUS_COLORS } from '../../constants/styles'
+import { DOMAIN_COLORS, REGION_COLORS, REVIEW_STATUS_COLORS, TECHNOLOGY_CATEGORY_COLORS } from '../../constants/styles'
 import { TECHNOLOGY_CATEGORY_LABELS, REVIEW_STATUS_LABELS } from '../../constants/categories'
 
 interface CaseCardProps {
@@ -27,7 +27,7 @@ export default function CaseCard({ caseItem }: CaseCardProps) {
           </span>
         )}
         {caseItem.technology_category?.map((tech) => (
-          <span key={tech} className="text-[10px] font-medium px-1.5 py-0.5 rounded-full bg-slate-100 text-slate-600">
+          <span key={tech} className={`text-[10px] font-medium px-1.5 py-0.5 rounded-full text-white ${TECHNOLOGY_CATEGORY_COLORS[tech] ?? 'bg-slate-400'}`}>
             {TECHNOLOGY_CATEGORY_LABELS[tech] ?? tech}
           </span>
         ))}

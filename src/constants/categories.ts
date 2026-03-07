@@ -1,6 +1,6 @@
 export const REGION_OPTIONS = ['国内', '国外'] as const
 
-export const DOMAIN_OPTIONS = ['金融', '医療', '公共', '通信'] as const
+export const DOMAIN_OPTIONS = ['金融', '医療', '公共', '通信', 'モビリティ', 'IT', 'エネルギー', '小売'] as const
 
 export const USECASE_CATEGORY_OPTIONS = [
   '組織内データ共有',
@@ -9,6 +9,7 @@ export const USECASE_CATEGORY_OPTIONS = [
   'R&D',
   'データ販売',
   'フィージビリティ検証',
+  '公的利用',
 ] as const
 
 export const TECHNOLOGY_CATEGORY_OPTIONS = [
