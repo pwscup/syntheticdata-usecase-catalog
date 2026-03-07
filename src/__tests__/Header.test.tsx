@@ -13,7 +13,7 @@ function renderHeader() {
 describe('Header', () => {
   it('アプリ名が表示される', () => {
     renderHeader()
-    expect(screen.getByText('合成データ ユースケースカタログ')).toBeInTheDocument()
+    expect(screen.getByText('プライバシー強化技術 活用事例カタログ')).toBeInTheDocument()
   })
 
   it('一覧リンクが存在する', () => {

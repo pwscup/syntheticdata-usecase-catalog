@@ -9,7 +9,7 @@ describe('AboutPage', () => {
         <AboutPage />
       </MemoryRouter>,
     )
-    expect(screen.getByText('合成データ活用事例カタログ')).toBeInTheDocument()
+    expect(screen.getByText('プライバシー強化技術 活用事例カタログ')).toBeInTheDocument()
   })
 
   it('免責事項が表示される', () => {

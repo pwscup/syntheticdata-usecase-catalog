@@ -1,13 +1,13 @@
 export default function AboutPage() {
   return (
     <div className="max-w-2xl mx-auto space-y-8">
-      <h1 className="text-2xl font-bold">合成データ活用事例カタログ</h1>
+      <h1 className="text-2xl font-bold">プライバシー強化技術 活用事例カタログ</h1>
 
       <section className="space-y-2">
         <h2 className="text-lg font-semibold">概要</h2>
         <p className="text-gray-700">
-          本カタログは、合成データ（Synthetic Data）の活用事例を収集・整理し、検索・閲覧できるWebカタログです。
-          国内外の多様な分野における合成データの活用方法、安全性評価、有用性評価の情報を提供します。
+          本カタログは、プライバシー強化技術（PETs: Privacy Enhancing Technologies）の活用事例を収集・整理し、検索・閲覧できるWebカタログです。
+          合成データ、差分プライバシー、匿名化、連合学習、秘密計算など、国内外の多様な分野における活用方法と評価情報を提供します。
         </p>
       </section>
 
