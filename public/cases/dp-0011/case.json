@@ -1,0 +1,71 @@
+{
+  "id": "dp-0011",
+  "title": "Microsoft：Viva Insightsの働き方分析における差分プライバシー",
+  "region": "国外",
+  "domain": "IT",
+  "organization": "Microsoft",
+  "usecase_category": [
+    "組織内データ共有"
+  ],
+  "technology_category": [
+    "differential_privacy"
+  ],
+  "review_status": "ai_generated",
+  "summary": "チーム単位のコラボレーションデータを対象に、People Manager向けに個人情報を共有せずチームの働き方を把握する集計インサイトを差分プライバシーを適用して提供している。エンタープライズ分析領域での差分プライバシー適用例である。",
+  "value_proposition": "個人単位の行動可視化に寄りすぎずに、働き方改善や組織マネジメントに必要な傾向把握を可能にしている。",
+  "synthetic_generation_method": "調査中",
+  "safety_evaluation_method": "調査中",
+  "utility_evaluation_method": "調査中",
+  "tags": [
+    "働き方分析",
+    "エンタープライズ",
+    "組織マネジメント"
+  ],
+  "sources": [
+    {
+      "source_type": "web",
+      "title": "Microsoft - Differential Privacy for Business",
+      "url": "https://blogs.microsoft.com/ai-for-business/differential-privacy/"
+    }
+  ],
+  "figures": [
+    {
+      "type": "data_flow",
+      "title": "概要フロー",
+      "data": {
+        "nodes": [
+          {
+            "id": "s1",
+            "label": "チームのコラボレーションデータ",
+            "category": "source"
+          },
+          {
+            "id": "s2",
+            "label": "個人行動の過度な可視化リスク",
+            "category": "constraint"
+          },
+          {
+            "id": "p1",
+            "label": "差分プライバシーで集計保護",
+            "category": "process"
+          },
+          {
+            "id": "a1",
+            "label": "チーム働き方インサイト提供",
+            "category": "application"
+          },
+          {
+            "id": "a2",
+            "label": "個人非特定で組織改善を支援",
+            "category": "outcome"
+          }
+        ],
+        "edges": []
+      },
+      "note": ""
+    }
+  ],
+  "status": "seed",
+  "created_at": "2026-03-08T00:00:00+09:00",
+  "updated_at": "2026-03-08T00:00:00+09:00"
+}

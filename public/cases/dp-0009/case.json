@@ -1,0 +1,71 @@
+{
+  "id": "dp-0009",
+  "title": "U.S. Census Bureau：大学卒業後の就業・所得統計の差分プライバシー保護",
+  "region": "国外",
+  "domain": "公共",
+  "organization": "U.S. Census Bureau",
+  "usecase_category": [
+    "公的利用"
+  ],
+  "technology_category": [
+    "differential_privacy"
+  ],
+  "review_status": "ai_generated",
+  "summary": "大学・専攻・学位別の卒業後の就業・所得データを対象に、教育データと雇用データを結び付けた実験的集計表を差分プライバシーで保護して公開している。Post-Secondary Employment Outcomes（PSEO）として2019年以降継続更新されている。",
+  "value_proposition": "学生は進学先や専攻選択の参考にでき、州政府や企業は人材供給の把握に使える。高感度な就業・所得情報でも公表可能な形に変換できている。",
+  "synthetic_generation_method": "調査中",
+  "safety_evaluation_method": "調査中",
+  "utility_evaluation_method": "調査中",
+  "tags": [
+    "教育政策",
+    "人材政策",
+    "公的統計"
+  ],
+  "sources": [
+    {
+      "source_type": "web",
+      "title": "PSEO Technical Documentation",
+      "url": "https://lehd.ces.census.gov/doc/PSEOTechnicalDocumentation.pdf"
+    }
+  ],
+  "figures": [
+    {
+      "type": "data_flow",
+      "title": "概要フロー",
+      "data": {
+        "nodes": [
+          {
+            "id": "s1",
+            "label": "卒業後の就業・所得データ",
+            "category": "source"
+          },
+          {
+            "id": "s2",
+            "label": "個人の所得情報の保護要件",
+            "category": "constraint"
+          },
+          {
+            "id": "p1",
+            "label": "差分プライバシーで集計表保護",
+            "category": "process"
+          },
+          {
+            "id": "a1",
+            "label": "専攻・学位別就業統計の公開",
+            "category": "application"
+          },
+          {
+            "id": "a2",
+            "label": "進学・人材政策の判断材料提供",
+            "category": "outcome"
+          }
+        ],
+        "edges": []
+      },
+      "note": ""
+    }
+  ],
+  "status": "seed",
+  "created_at": "2026-03-08T00:00:00+09:00",
+  "updated_at": "2026-03-08T00:00:00+09:00"
+}

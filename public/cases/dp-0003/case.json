@@ -1,0 +1,71 @@
+{
+  "id": "dp-0003",
+  "title": "Apple：Photosの代表写真選定における差分プライバシー",
+  "region": "国外",
+  "domain": "IT",
+  "organization": "Apple",
+  "usecase_category": [
+    "組織内データ共有"
+  ],
+  "technology_category": [
+    "differential_privacy"
+  ],
+  "review_status": "ai_generated",
+  "summary": "よく訪れる場所で撮影された写真の種類に関する情報を対象に、差分プライバシーを用いて群集レベルの傾向を学習し、PhotosのMemoriesやPlacesで代表写真を選定している。個人の写真や行動をデバイス外に出さない設計としている。",
+  "value_proposition": "個人の写真や行動を直接外部に出さずに、群集レベルの傾向を学習し、写真体験を改善できる。",
+  "synthetic_generation_method": "調査中",
+  "safety_evaluation_method": "調査中",
+  "utility_evaluation_method": "調査中",
+  "tags": [
+    "画像",
+    "UX改善",
+    "ローカル差分プライバシー"
+  ],
+  "sources": [
+    {
+      "source_type": "web",
+      "title": "Apple Machine Learning Research - Scenes and Differential Privacy",
+      "url": "https://machinelearning.apple.com/research/scenes-differential-privacy"
+    }
+  ],
+  "figures": [
+    {
+      "type": "data_flow",
+      "title": "概要フロー",
+      "data": {
+        "nodes": [
+          {
+            "id": "s1",
+            "label": "場所ごとの写真撮影傾向",
+            "category": "source"
+          },
+          {
+            "id": "s2",
+            "label": "個人の写真・行動の流出リスク",
+            "category": "constraint"
+          },
+          {
+            "id": "p1",
+            "label": "差分プライバシーで傾向学習",
+            "category": "process"
+          },
+          {
+            "id": "a1",
+            "label": "Memories/Placesの代表写真選定",
+            "category": "application"
+          },
+          {
+            "id": "a2",
+            "label": "プライバシー保護と写真体験向上",
+            "category": "outcome"
+          }
+        ],
+        "edges": []
+      },
+      "note": ""
+    }
+  ],
+  "status": "seed",
+  "created_at": "2026-03-08T00:00:00+09:00",
+  "updated_at": "2026-03-08T00:00:00+09:00"
+}

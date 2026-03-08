@@ -1,0 +1,72 @@
+{
+  "id": "dp-0006",
+  "title": "Google：Gboardの次単語予測における差分プライバシー",
+  "region": "国外",
+  "domain": "IT",
+  "organization": "Google",
+  "usecase_category": [
+    "組織内データ共有"
+  ],
+  "technology_category": [
+    "differential_privacy",
+    "federated_learning"
+  ],
+  "review_status": "ai_generated",
+  "summary": "Gboard利用時の入力文脈に基づく学習信号を対象に、Federated Learningと差分プライバシーを組み合わせて次単語予測モデルを訓練している。スペイン語話者向けGboardの本番系モデルとして導入されている。",
+  "value_proposition": "実際の入力データを中央に集めずに、予測変換の改善を進められる。差分プライバシーがモデル学習に直接使われる数少ない明示事例である。",
+  "synthetic_generation_method": "調査中",
+  "safety_evaluation_method": "調査中",
+  "utility_evaluation_method": "調査中",
+  "tags": [
+    "予測変換",
+    "連合学習",
+    "モデル学習"
+  ],
+  "sources": [
+    {
+      "source_type": "web",
+      "title": "Google Research - Federated Learning with Formal Differential Privacy Guarantees",
+      "url": "https://research.google/blog/federated-learning-with-formal-differential-privacy-guarantees/"
+    }
+  ],
+  "figures": [
+    {
+      "type": "data_flow",
+      "title": "概要フロー",
+      "data": {
+        "nodes": [
+          {
+            "id": "s1",
+            "label": "Gboardの入力文脈データ",
+            "category": "source"
+          },
+          {
+            "id": "s2",
+            "label": "入力内容の漏洩リスク",
+            "category": "constraint"
+          },
+          {
+            "id": "p1",
+            "label": "差分プライバシー＋連合学習",
+            "category": "process"
+          },
+          {
+            "id": "a1",
+            "label": "次単語予測モデルの訓練",
+            "category": "application"
+          },
+          {
+            "id": "a2",
+            "label": "データ非集約で予測精度向上",
+            "category": "outcome"
+          }
+        ],
+        "edges": []
+      },
+      "note": ""
+    }
+  ],
+  "status": "seed",
+  "created_at": "2026-03-08T00:00:00+09:00",
+  "updated_at": "2026-03-08T00:00:00+09:00"
+}

@@ -1,0 +1,71 @@
+{
+  "id": "dp-0012",
+  "title": "LinkedIn：広告・アナリティクスの差分プライバシー保護集計",
+  "region": "国外",
+  "domain": "IT",
+  "organization": "LinkedIn",
+  "usecase_category": [
+    "組織内データ共有"
+  ],
+  "technology_category": [
+    "differential_privacy"
+  ],
+  "review_status": "ai_generated",
+  "summary": "広告問い合わせ、コンテンツ分析、プロフィール閲覧、InMail分析などの行動データを対象に、advertiser queriesに対して差分プライバシー付き回答を返す仕組みを導入している。LinkedIn側もproduction deploymentのanalytics/reporting基盤PriPeARLを公開し、閲覧・検索・クリックなどのprivate actionsを保護している。",
+  "value_proposition": "広告主や利用部門は、個票を露出させずに有用な分析結果を得られる。大規模行動ログを扱うサービスで、分析価値と利用者保護の両立を実現している。",
+  "synthetic_generation_method": "調査中",
+  "safety_evaluation_method": "調査中",
+  "utility_evaluation_method": "調査中",
+  "tags": [
+    "広告分析",
+    "行動ログ",
+    "プライバシー保護集計"
+  ],
+  "sources": [
+    {
+      "source_type": "web",
+      "title": "Microsoft - Differential Privacy for Business",
+      "url": "https://blogs.microsoft.com/ai-for-business/differential-privacy/"
+    }
+  ],
+  "figures": [
+    {
+      "type": "data_flow",
+      "title": "概要フロー",
+      "data": {
+        "nodes": [
+          {
+            "id": "s1",
+            "label": "広告・閲覧・検索等の行動データ",
+            "category": "source"
+          },
+          {
+            "id": "s2",
+            "label": "ユーザー行動の再識別リスク",
+            "category": "constraint"
+          },
+          {
+            "id": "p1",
+            "label": "差分プライバシーで集計クエリ保護",
+            "category": "process"
+          },
+          {
+            "id": "a1",
+            "label": "広告主・社内部門への分析結果提供",
+            "category": "application"
+          },
+          {
+            "id": "a2",
+            "label": "個票非露出で分析価値を維持",
+            "category": "outcome"
+          }
+        ],
+        "edges": []
+      },
+      "note": ""
+    }
+  ],
+  "status": "seed",
+  "created_at": "2026-03-08T00:00:00+09:00",
+  "updated_at": "2026-03-08T00:00:00+09:00"
+}

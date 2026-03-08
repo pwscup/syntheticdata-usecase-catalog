@@ -1,0 +1,71 @@
+{
+  "id": "dp-0002",
+  "title": "Apple：iOS/macOSの利用傾向把握における差分プライバシー",
+  "region": "国外",
+  "domain": "IT",
+  "organization": "Apple",
+  "usecase_category": [
+    "組織内データ共有"
+  ],
+  "technology_category": [
+    "differential_privacy"
+  ],
+  "review_status": "ai_generated",
+  "summary": "QuickType候補、絵文字候補、Safariのクラッシュドメイン、Healthアプリの編集データ種別などを対象に、端末側で差分プライバシー処理したイベントを収集し、どの機能やカテゴリが多く使われているかを把握している。ローカル差分プライバシーを採用し、識別子やIPアドレスを保持しない運用としている。",
+  "value_proposition": "多数ユーザーの傾向を把握しつつ、個人単位の行動や内容をサーバ側で直接把握しない設計により、プロダクト改善とプライバシー保護を両立している。",
+  "synthetic_generation_method": "調査中",
+  "safety_evaluation_method": "調査中",
+  "utility_evaluation_method": "調査中",
+  "tags": [
+    "ローカル差分プライバシー",
+    "テレメトリ",
+    "プロダクト改善"
+  ],
+  "sources": [
+    {
+      "source_type": "web",
+      "title": "Apple Differential Privacy Overview",
+      "url": "https://www.apple.com/privacy/docs/Differential_Privacy_Overview.pdf"
+    }
+  ],
+  "figures": [
+    {
+      "type": "data_flow",
+      "title": "概要フロー",
+      "data": {
+        "nodes": [
+          {
+            "id": "s1",
+            "label": "iOS/macOSの利用イベント",
+            "category": "source"
+          },
+          {
+            "id": "s2",
+            "label": "個人行動の特定リスク",
+            "category": "constraint"
+          },
+          {
+            "id": "p1",
+            "label": "端末側で差分プライバシー処理",
+            "category": "process"
+          },
+          {
+            "id": "a1",
+            "label": "機能・カテゴリの利用傾向分析",
+            "category": "application"
+          },
+          {
+            "id": "a2",
+            "label": "個人非特定でプロダクト改善",
+            "category": "outcome"
+          }
+        ],
+        "edges": []
+      },
+      "note": ""
+    }
+  ],
+  "status": "seed",
+  "created_at": "2026-03-08T00:00:00+09:00",
+  "updated_at": "2026-03-08T00:00:00+09:00"
+}
