@@ -31,6 +31,12 @@
       "title": "MOSTLY AI: The Humana synthetic data sandbox for winning data-centric products",
       "url": "https://mostly.ai/blog/synthetic-healthcare-data-sandbox",
       "note": "MOSTLY AIによるHumanaサンドボックス事例紹介"
+    },
+    {
+      "source_type": "pdf",
+      "title": "プライバシー保護合成データの概説と動向",
+      "url": "https://www.jri.co.jp/MediaLibrary/file/column/opinion/pdf/14266.pdf",
+      "note": "Humanaのプラットフォーム公開に言及"
     }
   ],
   "figures": [

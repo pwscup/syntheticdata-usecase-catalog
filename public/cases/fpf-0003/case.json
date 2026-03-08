@@ -14,7 +14,7 @@
   ],
   "review_status": "ai_generated",
   "summary": "ドイツの保険会社Provinzialが、Statice社の合成データプラットフォームを活用し、顧客に最適な保険商品を提案する「next best offer」推薦エンジン等の予測分析モデルを最適化した事例。合成データの利用により、プライバシーリスク評価に要する期間を3か月以上短縮した。",
-  "value_proposition": "従来は実データを使う際に必要だった長期間のプライバシーリスク評価プロセスを合成データで代替し、3か月以上の開発期間短縮を実現。顧客のプライバシー保護と事業効率化を両立した。",
+  "value_proposition": "従来は実データを使う際に必要だった長期間のプライバシーリスク評価プロセスを合成データで代替し、3か月以上の開発期間短縮・データ入手リードタイム4週間短縮を実現。合成データの有用性は元データの97%を達成し、顧客のプライバシー保護と事業効率化を両立した。",
   "synthetic_generation_method": "Statice社の合成データプラットフォームを使用。保険顧客の属性・契約情報・行動データの統計的特性を保持した合成データを自動生成し、機械学習モデルの学習データとして使用。",
   "safety_evaluation_method": "合成データには実在の顧客情報が含まれないため、モデル開発時の実データに対するプライバシーリスク評価が不要に。Staticeプラットフォームに組み込まれたプライバシー保護機能により、元データからの個人特定を防止。",
   "utility_evaluation_method": "合成データで学習したnext best offer推薦エンジン等の予測モデルの精度を、実データで学習したモデルの精度と比較し、実用に十分な分析精度が維持されていることを検証。",
@@ -38,6 +38,12 @@
       "title": "FPF: Repository for Privacy Enhancing Technologies (PETs)",
       "url": "https://fpf.org/global/repository-for-privacy-enhancing-technologies-pets/",
       "note": "FPF PETsリポジトリでの掲載"
+    },
+    {
+      "source_type": "pdf",
+      "title": "プライバシー保護合成データの概説と動向",
+      "url": "https://www.jri.co.jp/MediaLibrary/file/column/opinion/pdf/14266.pdf",
+      "note": "Provinzialの効果（短縮、97%）に言及"
     }
   ],
   "figures": [

@@ -1,0 +1,71 @@
+{
+  "id": "dp-0013",
+  "title": "AWS：Clean Rooms Differential Privacyによる企業間データ連携",
+  "region": "国外",
+  "domain": "IT",
+  "organization": "Amazon Web Services",
+  "usecase_category": [
+    "組織間データ共有"
+  ],
+  "technology_category": [
+    "differential_privacy"
+  ],
+  "review_status": "ai_generated",
+  "summary": "AWS Clean Roomsに差分プライバシー機能を追加し、パートナー間で照合・分析する顧客データや重複顧客数、集計クエリ結果に対して再識別リスクを下げながら分析を実行できるようにしている。privacy budgetやquery sensitivityなどの概念を管理機能として提供する中央差分プライバシー型のSaaS機能である。",
+  "value_proposition": "企業間データ連携やクリーンルーム分析で、個票を直接共有せずに共同分析をしやすくなる。差分プライバシーをプロダクト化し、企業間データコラボレーション用途に提供している。",
+  "synthetic_generation_method": "調査中",
+  "safety_evaluation_method": "調査中",
+  "utility_evaluation_method": "調査中",
+  "tags": [
+    "クリーンルーム",
+    "企業間データ連携",
+    "SaaS"
+  ],
+  "sources": [
+    {
+      "source_type": "web",
+      "title": "AWS Clean Rooms Differential Privacy",
+      "url": "https://aws.amazon.com/blogs/aws/aws-clean-rooms-differential-privacy-enhances-privacy-protection-of-your-users-data-preview/"
+    }
+  ],
+  "figures": [
+    {
+      "type": "data_flow",
+      "title": "概要フロー",
+      "data": {
+        "nodes": [
+          {
+            "id": "s1",
+            "label": "パートナー間の顧客・集計データ",
+            "category": "source"
+          },
+          {
+            "id": "s2",
+            "label": "個票共有による再識別リスク",
+            "category": "constraint"
+          },
+          {
+            "id": "p1",
+            "label": "差分プライバシーでクエリ結果保護",
+            "category": "process"
+          },
+          {
+            "id": "a1",
+            "label": "Clean Roomsでの共同分析実行",
+            "category": "application"
+          },
+          {
+            "id": "a2",
+            "label": "個票非共有で企業間分析を実現",
+            "category": "outcome"
+          }
+        ],
+        "edges": []
+      },
+      "note": ""
+    }
+  ],
+  "status": "seed",
+  "created_at": "2026-03-08T00:00:00+09:00",
+  "updated_at": "2026-03-08T00:00:00+09:00"
+}
