@@ -20,7 +20,23 @@
       "url": "https://www.mcgc.com/news_release/pdf/02395/02654.pdf"
     }
   ],
-  "figures": [],
+  "figures": [
+    {
+      "type": "data_flow",
+      "title": "概要フロー",
+      "data": {
+        "nodes": [
+          {"id": "s1", "label": "サプライチェーン各社の材料データ", "category": "source"},
+          {"id": "s2", "label": "機密データのため直接開示が不可", "category": "constraint"},
+          {"id": "p1", "label": "ALCHEMISTAで秘密計算MI分析", "category": "process"},
+          {"id": "a1", "label": "企業間データ連携で新規材料を開発", "category": "application"},
+          {"id": "a2", "label": "開発期間を2〜3年から1年未満に短縮", "category": "outcome"}
+        ],
+        "edges": []
+      },
+      "note": ""
+    }
+  ],
   "status": "seed",
   "created_at": "2026-03-08T00:00:00+09:00",
   "updated_at": "2026-03-08T00:00:00+09:00"

@@ -28,7 +28,23 @@
       "url": "https://www.smbc.co.jp/kojin/decile/kamei/"
     }
   ],
-  "figures": [],
+  "figures": [
+    {
+      "type": "data_flow",
+      "title": "概要フロー",
+      "data": {
+        "nodes": [
+          {"id": "s1", "label": "decileサービス利用者情報", "category": "source"},
+          {"id": "s2", "label": "顧客の属性情報は個人情報", "category": "constraint"},
+          {"id": "p1", "label": "利用者情報を仮名加工情報に変換", "category": "process"},
+          {"id": "a1", "label": "性別・住所・年齢等による分析", "category": "application"},
+          {"id": "a2", "label": "プロダクト改善の意思決定を支援", "category": "outcome"}
+        ],
+        "edges": []
+      },
+      "note": ""
+    }
+  ],
   "status": "seed",
   "created_at": "2026-03-07T00:00:00+09:00",
   "updated_at": "2026-03-07T00:00:00+09:00"

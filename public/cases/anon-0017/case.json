@@ -29,7 +29,23 @@
       "url": "https://www.ncrkenpo.or.jp/member/info/policy.html"
     }
   ],
-  "figures": [],
+  "figures": [
+    {
+      "type": "data_flow",
+      "title": "概要フロー",
+      "data": {
+        "nodes": [
+          {"id": "s1", "label": "レセプト・健診情報", "category": "source"},
+          {"id": "s2", "label": "他組合とのデータ比較に制約", "category": "constraint"},
+          {"id": "p1", "label": "匿名加工情報として第三者提供", "category": "process"},
+          {"id": "a1", "label": "他健保とのベンチマーク分析", "category": "application"},
+          {"id": "a2", "label": "保健指導・受診勧奨を改善", "category": "outcome"}
+        ],
+        "edges": []
+      },
+      "note": ""
+    }
+  ],
   "status": "seed",
   "created_at": "2026-03-08T00:00:00+09:00",
   "updated_at": "2026-03-08T00:00:00+09:00"

@@ -20,7 +20,23 @@
       "url": "https://nces.ed.gov/FCSM/pdf/2007FCSM_Hawala-IX-B.pdf"
     }
   ],
-  "figures": [],
+  "figures": [
+    {
+      "type": "data_flow",
+      "title": "概要フロー",
+      "data": {
+        "nodes": [
+          {"id": "s1", "label": "退役軍人の統計データ", "category": "source"},
+          {"id": "s2", "label": "稀少レコードで個人識別リスク", "category": "constraint"},
+          {"id": "p1", "label": "高リスク変数のみ選択的に合成", "category": "process"},
+          {"id": "a1", "label": "統計分析・政策立案に活用", "category": "application"},
+          {"id": "a2", "label": "全件合成より精度を維持し秘匿化", "category": "outcome"}
+        ],
+        "edges": []
+      },
+      "note": ""
+    }
+  ],
   "status": "seed",
   "created_at": "2026-03-07T00:00:00+09:00",
   "updated_at": "2026-03-07T00:00:00+09:00"

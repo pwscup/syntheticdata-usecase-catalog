@@ -20,7 +20,23 @@
       "url": "https://www.nict.go.jp/press/2025/06/10-1.html"
     }
   ],
-  "figures": [],
+  "figures": [
+    {
+      "type": "data_flow",
+      "title": "概要フロー",
+      "data": {
+        "nodes": [
+          {"id": "s1", "label": "銀行4行の口座・取引データ", "category": "source"},
+          {"id": "s2", "label": "銀行間でデータ開示ができない制約", "category": "constraint"},
+          {"id": "p1", "label": "DeepProtectで連合＋個別のアンサンブル学習", "category": "process"},
+          {"id": "a1", "label": "不正口座検知の精度向上に活用", "category": "application"},
+          {"id": "a2", "label": "AMLシステムとの並行運用を検討可能に", "category": "outcome"}
+        ],
+        "edges": []
+      },
+      "note": ""
+    }
+  ],
   "status": "seed",
   "created_at": "2026-03-08T00:00:00+09:00",
   "updated_at": "2026-03-08T00:00:00+09:00"

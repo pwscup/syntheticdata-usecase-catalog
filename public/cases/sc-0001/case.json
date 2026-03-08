@@ -20,7 +20,23 @@
       "url": "https://group.ntt/jp/newsrelease/pdf/news2012/1202/120214a.pdf"
     }
   ],
-  "figures": [],
+  "figures": [
+    {
+      "type": "data_flow",
+      "title": "概要フロー",
+      "data": {
+        "nodes": [
+          {"id": "s1", "label": "約1,000症例×800項目の臨床データ", "category": "source"},
+          {"id": "s2", "label": "生データを研究者に開示できない", "category": "constraint"},
+          {"id": "p1", "label": "秘密計算で暗号化したまま統計処理", "category": "process"},
+          {"id": "a1", "label": "平均・分散・t検定等の医療統計", "category": "application"},
+          {"id": "a2", "label": "生データ非開示で多施設研究を実現", "category": "outcome"}
+        ],
+        "edges": []
+      },
+      "note": ""
+    }
+  ],
   "status": "seed",
   "created_at": "2026-03-08T00:00:00+09:00",
   "updated_at": "2026-03-08T00:00:00+09:00"

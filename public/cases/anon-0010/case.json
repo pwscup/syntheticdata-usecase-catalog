@@ -28,7 +28,23 @@
       "url": "https://www.ono.co.jp/jpnw/privacy/index.html"
     }
   ],
-  "figures": [],
+  "figures": [
+    {
+      "type": "data_flow",
+      "title": "概要フロー",
+      "data": {
+        "nodes": [
+          {"id": "s1", "label": "患者の臨床・医療データ", "category": "source"},
+          {"id": "s2", "label": "個人情報保護法による利用制限", "category": "constraint"},
+          {"id": "p1", "label": "仮名加工情報として加工・管理", "category": "process"},
+          {"id": "a1", "label": "医薬品の研究開発・臨床試験に活用", "category": "application"},
+          {"id": "a2", "label": "プライバシー保護と研究開発を両立", "category": "outcome"}
+        ],
+        "edges": []
+      },
+      "note": ""
+    }
+  ],
   "status": "seed",
   "created_at": "2026-03-07T00:00:00+09:00",
   "updated_at": "2026-03-07T00:00:00+09:00"

@@ -20,7 +20,23 @@
       "url": "https://prtimes.jp/main/html/rd/p/000000014.000046917.html"
     }
   ],
-  "figures": [],
+  "figures": [
+    {
+      "type": "data_flow",
+      "title": "概要フロー",
+      "data": {
+        "nodes": [
+          {"id": "s1", "label": "顧客アンケート＋DMP属性データ", "category": "source"},
+          {"id": "s2", "label": "企業間でプライバシーデータ共有不可", "category": "constraint"},
+          {"id": "p1", "label": "秘密計算(MPC)で暗号化突合・分析", "category": "process"},
+          {"id": "a1", "label": "マーケティング相関分析", "category": "application"},
+          {"id": "a2", "label": "高精度かつプライバシー保護の分析", "category": "outcome"}
+        ],
+        "edges": []
+      },
+      "note": ""
+    }
+  ],
   "status": "seed",
   "created_at": "2026-03-08T00:00:00+09:00",
   "updated_at": "2026-03-08T00:00:00+09:00"

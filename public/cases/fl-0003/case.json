@@ -31,7 +31,23 @@
       "url": "https://www.nict.go.jp/press/2025/07/22-1.html"
     }
   ],
-  "figures": [],
+  "figures": [
+    {
+      "type": "data_flow",
+      "title": "概要フロー",
+      "data": {
+        "nodes": [
+          {"id": "s1", "label": "3銀行の送金データ", "category": "source"},
+          {"id": "s2", "label": "犯罪手口が日々変化", "category": "constraint"},
+          {"id": "p1", "label": "DeepProtect+eFL-Boostで継続学習", "category": "process"},
+          {"id": "a1", "label": "変化する不正送金の検知", "category": "application"},
+          {"id": "a2", "label": "再現率が平均18pt改善", "category": "outcome"}
+        ],
+        "edges": []
+      },
+      "note": ""
+    }
+  ],
   "status": "seed",
   "created_at": "2025-07-22T00:00:00+09:00",
   "updated_at": "2026-03-07T00:00:00+09:00"

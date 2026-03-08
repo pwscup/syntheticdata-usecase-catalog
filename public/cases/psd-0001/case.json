@@ -25,7 +25,23 @@
       "url": "https://www.census.gov/content/dam/Census/programs-surveys/sipp/methodology/SSBdescribe_nontechnical.pdf"
     }
   ],
-  "figures": [],
+  "figures": [
+    {
+      "type": "data_flow",
+      "title": "概要フロー",
+      "data": {
+        "nodes": [
+          {"id": "s1", "label": "SIPP調査＋税・給付行政データ", "category": "source"},
+          {"id": "s2", "label": "機微な所得情報で公開困難", "category": "constraint"},
+          {"id": "p1", "label": "機微変数を合成値で部分置換", "category": "process"},
+          {"id": "a1", "label": "研究者向けに公開データ提供", "category": "application"},
+          {"id": "a2", "label": "プライバシー保護と研究利用を両立", "category": "outcome"}
+        ],
+        "edges": []
+      },
+      "note": ""
+    }
+  ],
   "status": "seed",
   "created_at": "2026-03-07T00:00:00+09:00",
   "updated_at": "2026-03-07T00:00:00+09:00"

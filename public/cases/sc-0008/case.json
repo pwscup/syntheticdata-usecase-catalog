@@ -20,7 +20,23 @@
       "url": "https://prtimes.jp/main/html/rd/p/000000042.000046917.html"
     }
   ],
-  "figures": [],
+  "figures": [
+    {
+      "type": "data_flow",
+      "title": "概要フロー",
+      "data": {
+        "nodes": [
+          {"id": "s1", "label": "複数病院のDPCデータ", "category": "source"},
+          {"id": "s2", "label": "病院間で経営データの開示が困難", "category": "constraint"},
+          {"id": "p1", "label": "SMPCで秘匿したまま統計値を算出", "category": "process"},
+          {"id": "a1", "label": "診療科別の経営指標を比較分析", "category": "application"},
+          {"id": "a2", "label": "機密性を保ちつつベンチマーク分析を実現", "category": "outcome"}
+        ],
+        "edges": []
+      },
+      "note": ""
+    }
+  ],
   "status": "seed",
   "created_at": "2026-03-08T00:00:00+09:00",
   "updated_at": "2026-03-08T00:00:00+09:00"

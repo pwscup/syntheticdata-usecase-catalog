@@ -25,7 +25,23 @@
       "url": "https://lehd.ces.census.gov/doc/help/OTMSyntheticData%2005262009-jma.pdf"
     }
   ],
-  "figures": [],
+  "figures": [
+    {
+      "type": "data_flow",
+      "title": "概要フロー",
+      "data": {
+        "nodes": [
+          {"id": "s1", "label": "就業地・居住地の地理データ", "category": "source"},
+          {"id": "s2", "label": "居住地情報の秘匿保護が必要", "category": "constraint"},
+          {"id": "p1", "label": "居住地側のみ部分合成データ化", "category": "process"},
+          {"id": "a1", "label": "地理的分布の分析に活用", "category": "application"},
+          {"id": "a2", "label": "秘匿保護しつつ地理分析を実現", "category": "outcome"}
+        ],
+        "edges": []
+      },
+      "note": ""
+    }
+  ],
   "status": "seed",
   "created_at": "2026-03-07T00:00:00+09:00",
   "updated_at": "2026-03-07T00:00:00+09:00"

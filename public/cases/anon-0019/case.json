@@ -29,7 +29,23 @@
       "url": "https://www.riken.jp/pr/news/2025/20250228_1/index.html"
     }
   ],
-  "figures": [],
+  "figures": [
+    {
+      "type": "data_flow",
+      "title": "概要フロー",
+      "data": {
+        "nodes": [
+          {"id": "s1", "label": "健康・医療データ（認定作成事業者）", "category": "source"},
+          {"id": "s2", "label": "詳細な医療データの研究利用に制約", "category": "constraint"},
+          {"id": "p1", "label": "仮名加工医療情報として安全に提供", "category": "process"},
+          {"id": "a1", "label": "AI予測医学・データ駆動型研究", "category": "application"},
+          {"id": "a2", "label": "先端研究の加速と医療の高度化", "category": "outcome"}
+        ],
+        "edges": []
+      },
+      "note": ""
+    }
+  ],
   "status": "seed",
   "created_at": "2026-03-08T00:00:00+09:00",
   "updated_at": "2026-03-08T00:00:00+09:00"

@@ -20,7 +20,23 @@
       "url": "https://datasciencecampus.ons.gov.uk/synthesising-the-linked-2011-census-and-deaths-dataset-while-preserving-its-confidentiality/"
     }
   ],
-  "figures": [],
+  "figures": [
+    {
+      "type": "data_flow",
+      "title": "概要フロー",
+      "data": {
+        "nodes": [
+          {"id": "s1", "label": "国勢調査＋死亡登録の連結データ", "category": "source"},
+          {"id": "s2", "label": "高機微な連結データで公開不可", "category": "constraint"},
+          {"id": "p1", "label": "連結データを合成データ化", "category": "process"},
+          {"id": "a1", "label": "研究者向け分析用データ公開", "category": "application"},
+          {"id": "a2", "label": "機密データの安全な公開を実現", "category": "outcome"}
+        ],
+        "edges": []
+      },
+      "note": ""
+    }
+  ],
   "status": "seed",
   "created_at": "2026-03-07T00:00:00+09:00",
   "updated_at": "2026-03-07T00:00:00+09:00"

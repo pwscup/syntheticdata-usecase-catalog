@@ -33,7 +33,23 @@
       "url": "https://www.jipdec.or.jp/news/news/htpisq0000002w03-att/20220318_case_study_privacygovernance_research.pdf"
     }
   ],
-  "figures": [],
+  "figures": [
+    {
+      "type": "data_flow",
+      "title": "概要フロー",
+      "data": {
+        "nodes": [
+          {"id": "s1", "label": "JCBカード会員の属性・決済情報", "category": "source"},
+          {"id": "s2", "label": "個人の購買行動はプライバシー情報", "category": "constraint"},
+          {"id": "p1", "label": "決済情報を匿名加工し統計化", "category": "process"},
+          {"id": "a1", "label": "「JCB消費NOW」として一般公開", "category": "application"},
+          {"id": "a2", "label": "社会全体の消費動向把握に貢献", "category": "outcome"}
+        ],
+        "edges": []
+      },
+      "note": ""
+    }
+  ],
   "status": "seed",
   "created_at": "2026-03-07T00:00:00+09:00",
   "updated_at": "2026-03-07T00:00:00+09:00"
