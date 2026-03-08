@@ -20,7 +20,23 @@
       "url": "https://www.nict.go.jp/press/2022/03/10-1.html"
     }
   ],
-  "figures": [],
+  "figures": [
+    {
+      "type": "data_flow",
+      "title": "概要フロー",
+      "data": {
+        "nodes": [
+          {"id": "s1", "label": "銀行5行の取引データ", "category": "source"},
+          {"id": "s2", "label": "競争関係で取引データの相互開示不可", "category": "constraint"},
+          {"id": "p1", "label": "DeepProtectで連合学習モデルを構築", "category": "process"},
+          {"id": "a1", "label": "銀行横断の不正送金検知に適用", "category": "application"},
+          {"id": "a2", "label": "検知精度80%以上を達成し共同防御実現", "category": "outcome"}
+        ],
+        "edges": []
+      },
+      "note": ""
+    }
+  ],
   "status": "seed",
   "created_at": "2026-03-08T00:00:00+09:00",
   "updated_at": "2026-03-08T00:00:00+09:00"

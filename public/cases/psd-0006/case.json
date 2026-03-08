@@ -20,7 +20,23 @@
       "url": "https://www.jmra-net.or.jp/Portals/0/committee/statistics/nenji2024_material_2.pdf"
     }
   ],
-  "figures": [],
+  "figures": [
+    {
+      "type": "data_flow",
+      "title": "概要フロー",
+      "data": {
+        "nodes": [
+          {"id": "s1", "label": "複数の公的統計データソース", "category": "source"},
+          {"id": "s2", "label": "異なるデータの直接結合が困難", "category": "constraint"},
+          {"id": "p1", "label": "共通変数で統計的マッチング", "category": "process"},
+          {"id": "a1", "label": "疑似結合パネルデータの作成", "category": "application"},
+          {"id": "a2", "label": "情報量を増加し分析精度向上", "category": "outcome"}
+        ],
+        "edges": []
+      },
+      "note": ""
+    }
+  ],
   "status": "seed",
   "created_at": "2026-03-07T00:00:00+09:00",
   "updated_at": "2026-03-07T00:00:00+09:00"

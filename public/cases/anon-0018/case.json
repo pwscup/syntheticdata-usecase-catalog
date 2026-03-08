@@ -30,7 +30,23 @@
       "url": "https://prtimes.jp/main/html/rd/p/000000490.000024308.html"
     }
   ],
-  "figures": [],
+  "figures": [
+    {
+      "type": "data_flow",
+      "title": "概要フロー",
+      "data": {
+        "nodes": [
+          {"id": "s1", "label": "患者の詳細な医療データ", "category": "source"},
+          {"id": "s2", "label": "匿名加工では検査値等が欠落", "category": "constraint"},
+          {"id": "p1", "label": "仮名加工医療情報として詳細保持", "category": "process"},
+          {"id": "a1", "label": "リアルワールドデータ構築・薬事承認", "category": "application"},
+          {"id": "a2", "label": "医薬品開発・個別化医療を加速", "category": "outcome"}
+        ],
+        "edges": []
+      },
+      "note": ""
+    }
+  ],
   "status": "seed",
   "created_at": "2026-03-08T00:00:00+09:00",
   "updated_at": "2026-03-08T00:00:00+09:00"

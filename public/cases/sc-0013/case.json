@@ -20,7 +20,23 @@
       "url": "https://jpn.nec.com/press/202209/20220928_03.html"
     }
   ],
-  "figures": [],
+  "figures": [
+    {
+      "type": "data_flow",
+      "title": "概要フロー",
+      "data": {
+        "nodes": [
+          {"id": "s1", "label": "プラント装置のログデータ", "category": "source"},
+          {"id": "s2", "label": "営業機密性が高く外部分析が困難", "category": "constraint"},
+          {"id": "p1", "label": "MPC方式で3サーバに秘密分散し分析", "category": "process"},
+          {"id": "a1", "label": "暗号化したまま異常検知ルールと突合", "category": "application"},
+          {"id": "a2", "label": "機密ログの安全なクラウド分析を実現", "category": "outcome"}
+        ],
+        "edges": []
+      },
+      "note": ""
+    }
+  ],
   "status": "seed",
   "created_at": "2026-03-08T00:00:00+09:00",
   "updated_at": "2026-03-08T00:00:00+09:00"

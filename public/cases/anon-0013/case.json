@@ -28,7 +28,23 @@
       "url": "https://www.energyline.co.jp/policy/kamei.html"
     }
   ],
-  "figures": [],
+  "figures": [
+    {
+      "type": "data_flow",
+      "title": "概要フロー",
+      "data": {
+        "nodes": [
+          {"id": "s1", "label": "サービス利用・運用データ", "category": "source"},
+          {"id": "s2", "label": "個人情報を含む分析に制約", "category": "constraint"},
+          {"id": "p1", "label": "仮名加工情報として加工・分析", "category": "process"},
+          {"id": "a1", "label": "運用保守分析・不正防止に活用", "category": "application"},
+          {"id": "a2", "label": "サービス品質向上と不正検知を実現", "category": "outcome"}
+        ],
+        "edges": []
+      },
+      "note": ""
+    }
+  ],
   "status": "seed",
   "created_at": "2026-03-07T00:00:00+09:00",
   "updated_at": "2026-03-07T00:00:00+09:00"

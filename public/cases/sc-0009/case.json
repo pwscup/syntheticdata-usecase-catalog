@@ -20,7 +20,23 @@
       "url": "https://eaglys.co.jp/resource/news/press-release/20221110"
     }
   ],
-  "figures": [],
+  "figures": [
+    {
+      "type": "data_flow",
+      "title": "概要フロー",
+      "data": {
+        "nodes": [
+          {"id": "s1", "label": "創薬・素材の研究データとAIモデル", "category": "source"},
+          {"id": "s2", "label": "データもモデルも企業秘密で共有困難", "category": "constraint"},
+          {"id": "p1", "label": "秘密計算で特徴量抽出〜推論を処理", "category": "process"},
+          {"id": "a1", "label": "秘匿したままAIモデルを共有・活用", "category": "application"},
+          {"id": "a2", "label": "平文比2〜4倍の現実的な処理時間を実証", "category": "outcome"}
+        ],
+        "edges": []
+      },
+      "note": ""
+    }
+  ],
   "status": "seed",
   "created_at": "2026-03-08T00:00:00+09:00",
   "updated_at": "2026-03-08T00:00:00+09:00"

@@ -35,7 +35,23 @@
     }
   ],
   "id": "seed-0011",
-  "figures": [],
+  "figures": [
+    {
+      "type": "data_flow",
+      "title": "概要フロー",
+      "data": {
+        "nodes": [
+          {"id": "s1", "label": "COVID-19の診療データ", "category": "source"},
+          {"id": "s2", "label": "患者プライバシーで外部共有が困難", "category": "constraint"},
+          {"id": "p1", "label": "合成データを生成し外部配布用に変換", "category": "process"},
+          {"id": "a1", "label": "入院リスク予測や流行曲線予測に活用", "category": "application"},
+          {"id": "a2", "label": "実データとほぼ同等の分析結果を確認", "category": "outcome"}
+        ],
+        "edges": []
+      },
+      "note": ""
+    }
+  ],
   "status": "seed",
   "created_at": "2026-02-26T00:00:00+09:00",
   "updated_at": "2026-03-04T00:49:07.565Z"

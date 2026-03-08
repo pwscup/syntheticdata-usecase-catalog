@@ -28,7 +28,23 @@
       "url": "https://www.ppc.go.jp/files/pdf/report_office_zirei2205.pdf"
     }
   ],
-  "figures": [],
+  "figures": [
+    {
+      "type": "data_flow",
+      "title": "概要フロー",
+      "data": {
+        "nodes": [
+          {"id": "s1", "label": "ICカード乗降履歴データ", "category": "source"},
+          {"id": "s2", "label": "個人の移動パターンはプライバシー情報", "category": "constraint"},
+          {"id": "p1", "label": "乗降履歴を匿名加工情報に変換", "category": "process"},
+          {"id": "a1", "label": "商圏分析・ターゲティング広告", "category": "application"},
+          {"id": "a2", "label": "人流データ活用によるビジネス創出", "category": "outcome"}
+        ],
+        "edges": []
+      },
+      "note": ""
+    }
+  ],
   "status": "seed",
   "created_at": "2026-03-07T00:00:00+09:00",
   "updated_at": "2026-03-07T00:00:00+09:00"

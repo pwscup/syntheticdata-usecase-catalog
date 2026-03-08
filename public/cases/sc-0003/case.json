@@ -20,7 +20,23 @@
       "url": "https://jpn.nec.com/press/201907/20190723_03.html"
     }
   ],
-  "figures": [],
+  "figures": [
+    {
+      "type": "data_flow",
+      "title": "概要フロー",
+      "data": {
+        "nodes": [
+          {"id": "s1", "label": "複数機関のゲノム・疾病情報", "category": "source"},
+          {"id": "s2", "label": "機関間でデータを直接共有できない", "category": "constraint"},
+          {"id": "p1", "label": "秘密計算で秘匿結合・集計分析", "category": "process"},
+          {"id": "a1", "label": "年代別ゲノム変異頻度の解析", "category": "application"},
+          {"id": "a2", "label": "多機関データで個別化医療を推進", "category": "outcome"}
+        ],
+        "edges": []
+      },
+      "note": ""
+    }
+  ],
   "status": "seed",
   "created_at": "2026-03-08T00:00:00+09:00",
   "updated_at": "2026-03-08T00:00:00+09:00"

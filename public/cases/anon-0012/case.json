@@ -27,7 +27,23 @@
       "url": "https://www.meiz.co.jp/tokumei/"
     }
   ],
-  "figures": [],
+  "figures": [
+    {
+      "type": "data_flow",
+      "title": "概要フロー",
+      "data": {
+        "nodes": [
+          {"id": "s1", "label": "業務データ・顧客データ", "category": "source"},
+          {"id": "s2", "label": "個人情報の社内利用に制約", "category": "constraint"},
+          {"id": "p1", "label": "仮名加工情報として社内活用", "category": "process"},
+          {"id": "a1", "label": "業務改善・新規サービス研究に活用", "category": "application"},
+          {"id": "a2", "label": "安全にデータ活用し業務効率化", "category": "outcome"}
+        ],
+        "edges": []
+      },
+      "note": ""
+    }
+  ],
   "status": "seed",
   "created_at": "2026-03-07T00:00:00+09:00",
   "updated_at": "2026-03-07T00:00:00+09:00"
