@@ -1,0 +1,56 @@
+{
+  "id": "da-0010",
+  "title": "京都大学・大阪大学等：PHTを用いた多施設RWD二次利用",
+  "region": "国内",
+  "domain": "医療",
+  "organization": "京都大学・大阪大学・九州大学",
+  "usecase_category": [
+    "R&D"
+  ],
+  "technology_category": [
+    "distributed_analytics"
+  ],
+  "review_status": "ai_generated",
+  "summary": "京都大学を中心に大阪大学・九州大学等が連携し、Personal Health Train（PHT）の概念を日本の医療データ基盤に適用。各大学病院のリアルワールドデータ（RWD）を移動させることなく、解析プログラムを各施設に配布して実行する分散解析手法により、多施設共同の臨床研究を実現した。",
+  "value_proposition": "日本の大学病院間でPHT型分散解析を実装し、RWDの二次利用における個人情報保護と研究推進を両立",
+  "privacy_enhancement_method": "PHT型分散解析（解析コードを各施設に配布実行）",
+  "safety_assurance_method": "各大学病院でデータ管理、集計結果のみ返送",
+  "utility_evaluation_method": "集中解析との精度比較と実施可能性評価",
+  "tags": [
+    "PHT",
+    "RWD",
+    "多施設共同研究",
+    "二次利用"
+  ],
+  "sources": [
+    {
+      "source_type": "web",
+      "title": "京都大学医療情報学分野",
+      "url": "https://www.kuhp.kyoto-u.ac.jp/",
+      "note": "研究グループ情報"
+    }
+  ],
+  "figures": [
+    {
+      "type": "data_flow",
+      "title": "京都大学・大阪大学等のデータフロー",
+      "note": "",
+      "nodes": [
+        { "id": "s1", "label": "各大学病院のリアルワールドデータ", "category": "source" },
+        { "id": "s2", "label": "個人情報保護と施設間データ共有制約", "category": "constraint" },
+        { "id": "p1", "label": "PHT型で解析コードを各施設に配布実行", "category": "process" },
+        { "id": "a1", "label": "多施設共同臨床研究", "category": "application" },
+        { "id": "a2", "label": "RWD二次利用と個人情報保護の両立", "category": "outcome" }
+      ],
+      "edges": [
+        { "from": "s1", "to": "p1", "label": "各施設のRWD" },
+        { "from": "s2", "to": "p1", "label": "データ非移動" },
+        { "from": "p1", "to": "a1", "label": "分散解析結果" },
+        { "from": "a1", "to": "a2", "label": "研究成果" }
+      ]
+    }
+  ],
+  "status": "seed",
+  "created_at": "2026-03-09T00:00:00.000Z",
+  "updated_at": "2026-03-09T00:00:00.000Z"
+}

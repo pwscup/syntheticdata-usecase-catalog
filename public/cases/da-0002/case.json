@@ -1,0 +1,56 @@
+{
+  "id": "da-0002",
+  "title": "EHDEN：薬剤安全性シグナルの分散ネットワーク検証",
+  "region": "国外",
+  "domain": "医療",
+  "organization": "EHDEN / Innovative Medicines Initiative (IMI)",
+  "usecase_category": [
+    "R&D"
+  ],
+  "technology_category": [
+    "distributed_analytics"
+  ],
+  "review_status": "ai_generated",
+  "summary": "欧州医薬品安全性研究ネットワークEHDENは、20カ国以上のデータパートナーがOMOP CDMで標準化したデータベースに対し、中央からの解析プログラムを分散実行する方式で薬剤安全性シグナルを検証。個人レベルデータの移動なしに大規模な安全性評価を実現している。",
+  "value_proposition": "20カ国超の医療データで薬剤安全性シグナルを個人データ移動なしに検証可能にした",
+  "privacy_enhancement_method": "OMOP CDM標準化 + フェデレーテッド解析",
+  "safety_assurance_method": "各機関がデータ管理を保持、集計結果のみ共有",
+  "utility_evaluation_method": "安全性シグナル検出の再現性と感度評価",
+  "tags": [
+    "EHDEN",
+    "薬剤安全性",
+    "IMI",
+    "OMOP"
+  ],
+  "sources": [
+    {
+      "source_type": "web",
+      "title": "EHDEN project",
+      "url": "https://www.ehden.eu/",
+      "note": "ネットワーク概要"
+    }
+  ],
+  "figures": [
+    {
+      "type": "data_flow",
+      "title": "EHDENのデータフロー",
+      "note": "",
+      "nodes": [
+        { "id": "s1", "label": "20カ国超の医療データベース", "category": "source" },
+        { "id": "s2", "label": "各国データ保護規制", "category": "constraint" },
+        { "id": "p1", "label": "OMOP CDMで標準化＋分散解析実行", "category": "process" },
+        { "id": "a1", "label": "薬剤安全性シグナルの検証", "category": "application" },
+        { "id": "a2", "label": "大規模な安全性エビデンス生成", "category": "outcome" }
+      ],
+      "edges": [
+        { "from": "s1", "to": "p1", "label": "各国データ" },
+        { "from": "s2", "to": "p1", "label": "データ移動制限" },
+        { "from": "p1", "to": "a1", "label": "分散解析結果" },
+        { "from": "a1", "to": "a2", "label": "シグナル検証" }
+      ]
+    }
+  ],
+  "status": "seed",
+  "created_at": "2026-03-09T00:00:00.000Z",
+  "updated_at": "2026-03-09T00:00:00.000Z"
+}

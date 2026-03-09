@@ -1,0 +1,56 @@
+{
+  "id": "da-0007",
+  "title": "DataSHIELD：10年超の分散型研究データ解析基盤",
+  "region": "国外",
+  "domain": "医療",
+  "organization": "DataSHIELD consortium",
+  "usecase_category": [
+    "R&D"
+  ],
+  "technology_category": [
+    "distributed_analytics"
+  ],
+  "review_status": "ai_generated",
+  "summary": "2009年に開発が始まったDataSHIELDは、生物医学・社会科学分野で10年以上にわたり分散型データ解析基盤として活用されている。各データ保有機関にRサーバーを設置し、分析者はクライアントから統計コマンドを送信するだけで個人データにアクセスせずに解析を実行でき、100以上の研究で利用実績がある。",
+  "value_proposition": "100以上の研究で個人データ移動なしの分散解析を実現し、マルチコホート研究の標準基盤として確立",
+  "privacy_enhancement_method": "DataSHIELD（R/Opalベース分散解析基盤）",
+  "safety_assurance_method": "非開示フィルタリング＋各施設のOpalサーバーでデータ管理",
+  "utility_evaluation_method": "集中解析との統計的同等性評価",
+  "tags": [
+    "DataSHIELD",
+    "Opal",
+    "分散解析",
+    "マルチコホート"
+  ],
+  "sources": [
+    {
+      "source_type": "web",
+      "title": "DataSHIELD",
+      "url": "https://www.datashield.org/",
+      "note": "DataSHIELD公式サイト"
+    }
+  ],
+  "figures": [
+    {
+      "type": "data_flow",
+      "title": "DataSHIELDのデータフロー",
+      "note": "",
+      "nodes": [
+        { "id": "s1", "label": "複数機関の研究データベース", "category": "source" },
+        { "id": "s2", "label": "個人データ共有の倫理的・法的制約", "category": "constraint" },
+        { "id": "p1", "label": "DataSHIELD/Opalで分散統計解析", "category": "process" },
+        { "id": "a1", "label": "マルチコホート研究の実施", "category": "application" },
+        { "id": "a2", "label": "100以上の研究で活用実績", "category": "outcome" }
+      ],
+      "edges": [
+        { "from": "s1", "to": "p1", "label": "各施設のデータ" },
+        { "from": "s2", "to": "p1", "label": "データ非移動" },
+        { "from": "p1", "to": "a1", "label": "集約統計結果" },
+        { "from": "a1", "to": "a2", "label": "研究成果" }
+      ]
+    }
+  ],
+  "status": "seed",
+  "created_at": "2026-03-09T00:00:00.000Z",
+  "updated_at": "2026-03-09T00:00:00.000Z"
+}
