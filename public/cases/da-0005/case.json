@@ -35,19 +35,57 @@
       "type": "data_flow",
       "title": "FDA Sentinelのデータフロー",
       "note": "",
-      "nodes": [
-        { "id": "s1", "label": "米国の保険請求DB・電子健康記録", "category": "source" },
-        { "id": "s2", "label": "患者データの移動制約", "category": "constraint" },
-        { "id": "p1", "label": "標準化クエリのローカル実行", "category": "process" },
-        { "id": "a1", "label": "要約統計量の集約・分析", "category": "application" },
-        { "id": "a2", "label": "市販後医薬品安全性監視", "category": "outcome" }
-      ],
-      "edges": [
-        { "from": "s1", "to": "p1", "label": "Sentinel CDMデータ" },
-        { "from": "s2", "to": "p1", "label": "データ移動なし" },
-        { "from": "p1", "to": "a1", "label": "要約統計量" },
-        { "from": "a1", "to": "a2", "label": "安全性シグナル検出" }
-      ]
+      "data": {
+        "nodes": [
+          {
+            "id": "s1",
+            "label": "米国の保険請求DB・電子健康記録",
+            "category": "source"
+          },
+          {
+            "id": "s2",
+            "label": "患者データの移動制約",
+            "category": "constraint"
+          },
+          {
+            "id": "p1",
+            "label": "標準化クエリのローカル実行",
+            "category": "process"
+          },
+          {
+            "id": "a1",
+            "label": "要約統計量の集約・分析",
+            "category": "application"
+          },
+          {
+            "id": "a2",
+            "label": "市販後医薬品安全性監視",
+            "category": "outcome"
+          }
+        ],
+        "edges": [
+          {
+            "from": "s1",
+            "to": "p1",
+            "label": "Sentinel CDMデータ"
+          },
+          {
+            "from": "s2",
+            "to": "p1",
+            "label": "データ移動なし"
+          },
+          {
+            "from": "p1",
+            "to": "a1",
+            "label": "要約統計量"
+          },
+          {
+            "from": "a1",
+            "to": "a2",
+            "label": "安全性シグナル検出"
+          }
+        ]
+      }
     }
   ],
   "status": "seed",
