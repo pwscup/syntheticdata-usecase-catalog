@@ -35,19 +35,57 @@
       "type": "data_flow",
       "title": "DARWIN EUのデータフロー",
       "note": "",
-      "nodes": [
-        { "id": "s1", "label": "欧州各国の医療データベース（OMOP CDM）", "category": "source" },
-        { "id": "s2", "label": "患者データ移動の規制制約", "category": "constraint" },
-        { "id": "p1", "label": "解析コードを各施設に分散実行", "category": "process" },
-        { "id": "a1", "label": "集約結果によるRWE生成", "category": "application" },
-        { "id": "a2", "label": "医薬品規制判断の迅速化", "category": "outcome" }
-      ],
-      "edges": [
-        { "from": "s1", "to": "p1", "label": "標準化データ" },
-        { "from": "s2", "to": "p1", "label": "データ移動なし" },
-        { "from": "p1", "to": "a1", "label": "分散解析結果" },
-        { "from": "a1", "to": "a2", "label": "エビデンス提供" }
-      ]
+      "data": {
+        "nodes": [
+          {
+            "id": "s1",
+            "label": "欧州各国の医療データベース（OMOP CDM）",
+            "category": "source"
+          },
+          {
+            "id": "s2",
+            "label": "患者データ移動の規制制約",
+            "category": "constraint"
+          },
+          {
+            "id": "p1",
+            "label": "解析コードを各施設に分散実行",
+            "category": "process"
+          },
+          {
+            "id": "a1",
+            "label": "集約結果によるRWE生成",
+            "category": "application"
+          },
+          {
+            "id": "a2",
+            "label": "医薬品規制判断の迅速化",
+            "category": "outcome"
+          }
+        ],
+        "edges": [
+          {
+            "from": "s1",
+            "to": "p1",
+            "label": "標準化データ"
+          },
+          {
+            "from": "s2",
+            "to": "p1",
+            "label": "データ移動なし"
+          },
+          {
+            "from": "p1",
+            "to": "a1",
+            "label": "分散解析結果"
+          },
+          {
+            "from": "a1",
+            "to": "a2",
+            "label": "エビデンス提供"
+          }
+        ]
+      }
     }
   ],
   "status": "seed",

@@ -35,19 +35,57 @@
       "type": "data_flow",
       "title": "Personal Health Trainのデータフロー",
       "note": "",
-      "nodes": [
-        { "id": "s1", "label": "各施設の医療データ（「駅」）", "category": "source" },
-        { "id": "s2", "label": "データ移動の制約", "category": "constraint" },
-        { "id": "p1", "label": "解析タスク（「列車」）を各駅に配送", "category": "process" },
-        { "id": "a1", "label": "分散型機械学習・統計解析", "category": "application" },
-        { "id": "a2", "label": "FAIR原則と個人情報保護の両立", "category": "outcome" }
-      ],
-      "edges": [
-        { "from": "s1", "to": "p1", "label": "データは駅に保持" },
-        { "from": "s2", "to": "p1", "label": "アルゴリズム移動" },
-        { "from": "p1", "to": "a1", "label": "分散解析結果" },
-        { "from": "a1", "to": "a2", "label": "研究成果" }
-      ]
+      "data": {
+        "nodes": [
+          {
+            "id": "s1",
+            "label": "各施設の医療データ（「駅」）",
+            "category": "source"
+          },
+          {
+            "id": "s2",
+            "label": "データ移動の制約",
+            "category": "constraint"
+          },
+          {
+            "id": "p1",
+            "label": "解析タスク（「列車」）を各駅に配送",
+            "category": "process"
+          },
+          {
+            "id": "a1",
+            "label": "分散型機械学習・統計解析",
+            "category": "application"
+          },
+          {
+            "id": "a2",
+            "label": "FAIR原則と個人情報保護の両立",
+            "category": "outcome"
+          }
+        ],
+        "edges": [
+          {
+            "from": "s1",
+            "to": "p1",
+            "label": "データは駅に保持"
+          },
+          {
+            "from": "s2",
+            "to": "p1",
+            "label": "アルゴリズム移動"
+          },
+          {
+            "from": "p1",
+            "to": "a1",
+            "label": "分散解析結果"
+          },
+          {
+            "from": "a1",
+            "to": "a2",
+            "label": "研究成果"
+          }
+        ]
+      }
     }
   ],
   "status": "seed",

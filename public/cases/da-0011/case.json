@@ -35,19 +35,57 @@
       "type": "data_flow",
       "title": "AMED CANNDsのデータフロー",
       "note": "",
-      "nodes": [
-        { "id": "s1", "label": "BBJ・ToMMo等のゲノムコホートデータ", "category": "source" },
-        { "id": "s2", "label": "ゲノムデータの機微性と移動制約", "category": "constraint" },
-        { "id": "p1", "label": "CANNDs基盤で分散処理解析を実行", "category": "process" },
-        { "id": "a1", "label": "バイオバンク横断ゲノム解析", "category": "application" },
-        { "id": "a2", "label": "数十万人規模のゲノム研究加速", "category": "outcome" }
-      ],
-      "edges": [
-        { "from": "s1", "to": "p1", "label": "各バイオバンクのデータ" },
-        { "from": "s2", "to": "p1", "label": "データ非移動" },
-        { "from": "p1", "to": "a1", "label": "分散処理結果" },
-        { "from": "a1", "to": "a2", "label": "研究成果" }
-      ]
+      "data": {
+        "nodes": [
+          {
+            "id": "s1",
+            "label": "BBJ・ToMMo等のゲノムコホートデータ",
+            "category": "source"
+          },
+          {
+            "id": "s2",
+            "label": "ゲノムデータの機微性と移動制約",
+            "category": "constraint"
+          },
+          {
+            "id": "p1",
+            "label": "CANNDs基盤で分散処理解析を実行",
+            "category": "process"
+          },
+          {
+            "id": "a1",
+            "label": "バイオバンク横断ゲノム解析",
+            "category": "application"
+          },
+          {
+            "id": "a2",
+            "label": "数十万人規模のゲノム研究加速",
+            "category": "outcome"
+          }
+        ],
+        "edges": [
+          {
+            "from": "s1",
+            "to": "p1",
+            "label": "各バイオバンクのデータ"
+          },
+          {
+            "from": "s2",
+            "to": "p1",
+            "label": "データ非移動"
+          },
+          {
+            "from": "p1",
+            "to": "a1",
+            "label": "分散処理結果"
+          },
+          {
+            "from": "a1",
+            "to": "a2",
+            "label": "研究成果"
+          }
+        ]
+      }
     }
   ],
   "status": "seed",

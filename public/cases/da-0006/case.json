@@ -35,19 +35,57 @@
       "type": "data_flow",
       "title": "DataSHIELD/SOPHIAのデータフロー",
       "note": "",
-      "nodes": [
-        { "id": "s1", "label": "複数の肥満コホートデータ", "category": "source" },
-        { "id": "s2", "label": "個人データ移動の制約", "category": "constraint" },
-        { "id": "p1", "label": "DataSHIELDによる分散解析実行", "category": "process" },
-        { "id": "a1", "label": "肥満の層別化・バイオマーカー分析", "category": "application" },
-        { "id": "a2", "label": "大規模な層別化研究の実現", "category": "outcome" }
-      ],
-      "edges": [
-        { "from": "s1", "to": "p1", "label": "コホートデータ" },
-        { "from": "s2", "to": "p1", "label": "データ移動なし" },
-        { "from": "p1", "to": "a1", "label": "要約統計量" },
-        { "from": "a1", "to": "a2", "label": "層別化結果" }
-      ]
+      "data": {
+        "nodes": [
+          {
+            "id": "s1",
+            "label": "複数の肥満コホートデータ",
+            "category": "source"
+          },
+          {
+            "id": "s2",
+            "label": "個人データ移動の制約",
+            "category": "constraint"
+          },
+          {
+            "id": "p1",
+            "label": "DataSHIELDによる分散解析実行",
+            "category": "process"
+          },
+          {
+            "id": "a1",
+            "label": "肥満の層別化・バイオマーカー分析",
+            "category": "application"
+          },
+          {
+            "id": "a2",
+            "label": "大規模な層別化研究の実現",
+            "category": "outcome"
+          }
+        ],
+        "edges": [
+          {
+            "from": "s1",
+            "to": "p1",
+            "label": "コホートデータ"
+          },
+          {
+            "from": "s2",
+            "to": "p1",
+            "label": "データ移動なし"
+          },
+          {
+            "from": "p1",
+            "to": "a1",
+            "label": "要約統計量"
+          },
+          {
+            "from": "a1",
+            "to": "a2",
+            "label": "層別化結果"
+          }
+        ]
+      }
     }
   ],
   "status": "seed",

@@ -35,19 +35,57 @@
       "type": "data_flow",
       "title": "EHDENのデータフロー",
       "note": "",
-      "nodes": [
-        { "id": "s1", "label": "20カ国超の医療データベース", "category": "source" },
-        { "id": "s2", "label": "各国データ保護規制", "category": "constraint" },
-        { "id": "p1", "label": "OMOP CDMで標準化＋分散解析実行", "category": "process" },
-        { "id": "a1", "label": "薬剤安全性シグナルの検証", "category": "application" },
-        { "id": "a2", "label": "大規模な安全性エビデンス生成", "category": "outcome" }
-      ],
-      "edges": [
-        { "from": "s1", "to": "p1", "label": "各国データ" },
-        { "from": "s2", "to": "p1", "label": "データ移動制限" },
-        { "from": "p1", "to": "a1", "label": "分散解析結果" },
-        { "from": "a1", "to": "a2", "label": "シグナル検証" }
-      ]
+      "data": {
+        "nodes": [
+          {
+            "id": "s1",
+            "label": "20カ国超の医療データベース",
+            "category": "source"
+          },
+          {
+            "id": "s2",
+            "label": "各国データ保護規制",
+            "category": "constraint"
+          },
+          {
+            "id": "p1",
+            "label": "OMOP CDMで標準化＋分散解析実行",
+            "category": "process"
+          },
+          {
+            "id": "a1",
+            "label": "薬剤安全性シグナルの検証",
+            "category": "application"
+          },
+          {
+            "id": "a2",
+            "label": "大規模な安全性エビデンス生成",
+            "category": "outcome"
+          }
+        ],
+        "edges": [
+          {
+            "from": "s1",
+            "to": "p1",
+            "label": "各国データ"
+          },
+          {
+            "from": "s2",
+            "to": "p1",
+            "label": "データ移動制限"
+          },
+          {
+            "from": "p1",
+            "to": "a1",
+            "label": "分散解析結果"
+          },
+          {
+            "from": "a1",
+            "to": "a2",
+            "label": "シグナル検証"
+          }
+        ]
+      }
     }
   ],
   "status": "seed",

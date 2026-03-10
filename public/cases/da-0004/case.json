@@ -35,19 +35,57 @@
       "type": "data_flow",
       "title": "OHDSI小児治験フィージビリティのデータフロー",
       "note": "",
-      "nodes": [
-        { "id": "s1", "label": "OHDSI参加医療機関のデータベース", "category": "source" },
-        { "id": "s2", "label": "小児データの保護要件", "category": "constraint" },
-        { "id": "p1", "label": "OMOP CDM + 分散クエリ実行", "category": "process" },
-        { "id": "a1", "label": "患者数・適格基準の充足分析", "category": "application" },
-        { "id": "a2", "label": "治験フィージビリティ評価", "category": "outcome" }
-      ],
-      "edges": [
-        { "from": "s1", "to": "p1", "label": "標準化データ" },
-        { "from": "s2", "to": "p1", "label": "データ移動なし" },
-        { "from": "p1", "to": "a1", "label": "集計結果" },
-        { "from": "a1", "to": "a2", "label": "フィージビリティ判定" }
-      ]
+      "data": {
+        "nodes": [
+          {
+            "id": "s1",
+            "label": "OHDSI参加医療機関のデータベース",
+            "category": "source"
+          },
+          {
+            "id": "s2",
+            "label": "小児データの保護要件",
+            "category": "constraint"
+          },
+          {
+            "id": "p1",
+            "label": "OMOP CDM + 分散クエリ実行",
+            "category": "process"
+          },
+          {
+            "id": "a1",
+            "label": "患者数・適格基準の充足分析",
+            "category": "application"
+          },
+          {
+            "id": "a2",
+            "label": "治験フィージビリティ評価",
+            "category": "outcome"
+          }
+        ],
+        "edges": [
+          {
+            "from": "s1",
+            "to": "p1",
+            "label": "標準化データ"
+          },
+          {
+            "from": "s2",
+            "to": "p1",
+            "label": "データ移動なし"
+          },
+          {
+            "from": "p1",
+            "to": "a1",
+            "label": "集計結果"
+          },
+          {
+            "from": "a1",
+            "to": "a2",
+            "label": "フィージビリティ判定"
+          }
+        ]
+      }
     }
   ],
   "status": "seed",

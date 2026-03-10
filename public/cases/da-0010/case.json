@@ -35,19 +35,57 @@
       "type": "data_flow",
       "title": "京都大学・大阪大学等のデータフロー",
       "note": "",
-      "nodes": [
-        { "id": "s1", "label": "各大学病院のリアルワールドデータ", "category": "source" },
-        { "id": "s2", "label": "個人情報保護と施設間データ共有制約", "category": "constraint" },
-        { "id": "p1", "label": "PHT型で解析コードを各施設に配布実行", "category": "process" },
-        { "id": "a1", "label": "多施設共同臨床研究", "category": "application" },
-        { "id": "a2", "label": "RWD二次利用と個人情報保護の両立", "category": "outcome" }
-      ],
-      "edges": [
-        { "from": "s1", "to": "p1", "label": "各施設のRWD" },
-        { "from": "s2", "to": "p1", "label": "データ非移動" },
-        { "from": "p1", "to": "a1", "label": "分散解析結果" },
-        { "from": "a1", "to": "a2", "label": "研究成果" }
-      ]
+      "data": {
+        "nodes": [
+          {
+            "id": "s1",
+            "label": "各大学病院のリアルワールドデータ",
+            "category": "source"
+          },
+          {
+            "id": "s2",
+            "label": "個人情報保護と施設間データ共有制約",
+            "category": "constraint"
+          },
+          {
+            "id": "p1",
+            "label": "PHT型で解析コードを各施設に配布実行",
+            "category": "process"
+          },
+          {
+            "id": "a1",
+            "label": "多施設共同臨床研究",
+            "category": "application"
+          },
+          {
+            "id": "a2",
+            "label": "RWD二次利用と個人情報保護の両立",
+            "category": "outcome"
+          }
+        ],
+        "edges": [
+          {
+            "from": "s1",
+            "to": "p1",
+            "label": "各施設のRWD"
+          },
+          {
+            "from": "s2",
+            "to": "p1",
+            "label": "データ非移動"
+          },
+          {
+            "from": "p1",
+            "to": "a1",
+            "label": "分散解析結果"
+          },
+          {
+            "from": "a1",
+            "to": "a2",
+            "label": "研究成果"
+          }
+        ]
+      }
     }
   ],
   "status": "seed",
