@@ -76,6 +76,10 @@
       "note": ""
     }
   ],
+  "editorial_notes": [
+    "organizationにMerck Canadaが欠落",
+    "safety_assurance_methodの『個人の特定は原理的に不可能』は出典の表現より強い。出典ではプライバシー懸念の軽減に言及するにとどまる"
+  ],
   "status": "draft",
   "created_at": "2026-03-05T00:00:00+09:00",
   "updated_at": "2026-03-05T00:00:00+09:00"

@@ -10,7 +10,7 @@
   "technology_category": [
     "synthetic_data"
   ],
-  "review_status": "ai_generated",
+  "review_status": "flagged",
   "summary": "NHS Englandが、SynthVAE（変分オートエンコーダベースの合成データ生成手法）を使って模擬患者データを生成し、その評価方法や再利用可能な手順を整備した事例。生成・評価・文書化までの一連のプロセスを公開しており、他機関での再現が可能な実務的な取り組み。",
   "value_proposition": "合成患者データの生成から品質評価、文書化までの一連の手順を再利用可能な形で整備。他の医療機関やNHS内の組織が同様の取り組みを実施する際のテンプレートとして活用できる。",
   "privacy_enhancement_method": "SynthVAE（変分オートエンコーダ: VAEベース）をPyTorchで実装し、MIMIC-III（公開病院治療記録）で検証。オプションで差分プライバシー（Opacus）を適用可能。QuantumBlackのKedroフレームワークでパイプライン化し、データ生成からモデル学習、合成データ生成、評価までを単一コマンドで実行可能。",
@@ -67,6 +67,9 @@
       },
       "note": ""
     }
+  ],
+  "editorial_notes": [
+    "唯一の出典URLが403エラーでアクセス不能。代替出典の追加が必要"
   ],
   "status": "draft",
   "created_at": "2026-03-06T00:00:00+09:00",

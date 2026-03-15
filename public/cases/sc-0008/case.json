@@ -7,6 +7,7 @@
   "usecase_category": ["組織間データ共有"],
   "technology_category": ["secure_computation"],
   "review_status": "ai_generated",
+  "editorial_notes": ["出典では『仮想医療機関の擬似DPCデータ』を使用"],
   "summary": "複数病院間のDPCデータについて、診療科ごとの人数・売上・コスト・粗利の統計値を、SMPCで秘匿したまま算出。各病院は他院の生データを見ずに、全体の統計値や自院の相対的位置を把握できる設計。",
   "value_proposition": "地域医療活性化や病院経営改善に使える指標を、機密性を壊さずに取得可能に。病院ごとの経営状態が外部に見えてしまう懸念を抑えつつ、ベンチマーク分析を実現",
   "privacy_enhancement_method": "調査中",

@@ -8,7 +8,7 @@
   "technology_category": ["secure_computation"],
   "review_status": "ai_generated",
   "summary": "約1,000症例×800項目の臨床研究データを対象に、平均・分散・中央値・t検定・Kaplan-Meier法などの医療統計を、データを暗号化したまま秘密計算で実行。研究者が生データを見ずに統計処理できることを世界で初めて実証した。",
-  "value_proposition": "平均・分散は1秒以内、中央値は5秒以内、t検定も3秒以内で処理でき、秘密計算でも医療統計が実用速度で回ることを実証。機微性の高い臨床データを外部開示せずに解析できるため、多施設研究や外部委託分析の実現性を向上",
+  "value_proposition": "平均・分散は1秒以内、中央値は5秒以内、t検定も3秒以内で処理でき、秘密計算でも医療統計が実用速度で回ることを実証。機微性の高い臨床データを外部開示せずに解析できるため、多施設研究や外部委託分析の実現性の向上が期待される",
   "privacy_enhancement_method": "調査中",
   "safety_assurance_method": "調査中",
   "utility_evaluation_method": "調査中",

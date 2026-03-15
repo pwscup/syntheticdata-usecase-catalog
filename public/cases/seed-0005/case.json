@@ -17,7 +17,8 @@
   "safety_assurance_method": "調査中",
   "utility_evaluation_method": "調査中",
   "editorial_notes": [
-    "人工的に作成とのみ"
+    "人工的に作成とのみ",
+    "『人工的に作成した金融データ』をsynthetic_dataと分類しているが、プライバシー保護目的かは出典に明記なし"
   ],
   "tags": [
     "コンペティション",

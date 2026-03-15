@@ -10,7 +10,7 @@
   "technology_category": [
     "differential_privacy"
   ],
-  "review_status": "ai_generated",
+  "review_status": "flagged",
   "summary": "国・プロジェクト・ページ単位の日次ページビュー数や地域・端末属性を含む閲覧統計を対象に、約5年分の履歴を含むページビュー統計を差分プライバシーで保護して公開データセットとして提供している。Tumult Labsの支援を受けた公開プロジェクトである。",
   "value_proposition": "研究・分析・運営改善に使える高粒度データを、閲覧者プライバシーに配慮しながら公開できる。オープンデータ公開の文脈で差分プライバシーを使う好例である。",
   "privacy_enhancement_method": "調査中",
@@ -64,6 +64,9 @@
       },
       "note": ""
     }
+  ],
+  "editorial_notes": [
+    "出典URLが403エラーでアクセス不能。出典差し替え必須"
   ],
   "status": "seed",
   "created_at": "2026-03-08T00:00:00+09:00",

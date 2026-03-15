@@ -10,7 +10,7 @@
   "technology_category": [
     "distributed_analytics"
   ],
-  "review_status": "ai_generated",
+  "review_status": "flagged",
   "summary": "AMED事業CANNDs（Cross-cutting Advanced Network for Next-generation Data Science）は、バイオバンク・ジャパン（BBJ）、東北メディカル・メガバンク（ToMMo）等の大規模ゲノムコホートを対象に、ゲノムデータを各バイオバンクに保持したまま横断的な分散処理解析を実施する基盤を構築。データを移動させずに数十万人規模のゲノム解析を可能にしている。",
   "value_proposition": "日本の主要バイオバンクのゲノムデータに対し移動なしの分散処理を実現し、大規模ゲノム研究を加速",
   "privacy_enhancement_method": "分散処理基盤（各バイオバンクでのローカル解析実行）",
@@ -87,6 +87,9 @@
         ]
       }
     }
+  ],
+  "editorial_notes": [
+    "出典がAMEDトップページで事例詳細の検証不可。適切な出典への差し替えが必要"
   ],
   "status": "seed",
   "created_at": "2026-03-09T00:00:00.000Z",

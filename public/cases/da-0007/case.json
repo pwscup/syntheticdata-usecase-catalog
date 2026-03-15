@@ -88,6 +88,11 @@
       }
     }
   ],
+  "editorial_notes": [
+    "「2009年」「100以上の研究」等の具体的数値は出典から確認できない",
+    "出典では確認できない技術名（Opal）が含まれている。出典では「OBiBa/Molgenis」との連携が記載されている",
+    "「生物医学・社会科学分野」は出典では「academia, healthcare, industry and SMEs」と記載されており、分野の記述が異なる"
+  ],
   "status": "seed",
   "created_at": "2026-03-09T00:00:00.000Z",
   "updated_at": "2026-03-09T00:00:00.000Z"

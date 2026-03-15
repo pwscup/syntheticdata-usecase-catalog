@@ -8,7 +8,7 @@
   "technology_category": ["secure_computation"],
   "review_status": "ai_generated",
   "summary": "希少疾患を対象に、複数施設の臨床研究データを相互秘匿のまま横断研究・縦断研究に使えるかを検証し、さらに秘密計算ディープラーニングでAIモデル作成も試みる共同研究。診断情報を外部に見せずに、多施設共同研究の仕組みを構築する取り組み。",
-  "value_proposition": "単一施設では症例数が足りない希少疾患研究を、多施設の機微データを直接開示せずに推進可能に。診断時間短縮や薬剤選定支援AIへの展開まで見据えた研究基盤を構築",
+  "value_proposition": "単一施設では症例数が足りない希少疾患研究を、多施設の機微データを直接開示せずに推進可能に。診断時間短縮や薬剤選定支援AIへの展開まで見据えた研究基盤の構築を目指す",
   "privacy_enhancement_method": "調査中",
   "safety_assurance_method": "調査中",
   "utility_evaluation_method": "調査中",

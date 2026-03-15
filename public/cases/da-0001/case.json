@@ -12,7 +12,7 @@
   ],
   "review_status": "ai_generated",
   "summary": "EMAが医薬品規制におけるリアルワールドエビデンス（RWE）の活用を目的にDARWIN EUを構築。OMOP CDMで標準化された欧州各国のデータベースに対し、解析コードのみを配布して分散実行する方式により、患者レベルデータを一切移動させることなく規制判断に必要なエビデンスを生成している。",
-  "value_proposition": "患者データを移動させることなく欧州規模の医薬品安全性・有効性エビデンスをリアルタイムに生成可能にした",
+  "value_proposition": "患者データを移動させることなく欧州規模の医薬品安全性・有効性エビデンスをタイムリーに生成可能にした",
   "privacy_enhancement_method": "OMOP CDM標準化 + 解析コード分散実行（データ移動なし）",
   "safety_assurance_method": "データは各施設内に保持、集約結果のみ返送",
   "utility_evaluation_method": "規制当局の意思決定への採用実績",
@@ -87,6 +87,10 @@
         ]
       }
     }
+  ],
+  "editorial_notes": [
+    "出典ではOMOP CDMへの明示的な言及がなく、OMOP CDMの使用は出典から直接確認できない",
+    "「リアルタイム」は出典の「timely」に基づき「タイムリー」に修正"
   ],
   "status": "seed",
   "created_at": "2026-03-09T00:00:00.000Z",

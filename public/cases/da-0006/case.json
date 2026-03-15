@@ -10,7 +10,7 @@
   "technology_category": [
     "distributed_analytics"
   ],
-  "review_status": "ai_generated",
+  "review_status": "flagged",
   "summary": "EU Horizon 2020の肥満研究プロジェクトSOPHIAは、DataSHIELD基盤を用いて複数の肥満コホートデータを仮想的に統合。各施設にRサーバーを設置し、個人レベルデータを移動させず統計解析コマンドを分散実行する方式で、大規模な肥満の層別化・バイオマーカー研究を実現した。",
   "value_proposition": "複数の肥満コホートデータを個人データ移動なしに仮想統合し、大規模な層別化研究を可能にした",
   "privacy_enhancement_method": "DataSHIELD（Rベース分散解析フレームワーク）",
@@ -87,6 +87,9 @@
         ]
       }
     }
+  ],
+  "editorial_notes": [
+    "出典URL（imisophia.eu）が接続拒否でアクセス不能。出典差し替え必須"
   ],
   "status": "seed",
   "created_at": "2026-03-09T00:00:00.000Z",

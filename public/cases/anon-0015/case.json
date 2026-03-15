@@ -11,8 +11,8 @@
     "anonymization"
   ],
   "review_status": "ai_generated",
-  "summary": "生活習慣病予防健診データに加え、睡眠習慣、ワークエンゲージメント、警備業の業界アンケート等を匿名加工して仙台白百合女子大学へ提供。一般的な健診分析にとどまらず、睡眠・職域特性を踏まえた保健事業設計に活用されている。",
-  "value_proposition": "健診データに睡眠・職域データを加えた多角的分析により、加入者の健康維持・増進のための保健事業を高度化",
+  "summary": "生活習慣病予防健診データに加え、睡眠習慣、ワークエンゲージメント、警備業の業界アンケート等を匿名加工して仙台白百合女子大学へ提供。一般的な健診分析にとどまらず、睡眠・職域特性を踏まえたデータ分析に提供。",
+  "value_proposition": "健診データに睡眠・職域データを加えた多角的な分析を可能にする",
   "privacy_enhancement_method": "調査中",
   "safety_assurance_method": "調査中",
   "utility_evaluation_method": "調査中",
@@ -39,7 +39,7 @@
           {"id": "s2", "label": "加入者の個人情報保護が必要", "category": "constraint"},
           {"id": "p1", "label": "匿名加工情報として大学へ提供", "category": "process"},
           {"id": "a1", "label": "睡眠・職域特性を踏まえた分析", "category": "application"},
-          {"id": "a2", "label": "多角的分析で保健事業を高度化", "category": "outcome"}
+          {"id": "a2", "label": "多角的な分析を可能にする", "category": "outcome"}
         ],
         "edges": []
       },
