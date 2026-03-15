@@ -11,8 +11,8 @@
     "anonymization"
   ],
   "review_status": "ai_generated",
-  "summary": "被保険者情報、レセプト、健診、介護データを匿名加工し、「第3期データヘルス計画費用対効果調査及び解析業務」に使うため第三者提供。匿名加工情報を利用したデータ分析により、被保険者の健康維持・増進のための保健事業の企画・評価を高度化している。",
-  "value_proposition": "匿名加工情報の分析に基づく保健事業の企画・評価の高度化により、被保険者の健康維持・増進に貢献",
+  "summary": "被保険者情報、レセプト、健診、介護データを匿名加工し、「第3期データヘルス計画費用対効果調査及び解析業務」に使うため第三者提供。匿名加工情報を第三者提供し、データヘルス計画の費用対効果分析に活用。",
+  "value_proposition": "データヘルス計画の費用対効果分析を可能にする",
   "privacy_enhancement_method": "調査中",
   "safety_assurance_method": "調査中",
   "utility_evaluation_method": "調査中",
@@ -39,7 +39,7 @@
           {"id": "s2", "label": "被保険者の個人情報保護が必要", "category": "constraint"},
           {"id": "p1", "label": "匿名加工情報として第三者提供", "category": "process"},
           {"id": "a1", "label": "データヘルス計画の費用対効果分析", "category": "application"},
-          {"id": "a2", "label": "保健事業の企画・評価を高度化", "category": "outcome"}
+          {"id": "a2", "label": "データヘルス計画の費用対効果分析を実施", "category": "outcome"}
         ],
         "edges": []
       },

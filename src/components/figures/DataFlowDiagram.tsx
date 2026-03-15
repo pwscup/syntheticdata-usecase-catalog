@@ -16,7 +16,7 @@ const COLUMN_CONFIG = [
   },
   {
     key: 'generate',
-    label: '合成',
+    label: 'PETs適用',
     categories: ['process'],
     bgClass: 'bg-indigo-50',
     arrowClass: 'bg-indigo-700',
@@ -24,7 +24,7 @@ const COLUMN_CONFIG = [
   },
   {
     key: 'utilize',
-    label: '活用',
+    label: '価値創出',
     categories: ['application', 'outcome'],
     bgClass: 'bg-emerald-50',
     arrowClass: 'bg-emerald-700',

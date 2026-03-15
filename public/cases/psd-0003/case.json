@@ -37,6 +37,9 @@
       "note": ""
     }
   ],
+  "editorial_notes": [
+    "出典では研究段階（still in progress）だが、case.jsonでは『実務設計の事例』と記述"
+  ],
   "status": "seed",
   "created_at": "2026-03-07T00:00:00+09:00",
   "updated_at": "2026-03-07T00:00:00+09:00"

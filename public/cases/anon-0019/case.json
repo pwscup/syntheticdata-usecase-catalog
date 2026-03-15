@@ -12,7 +12,7 @@
   ],
   "review_status": "ai_generated",
   "summary": "次世代医療基盤法に基づく認定仮名加工医療情報利用事業者として、認定作成事業者から提供される健康・医療データをAI予測医学などの研究に利用。安全な研究データ解析環境を構築済みで、仮名加工医療情報を用いたデータ駆動型の予測医学研究を推進。仮名加工情報が詳細な医療データを保持したまま先端研究へ使えることを示す研究機関側の代表例。",
-  "value_proposition": "仮名加工医療情報により利用可能な健康・医療データが増大し、データ駆動型のAI予測医学研究を強力に推進",
+  "value_proposition": "仮名加工医療情報により利用可能な健康・医療データが増大し、データ駆動型のAI予測医学研究の推進が期待される",
   "privacy_enhancement_method": "調査中",
   "safety_assurance_method": "調査中",
   "utility_evaluation_method": "調査中",
@@ -39,12 +39,15 @@
           {"id": "s2", "label": "詳細な医療データの研究利用に制約", "category": "constraint"},
           {"id": "p1", "label": "仮名加工医療情報として安全に提供", "category": "process"},
           {"id": "a1", "label": "AI予測医学・データ駆動型研究", "category": "application"},
-          {"id": "a2", "label": "先端研究の加速と医療の高度化", "category": "outcome"}
+          {"id": "a2", "label": "先端研究と医療の高度化が期待される", "category": "outcome"}
         ],
         "edges": []
       },
       "note": ""
     }
+  ],
+  "editorial_notes": [
+    "仮名加工情報を扱う事例であり、technology_categoryはpseudonymizationが適切"
   ],
   "status": "seed",
   "created_at": "2026-03-08T00:00:00+09:00",

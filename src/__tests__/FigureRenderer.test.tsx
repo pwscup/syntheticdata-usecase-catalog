@@ -24,8 +24,8 @@ describe('FigureRenderer', () => {
     expect(screen.getByText('データフロー図')).toBeInTheDocument()
     // 3列ヘッダー
     expect(screen.getByText('収集')).toBeInTheDocument()
-    expect(screen.getByText('合成')).toBeInTheDocument()
-    expect(screen.getByText('活用')).toBeInTheDocument()
+    expect(screen.getByText('PETs適用')).toBeInTheDocument()
+    expect(screen.getByText('価値創出')).toBeInTheDocument()
     // ノードラベル
     expect(screen.getByText('元データ')).toBeInTheDocument()
     expect(screen.getByText('プライバシー制約')).toBeInTheDocument()

@@ -11,7 +11,7 @@
     "differential_privacy"
   ],
   "review_status": "ai_generated",
-  "summary": "AWS Clean Roomsに差分プライバシー機能を追加し、パートナー間で照合・分析する顧客データや重複顧客数、集計クエリ結果に対して再識別リスクを下げながら分析を実行できるようにしている。privacy budgetやquery sensitivityなどの概念を管理機能として提供する中央差分プライバシー型のSaaS機能である。",
+  "summary": "AWS Clean Roomsに差分プライバシー機能を追加し（出典時点ではpreview段階）、パートナー間で照合・分析する顧客データや重複顧客数、集計クエリ結果に対して再識別リスクを下げながら分析を実行できるようにしている。privacy budgetやquery sensitivityなどの概念を管理機能として提供する中央差分プライバシー型のSaaS機能である。",
   "value_proposition": "企業間データ連携やクリーンルーム分析で、個票を直接共有せずに共同分析をしやすくなる。差分プライバシーをプロダクト化し、企業間データコラボレーション用途に提供している。",
   "privacy_enhancement_method": "調査中",
   "safety_assurance_method": "調査中",
@@ -64,6 +64,9 @@
       },
       "note": ""
     }
+  ],
+  "editorial_notes": [
+    "出典時点ではpreview段階。正式リリース状況の確認が必要"
   ],
   "status": "seed",
   "created_at": "2026-03-08T00:00:00+09:00",

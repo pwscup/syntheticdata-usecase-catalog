@@ -10,7 +10,7 @@
   "technology_category": [
     "anonymization"
   ],
-  "review_status": "ai_generated",
+  "review_status": "flagged",
   "summary": "健康ポイントサービスアプリで取得した個人情報から仮名加工情報を作成し、ライフログデータを用いたAI技術の研究開発に利用。このアプリはAIで健康リスクを予測・認知させ、健康無関心層の行動変容を促し、健康寿命延伸や医療費等の社会保障給付費の適正化に貢献する設計。仮名加工情報の用途は健康行動変容を生むAI機能の研究開発。",
   "value_proposition": "健康無関心層の行動変容を促すAI機能の研究開発により、健康寿命延伸・社会保障給付費の適正化に貢献",
   "privacy_enhancement_method": "調査中",
@@ -50,6 +50,10 @@
       },
       "note": ""
     }
+  ],
+  "editorial_notes": [
+    "出典URLがアクセス不能（403エラー等）のため内容検証不可。出典の差し替えが必要",
+    "仮名加工情報を扱う事例であり、technology_categoryはpseudonymizationが適切"
   ],
   "status": "seed",
   "created_at": "2026-03-07T00:00:00+09:00",

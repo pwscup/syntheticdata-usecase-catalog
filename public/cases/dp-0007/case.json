@@ -2,7 +2,7 @@
   "id": "dp-0007",
   "title": "Google：Ads Data Hubのプライバシー保護広告分析",
   "region": "国外",
-  "domain": "通信",
+  "domain": "IT",
   "organization": "Google",
   "usecase_category": [
     "組織間データ共有"
@@ -64,6 +64,11 @@
       },
       "note": ""
     }
+  ],
+  "editorial_notes": [
+    "出典では「differential privacy」の語が使用されておらず、ノイズ注入や差分チェックとして説明されている。差分プライバシー事例としての分類根拠が弱い",
+    "「3,000超のブランド」の利用数は出典に記載なく根拠不足",
+    "「ROAS評価」は出典に言及なく根拠不足"
   ],
   "status": "seed",
   "created_at": "2026-03-08T00:00:00+09:00",

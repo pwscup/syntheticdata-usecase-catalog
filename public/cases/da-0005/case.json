@@ -11,8 +11,8 @@
     "distributed_analytics"
   ],
   "review_status": "ai_generated",
-  "summary": "FDAが構築した分散データネットワークSentinel Systemは、米国の保険請求データベースや電子健康記録を保有する複数の医療機関をネットワーク化。各機関がデータを保持したまま、FDAから配布される標準化クエリをローカルで実行し結果のみを返送する方式で、年間数億人分のデータを活用した市販後医薬品安全性監視を実現している。",
-  "value_proposition": "数億人規模の医療データに対しデータ移動なしでリアルタイムの医薬品安全性監視を実現",
+  "summary": "FDAが構築した分散データネットワークSentinel Systemは、米国の保険請求データベースや電子健康記録を保有する複数の医療機関をネットワーク化。各機関がデータを保持したまま、FDAから配布される標準化クエリをローカルで実行し結果のみを返送する方式で、約1億3,900万人分のデータを活用した市販後医薬品安全性監視を実現している。",
+  "value_proposition": "約1億3,900万人規模の医療データに対しデータ移動なしで継続的な医薬品安全性監視を実現",
   "privacy_enhancement_method": "Sentinel Common Data Model + 分散クエリ実行",
   "safety_assurance_method": "データは各機関が保持、要約統計量のみFDAに返送",
   "utility_evaluation_method": "安全性シグナル検出実績と規制措置への反映",
@@ -35,20 +35,62 @@
       "type": "data_flow",
       "title": "FDA Sentinelのデータフロー",
       "note": "",
-      "nodes": [
-        { "id": "s1", "label": "米国の保険請求DB・電子健康記録", "category": "source" },
-        { "id": "s2", "label": "患者データの移動制約", "category": "constraint" },
-        { "id": "p1", "label": "標準化クエリのローカル実行", "category": "process" },
-        { "id": "a1", "label": "要約統計量の集約・分析", "category": "application" },
-        { "id": "a2", "label": "市販後医薬品安全性監視", "category": "outcome" }
-      ],
-      "edges": [
-        { "from": "s1", "to": "p1", "label": "Sentinel CDMデータ" },
-        { "from": "s2", "to": "p1", "label": "データ移動なし" },
-        { "from": "p1", "to": "a1", "label": "要約統計量" },
-        { "from": "a1", "to": "a2", "label": "安全性シグナル検出" }
-      ]
+      "data": {
+        "nodes": [
+          {
+            "id": "s1",
+            "label": "米国の保険請求DB・電子健康記録",
+            "category": "source"
+          },
+          {
+            "id": "s2",
+            "label": "患者データの移動制約",
+            "category": "constraint"
+          },
+          {
+            "id": "p1",
+            "label": "標準化クエリのローカル実行",
+            "category": "process"
+          },
+          {
+            "id": "a1",
+            "label": "要約統計量の集約・分析",
+            "category": "application"
+          },
+          {
+            "id": "a2",
+            "label": "市販後医薬品安全性監視",
+            "category": "outcome"
+          }
+        ],
+        "edges": [
+          {
+            "from": "s1",
+            "to": "p1",
+            "label": "Sentinel CDMデータ"
+          },
+          {
+            "from": "s2",
+            "to": "p1",
+            "label": "データ移動なし"
+          },
+          {
+            "from": "p1",
+            "to": "a1",
+            "label": "要約統計量"
+          },
+          {
+            "from": "a1",
+            "to": "a2",
+            "label": "安全性シグナル検出"
+          }
+        ]
+      }
     }
+  ],
+  "editorial_notes": [
+    "「数億人」を出典に基づき「約1億3,900万人」に修正（Sentinel Initiativeの実際の規模）",
+    "「リアルタイム」は出典に明示がないため「継続的な」に修正"
   ],
   "status": "seed",
   "created_at": "2026-03-09T00:00:00.000Z",
