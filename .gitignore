@@ -28,3 +28,10 @@ gitworktree
 
 # ビルド時に自動生成
 public/cases/index.json
+
+# Playwright
+test-results/
+playwright-report/
+
+# Claude Code (ローカル設定のみ除外)
+.claude/settings.local.json
