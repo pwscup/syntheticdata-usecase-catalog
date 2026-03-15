@@ -1,0 +1,56 @@
+{
+  "id": "anon-0005",
+  "title": "JCB：クレジットカード決済情報の匿名加工による消費指数公開サービス",
+  "region": "国内",
+  "domain": "金融",
+  "organization": "JCB",
+  "usecase_category": [
+    "公的利用"
+  ],
+  "technology_category": [
+    "anonymization"
+  ],
+  "review_status": "ai_generated",
+  "summary": "JCBグループが発行するクレジットカード会員の属性・決済情報を個人が特定できないよう統計化（匿名加工）し、消費指数「JCB消費NOW」として公開。匿名加工に基づく社会公開型サービスの事例。",
+  "value_proposition": "調査中",
+  "privacy_enhancement_method": "調査中",
+  "safety_assurance_method": "調査中",
+  "utility_evaluation_method": "調査中",
+  "tags": [
+    "匿名加工情報",
+    "消費統計",
+    "クレジットカード"
+  ],
+  "sources": [
+    {
+      "source_type": "web",
+      "title": "JCB消費NOW",
+      "url": "https://www.jcbconsumptionnow.com/"
+    },
+    {
+      "source_type": "pdf",
+      "title": "JIPDEC プライバシーガバナンス調査",
+      "url": "https://www.jipdec.or.jp/news/news/htpisq0000002w03-att/20220318_case_study_privacygovernance_research.pdf"
+    }
+  ],
+  "figures": [
+    {
+      "type": "data_flow",
+      "title": "概要フロー",
+      "data": {
+        "nodes": [
+          {"id": "s1", "label": "JCBカード会員の属性・決済情報", "category": "source"},
+          {"id": "s2", "label": "個人の購買行動はプライバシー情報", "category": "constraint"},
+          {"id": "p1", "label": "決済情報を匿名加工し統計化", "category": "process"},
+          {"id": "a1", "label": "「JCB消費NOW」として一般公開", "category": "application"},
+          {"id": "a2", "label": "社会全体の消費動向把握に貢献", "category": "outcome"}
+        ],
+        "edges": []
+      },
+      "note": ""
+    }
+  ],
+  "status": "seed",
+  "created_at": "2026-03-07T00:00:00+09:00",
+  "updated_at": "2026-03-07T00:00:00+09:00"
+}

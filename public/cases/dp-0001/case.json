@@ -1,0 +1,72 @@
+{
+  "id": "dp-0001",
+  "title": "LINEヤフー：LINEスタンプ推薦での差分プライバシー活用",
+  "region": "国内",
+  "domain": "IT",
+  "organization": "LINEヤフー",
+  "usecase_category": [
+    "組織内データ共有"
+  ],
+  "technology_category": [
+    "differential_privacy",
+    "federated_learning"
+  ],
+  "review_status": "ai_generated",
+  "summary": "LINEアプリ内のスタンプ閲覧・送信履歴を対象に、端末上でスタンプ推薦モデルを学習し、サーバへ送る更新情報に差分プライバシーのノイズを付与している。Federated Learningと組み合わせ、識別子を除去したうえで更新情報にノイズを加える構成をとっている。",
+  "value_proposition": "推薦改善に必要な学習を続けつつ、個々の利用履歴や入力スタンプの推定を困難にし、利便性とプライバシー保護を両立している。",
+  "privacy_enhancement_method": "調査中",
+  "safety_assurance_method": "調査中",
+  "utility_evaluation_method": "調査中",
+  "tags": [
+    "スタンプ推薦",
+    "連合学習",
+    "モバイル"
+  ],
+  "sources": [
+    {
+      "source_type": "web",
+      "title": "LINEヤフー プライバシーテック",
+      "url": "https://privacy.lycorp.co.jp/ja/acquisition/privacy_techs.html"
+    }
+  ],
+  "figures": [
+    {
+      "type": "data_flow",
+      "title": "概要フロー",
+      "data": {
+        "nodes": [
+          {
+            "id": "s1",
+            "label": "スタンプ閲覧・送信履歴",
+            "category": "source"
+          },
+          {
+            "id": "s2",
+            "label": "個人の利用履歴の推定リスク",
+            "category": "constraint"
+          },
+          {
+            "id": "p1",
+            "label": "差分プライバシー＋連合学習",
+            "category": "process"
+          },
+          {
+            "id": "a1",
+            "label": "スタンプ推薦モデルの改善",
+            "category": "application"
+          },
+          {
+            "id": "a2",
+            "label": "利便性とプライバシーの両立",
+            "category": "outcome"
+          }
+        ],
+        "edges": []
+      },
+      "note": ""
+    }
+  ],
+  "status": "seed",
+  "created_at": "2026-03-08T00:00:00+09:00",
+  "updated_at": "2026-03-08T00:00:00+09:00"
+}

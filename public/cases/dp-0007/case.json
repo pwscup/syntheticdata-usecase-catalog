@@ -1,0 +1,76 @@
+{
+  "id": "dp-0007",
+  "title": "Google：Ads Data Hubのプライバシー保護広告分析",
+  "region": "国外",
+  "domain": "IT",
+  "organization": "Google",
+  "usecase_category": [
+    "組織間データ共有"
+  ],
+  "technology_category": [
+    "differential_privacy"
+  ],
+  "review_status": "ai_generated",
+  "summary": "広告配信・露出・コンバージョン・キャンペーン分析用データを対象に、クラウド型の分析環境で差分プライバシー由来のノイズ注入や差分チェックなどのプライバシー保護モードを提供している。3,000超のブランド等が利用している。",
+  "value_proposition": "ブランドや代理店は個票を直接受け取らずに広告効果分析やROAS評価を実施できる。差分プライバシーを安全な広告分析の構成要素として提供する典型例である。",
+  "privacy_enhancement_method": "調査中",
+  "safety_assurance_method": "調査中",
+  "utility_evaluation_method": "調査中",
+  "tags": [
+    "広告分析",
+    "クリーンルーム",
+    "ROAS"
+  ],
+  "sources": [
+    {
+      "source_type": "web",
+      "title": "Google Ads Data Hub - Privacy Checks",
+      "url": "https://developers.google.com/ads-data-hub/marketers/guides/privacy-checks"
+    }
+  ],
+  "figures": [
+    {
+      "type": "data_flow",
+      "title": "概要フロー",
+      "data": {
+        "nodes": [
+          {
+            "id": "s1",
+            "label": "広告配信・コンバージョンデータ",
+            "category": "source"
+          },
+          {
+            "id": "s2",
+            "label": "個票データの外部提供制約",
+            "category": "constraint"
+          },
+          {
+            "id": "p1",
+            "label": "差分プライバシーでノイズ注入",
+            "category": "process"
+          },
+          {
+            "id": "a1",
+            "label": "広告効果分析・ROAS評価",
+            "category": "application"
+          },
+          {
+            "id": "a2",
+            "label": "個票非開示で広告分析を実現",
+            "category": "outcome"
+          }
+        ],
+        "edges": []
+      },
+      "note": ""
+    }
+  ],
+  "editorial_notes": [
+    "出典では「differential privacy」の語が使用されておらず、ノイズ注入や差分チェックとして説明されている。差分プライバシー事例としての分類根拠が弱い",
+    "「3,000超のブランド」の利用数は出典に記載なく根拠不足",
+    "「ROAS評価」は出典に言及なく根拠不足"
+  ],
+  "status": "seed",
+  "created_at": "2026-03-08T00:00:00+09:00",
+  "updated_at": "2026-03-08T00:00:00+09:00"
+}

@@ -1,0 +1,44 @@
+{
+  "id": "sc-0013",
+  "title": "三菱重工 × NEC：秘密計算を活用したプラント等のセキュアなログ分析システム開発",
+  "region": "国内",
+  "domain": "製造",
+  "organization": "三菱重工業・NEC",
+  "usecase_category": ["R&D"],
+  "technology_category": ["secure_computation"],
+  "review_status": "flagged",
+  "editorial_notes": ["出典URL（NEC）がHTTP 403でアクセス不能。代替出典の追加が必要"],
+  "summary": "プラント装置等のログデータを、秘密分散方式（MPC方式）で3サーバに分散し、異常検知ルールとの突合を暗号化したまま実施する研究開発。ログという営業機密性の高いデータを、クラウド等で安全に分析するニーズに対応。",
+  "value_proposition": "機密ログを開示せずに異常検知できるため、将来的には大規模ログの準リアルタイム分析を通じたサイバー攻撃検知システムへの活用を展望。医療・金融以外で営業秘密データに秘密計算を適用する国内事例",
+  "privacy_enhancement_method": "調査中",
+  "safety_assurance_method": "調査中",
+  "utility_evaluation_method": "調査中",
+  "tags": ["秘密計算", "MPC", "ログ分析", "異常検知"],
+  "sources": [
+    {
+      "source_type": "web",
+      "title": "NEC、三菱重工とプラント等におけるセキュリティ強化に向け秘密計算技術を活用したセキュアなログ分析システムの研究開発に着手",
+      "url": "https://jpn.nec.com/press/202209/20220928_03.html"
+    }
+  ],
+  "figures": [
+    {
+      "type": "data_flow",
+      "title": "概要フロー",
+      "data": {
+        "nodes": [
+          {"id": "s1", "label": "プラント装置のログデータ", "category": "source"},
+          {"id": "s2", "label": "営業機密性が高く外部分析が困難", "category": "constraint"},
+          {"id": "p1", "label": "MPC方式で3サーバに秘密分散し分析", "category": "process"},
+          {"id": "a1", "label": "暗号化したまま異常検知ルールと突合", "category": "application"},
+          {"id": "a2", "label": "機密ログの安全なクラウド分析を実現", "category": "outcome"}
+        ],
+        "edges": []
+      },
+      "note": ""
+    }
+  ],
+  "status": "seed",
+  "created_at": "2026-03-08T00:00:00+09:00",
+  "updated_at": "2026-03-08T00:00:00+09:00"
+}

@@ -1,0 +1,55 @@
+{
+  "id": "anon-0009",
+  "title": "三井住友銀行：decileサービスにおける仮名加工情報の分析活用",
+  "region": "国内",
+  "domain": "金融",
+  "organization": "三井住友銀行",
+  "usecase_category": [
+    "組織内データ共有"
+  ],
+  "technology_category": [
+    "anonymization"
+  ],
+  "review_status": "ai_generated",
+  "summary": "サービス利用者情報から仮名加工情報を作成し、性別・住所・年齢等の情報を用いた分析を実施。プロダクト改善・分析用途の制度活用例。",
+  "value_proposition": "調査中",
+  "privacy_enhancement_method": "調査中",
+  "safety_assurance_method": "調査中",
+  "utility_evaluation_method": "調査中",
+  "tags": [
+    "仮名加工情報",
+    "金融",
+    "顧客分析"
+  ],
+  "sources": [
+    {
+      "source_type": "web",
+      "title": "decileにおける仮名加工情報の取扱いについて",
+      "url": "https://www.smbc.co.jp/kojin/decile/kamei/"
+    }
+  ],
+  "figures": [
+    {
+      "type": "data_flow",
+      "title": "概要フロー",
+      "data": {
+        "nodes": [
+          {"id": "s1", "label": "decileサービス利用者情報", "category": "source"},
+          {"id": "s2", "label": "顧客の属性情報は個人情報", "category": "constraint"},
+          {"id": "p1", "label": "利用者情報を仮名加工情報に変換", "category": "process"},
+          {"id": "a1", "label": "性別・住所・年齢等による分析", "category": "application"},
+          {"id": "a2", "label": "プロダクト改善の意思決定を支援", "category": "outcome"}
+        ],
+        "edges": []
+      },
+      "note": ""
+    }
+  ],
+  "editorial_notes": [
+    "仮名加工情報を扱う事例であり、technology_categoryはpseudonymizationが適切",
+    "プライバシーポリシーに記載された利用目的に基づく事例であり、実際の活用実績は未確認"
+  ],
+  "status": "seed",
+  "created_at": "2026-03-07T00:00:00+09:00",
+  "updated_at": "2026-03-07T00:00:00+09:00"
+}

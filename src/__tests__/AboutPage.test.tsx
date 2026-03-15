@@ -9,7 +9,7 @@ describe('AboutPage', () => {
         <AboutPage />
       </MemoryRouter>,
     )
-    expect(screen.getByText('合成データ活用事例カタログ')).toBeInTheDocument()
+    expect(screen.getByText('プライバシー強化技術 活用事例カタログ')).toBeInTheDocument()
   })
 
   it('免責事項が表示される', () => {
@@ -19,7 +19,7 @@ describe('AboutPage', () => {
       </MemoryRouter>,
     )
     expect(screen.getByText('免責事項')).toBeInTheDocument()
-    expect(screen.getByText(/正確性、完全性、最新性について保証するものではありません/)).toBeInTheDocument()
+    expect(screen.getByText(/現時点の状況を正確に反映しているとは限りません/)).toBeInTheDocument()
   })
 
   it('機微情報の取り扱いについてが表示される', () => {

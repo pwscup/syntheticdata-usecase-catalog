@@ -1,0 +1,63 @@
+{
+  "id": "anon-0016",
+  "title": "愛媛県×協会けんぽ愛媛支部：匿名加工情報によるビッグデータ活用県民健康づくり事業",
+  "region": "国内",
+  "domain": "医療",
+  "organization": "愛媛県・全国健康保険協会 愛媛支部",
+  "usecase_category": [
+    "公的利用"
+  ],
+  "technology_category": [
+    "anonymization"
+  ],
+  "review_status": "ai_generated",
+  "summary": "協会けんぽ愛媛支部が健診・レセプトの匿名加工情報を愛媛県へ継続提供し、県は国保・協会けんぽ等のビッグデータを一元活用して分析。特定健診受診率向上、医療費適正化、健康寿命延伸、疾病予防・健康づくりのために実施。事業の中で高血圧が重点課題とされ、減塩施策も展開されている。",
+  "value_proposition": "ビッグデータの一元分析により健康課題の可視化を可能にし、事業の中で高血圧が重点課題とされ減塩施策や高血圧啓発活動も展開されている",
+  "privacy_enhancement_method": "調査中",
+  "safety_assurance_method": "調査中",
+  "utility_evaluation_method": "調査中",
+  "tags": [
+    "匿名加工情報",
+    "ビッグデータ",
+    "県民健康づくり",
+    "高血圧対策",
+    "減塩施策"
+  ],
+  "sources": [
+    {
+      "source_type": "web",
+      "title": "ビッグデータ活用県民健康づくり事業に係る匿名加工情報の作成及び第三者への提供について",
+      "url": "https://www.kyoukaikenpo.or.jp/shibu/ehime/cat140/20230120-01/"
+    },
+    {
+      "source_type": "web",
+      "title": "愛媛県 ビッグデータ活用県民健康づくり事業",
+      "url": "https://www.pref.ehime.jp/page/17634.html"
+    },
+    {
+      "source_type": "web",
+      "title": "協会けんぽ愛媛支部 愛顔の健康づくり通信",
+      "url": "https://www.kyoukaikenpo.or.jp/shibu/ehime/cat080/20190228_01/20190226001/"
+    }
+  ],
+  "figures": [
+    {
+      "type": "data_flow",
+      "title": "概要フロー",
+      "data": {
+        "nodes": [
+          {"id": "s1", "label": "健診・レセプトデータ（複数保険者）", "category": "source"},
+          {"id": "s2", "label": "保険者間のデータ共有に制約", "category": "constraint"},
+          {"id": "p1", "label": "匿名加工情報として県へ継続提供", "category": "process"},
+          {"id": "a1", "label": "ビッグデータ一元分析で課題特定", "category": "application"},
+          {"id": "a2", "label": "高血圧対策・減塩施策へ展開", "category": "outcome"}
+        ],
+        "edges": []
+      },
+      "note": ""
+    }
+  ],
+  "status": "seed",
+  "created_at": "2026-03-08T00:00:00+09:00",
+  "updated_at": "2026-03-08T00:00:00+09:00"
+}

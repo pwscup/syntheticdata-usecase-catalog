@@ -9,6 +9,8 @@ const defaultFilters: FilterState = {
   region: [],
   domain: [],
   usecase_category: [],
+  technology_category: [],
+  review_status: [],
   sortBy: 'updated_at_desc',
   page: 1,
 }
@@ -17,6 +19,8 @@ const filterOptions: Record<string, string[]> = {
   region: ['国内', '国外'],
   domain: ['医療', '金融'],
   usecase_category: ['組織内データ共有', 'R&D'],
+  technology_category: ['synthetic_data'],
+  review_status: ['ai_generated'],
 }
 
 const mockCases: Case[] = [
@@ -26,11 +30,13 @@ const mockCases: Case[] = [
     region: '国内',
     domain: '医療',
     organization: 'テスト組織',
-    usecase_category: '組織内データ共有',
+    usecase_category: ['組織内データ共有'],
+    technology_category: ['synthetic_data'],
+    review_status: 'ai_generated',
     summary: '',
     value_proposition: '',
-    synthetic_generation_method: '',
-    safety_evaluation_method: '',
+    privacy_enhancement_method: '',
+    safety_assurance_method: '',
     utility_evaluation_method: '',
     tags: [],
     sources: [],
@@ -45,11 +51,13 @@ const mockCases: Case[] = [
     region: '国外',
     domain: '金融',
     organization: 'テスト組織2',
-    usecase_category: 'R&D',
+    usecase_category: ['R&D'],
+    technology_category: ['synthetic_data'],
+    review_status: 'ai_generated',
     summary: '',
     value_proposition: '',
-    synthetic_generation_method: '',
-    safety_evaluation_method: '',
+    privacy_enhancement_method: '',
+    safety_assurance_method: '',
     utility_evaluation_method: '',
     tags: [],
     sources: [],
@@ -109,6 +117,18 @@ describe('FilterPanel', () => {
     expect(screen.getByText('ユースケース分類')).toBeInTheDocument()
     expect(screen.getByText('組織内データ共有')).toBeInTheDocument()
     expect(screen.getByText('R&D')).toBeInTheDocument()
+  })
+
+  it('技術カテゴリフィルタが表示される', () => {
+    renderPanel()
+    expect(screen.getByText('技術カテゴリ')).toBeInTheDocument()
+    expect(screen.getByText('合成データ')).toBeInTheDocument()
+  })
+
+  it('レビュー状態フィルタが表示される', () => {
+    renderPanel()
+    expect(screen.getByText('レビュー状態')).toBeInTheDocument()
+    expect(screen.getByText('AI生成')).toBeInTheDocument()
   })
 
   it('各選択肢に件数が表示される', () => {

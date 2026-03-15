@@ -6,10 +6,14 @@
   "usecase_category": [
     "組織間データ共有"
   ],
+  "technology_category": [
+    "synthetic_data"
+  ],
+  "review_status": "human_reviewed",
   "summary": "COVID-19の診療データは患者プライバシーの観点から外部配布が困難で、研究の協業が制限されていた。米ワシントン大学は合成データを作成して外部共有し、入院リスク予測や流行曲線予測などの下流タスクで有用性を検証した。",
   "value_proposition": "合成データによる分析結果が実データとほぼ同等であることを確認（一部例外あり）。",
-  "synthetic_generation_method": "調査中",
-  "safety_evaluation_method": "調査中",
+  "privacy_enhancement_method": "調査中",
+  "safety_assurance_method": "調査中",
   "utility_evaluation_method": "下流タスクでの比較評価（特徴探索、入院リスク予測、流行曲線予測などで合成前後比較）",
   "tags": [
     "sub:COVID-19",
@@ -31,7 +35,23 @@
     }
   ],
   "id": "seed-0011",
-  "figures": [],
+  "figures": [
+    {
+      "type": "data_flow",
+      "title": "概要フロー",
+      "data": {
+        "nodes": [
+          {"id": "s1", "label": "COVID-19の診療データ", "category": "source"},
+          {"id": "s2", "label": "患者プライバシーで外部共有が困難", "category": "constraint"},
+          {"id": "p1", "label": "合成データを生成し外部配布用に変換", "category": "process"},
+          {"id": "a1", "label": "入院リスク予測や流行曲線予測に活用", "category": "application"},
+          {"id": "a2", "label": "実データとほぼ同等の分析結果を確認", "category": "outcome"}
+        ],
+        "edges": []
+      },
+      "note": ""
+    }
+  ],
   "status": "seed",
   "created_at": "2026-02-26T00:00:00+09:00",
   "updated_at": "2026-03-04T00:49:07.565Z"

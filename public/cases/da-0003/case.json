@@ -1,0 +1,98 @@
+{
+  "id": "da-0003",
+  "title": "EHDEN/OHDSI：COVID-19ワクチンAESI背景発生率の分散解析",
+  "region": "国外",
+  "domain": "医療",
+  "organization": "OHDSI / EHDEN",
+  "usecase_category": [
+    "R&D"
+  ],
+  "technology_category": [
+    "distributed_analytics"
+  ],
+  "review_status": "ai_generated",
+  "summary": "COVID-19ワクチン接種開始に備え、有害事象特別関心（AESI）の背景発生率を迅速に把握するため、OHDSIネットワークの13データベースで分散解析を実施。各施設がローカルにコードを実行し結果のみを集約することで、パンデミック下でも短期間で国際的なベースラインデータを確立した。",
+  "value_proposition": "パンデミック下で分散解析により迅速にワクチンAESI背景発生率の国際的ベースラインを確立",
+  "privacy_enhancement_method": "OMOP CDM + 標準化解析パッケージのローカル実行",
+  "safety_assurance_method": "患者レベルデータは各施設に保持、集計結果のみ共有",
+  "utility_evaluation_method": "13データベース間の結果の一貫性評価",
+  "tags": [
+    "COVID-19",
+    "AESI",
+    "OHDSI",
+    "背景発生率"
+  ],
+  "sources": [
+    {
+      "source_type": "web",
+      "title": "OHDSI COVID-19 studies",
+      "url": "https://www.ohdsi.org/covid-19-updates/",
+      "note": "COVID-19関連研究"
+    }
+  ],
+  "figures": [
+    {
+      "type": "data_flow",
+      "title": "EHDEN/OHDSI COVID-19分散解析のデータフロー",
+      "note": "",
+      "data": {
+        "nodes": [
+          {
+            "id": "s1",
+            "label": "OHDSIネットワークの13データベース",
+            "category": "source"
+          },
+          {
+            "id": "s2",
+            "label": "パンデミック下のデータ移動制約",
+            "category": "constraint"
+          },
+          {
+            "id": "p1",
+            "label": "標準化解析パッケージのローカル実行",
+            "category": "process"
+          },
+          {
+            "id": "a1",
+            "label": "AESI背景発生率の集約",
+            "category": "application"
+          },
+          {
+            "id": "a2",
+            "label": "国際的ベースラインデータの確立",
+            "category": "outcome"
+          }
+        ],
+        "edges": [
+          {
+            "from": "s1",
+            "to": "p1",
+            "label": "OMOP CDMデータ"
+          },
+          {
+            "from": "s2",
+            "to": "p1",
+            "label": "データ移動なし"
+          },
+          {
+            "from": "p1",
+            "to": "a1",
+            "label": "分散解析結果"
+          },
+          {
+            "from": "a1",
+            "to": "a2",
+            "label": "背景発生率の統合"
+          }
+        ]
+      }
+    }
+  ],
+  "editorial_notes": [
+    "EHDENの直接的関与は出典から確認不可",
+    "出典ではAESI研究は8カ国とされており、「13データベース」はCHARYBDISプロジェクトの数値である可能性がある"
+  ],
+  "status": "seed",
+  "created_at": "2026-03-09T00:00:00.000Z",
+  "updated_at": "2026-03-09T00:00:00.000Z"
+}

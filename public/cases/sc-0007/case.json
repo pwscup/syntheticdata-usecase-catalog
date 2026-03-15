@@ -1,0 +1,44 @@
+{
+  "id": "sc-0007",
+  "title": "三谷産業 × Acompany：秘密計算による複数病院の医療行為データ格差分析",
+  "region": "国内",
+  "domain": "医療",
+  "organization": "三谷産業・Acompany",
+  "usecase_category": ["組織間データ共有"],
+  "technology_category": ["secure_computation"],
+  "review_status": "ai_generated",
+  "editorial_notes": ["出典では『シミュレーション用データ（擬似データ）』と明記されている"],
+  "summary": "複数病院の約6万人分の医療行為データを、秘密計算ソフトウェアQuickMPCで秘匿したまま統合分析し、医療サービス格差の有無を分析。医療データを三谷産業データセンターで保管しつつ、複数組織のデータをまたいで解析を実施。",
+  "value_proposition": "通常の生データ分析と遜色ない精度を得たうえで、医療格差があるケースとないケースを明らかにできた。単なる安全な計算にとどまらず、分析結果として意味のある差分を見いだした実証",
+  "privacy_enhancement_method": "調査中",
+  "safety_assurance_method": "調査中",
+  "utility_evaluation_method": "調査中",
+  "tags": ["秘密計算", "MPC", "医療格差", "統合分析"],
+  "sources": [
+    {
+      "source_type": "web",
+      "title": "三谷産業とAcompany、秘密計算を用いた統合分析の実証実験に成功",
+      "url": "https://prtimes.jp/main/html/rd/p/000000013.000046917.html"
+    }
+  ],
+  "figures": [
+    {
+      "type": "data_flow",
+      "title": "概要フロー",
+      "data": {
+        "nodes": [
+          {"id": "s1", "label": "複数病院の約6万人分医療行為データ", "category": "source"},
+          {"id": "s2", "label": "病院間で患者データを共有できない", "category": "constraint"},
+          {"id": "p1", "label": "秘密計算(QuickMPC)で秘匿統合分析", "category": "process"},
+          {"id": "a1", "label": "医療サービス格差の分析", "category": "application"},
+          {"id": "a2", "label": "生データ同等精度で格差を可視化", "category": "outcome"}
+        ],
+        "edges": []
+      },
+      "note": ""
+    }
+  ],
+  "status": "seed",
+  "created_at": "2026-03-08T00:00:00+09:00",
+  "updated_at": "2026-03-08T00:00:00+09:00"
+}

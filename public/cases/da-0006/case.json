@@ -1,0 +1,97 @@
+{
+  "id": "da-0006",
+  "title": "DataSHIELD/SOPHIA：肥満研究の連合データベース",
+  "region": "国外",
+  "domain": "医療",
+  "organization": "SOPHIA project / DataSHIELD consortium",
+  "usecase_category": [
+    "R&D"
+  ],
+  "technology_category": [
+    "distributed_analytics"
+  ],
+  "review_status": "flagged",
+  "summary": "EU Horizon 2020の肥満研究プロジェクトSOPHIAは、DataSHIELD基盤を用いて複数の肥満コホートデータを仮想的に統合。各施設にRサーバーを設置し、個人レベルデータを移動させず統計解析コマンドを分散実行する方式で、大規模な肥満の層別化・バイオマーカー研究を実現した。",
+  "value_proposition": "複数の肥満コホートデータを個人データ移動なしに仮想統合し、大規模な層別化研究を可能にした",
+  "privacy_enhancement_method": "DataSHIELD（Rベース分散解析フレームワーク）",
+  "safety_assurance_method": "各施設のRサーバーでローカル実行、要約統計のみ返送",
+  "utility_evaluation_method": "従来の単施設研究との比較によるサンプルサイズ・検出力の向上",
+  "tags": [
+    "DataSHIELD",
+    "SOPHIA",
+    "肥満",
+    "Horizon 2020"
+  ],
+  "sources": [
+    {
+      "source_type": "web",
+      "title": "SOPHIA project",
+      "url": "https://imisophia.eu/",
+      "note": "プロジェクト概要"
+    }
+  ],
+  "figures": [
+    {
+      "type": "data_flow",
+      "title": "DataSHIELD/SOPHIAのデータフロー",
+      "note": "",
+      "data": {
+        "nodes": [
+          {
+            "id": "s1",
+            "label": "複数の肥満コホートデータ",
+            "category": "source"
+          },
+          {
+            "id": "s2",
+            "label": "個人データ移動の制約",
+            "category": "constraint"
+          },
+          {
+            "id": "p1",
+            "label": "DataSHIELDによる分散解析実行",
+            "category": "process"
+          },
+          {
+            "id": "a1",
+            "label": "肥満の層別化・バイオマーカー分析",
+            "category": "application"
+          },
+          {
+            "id": "a2",
+            "label": "大規模な層別化研究の実現",
+            "category": "outcome"
+          }
+        ],
+        "edges": [
+          {
+            "from": "s1",
+            "to": "p1",
+            "label": "コホートデータ"
+          },
+          {
+            "from": "s2",
+            "to": "p1",
+            "label": "データ移動なし"
+          },
+          {
+            "from": "p1",
+            "to": "a1",
+            "label": "要約統計量"
+          },
+          {
+            "from": "a1",
+            "to": "a2",
+            "label": "層別化結果"
+          }
+        ]
+      }
+    }
+  ],
+  "editorial_notes": [
+    "出典URL（imisophia.eu）が接続拒否でアクセス不能。出典差し替え必須"
+  ],
+  "status": "seed",
+  "created_at": "2026-03-09T00:00:00.000Z",
+  "updated_at": "2026-03-09T00:00:00.000Z"
+}

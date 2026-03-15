@@ -10,8 +10,8 @@ const validFormJson = JSON.stringify({
   usecase_category: ['R&D'],
   summary: 'テストサマリー',
   value_proposition: '成果の説明',
-  synthetic_generation_method: 'CTGAN',
-  safety_evaluation_method: 'k-匿名性',
+  privacy_enhancement_method: 'CTGAN',
+  safety_assurance_method: 'k-匿名性',
   utility_evaluation_method: '精度比較',
   tags: ['テスト'],
   sources: [

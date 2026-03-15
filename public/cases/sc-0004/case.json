@@ -1,0 +1,43 @@
+{
+  "id": "sc-0004",
+  "title": "千葉大学病院 × NTT Com：秘密計算ディープラーニングによる希少疾患の多施設共同研究",
+  "region": "国内",
+  "domain": "医療",
+  "organization": "千葉大学病院・NTTコミュニケーションズ",
+  "usecase_category": ["R&D"],
+  "technology_category": ["secure_computation"],
+  "review_status": "ai_generated",
+  "summary": "希少疾患を対象に、複数施設の臨床研究データを相互秘匿のまま横断研究・縦断研究に使えるかを検証し、さらに秘密計算ディープラーニングでAIモデル作成も試みる共同研究。診断情報を外部に見せずに、多施設共同研究の仕組みを構築する取り組み。",
+  "value_proposition": "単一施設では症例数が足りない希少疾患研究を、多施設の機微データを直接開示せずに推進可能に。診断時間短縮や薬剤選定支援AIへの展開まで見据えた研究基盤の構築を目指す",
+  "privacy_enhancement_method": "調査中",
+  "safety_assurance_method": "調査中",
+  "utility_evaluation_method": "調査中",
+  "tags": ["秘密計算", "希少疾患", "ディープラーニング", "多施設共同研究"],
+  "sources": [
+    {
+      "source_type": "web",
+      "title": "千葉大学病院とNTT Com、「秘密計算ディープラーニング」などの技術を活用した臨床データ分析の共同研究を開始",
+      "url": "https://www.ntt.com/about-us/press-releases/news/article/2021/0208.html"
+    }
+  ],
+  "figures": [
+    {
+      "type": "data_flow",
+      "title": "概要フロー",
+      "data": {
+        "nodes": [
+          {"id": "s1", "label": "複数施設の希少疾患臨床データ", "category": "source"},
+          {"id": "s2", "label": "単施設では症例数が不足", "category": "constraint"},
+          {"id": "p1", "label": "秘密計算DLで秘匿のままAI学習", "category": "process"},
+          {"id": "a1", "label": "診断支援・薬剤選定AIの構築", "category": "application"},
+          {"id": "a2", "label": "データ非開示で多施設共同研究", "category": "outcome"}
+        ],
+        "edges": []
+      },
+      "note": ""
+    }
+  ],
+  "status": "seed",
+  "created_at": "2026-03-08T00:00:00+09:00",
+  "updated_at": "2026-03-08T00:00:00+09:00"
+}

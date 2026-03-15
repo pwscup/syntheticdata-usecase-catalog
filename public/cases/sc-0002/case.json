@@ -1,0 +1,43 @@
+{
+  "id": "sc-0002",
+  "title": "NTT × 東北メディカル・メガバンク機構：ゲノムデータの相互非開示解析手法の開発",
+  "region": "国内",
+  "domain": "医療",
+  "organization": "NTT・東北大学 東北メディカル・メガバンク機構",
+  "usecase_category": ["R&D"],
+  "technology_category": ["secure_computation"],
+  "review_status": "ai_generated",
+  "summary": "複数研究機関が保有するゲノムデータを相互に開示せず、ゲノムワイド関連解析で用いるフィッシャー正確確率検定を秘密計算で実施できる手法を開発。疾病情報と遺伝子の関連性を調べるゲノム解析において、機微なゲノムデータを持ち寄れないため十分なサンプル数が確保できないという研究上の制約を、秘密計算で緩和する。",
+  "value_proposition": "従来の秘密計算では処理に1年以上かかるところを、1,000人分試算で約20分まで短縮。機微なゲノムデータを持ち寄れないために十分なサンプル数が確保できないという研究上の制約を、秘密計算で緩和",
+  "privacy_enhancement_method": "調査中",
+  "safety_assurance_method": "調査中",
+  "utility_evaluation_method": "調査中",
+  "tags": ["秘密計算", "ゲノム解析", "フィッシャー正確確率検定", "多施設研究"],
+  "sources": [
+    {
+      "source_type": "web",
+      "title": "NTT 複数の研究機関が持つゲノムデータを相互に開示せず分析する解析手法を開発",
+      "url": "https://group.ntt/jp/newsrelease/2016/07/12/160712a.html"
+    }
+  ],
+  "figures": [
+    {
+      "type": "data_flow",
+      "title": "概要フロー",
+      "data": {
+        "nodes": [
+          {"id": "s1", "label": "複数機関のゲノムデータ", "category": "source"},
+          {"id": "s2", "label": "機微データを持ち寄れずサンプル不足", "category": "constraint"},
+          {"id": "p1", "label": "秘密計算でフィッシャー検定を実行", "category": "process"},
+          {"id": "a1", "label": "ゲノムワイド関連解析", "category": "application"},
+          {"id": "a2", "label": "データ非開示で大規模ゲノム研究", "category": "outcome"}
+        ],
+        "edges": []
+      },
+      "note": ""
+    }
+  ],
+  "status": "seed",
+  "created_at": "2026-03-08T00:00:00+09:00",
+  "updated_at": "2026-03-08T00:00:00+09:00"
+}

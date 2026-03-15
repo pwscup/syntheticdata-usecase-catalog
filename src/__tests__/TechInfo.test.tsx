@@ -5,8 +5,8 @@ describe('TechInfo', () => {
   it('技術情報が表示される', () => {
     render(
       <TechInfo
-        synthetic_generation_method="GAN"
-        safety_evaluation_method="差分プライバシー"
+        privacy_enhancement_method="GAN"
+        safety_assurance_method="差分プライバシー"
         utility_evaluation_method="ベンチマーク"
       />,
     )
@@ -19,8 +19,8 @@ describe('TechInfo', () => {
   it('「調査中」の場合にバッジで表示される', () => {
     render(
       <TechInfo
-        synthetic_generation_method="調査中"
-        safety_evaluation_method="調査中"
+        privacy_enhancement_method="調査中"
+        safety_assurance_method="調査中"
         utility_evaluation_method="調査中"
       />,
     )
@@ -35,8 +35,8 @@ describe('TechInfo', () => {
   it('通常値と「調査中」が混在する場合に正しく表示される', () => {
     render(
       <TechInfo
-        synthetic_generation_method="VAE"
-        safety_evaluation_method="調査中"
+        privacy_enhancement_method="VAE"
+        safety_assurance_method="調査中"
         utility_evaluation_method="統計評価"
       />,
     )

@@ -1,0 +1,61 @@
+{
+  "id": "anon-0008",
+  "title": "NEC：仮名加工情報を用いた健康行動変容AIの研究開発",
+  "region": "国内",
+  "domain": "IT",
+  "organization": "NEC",
+  "usecase_category": [
+    "R&D"
+  ],
+  "technology_category": [
+    "anonymization"
+  ],
+  "review_status": "flagged",
+  "summary": "健康ポイントサービスアプリで取得した個人情報から仮名加工情報を作成し、ライフログデータを用いたAI技術の研究開発に利用。このアプリはAIで健康リスクを予測・認知させ、健康無関心層の行動変容を促し、健康寿命延伸や医療費等の社会保障給付費の適正化に貢献する設計。仮名加工情報の用途は健康行動変容を生むAI機能の研究開発。",
+  "value_proposition": "健康無関心層の行動変容を促すAI機能の研究開発により、健康寿命延伸・社会保障給付費の適正化に貢献",
+  "privacy_enhancement_method": "調査中",
+  "safety_assurance_method": "調査中",
+  "utility_evaluation_method": "調査中",
+  "tags": [
+    "仮名加工情報",
+    "AI研究開発",
+    "ライフログ",
+    "健康行動変容"
+  ],
+  "sources": [
+    {
+      "source_type": "web",
+      "title": "NEC 匿名加工情報・仮名加工情報",
+      "url": "https://jpn.nec.com/site/AnonymousData/index.html"
+    },
+    {
+      "source_type": "web",
+      "title": "NEC 健康ポイントサービスアプリのリリース",
+      "url": "https://jpn.nec.com/press/202306/20230601_01.html"
+    }
+  ],
+  "figures": [
+    {
+      "type": "data_flow",
+      "title": "概要フロー",
+      "data": {
+        "nodes": [
+          {"id": "s1", "label": "健康ポイントアプリのライフログ", "category": "source"},
+          {"id": "s2", "label": "個人の健康情報は高い保護が必要", "category": "constraint"},
+          {"id": "p1", "label": "個人情報を仮名加工情報に変換", "category": "process"},
+          {"id": "a1", "label": "健康行動変容AIの研究開発", "category": "application"},
+          {"id": "a2", "label": "健康寿命延伸・医療費適正化に貢献", "category": "outcome"}
+        ],
+        "edges": []
+      },
+      "note": ""
+    }
+  ],
+  "editorial_notes": [
+    "出典URLがアクセス不能（403エラー等）のため内容検証不可。出典の差し替えが必要",
+    "仮名加工情報を扱う事例であり、technology_categoryはpseudonymizationが適切"
+  ],
+  "status": "seed",
+  "created_at": "2026-03-07T00:00:00+09:00",
+  "updated_at": "2026-03-08T00:00:00+09:00"
+}

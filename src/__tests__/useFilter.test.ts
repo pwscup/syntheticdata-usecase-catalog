@@ -11,12 +11,14 @@ function makeCase(overrides: Partial<Case> = {}): Case {
     usecase_category: ['組織内データ共有'],
     summary: 'デフォルト概要',
     value_proposition: '成果',
-    synthetic_generation_method: 'GAN',
-    safety_evaluation_method: 'k-匿名性',
+    privacy_enhancement_method: 'GAN',
+    safety_assurance_method: 'k-匿名性',
     utility_evaluation_method: '精度比較',
     tags: ['タグ1'],
     sources: [{ source_type: 'web', title: 'ソースA', url: 'https://example.com', note: '' }],
     figures: [],
+    technology_category: ['synthetic_data'],
+    review_status: 'ai_generated',
     status: 'seed',
     created_at: '2026-01-01T00:00:00Z',
     updated_at: '2026-01-01T00:00:00Z',
@@ -30,6 +32,8 @@ function defaultFilters(overrides: Partial<FilterState> = {}): FilterState {
     region: [],
     domain: [],
     usecase_category: [],
+    technology_category: [],
+    review_status: [],
     sortBy: 'updated_at_desc',
     page: 1,
     ...overrides,
@@ -47,8 +51,8 @@ const testCases: Case[] = [
     summary: '患者データを匿名化して研究に活用',
     tags: ['匿名化', 'ヘルスケア'],
     sources: [{ source_type: 'web', title: '論文A', url: 'https://example.com/a', note: '' }],
-    synthetic_generation_method: 'GAN',
-    safety_evaluation_method: 'k-匿名性',
+    privacy_enhancement_method: 'GAN',
+    safety_assurance_method: 'k-匿名性',
     utility_evaluation_method: '精度比較',
     updated_at: '2026-03-01T00:00:00Z',
   }),
@@ -62,8 +66,8 @@ const testCases: Case[] = [
     summary: '不正取引パターンの合成データ生成',
     tags: ['不正検知', 'Finance'],
     sources: [{ source_type: 'pdf', title: 'レポートB', url: 'https://example.com/b', note: '' }],
-    synthetic_generation_method: 'VAE',
-    safety_evaluation_method: '差分プライバシー',
+    privacy_enhancement_method: 'VAE',
+    safety_assurance_method: '差分プライバシー',
     utility_evaluation_method: 'F値',
     updated_at: '2026-01-15T00:00:00Z',
   }),
@@ -77,8 +81,8 @@ const testCases: Case[] = [
     summary: '走行データの合成によるモデル訓練',
     tags: ['自動運転', 'シミュレーション'],
     sources: [{ source_type: 'web', title: '論文A', url: 'https://example.com/a2', note: '' }],
-    synthetic_generation_method: '調査中',
-    safety_evaluation_method: '調査中',
+    privacy_enhancement_method: '調査中',
+    safety_assurance_method: '調査中',
     utility_evaluation_method: '精度比較',
     updated_at: '2026-02-10T00:00:00Z',
   }),
@@ -152,6 +156,38 @@ describe('useFilter - applyFilters', () => {
     expect(result[0].id).toBe('case-002')
   })
 
+  it('technology_categoryフィルタで絞り込める', () => {
+    const cases = [
+      makeCase({ id: 'tc-1', technology_category: ['synthetic_data'] }),
+      makeCase({ id: 'tc-2', technology_category: ['differential_privacy'] }),
+      makeCase({ id: 'tc-3', technology_category: ['synthetic_data', 'anonymization'] }),
+    ]
+    const result = applyFilters(cases, defaultFilters({ technology_category: ['differential_privacy'] }))
+    expect(result).toHaveLength(1)
+    expect(result[0].id).toBe('tc-2')
+  })
+
+  it('technology_categoryフィルタ: 複数カテゴリのOR一致', () => {
+    const cases = [
+      makeCase({ id: 'tc-1', technology_category: ['synthetic_data'] }),
+      makeCase({ id: 'tc-2', technology_category: ['differential_privacy'] }),
+      makeCase({ id: 'tc-3', technology_category: ['anonymization'] }),
+    ]
+    const result = applyFilters(cases, defaultFilters({ technology_category: ['synthetic_data', 'differential_privacy'] }))
+    expect(result).toHaveLength(2)
+  })
+
+  it('review_statusフィルタで絞り込める', () => {
+    const cases = [
+      makeCase({ id: 'rs-1', review_status: 'ai_generated' }),
+      makeCase({ id: 'rs-2', review_status: 'human_reviewed' }),
+      makeCase({ id: 'rs-3', review_status: 'flagged' }),
+    ]
+    const result = applyFilters(cases, defaultFilters({ review_status: ['human_reviewed'] }))
+    expect(result).toHaveLength(1)
+    expect(result[0].id).toBe('rs-2')
+  })
+
   it('フィルタクリア（空フィルタで全件返る）', () => {
     const result = applyFilters(testCases, defaultFilters())
     expect(result).toHaveLength(3)
@@ -193,6 +229,24 @@ describe('useFilter - collectFilterOptions', () => {
 
     expect(options.usecase_category).toEqual(expect.arrayContaining(['組織内データ共有', 'R&D', '外部分析者活用']))
     expect(options.usecase_category).toHaveLength(3)
+
+    expect(options.technology_category).toEqual(expect.arrayContaining(['synthetic_data']))
+    expect(options.technology_category).toHaveLength(1)
+
+    expect(options.review_status).toEqual(expect.arrayContaining(['ai_generated']))
+    expect(options.review_status).toHaveLength(1)
+  })
+
+  it('technology_category/review_statusの多様な値が収集される', () => {
+    const cases = [
+      makeCase({ id: 'c1', technology_category: ['synthetic_data', 'anonymization'], review_status: 'ai_generated' }),
+      makeCase({ id: 'c2', technology_category: ['differential_privacy'], review_status: 'human_reviewed' }),
+    ]
+    const options = collectFilterOptions(cases)
+    expect(options.technology_category).toEqual(expect.arrayContaining(['synthetic_data', 'anonymization', 'differential_privacy']))
+    expect(options.technology_category).toHaveLength(3)
+    expect(options.review_status).toEqual(expect.arrayContaining(['ai_generated', 'human_reviewed']))
+    expect(options.review_status).toHaveLength(2)
   })
 
   it('filterOptions の値がソートされている', () => {

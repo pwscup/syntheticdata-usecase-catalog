@@ -1,0 +1,74 @@
+{
+  "id": "dp-0004",
+  "title": "Google：Google Mapsの混雑情報表示における差分プライバシー",
+  "region": "国外",
+  "domain": "IT",
+  "organization": "Google",
+  "usecase_category": [
+    "組織内データ共有"
+  ],
+  "technology_category": [
+    "differential_privacy"
+  ],
+  "review_status": "ai_generated",
+  "summary": "Location Historyを有効にしたユーザーの位置履歴データを対象に、差分プライバシーを適用して店舗や場所の混雑傾向・現在の混雑度を集計・公開している。十分なデータがない場合は表示しない制御を入れている。",
+  "value_proposition": "利用者は店舗選択や訪問時間の判断に使え、Google側は個人を特定せずに有用な混雑情報を提供できる。",
+  "privacy_enhancement_method": "調査中",
+  "safety_assurance_method": "調査中",
+  "utility_evaluation_method": "調査中",
+  "tags": [
+    "位置情報",
+    "混雑情報",
+    "集計公開"
+  ],
+  "sources": [
+    {
+      "source_type": "web",
+      "title": "Google Maps - Popular times and live busyness information",
+      "url": "https://blog.google/products-and-platforms/products/maps/maps101-popular-times-and-live-busyness-information/"
+    }
+  ],
+  "figures": [
+    {
+      "type": "data_flow",
+      "title": "概要フロー",
+      "data": {
+        "nodes": [
+          {
+            "id": "s1",
+            "label": "ユーザーの位置履歴データ",
+            "category": "source"
+          },
+          {
+            "id": "s2",
+            "label": "個人の位置情報特定リスク",
+            "category": "constraint"
+          },
+          {
+            "id": "p1",
+            "label": "差分プライバシーで混雑度集計",
+            "category": "process"
+          },
+          {
+            "id": "a1",
+            "label": "店舗・施設の混雑情報表示",
+            "category": "application"
+          },
+          {
+            "id": "a2",
+            "label": "個人非特定で有用な情報提供",
+            "category": "outcome"
+          }
+        ],
+        "edges": []
+      },
+      "note": ""
+    }
+  ],
+  "editorial_notes": [
+    "出典に差分プライバシーの明記なし。差分プライバシー事例としての根拠が不足"
+  ],
+  "status": "seed",
+  "created_at": "2026-03-08T00:00:00+09:00",
+  "updated_at": "2026-03-08T00:00:00+09:00"
+}

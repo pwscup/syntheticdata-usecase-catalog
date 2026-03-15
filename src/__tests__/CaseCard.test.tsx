@@ -12,12 +12,14 @@ const mockCase: Case = {
   usecase_category: ['組織内データ共有'],
   summary: 'テスト概要',
   value_proposition: 'テスト成果',
-  synthetic_generation_method: '生成方法',
-  safety_evaluation_method: '安全性評価',
+  privacy_enhancement_method: '生成方法',
+  safety_assurance_method: '安全性評価',
   utility_evaluation_method: '有用性評価',
   tags: ['tag1'],
   sources: [],
   figures: [],
+  technology_category: ['synthetic_data'],
+  review_status: 'ai_generated',
   status: 'seed',
   created_at: '2026-01-01T00:00:00Z',
   updated_at: '2026-01-01T00:00:00Z',
@@ -80,5 +82,16 @@ describe('CaseCard', () => {
   it('tagsが空の場合はタグバッジが表示されない', () => {
     renderCard({ ...mockCase, tags: [] })
     expect(screen.queryByText('+0')).not.toBeInTheDocument()
+  })
+
+  it('review_statusバッジが表示される', () => {
+    renderCard({ ...mockCase, review_status: 'ai_generated' })
+    expect(screen.getByText('AI生成')).toBeInTheDocument()
+  })
+
+  it('technology_categoryバッジが表示される', () => {
+    renderCard({ ...mockCase, technology_category: ['synthetic_data', 'differential_privacy'] })
+    expect(screen.getByText('合成データ')).toBeInTheDocument()
+    expect(screen.getByText('差分プライバシー')).toBeInTheDocument()
   })
 })

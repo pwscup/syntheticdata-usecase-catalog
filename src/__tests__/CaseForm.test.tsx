@@ -12,8 +12,8 @@ const mockCase: Case = {
   usecase_category: ['組織内データ共有'],
   summary: 'テスト概要',
   value_proposition: 'テスト成果',
-  synthetic_generation_method: 'GAN',
-  safety_evaluation_method: 'k-匿名性',
+  privacy_enhancement_method: 'GAN',
+  safety_assurance_method: 'k-匿名性',
   utility_evaluation_method: 'ベンチマーク',
   tags: ['医療', 'GAN'],
   sources: [

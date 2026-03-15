@@ -13,8 +13,8 @@ const mockCase: Case = {
   usecase_category: ['プライバシー保護'],
   summary: 'テスト概要の内容です',
   value_proposition: 'テスト成果の内容です',
-  synthetic_generation_method: 'GAN',
-  safety_evaluation_method: '調査中',
+  privacy_enhancement_method: 'GAN',
+  safety_assurance_method: '調査中',
   utility_evaluation_method: 'ベンチマーク評価',
   tags: ['医療'],
   sources: [

@@ -1,0 +1,52 @@
+{
+  "id": "anon-0017",
+  "title": "日本NCR健康保険組合：匿名加工情報による他健保ベンチマーク分析と保健指導改善",
+  "region": "国内",
+  "domain": "医療",
+  "organization": "日本NCR健康保険組合",
+  "usecase_category": [
+    "組織間データ共有"
+  ],
+  "technology_category": [
+    "anonymization"
+  ],
+  "review_status": "ai_generated",
+  "summary": "レセプト・健診情報を匿名加工し、他健保とのベンチマーク分析を目的として第三者提供。さらに、健診結果の共有による事後指導や高リスク者への医療機関受診勧奨を実施。自組合の健康課題の相対把握と、保健指導・受診勧奨の改善に活用している。",
+  "value_proposition": "他健保との比較分析による自組合の健康課題の相対把握と、保健指導・受診勧奨プログラムの改善",
+  "privacy_enhancement_method": "調査中",
+  "safety_assurance_method": "調査中",
+  "utility_evaluation_method": "調査中",
+  "tags": [
+    "匿名加工情報",
+    "ベンチマーク分析",
+    "保健指導",
+    "受診勧奨"
+  ],
+  "sources": [
+    {
+      "source_type": "web",
+      "title": "日本NCR健康保険組合 個人情報保護について",
+      "url": "https://www.ncrkenpo.or.jp/member/info/policy.html"
+    }
+  ],
+  "figures": [
+    {
+      "type": "data_flow",
+      "title": "概要フロー",
+      "data": {
+        "nodes": [
+          {"id": "s1", "label": "レセプト・健診情報", "category": "source"},
+          {"id": "s2", "label": "他組合とのデータ比較に制約", "category": "constraint"},
+          {"id": "p1", "label": "匿名加工情報として第三者提供", "category": "process"},
+          {"id": "a1", "label": "他健保とのベンチマーク分析", "category": "application"},
+          {"id": "a2", "label": "保健指導・受診勧奨を改善", "category": "outcome"}
+        ],
+        "edges": []
+      },
+      "note": ""
+    }
+  ],
+  "status": "seed",
+  "created_at": "2026-03-08T00:00:00+09:00",
+  "updated_at": "2026-03-08T00:00:00+09:00"
+}

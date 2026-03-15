@@ -8,10 +8,14 @@
   "usecase_category": [
     "組織内データ共有"
   ],
+  "technology_category": [
+    "synthetic_data"
+  ],
+  "review_status": "ai_generated",
   "summary": "鹿島建設がスマートビル領域において、建物利用者の個別同意取得が重くデータ活用が非効率だった課題に対し、Betterdata社の合成データ基盤を導入した事例。個別同意を不要化し、運用コストを60%削減しながら規制準拠を維持。",
   "value_proposition": "スマートビルの利用者データについて個別の同意取得を不要とし、運用コストを60%削減。規制準拠を維持しつつ、データ活用のスピードと効率性を大幅に改善。",
-  "synthetic_generation_method": "Betterdata社のセルフサービス型合成データ生成プラットフォームを使用。スマートビルのセンサー・利用者データの統計的特性を保持した合成データを生成。",
-  "safety_evaluation_method": "合成データは実在の利用者情報を含まないため、個別の同意取得が不要に。規制準拠を維持した上でデータ活用が可能な環境を構築。",
+  "privacy_enhancement_method": "Betterdata社のセルフサービス型合成データ生成プラットフォームを使用。スマートビルのセンサー・利用者データの統計的特性を保持した合成データを生成。",
+  "safety_assurance_method": "合成データは実在の利用者情報を含まないため、個別の同意取得が不要に。規制準拠を維持した上でデータ活用が可能な環境を構築。",
   "utility_evaluation_method": "合成データを用いたスマートビル運用の分析・最適化の精度を検証し、運用コスト60%削減の効果を計測。",
   "tags": [
     "スマートビル",
@@ -36,11 +40,31 @@
       "title": "スマートビルにおける合成データ活用フロー",
       "data": {
         "nodes": [
-          { "id": "s1", "label": "スマートビルのセンサー・利用者データ", "category": "source" },
-          { "id": "s2", "label": "利用者ごとの個別同意取得が重く非効率", "category": "constraint" },
-          { "id": "p1", "label": "Betterdataで合成データを生成", "category": "process" },
-          { "id": "a1", "label": "ビル運用の分析・最適化に活用", "category": "application" },
-          { "id": "a2", "label": "個別同意不要化・運用コスト60%削減を実現", "category": "outcome" }
+          {
+            "id": "s1",
+            "label": "スマートビルのセンサー・利用者データ",
+            "category": "source"
+          },
+          {
+            "id": "s2",
+            "label": "利用者ごとの個別同意取得が重く非効率",
+            "category": "constraint"
+          },
+          {
+            "id": "p1",
+            "label": "Betterdataで合成データを生成",
+            "category": "process"
+          },
+          {
+            "id": "a1",
+            "label": "ビル運用の分析・最適化に活用",
+            "category": "application"
+          },
+          {
+            "id": "a2",
+            "label": "個別同意不要化・運用コスト60%削減を実現",
+            "category": "outcome"
+          }
         ],
         "edges": []
       },

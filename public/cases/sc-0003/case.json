@@ -1,0 +1,44 @@
+{
+  "id": "sc-0003",
+  "title": "NEC × 大阪大学：秘密計算による複数機関ゲノム情報の結合解析実証",
+  "region": "国内",
+  "domain": "医療",
+  "organization": "NEC・大阪大学",
+  "usecase_category": ["組織間データ共有"],
+  "technology_category": ["secure_computation"],
+  "review_status": "flagged",
+  "editorial_notes": ["出典URL（NEC）がHTTP 403でアクセス不能。代替出典の追加が必要"],
+  "summary": "複数の医療・研究機関が持つゲノム情報・疾病情報を、NECの秘密計算を組み込んだDSビューアで秘匿結合し、年代別のゲノム変異頻度などを解析。集計値が一定数以上のときのみ結果を開示する制御も実装。AMED事業の文脈で実施された。",
+  "value_proposition": "約8,000人分のゲノム情報を約1秒で結合解析でき、秘密計算適用も一般のSEが数日で行えることを確認。多機関データを安全にまとめ、個別化治療や先端医療研究を前進させる実用性を実証",
+  "privacy_enhancement_method": "調査中",
+  "safety_assurance_method": "調査中",
+  "utility_evaluation_method": "調査中",
+  "tags": ["秘密計算", "ゲノム解析", "MPC", "秘匿結合"],
+  "sources": [
+    {
+      "source_type": "web",
+      "title": "NEC・大阪大学、複数機関が保有するゲノム情報をプライバシー侵害リスクを抑えて解析できることを実証",
+      "url": "https://jpn.nec.com/press/201907/20190723_03.html"
+    }
+  ],
+  "figures": [
+    {
+      "type": "data_flow",
+      "title": "概要フロー",
+      "data": {
+        "nodes": [
+          {"id": "s1", "label": "複数機関のゲノム・疾病情報", "category": "source"},
+          {"id": "s2", "label": "機関間でデータを直接共有できない", "category": "constraint"},
+          {"id": "p1", "label": "秘密計算で秘匿結合・集計分析", "category": "process"},
+          {"id": "a1", "label": "年代別ゲノム変異頻度の解析", "category": "application"},
+          {"id": "a2", "label": "多機関データで個別化医療を推進", "category": "outcome"}
+        ],
+        "edges": []
+      },
+      "note": ""
+    }
+  ],
+  "status": "seed",
+  "created_at": "2026-03-08T00:00:00+09:00",
+  "updated_at": "2026-03-08T00:00:00+09:00"
+}

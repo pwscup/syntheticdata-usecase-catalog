@@ -1,0 +1,54 @@
+{
+  "id": "fl-0003",
+  "title": "NICT・神戸大学・エルテス・テラアクソン：3銀行による継続学習型の不正送金検知",
+  "region": "国内",
+  "domain": "金融",
+  "organization": "NICT・神戸大学・エルテス・テラアクソン",
+  "usecase_category": [
+    "組織間データ共有"
+  ],
+  "technology_category": [
+    "federated_learning",
+    "secure_computation"
+  ],
+  "review_status": "ai_generated",
+  "summary": "千葉銀行、中国銀行、三井住友信託銀行と連携し、DeepProtectとeFL-Boostを用いて日々変化する犯罪手口に対応する継続学習シナリオで不正送金検知を実証。連合学習モデルが個別学習モデルに比べて不正口座を見逃さない割合（再現率）が平均18ポイント程度改善。後続フェーズとして協力銀行1行で行内実証を開始しており、研究段階から運用段階への接続が明確。",
+  "value_proposition": "継続学習により変化する犯罪手口に対応し、再現率が個別学習比で平均18ポイント改善。行内実証段階へ移行",
+  "privacy_enhancement_method": "調査中",
+  "safety_assurance_method": "調査中",
+  "utility_evaluation_method": "個別学習モデルとの再現率比較、継続学習シナリオでの性能評価",
+  "tags": [
+    "連合学習",
+    "DeepProtect",
+    "eFL-Boost",
+    "不正送金検知",
+    "継続学習"
+  ],
+  "sources": [
+    {
+      "source_type": "web",
+      "title": "プライバシー保護連合学習技術「DeepProtect」「eFL-Boost」を活用した不正送金検知の実証実験を実施",
+      "url": "https://www.nict.go.jp/press/2025/07/22-1.html"
+    }
+  ],
+  "figures": [
+    {
+      "type": "data_flow",
+      "title": "概要フロー",
+      "data": {
+        "nodes": [
+          {"id": "s1", "label": "3銀行の送金データ", "category": "source"},
+          {"id": "s2", "label": "犯罪手口が日々変化", "category": "constraint"},
+          {"id": "p1", "label": "DeepProtect+eFL-Boostで継続学習", "category": "process"},
+          {"id": "a1", "label": "変化する不正送金の検知", "category": "application"},
+          {"id": "a2", "label": "再現率が平均18pt改善", "category": "outcome"}
+        ],
+        "edges": []
+      },
+      "note": ""
+    }
+  ],
+  "status": "seed",
+  "created_at": "2025-07-22T00:00:00+09:00",
+  "updated_at": "2026-03-07T00:00:00+09:00"
+}

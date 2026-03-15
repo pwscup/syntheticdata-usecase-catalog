@@ -1,0 +1,71 @@
+{
+  "id": "dp-0008",
+  "title": "U.S. Census Bureau：2020年国勢調査の差分プライバシー保護",
+  "region": "国外",
+  "domain": "公共",
+  "organization": "U.S. Census Bureau",
+  "usecase_category": [
+    "公的利用"
+  ],
+  "technology_category": [
+    "differential_privacy"
+  ],
+  "review_status": "ai_generated",
+  "summary": "2020年米国国勢調査の回答データを対象に、TopDown Algorithmにより差分プライバシーに基づくノイズ入り計測を行い、公開統計やprivacy-protected microdata file（PPMF）を生成している。PPMFは実際の回答ではなく保護処理済みのマイクロデータとして公開されている。",
+  "value_proposition": "回答者の機密性を守りながら、全国から細粒度地域までの統計公開を継続できる。公的統計における差分プライバシーの世界的な代表事例である。",
+  "privacy_enhancement_method": "調査中",
+  "safety_assurance_method": "調査中",
+  "utility_evaluation_method": "調査中",
+  "tags": [
+    "国勢調査",
+    "公的統計",
+    "マイクロデータ"
+  ],
+  "sources": [
+    {
+      "source_type": "web",
+      "title": "2020 Census Privacy-Protected Microdata File",
+      "url": "https://www2.census.gov/programs-surveys/decennial/2020/technical-documentation/complete-tech-docs/privacy-protected-microdata-file/2020census-privacy-protected-microdata-file.pdf"
+    }
+  ],
+  "figures": [
+    {
+      "type": "data_flow",
+      "title": "概要フロー",
+      "data": {
+        "nodes": [
+          {
+            "id": "s1",
+            "label": "国勢調査の回答データ",
+            "category": "source"
+          },
+          {
+            "id": "s2",
+            "label": "回答者の再識別リスク",
+            "category": "constraint"
+          },
+          {
+            "id": "p1",
+            "label": "差分プライバシーでノイズ付与",
+            "category": "process"
+          },
+          {
+            "id": "a1",
+            "label": "保護済み統計・PPMFの公開",
+            "category": "application"
+          },
+          {
+            "id": "a2",
+            "label": "機密性保持と統計公開の両立",
+            "category": "outcome"
+          }
+        ],
+        "edges": []
+      },
+      "note": ""
+    }
+  ],
+  "status": "seed",
+  "created_at": "2026-03-08T00:00:00+09:00",
+  "updated_at": "2026-03-08T00:00:00+09:00"
+}

@@ -38,8 +38,7 @@ export default function CaseDetailPage() {
       </div>
 
       <p className="text-xs text-gray-400 mb-6">
-        ※ 本事例の情報は公開資料等に基づき作成したものであり、内容の正確性を保証するものではありません。最新の情報は出典元をご確認ください。
-        詳細は<Link to="/about" className="text-blue-400 hover:text-blue-500 underline underline-offset-2 ml-0.5">Aboutページ</Link>をご確認ください。
+        ※ 本事例の情報は、調査時点で公開されていた資料に基づいて作成したものであり、現時点の状況を正確に反映しているとは限りません。免責事項については<Link to="/about" className="text-blue-400 hover:text-blue-500 underline underline-offset-2 mx-0.5">Aboutページ</Link>をご参照ください。事例の詳細については、出典元をご確認ください。
       </p>
     </div>
   )

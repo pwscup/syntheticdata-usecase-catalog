@@ -1,0 +1,54 @@
+{
+  "id": "anon-0011",
+  "title": "MS&ADインシュアランスグループ：仮名加工情報のグループ内共同利用",
+  "region": "国内",
+  "domain": "金融",
+  "organization": "MS&ADインシュアランスグループ",
+  "usecase_category": [
+    "組織内データ共有"
+  ],
+  "technology_category": [
+    "anonymization"
+  ],
+  "review_status": "ai_generated",
+  "summary": "仮名加工情報である個人データをグループ内で共同利用し、商品・サービスの企画、研究、開発、調査、分析、販売促進に活用。仮名加工情報の共同利用・グループ内活用の典型例。",
+  "value_proposition": "調査中",
+  "privacy_enhancement_method": "調査中",
+  "safety_assurance_method": "調査中",
+  "utility_evaluation_method": "調査中",
+  "tags": [
+    "仮名加工情報",
+    "保険",
+    "共同利用"
+  ],
+  "sources": [
+    {
+      "source_type": "pdf",
+      "title": "仮名加工情報の共同利用について",
+      "url": "https://www.irric.co.jp/pdf/privacy_policy/shared_use_public_declaration.pdf"
+    }
+  ],
+  "figures": [
+    {
+      "type": "data_flow",
+      "title": "概要フロー",
+      "data": {
+        "nodes": [
+          {"id": "s1", "label": "グループ各社の顧客データ", "category": "source"},
+          {"id": "s2", "label": "個人データの社外共有に制約", "category": "constraint"},
+          {"id": "p1", "label": "仮名加工情報としてグループ内共同利用", "category": "process"},
+          {"id": "a1", "label": "商品・サービスの企画・開発に活用", "category": "application"},
+          {"id": "a2", "label": "グループ横断のデータ活用を実現", "category": "outcome"}
+        ],
+        "edges": []
+      },
+      "note": ""
+    }
+  ],
+  "editorial_notes": [
+    "仮名加工情報を扱う事例であり、technology_categoryはpseudonymizationが適切"
+  ],
+  "status": "seed",
+  "created_at": "2026-03-07T00:00:00+09:00",
+  "updated_at": "2026-03-07T00:00:00+09:00"
+}

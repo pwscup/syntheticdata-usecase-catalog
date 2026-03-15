@@ -3,7 +3,7 @@ import { useForm, FormProvider } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { caseFormSchema, type CaseFormData } from '../../schemas/case.schema'
 import type { Case } from '../../types'
-import { DOMAIN_OPTIONS } from '../../constants/categories'
+import { DOMAIN_OPTIONS, TECHNOLOGY_CATEGORY_OPTIONS, TECHNOLOGY_CATEGORY_LABELS } from '../../constants/categories'
 import BasicFields from './BasicFields'
 import TechFields from './TechFields'
 import SourceFields from './SourceFields'
@@ -47,10 +47,12 @@ export default function CaseForm({ defaultValues, onSubmit, submitLabel }: CaseF
       domain_sub: defaultValues?.domain_sub ?? '',
       organization: defaultValues?.organization ?? '',
       usecase_category: defaultValues?.usecase_category ?? [],
+      technology_category: defaultValues?.technology_category ?? ['synthetic_data'],
+      review_status: defaultValues?.review_status ?? 'ai_generated',
       summary: defaultValues?.summary ?? '',
       value_proposition: defaultValues?.value_proposition ?? '',
-      synthetic_generation_method: defaultValues?.synthetic_generation_method ?? '調査中',
-      safety_evaluation_method: defaultValues?.safety_evaluation_method ?? '調査中',
+      privacy_enhancement_method: defaultValues?.privacy_enhancement_method ?? '調査中',
+      safety_assurance_method: defaultValues?.safety_assurance_method ?? '調査中',
       utility_evaluation_method: defaultValues?.utility_evaluation_method ?? '調査中',
       tags: defaultValues?.tags ?? [],
       sources: defaultValues?.sources ?? [{ source_type: 'web', title: '', url: '', note: '' }],
@@ -73,6 +75,8 @@ export default function CaseForm({ defaultValues, onSubmit, submitLabel }: CaseF
     const fullCase: Case = {
       ...formData,
       id: isEdit ? defaultValues!.id! : crypto.randomUUID(),
+      technology_category: formData.technology_category ?? ['synthetic_data'],
+      review_status: formData.review_status ?? 'ai_generated',
       figures: defaultValues?.figures ?? [],
       status: isEdit ? defaultValues!.status! : 'user',
       created_at: isEdit ? defaultValues!.created_at! : now,
@@ -115,6 +119,32 @@ export default function CaseForm({ defaultValues, onSubmit, submitLabel }: CaseF
             placeholder="例: 保険、COVID-19"
             className="mt-1 block w-full rounded border border-gray-300 px-3 py-2"
           />
+        </div>
+
+        {/* 技術カテゴリ */}
+        <div>
+          <span className="block text-sm font-medium mb-1">技術カテゴリ</span>
+          <div className="flex flex-wrap gap-3">
+            {TECHNOLOGY_CATEGORY_OPTIONS.map((tech) => {
+              const current = methods.watch('technology_category') ?? []
+              return (
+                <label key={tech} className="flex items-center gap-1.5 text-sm">
+                  <input
+                    type="checkbox"
+                    checked={current.includes(tech)}
+                    onChange={(e) => {
+                      const next = e.target.checked
+                        ? [...current, tech]
+                        : current.filter((t: string) => t !== tech)
+                      methods.setValue('technology_category', next, { shouldDirty: true })
+                    }}
+                    className="rounded border-gray-300"
+                  />
+                  {TECHNOLOGY_CATEGORY_LABELS[tech]}
+                </label>
+              )
+            })}
+          </div>
         </div>
 
         {/* カテゴリ */}

@@ -11,6 +11,15 @@ export default function Footer() {
       </p>
       <p className="text-gray-400 text-xs">
         &copy; 2026 合成データ ユースケースカタログ
+        <span className="mx-1">|</span>
+        <a
+          href="https://github.com/pwscup/syntheticdata-usecase-catalog"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-blue-500 hover:text-blue-600 underline underline-offset-2"
+        >
+          GitHub
+        </a>
       </p>
     </footer>
   )

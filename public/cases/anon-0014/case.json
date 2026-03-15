@@ -1,0 +1,52 @@
+{
+  "id": "anon-0014",
+  "title": "新潟県後期高齢者医療広域連合：匿名加工情報によるデータヘルス計画の費用対効果分析",
+  "region": "国内",
+  "domain": "医療",
+  "organization": "新潟県後期高齢者医療広域連合",
+  "usecase_category": [
+    "組織間データ共有"
+  ],
+  "technology_category": [
+    "anonymization"
+  ],
+  "review_status": "ai_generated",
+  "summary": "被保険者情報、レセプト、健診、介護データを匿名加工し、「第3期データヘルス計画費用対効果調査及び解析業務」に使うため第三者提供。匿名加工情報を第三者提供し、データヘルス計画の費用対効果分析に活用。",
+  "value_proposition": "データヘルス計画の費用対効果分析を可能にする",
+  "privacy_enhancement_method": "調査中",
+  "safety_assurance_method": "調査中",
+  "utility_evaluation_method": "調査中",
+  "tags": [
+    "匿名加工情報",
+    "データヘルス計画",
+    "レセプトデータ",
+    "後期高齢者医療"
+  ],
+  "sources": [
+    {
+      "source_type": "web",
+      "title": "匿名加工情報の作成及び第三者への提供について",
+      "url": "https://www.niigata-kouiki.jp/news/001306.html"
+    }
+  ],
+  "figures": [
+    {
+      "type": "data_flow",
+      "title": "概要フロー",
+      "data": {
+        "nodes": [
+          {"id": "s1", "label": "レセプト・健診・介護データ", "category": "source"},
+          {"id": "s2", "label": "被保険者の個人情報保護が必要", "category": "constraint"},
+          {"id": "p1", "label": "匿名加工情報として第三者提供", "category": "process"},
+          {"id": "a1", "label": "データヘルス計画の費用対効果分析", "category": "application"},
+          {"id": "a2", "label": "データヘルス計画の費用対効果分析を実施", "category": "outcome"}
+        ],
+        "edges": []
+      },
+      "note": ""
+    }
+  ],
+  "status": "seed",
+  "created_at": "2026-03-08T00:00:00+09:00",
+  "updated_at": "2026-03-08T00:00:00+09:00"
+}

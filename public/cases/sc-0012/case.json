@@ -1,0 +1,43 @@
+{
+  "id": "sc-0012",
+  "title": "NICT × 神戸大学 × EAGLYS × 銀行4行：DeepProtectによる銀行横断の不正口座検知実証",
+  "region": "国内",
+  "domain": "金融",
+  "organization": "NICT・神戸大学・EAGLYS・りそな銀行ほか3行",
+  "usecase_category": ["組織間データ共有"],
+  "technology_category": ["federated_learning", "secure_computation"],
+  "review_status": "ai_generated",
+  "summary": "銀行4行の実データを使い、プライバシー保護連合学習技術DeepProtectにより不正口座検知を共同で実施。個別学習モデルと連合学習モデルを組み合わせたアンサンブル学習を採用し、AMLシステムとの並行運用の可能性まで検討。",
+  "value_proposition": "不正口座検知の精度向上に加え、AMLシステムとの並行運用の可能性まで検討。PoC段階でも業務に乗せられるかという実装観点まで踏み込んだ、金融実務への接続が強い事例",
+  "privacy_enhancement_method": "調査中",
+  "safety_assurance_method": "調査中",
+  "utility_evaluation_method": "調査中",
+  "tags": ["プライバシー保護連合学習", "不正口座検知", "DeepProtect", "AML"],
+  "sources": [
+    {
+      "source_type": "web",
+      "title": "NICT プライバシー保護連合学習技術「DeepProtect」を活用した銀行の不正口座検知の実証実験を実施",
+      "url": "https://www.nict.go.jp/press/2025/06/10-1.html"
+    }
+  ],
+  "figures": [
+    {
+      "type": "data_flow",
+      "title": "概要フロー",
+      "data": {
+        "nodes": [
+          {"id": "s1", "label": "銀行4行の口座・取引データ", "category": "source"},
+          {"id": "s2", "label": "銀行間でデータ開示ができない制約", "category": "constraint"},
+          {"id": "p1", "label": "DeepProtectで連合＋個別のアンサンブル学習", "category": "process"},
+          {"id": "a1", "label": "不正口座検知の精度向上に活用", "category": "application"},
+          {"id": "a2", "label": "AMLシステムとの並行運用を検討可能に", "category": "outcome"}
+        ],
+        "edges": []
+      },
+      "note": ""
+    }
+  ],
+  "status": "seed",
+  "created_at": "2026-03-08T00:00:00+09:00",
+  "updated_at": "2026-03-08T00:00:00+09:00"
+}

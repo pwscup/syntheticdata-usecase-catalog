@@ -1,0 +1,52 @@
+{
+  "id": "anon-0015",
+  "title": "全国健康保険協会宮城支部：匿名加工情報による睡眠・職域特性を踏まえた保健事業設計",
+  "region": "国内",
+  "domain": "医療",
+  "organization": "全国健康保険協会 宮城支部",
+  "usecase_category": [
+    "組織間データ共有"
+  ],
+  "technology_category": [
+    "anonymization"
+  ],
+  "review_status": "ai_generated",
+  "summary": "生活習慣病予防健診データに加え、睡眠習慣、ワークエンゲージメント、警備業の業界アンケート等を匿名加工して仙台白百合女子大学へ提供。一般的な健診分析にとどまらず、睡眠・職域特性を踏まえたデータ分析に提供。",
+  "value_proposition": "健診データに睡眠・職域データを加えた多角的な分析を可能にする",
+  "privacy_enhancement_method": "調査中",
+  "safety_assurance_method": "調査中",
+  "utility_evaluation_method": "調査中",
+  "tags": [
+    "匿名加工情報",
+    "保健事業",
+    "睡眠習慣",
+    "職域健康"
+  ],
+  "sources": [
+    {
+      "source_type": "web",
+      "title": "保健事業等に関するデータの解析業務等に係る匿名加工情報の作成及び第三者への提供について",
+      "url": "https://www.kyoukaikenpo.or.jp/shibu/miyagi/cat140/2023041102/"
+    }
+  ],
+  "figures": [
+    {
+      "type": "data_flow",
+      "title": "概要フロー",
+      "data": {
+        "nodes": [
+          {"id": "s1", "label": "健診・睡眠・職域アンケートデータ", "category": "source"},
+          {"id": "s2", "label": "加入者の個人情報保護が必要", "category": "constraint"},
+          {"id": "p1", "label": "匿名加工情報として大学へ提供", "category": "process"},
+          {"id": "a1", "label": "睡眠・職域特性を踏まえた分析", "category": "application"},
+          {"id": "a2", "label": "多角的な分析を可能にする", "category": "outcome"}
+        ],
+        "edges": []
+      },
+      "note": ""
+    }
+  ],
+  "status": "seed",
+  "created_at": "2026-03-08T00:00:00+09:00",
+  "updated_at": "2026-03-08T00:00:00+09:00"
+}

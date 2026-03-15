@@ -119,12 +119,52 @@ describe("caseSchema", () => {
     const result = caseSchema.parse(input);
 
     expect(result.value_proposition).toBe("調査中");
-    expect(result.synthetic_generation_method).toBe("調査中");
-    expect(result.safety_evaluation_method).toBe("調査中");
+    expect(result.privacy_enhancement_method).toBe("調査中");
+    expect(result.safety_assurance_method).toBe("調査中");
     expect(result.utility_evaluation_method).toBe("調査中");
     expect(result.tags).toEqual([]);
     expect(result.figures).toEqual([]);
     expect(result.status).toBe("user");
+  });
+
+  it("technology_categoryが未指定でもデフォルト値['synthetic_data']で通る", () => {
+    const input = validCaseInput();
+    const result = caseSchema.parse(input);
+    expect(result.technology_category).toEqual(["synthetic_data"]);
+  });
+
+  it("technology_categoryが配列で指定されていれば保持される", () => {
+    const input = validCaseInput({ technology_category: ["differential_privacy", "anonymization"] });
+    const result = caseSchema.parse(input);
+    expect(result.technology_category).toEqual(["differential_privacy", "anonymization"]);
+  });
+
+  it("technology_categoryが文字列の場合に配列に変換される（後方互換）", () => {
+    const input = validCaseInput({ technology_category: "federated_learning" });
+    const result = caseSchema.parse(input);
+    expect(result.technology_category).toEqual(["federated_learning"]);
+  });
+
+  it("technology_categoryが不正値の場合にバリデーションエラー", () => {
+    const input = validCaseInput({ technology_category: ["invalid_tech"] });
+    expect(() => caseSchema.parse(input)).toThrow();
+  });
+
+  it("review_statusが未指定でもデフォルト値'ai_generated'で通る", () => {
+    const input = validCaseInput();
+    const result = caseSchema.parse(input);
+    expect(result.review_status).toBe("ai_generated");
+  });
+
+  it("review_statusが指定されていれば保持される", () => {
+    const input = validCaseInput({ review_status: "human_reviewed" });
+    const result = caseSchema.parse(input);
+    expect(result.review_status).toBe("human_reviewed");
+  });
+
+  it("review_statusが不正値の場合にバリデーションエラー", () => {
+    const input = validCaseInput({ review_status: "invalid_status" });
+    expect(() => caseSchema.parse(input)).toThrow();
   });
 });
 

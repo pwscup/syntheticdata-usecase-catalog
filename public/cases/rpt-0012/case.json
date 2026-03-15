@@ -8,10 +8,14 @@
   "usecase_category": [
     "フィージビリティ検証"
   ],
+  "technology_category": [
+    "synthetic_data"
+  ],
+  "review_status": "ai_generated",
   "summary": "英国国家統計局（ONS）のData Science Campusが、Census 2021本番前に処理パイプラインのテスト用として合成国勢調査データを生成した事例。差分プライバシーを適用し、どの統計量を合成に使用するかをデータ所有者が制御できる仕組みを構築。統合データサービス（IDS）のデモ環境としても活用。",
   "value_proposition": "本番の国勢調査データを使わずに処理パイプラインの事前検証が可能に。研究者のオンボーディング支援、ユーザートレーニング、手法テストなど、実データを使えない段階での多様な用途に合成データを活用。",
-  "synthetic_generation_method": "NIST 2018 Differential Privacy Synthetic Data Challengeの受賞手法を応用。差分プライバシーを適用し、データ所有者が合成に使用する統計量を選択できる仕組みを構築。データサイエンティストと非技術者の共同意思決定プロセスを導入。",
-  "safety_evaluation_method": "差分プライバシーによる定量的なプライバシーリスク管理。ONSのデータ保護担当者と開示管理専門家との協議を実施。Statistics and Registration Service Act 2007、UK GDPR、Data Protection Act 2018への準拠を検証。",
+  "privacy_enhancement_method": "NIST 2018 Differential Privacy Synthetic Data Challengeの受賞手法を応用。差分プライバシーを適用し、データ所有者が合成に使用する統計量を選択できる仕組みを構築。データサイエンティストと非技術者の共同意思決定プロセスを導入。",
+  "safety_assurance_method": "差分プライバシーによる定量的なプライバシーリスク管理。ONSのデータ保護担当者と開示管理専門家との協議を実施。Statistics and Registration Service Act 2007、UK GDPR、Data Protection Act 2018への準拠を検証。",
   "utility_evaluation_method": "統計手法ライブラリ（Statistical Methods Library）を用いた機能テストを実施。IDS上での研究者オンボーディング、トレーニング、プラットフォーム改善に活用し、実務的な有用性を確認。",
   "tags": [
     "国勢調査",
@@ -35,11 +39,31 @@
       "title": "Census 2021テスト用合成データ生成フロー",
       "data": {
         "nodes": [
-          { "id": "s1", "label": "国勢調査データ（連結・機密）", "category": "source" },
-          { "id": "s2", "label": "本番前のテスト環境に実データは使用不可", "category": "constraint" },
-          { "id": "p1", "label": "差分プライバシー適用の合成データを生成（NIST手法応用）", "category": "process" },
-          { "id": "a1", "label": "処理パイプラインテスト・IDS研究者オンボーディング", "category": "application" },
-          { "id": "a2", "label": "本番前に安全にパイプライン検証を完了", "category": "outcome" }
+          {
+            "id": "s1",
+            "label": "国勢調査データ（連結・機密）",
+            "category": "source"
+          },
+          {
+            "id": "s2",
+            "label": "本番前のテスト環境に実データは使用不可",
+            "category": "constraint"
+          },
+          {
+            "id": "p1",
+            "label": "差分プライバシー適用の合成データを生成（NIST手法応用）",
+            "category": "process"
+          },
+          {
+            "id": "a1",
+            "label": "処理パイプラインテスト・IDS研究者オンボーディング",
+            "category": "application"
+          },
+          {
+            "id": "a2",
+            "label": "本番前に安全にパイプライン検証を完了",
+            "category": "outcome"
+          }
         ],
         "edges": []
       },

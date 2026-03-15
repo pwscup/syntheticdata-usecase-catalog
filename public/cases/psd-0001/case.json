@@ -1,0 +1,48 @@
+{
+  "id": "psd-0001",
+  "title": "米国国勢調査局：SIPP Synthetic Betaによる家計・所得データの部分合成公開",
+  "region": "国外",
+  "domain": "公共",
+  "organization": "U.S. Census Bureau",
+  "usecase_category": ["公的利用"],
+  "technology_category": ["synthetic_data"],
+  "review_status": "ai_generated",
+  "summary": "米国国勢調査局が、家計・所得・給付に関するSIPP調査データを税・給付の行政データと統合したうえで公開用に部分合成化（partially synthetic）した事例。機微な変数を合成値で置換し、研究利用可能性を高めている。",
+  "value_proposition": "調査中",
+  "privacy_enhancement_method": "調査中",
+  "safety_assurance_method": "調査中",
+  "utility_evaluation_method": "調査中",
+  "tags": ["部分合成データ", "公的統計", "行政データ"],
+  "sources": [
+    {
+      "source_type": "web",
+      "title": "SIPP Synthetic Beta Data Product",
+      "url": "https://www.census.gov/programs-surveys/sipp/guidance/sipp-synthetic-beta-data-product.html"
+    },
+    {
+      "source_type": "pdf",
+      "title": "The Creation and Use of the SIPP Synthetic Beta",
+      "url": "https://www.census.gov/content/dam/Census/programs-surveys/sipp/methodology/SSBdescribe_nontechnical.pdf"
+    }
+  ],
+  "figures": [
+    {
+      "type": "data_flow",
+      "title": "概要フロー",
+      "data": {
+        "nodes": [
+          {"id": "s1", "label": "SIPP調査＋税・給付行政データ", "category": "source"},
+          {"id": "s2", "label": "機微な所得情報で公開困難", "category": "constraint"},
+          {"id": "p1", "label": "機微変数を合成値で部分置換", "category": "process"},
+          {"id": "a1", "label": "研究者向けに公開データ提供", "category": "application"},
+          {"id": "a2", "label": "プライバシー保護と研究利用を両立", "category": "outcome"}
+        ],
+        "edges": []
+      },
+      "note": ""
+    }
+  ],
+  "status": "seed",
+  "created_at": "2026-03-07T00:00:00+09:00",
+  "updated_at": "2026-03-07T00:00:00+09:00"
+}

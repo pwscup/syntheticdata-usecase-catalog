@@ -13,8 +13,8 @@ const mockCase: Case = {
   usecase_category: ['組織内データ共有'],
   summary: 'テスト概要の内容です',
   value_proposition: 'テスト成果の内容です',
-  synthetic_generation_method: 'GAN',
-  safety_evaluation_method: '調査中',
+  privacy_enhancement_method: 'GAN',
+  safety_assurance_method: '調査中',
   utility_evaluation_method: 'ベンチマーク評価',
   domain_sub: '研究',
   tags: ['ゲノミクス'],
@@ -22,6 +22,8 @@ const mockCase: Case = {
     { source_type: 'web', title: '出典1', url: 'https://example.com', note: 'メモ' },
   ],
   figures: [],
+  technology_category: ['synthetic_data'],
+  review_status: 'ai_generated',
   status: 'seed',
   created_at: '2026-01-01T00:00:00Z',
   updated_at: '2026-01-01T00:00:00Z',
@@ -133,5 +135,32 @@ describe('CaseDetailPage', () => {
     renderWithRoute('case-001')
     const editLink = screen.getByText('編集')
     expect(editLink.closest('a')).toHaveAttribute('href', '/cases/case-001/edit')
+  })
+
+  it('review_statusバッジが表示される', () => {
+    renderWithRoute('case-001')
+    expect(screen.getByTestId('review-status-badge')).toBeInTheDocument()
+    expect(screen.getByText('AI生成')).toBeInTheDocument()
+  })
+
+  it('AI生成の注意書きが表示される', () => {
+    renderWithRoute('case-001')
+    expect(screen.getByTestId('review-alert')).toBeInTheDocument()
+    expect(screen.getByText(/公開情報をもとにAIを用いて整理したものです/)).toBeInTheDocument()
+  })
+
+  it('human_reviewedの場合は注意書きが表示されない', () => {
+    mockedUseCases.mockReturnValue({
+      cases: [{ ...mockCase, review_status: 'human_reviewed' }],
+      loading: false,
+      error: null,
+    })
+    renderWithRoute('case-001')
+    expect(screen.queryByTestId('review-alert')).not.toBeInTheDocument()
+  })
+
+  it('technology_categoryバッジが表示される', () => {
+    renderWithRoute('case-001')
+    expect(screen.getByText('合成データ')).toBeInTheDocument()
   })
 })

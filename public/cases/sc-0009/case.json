@@ -1,0 +1,43 @@
+{
+  "id": "sc-0009",
+  "title": "EAGLYS × 三井物産：秘密計算によるデータとAIモデルの秘匿共有PoC",
+  "region": "国内",
+  "domain": "製造",
+  "organization": "EAGLYS・三井物産",
+  "usecase_category": ["R&D"],
+  "technology_category": ["secure_computation"],
+  "review_status": "ai_generated",
+  "summary": "創薬・素材開発（MI）を想定し、異なる研究機関・事業者が互いのデータやAIモデルを秘匿したまま連携できるかを検証。特徴量抽出、学習、推論までを秘密計算環境で処理し、AIモデル共有により推論精度が向上することを確認。",
+  "value_proposition": "1予測あたり0.06〜0.11秒、多層ニューラルネットでも平文比2.1〜3.8倍程度という現実的な処理時間を実証。データだけでなくモデルも秘匿共有できることで、企業間連携の価値を一段深める事例",
+  "privacy_enhancement_method": "調査中",
+  "safety_assurance_method": "調査中",
+  "utility_evaluation_method": "調査中",
+  "tags": ["秘密計算", "AIモデル共有", "創薬", "素材開発"],
+  "sources": [
+    {
+      "source_type": "web",
+      "title": "EAGLYS・三井物産で秘密計算PoCを実施〜データとアルゴリズムを秘匿した状態でのAIモデル活用・共有を検証",
+      "url": "https://eaglys.co.jp/resource/news/press-release/20221110"
+    }
+  ],
+  "figures": [
+    {
+      "type": "data_flow",
+      "title": "概要フロー",
+      "data": {
+        "nodes": [
+          {"id": "s1", "label": "創薬・素材の研究データとAIモデル", "category": "source"},
+          {"id": "s2", "label": "データもモデルも企業秘密で共有困難", "category": "constraint"},
+          {"id": "p1", "label": "秘密計算で特徴量抽出〜推論を処理", "category": "process"},
+          {"id": "a1", "label": "秘匿したままAIモデルを共有・活用", "category": "application"},
+          {"id": "a2", "label": "平文比2〜4倍の現実的な処理時間を実証", "category": "outcome"}
+        ],
+        "edges": []
+      },
+      "note": ""
+    }
+  ],
+  "status": "seed",
+  "created_at": "2026-03-08T00:00:00+09:00",
+  "updated_at": "2026-03-08T00:00:00+09:00"
+}

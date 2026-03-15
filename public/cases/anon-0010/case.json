@@ -1,0 +1,55 @@
+{
+  "id": "anon-0010",
+  "title": "小野薬品工業：仮名加工情報を用いた医薬品研究開発・臨床試験",
+  "region": "国内",
+  "domain": "医療",
+  "organization": "小野薬品工業",
+  "usecase_category": [
+    "R&D"
+  ],
+  "technology_category": [
+    "anonymization"
+  ],
+  "review_status": "ai_generated",
+  "summary": "仮名加工情報を医学・薬学・ヘルスケア分野の調査・研究・開発、臨床試験・製造販売後調査等に活用。必要な第三者提供・業務委託・共同利用も含む、製薬企業における仮名加工情報の制度運用例。",
+  "value_proposition": "調査中",
+  "privacy_enhancement_method": "調査中",
+  "safety_assurance_method": "調査中",
+  "utility_evaluation_method": "調査中",
+  "tags": [
+    "仮名加工情報",
+    "製薬",
+    "臨床試験"
+  ],
+  "sources": [
+    {
+      "source_type": "web",
+      "title": "小野薬品工業 個人情報の取り扱いについて",
+      "url": "https://www.ono.co.jp/jpnw/privacy/index.html"
+    }
+  ],
+  "figures": [
+    {
+      "type": "data_flow",
+      "title": "概要フロー",
+      "data": {
+        "nodes": [
+          {"id": "s1", "label": "患者の臨床・医療データ", "category": "source"},
+          {"id": "s2", "label": "個人情報保護法による利用制限", "category": "constraint"},
+          {"id": "p1", "label": "仮名加工情報として加工・管理", "category": "process"},
+          {"id": "a1", "label": "医薬品の研究開発・臨床試験に活用", "category": "application"},
+          {"id": "a2", "label": "プライバシー保護と研究開発を両立", "category": "outcome"}
+        ],
+        "edges": []
+      },
+      "note": ""
+    }
+  ],
+  "editorial_notes": [
+    "仮名加工情報を扱う事例であり、technology_categoryはpseudonymizationが適切",
+    "プライバシーポリシーに記載された利用目的に基づく事例であり、実際の活用実績は未確認"
+  ],
+  "status": "seed",
+  "created_at": "2026-03-07T00:00:00+09:00",
+  "updated_at": "2026-03-07T00:00:00+09:00"
+}

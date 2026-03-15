@@ -1,0 +1,54 @@
+{
+  "id": "anon-0012",
+  "title": "MEIZ：仮名加工情報による業務改善・新規サービス研究開発",
+  "region": "国内",
+  "domain": "IT",
+  "organization": "MEIZ",
+  "usecase_category": [
+    "R&D"
+  ],
+  "technology_category": [
+    "anonymization"
+  ],
+  "review_status": "ai_generated",
+  "summary": "仮名加工情報を業務の改善・効率化・提供役務の向上、および新たな役務や研究開発に向けた分析に活用。制度を前提にした社内活用方針の事例。",
+  "value_proposition": "調査中",
+  "privacy_enhancement_method": "調査中",
+  "safety_assurance_method": "調査中",
+  "utility_evaluation_method": "調査中",
+  "tags": [
+    "仮名加工情報",
+    "業務改善"
+  ],
+  "sources": [
+    {
+      "source_type": "web",
+      "title": "仮名加工情報・匿名加工情報の取扱いについて",
+      "url": "https://www.meiz.co.jp/tokumei/"
+    }
+  ],
+  "figures": [
+    {
+      "type": "data_flow",
+      "title": "概要フロー",
+      "data": {
+        "nodes": [
+          {"id": "s1", "label": "業務データ・顧客データ", "category": "source"},
+          {"id": "s2", "label": "個人情報の社内利用に制約", "category": "constraint"},
+          {"id": "p1", "label": "仮名加工情報として社内活用", "category": "process"},
+          {"id": "a1", "label": "業務改善・新規サービス研究に活用", "category": "application"},
+          {"id": "a2", "label": "安全にデータ活用し業務効率化", "category": "outcome"}
+        ],
+        "edges": []
+      },
+      "note": ""
+    }
+  ],
+  "editorial_notes": [
+    "仮名加工情報を扱う事例であり、technology_categoryはpseudonymizationが適切",
+    "プライバシーポリシーに記載された利用目的に基づく事例であり、実際の活用実績は未確認"
+  ],
+  "status": "seed",
+  "created_at": "2026-03-07T00:00:00+09:00",
+  "updated_at": "2026-03-07T00:00:00+09:00"
+}

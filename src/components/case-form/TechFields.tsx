@@ -7,13 +7,13 @@ export default function TechFields() {
   return (
     <div className="space-y-4">
       <div>
-        <label htmlFor="synthetic_generation_method" className="block text-sm font-medium">合成データ生成手法</label>
-        <input id="synthetic_generation_method" type="text" {...register('synthetic_generation_method')} className="mt-1 block w-full rounded border border-gray-300 px-3 py-2" />
+        <label htmlFor="privacy_enhancement_method" className="block text-sm font-medium">プライバシー強化手法</label>
+        <input id="privacy_enhancement_method" type="text" {...register('privacy_enhancement_method')} className="mt-1 block w-full rounded border border-gray-300 px-3 py-2" />
       </div>
 
       <div>
-        <label htmlFor="safety_evaluation_method" className="block text-sm font-medium">安全性評価手法</label>
-        <input id="safety_evaluation_method" type="text" {...register('safety_evaluation_method')} className="mt-1 block w-full rounded border border-gray-300 px-3 py-2" />
+        <label htmlFor="safety_assurance_method" className="block text-sm font-medium">安全性保証手法</label>
+        <input id="safety_assurance_method" type="text" {...register('safety_assurance_method')} className="mt-1 block w-full rounded border border-gray-300 px-3 py-2" />
       </div>
 
       <div>

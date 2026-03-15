@@ -1,0 +1,43 @@
+{
+  "id": "sc-0010",
+  "title": "三菱ケミカル × 大塚化学 × EAGLYS：ALCHEMISTAを活用した秘密計算による新規材料開発",
+  "region": "国内",
+  "domain": "製造",
+  "organization": "三菱ケミカル・大塚化学・三井物産ケミカル・EAGLYS",
+  "usecase_category": ["R&D", "組織間データ共有"],
+  "technology_category": ["secure_computation"],
+  "review_status": "ai_generated",
+  "summary": "サプライチェーン間で機密データを直接開示せずに、秘密計算プラットフォームALCHEMISTAを使って企業間データを連携し、マテリアルズ・インフォマティクス（MI）による新規材料開発を推進。両社がより具体的・定量的なデータを出し合える状態を実現。",
+  "value_proposition": "通常2〜3年かかる材料開発プロセスを1年未満に短縮し、顧客提供可能なビジネスレベルのサンプル作成に成功。秘密計算が単なる安全性強化ではなく、開発スピードと企業間コミュニケーションの質そのものを変えた事例",
+  "privacy_enhancement_method": "調査中",
+  "safety_assurance_method": "調査中",
+  "utility_evaluation_method": "調査中",
+  "tags": ["秘密計算", "マテリアルズ・インフォマティクス", "新規材料開発", "企業間データ連携"],
+  "sources": [
+    {
+      "source_type": "web",
+      "title": "EAGLYS ALCHEMISTAを活用し、三菱ケミカルと大塚化学が秘密計算による新規材料開発",
+      "url": "https://www.mcgc.com/news_release/pdf/02395/02654.pdf"
+    }
+  ],
+  "figures": [
+    {
+      "type": "data_flow",
+      "title": "概要フロー",
+      "data": {
+        "nodes": [
+          {"id": "s1", "label": "サプライチェーン各社の材料データ", "category": "source"},
+          {"id": "s2", "label": "機密データのため直接開示が不可", "category": "constraint"},
+          {"id": "p1", "label": "ALCHEMISTAで秘密計算MI分析", "category": "process"},
+          {"id": "a1", "label": "企業間データ連携で新規材料を開発", "category": "application"},
+          {"id": "a2", "label": "開発期間を2〜3年から1年未満に短縮", "category": "outcome"}
+        ],
+        "edges": []
+      },
+      "note": ""
+    }
+  ],
+  "status": "seed",
+  "created_at": "2026-03-08T00:00:00+09:00",
+  "updated_at": "2026-03-08T00:00:00+09:00"
+}

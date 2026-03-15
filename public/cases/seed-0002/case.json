@@ -7,10 +7,14 @@
   "usecase_category": [
     "R&D"
   ],
+  "technology_category": [
+    "synthetic_data"
+  ],
+  "review_status": "human_reviewed",
   "summary": "金融分野のAI開発では、学習用の大量データが必要だが、機密性の高い取引データの利用には制約がある。J.P. Morganはリアルな合成金融データを生成するアルゴリズムを研究開発し、AIモデルの訓練データ不足を解消する取り組みを行った。",
   "value_proposition": "調査中",
-  "synthetic_generation_method": "調査中",
-  "safety_evaluation_method": "調査中",
+  "privacy_enhancement_method": "調査中",
+  "safety_assurance_method": "調査中",
   "utility_evaluation_method": "調査中",
   "tags": [
     "研究開発",

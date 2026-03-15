@@ -1,0 +1,46 @@
+{
+  "id": "psd-0006",
+  "title": "日本統計学会：部分合成・疑似データを用いた統計的マッチング手法",
+  "region": "国内",
+  "domain": "公共",
+  "organization": "日本マーケティング・リサーチ協会",
+  "usecase_category": ["R&D"],
+  "technology_category": ["synthetic_data"],
+  "review_status": "ai_generated",
+  "summary": "公的統計系資料において、本物のデータを一部欠損させて補完する手法と、統計的マッチングやパネルデータ作成による情報量増加が整理されている。共通変数を接着剤として、異なるデータソースを疑似的に結合する手法の研究事例。",
+  "value_proposition": "調査中",
+  "privacy_enhancement_method": "調査中",
+  "safety_assurance_method": "調査中",
+  "utility_evaluation_method": "調査中",
+  "tags": ["部分合成データ", "統計的マッチング", "疑似結合"],
+  "sources": [
+    {
+      "source_type": "pdf",
+      "title": "Synthetic Data（合成データ）の概要と調査業務・公的統計への応用",
+      "url": "https://www.jmra-net.or.jp/Portals/0/committee/statistics/nenji2024_material_2.pdf"
+    }
+  ],
+  "figures": [
+    {
+      "type": "data_flow",
+      "title": "概要フロー",
+      "data": {
+        "nodes": [
+          {"id": "s1", "label": "複数の公的統計データソース", "category": "source"},
+          {"id": "s2", "label": "異なるデータの直接結合が困難", "category": "constraint"},
+          {"id": "p1", "label": "共通変数で統計的マッチング", "category": "process"},
+          {"id": "a1", "label": "疑似結合パネルデータの作成", "category": "application"},
+          {"id": "a2", "label": "情報量を増加し分析精度向上", "category": "outcome"}
+        ],
+        "edges": []
+      },
+      "note": ""
+    }
+  ],
+  "editorial_notes": [
+    "titleの『日本統計学会』は出典に記載なし（正しくはJMRA講演）。事例としての切り出し方に再検討が必要"
+  ],
+  "status": "seed",
+  "created_at": "2026-03-07T00:00:00+09:00",
+  "updated_at": "2026-03-07T00:00:00+09:00"
+}

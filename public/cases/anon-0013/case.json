@@ -1,0 +1,55 @@
+{
+  "id": "anon-0013",
+  "title": "TOKAIグループ：仮名加工情報による運用保守分析・不正防止",
+  "region": "国内",
+  "domain": "エネルギー",
+  "organization": "TOKAIグループ",
+  "usecase_category": [
+    "組織内データ共有"
+  ],
+  "technology_category": [
+    "anonymization"
+  ],
+  "review_status": "ai_generated",
+  "summary": "仮名加工情報を商品・サービスの運用保守状況の分析や不正防止の分析に活用。一般事業会社における仮名加工情報活用の事例。",
+  "value_proposition": "調査中",
+  "privacy_enhancement_method": "調査中",
+  "safety_assurance_method": "調査中",
+  "utility_evaluation_method": "調査中",
+  "tags": [
+    "仮名加工情報",
+    "不正防止",
+    "運用分析"
+  ],
+  "sources": [
+    {
+      "source_type": "web",
+      "title": "仮名加工情報について",
+      "url": "https://www.energyline.co.jp/policy/kamei.html"
+    }
+  ],
+  "figures": [
+    {
+      "type": "data_flow",
+      "title": "概要フロー",
+      "data": {
+        "nodes": [
+          {"id": "s1", "label": "サービス利用・運用データ", "category": "source"},
+          {"id": "s2", "label": "個人情報を含む分析に制約", "category": "constraint"},
+          {"id": "p1", "label": "仮名加工情報として加工・分析", "category": "process"},
+          {"id": "a1", "label": "運用保守分析・不正防止に活用", "category": "application"},
+          {"id": "a2", "label": "サービス品質向上と不正検知を実現", "category": "outcome"}
+        ],
+        "edges": []
+      },
+      "note": ""
+    }
+  ],
+  "editorial_notes": [
+    "仮名加工情報を扱う事例であり、technology_categoryはpseudonymizationが適切",
+    "プライバシーポリシーに記載された利用目的に基づく事例であり、実際の活用実績は未確認"
+  ],
+  "status": "seed",
+  "created_at": "2026-03-07T00:00:00+09:00",
+  "updated_at": "2026-03-07T00:00:00+09:00"
+}

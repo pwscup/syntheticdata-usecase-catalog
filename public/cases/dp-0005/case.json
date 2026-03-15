@@ -1,0 +1,71 @@
+{
+  "id": "dp-0005",
+  "title": "Google：COVID-19 Community Mobility Reportsの差分プライバシー",
+  "region": "国外",
+  "domain": "公共",
+  "organization": "Google",
+  "usecase_category": [
+    "公的利用"
+  ],
+  "technology_category": [
+    "differential_privacy"
+  ],
+  "review_status": "ai_generated",
+  "summary": "Location Historyを有効にしたユーザーの位置履歴の集計を対象に、小売、職場、公共交通、公園、住宅地などカテゴリ別の移動傾向を地域ごとに差分プライバシーで保護して公表した。人工ノイズを加える差分プライバシーを用いている。",
+  "value_proposition": "公衆衛生当局や地域社会が行動制限や政策の影響を把握する材料を得られる一方、個人の移動を特定しない形で公開できる。",
+  "privacy_enhancement_method": "調査中",
+  "safety_assurance_method": "調査中",
+  "utility_evaluation_method": "調査中",
+  "tags": [
+    "公衆衛生",
+    "移動データ",
+    "統計公開"
+  ],
+  "sources": [
+    {
+      "source_type": "web",
+      "title": "Google COVID-19 Community Mobility Reports",
+      "url": "https://blog.google/innovation-and-ai/technology/health/covid-19-community-mobility-reports/"
+    }
+  ],
+  "figures": [
+    {
+      "type": "data_flow",
+      "title": "概要フロー",
+      "data": {
+        "nodes": [
+          {
+            "id": "s1",
+            "label": "ユーザーの位置履歴集計",
+            "category": "source"
+          },
+          {
+            "id": "s2",
+            "label": "個人移動の特定リスク",
+            "category": "constraint"
+          },
+          {
+            "id": "p1",
+            "label": "差分プライバシーでノイズ付与",
+            "category": "process"
+          },
+          {
+            "id": "a1",
+            "label": "地域別移動傾向レポート公表",
+            "category": "application"
+          },
+          {
+            "id": "a2",
+            "label": "公衆衛生政策の判断材料提供",
+            "category": "outcome"
+          }
+        ],
+        "edges": []
+      },
+      "note": ""
+    }
+  ],
+  "status": "seed",
+  "created_at": "2026-03-08T00:00:00+09:00",
+  "updated_at": "2026-03-08T00:00:00+09:00"
+}
