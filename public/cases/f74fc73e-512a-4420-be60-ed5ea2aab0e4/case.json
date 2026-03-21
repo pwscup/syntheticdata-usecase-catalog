@@ -1,0 +1,49 @@
+{
+  "id": "f74fc73e-512a-4420-be60-ed5ea2aab0e4",
+  "title": "Space Radiation and Cancer Risk Study",
+  "region": "国外",
+  "domain": "医療",
+  "organization": "Frontier Development Lab / Intel",
+  "usecase_category": [
+    "フィージビリティ検証"
+  ],
+  "technology_category": [
+    "federated_learning"
+  ],
+  "review_status": "ai_generated",
+  "summary": "Frontier Development LabとIntelが連合学習を活用し、NASA、メイヨー・クリニック、NASAジーンラボが保有する宇宙飛行士の健康データに、データ転送なしでアクセス。宇宙放射線と癌リスクの関連を、各機関のデータを移動させずにモデル訓練。",
+  "value_proposition": "連合学習により、高度に保護された宇宙飛行士の健康データを移動させずに研究を実施。データ転送の法的・技術的障壁を回避しながら、宇宙医学研究を推進。",
+  "privacy_enhancement_method": "連合学習による分散データ上でのモデル訓練（データ転送なし）",
+  "safety_assurance_method": "調査中",
+  "utility_evaluation_method": "調査中",
+  "tags": [
+    "Pilot",
+    "CDEI PETs Adoption Guide",
+    "Federated Learning"
+  ],
+  "sources": [
+    {
+      "source_type": "web",
+      "title": "CDEI PETs Adoption Guide - Repository of Use Cases",
+      "url": "https://cdeiuk.github.io/pets-adoption-guide/repository/",
+      "note": "Centre for Data Ethics and Innovation (CDEI) PETs Adoption Guide"
+    },
+    {
+      "source_type": "web",
+      "title": "MarketScreener article",
+      "url": "https://www.marketscreener.com/quote/stock/INTEL-CORPORATION-4829/news/Intel-FDL-Intel-AI-Mentors-Seek-to-Improve-Astronaut-Health-36716002/",
+      "note": ""
+    },
+    {
+      "source_type": "web",
+      "title": "YouTube video by Intel Software",
+      "url": "https://www.youtube.com/watch?v=ZRdg5fH93EI",
+      "note": ""
+    }
+  ],
+  "figures": [],
+  "occurred_at": "2023-06",
+  "status": "seed",
+  "created_at": "2026-03-21T07:12:31Z",
+  "updated_at": "2026-03-21T07:12:31Z"
+}

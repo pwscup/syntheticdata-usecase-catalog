@@ -1,0 +1,43 @@
+{
+  "id": "af0b38e6-42e7-49d2-a9d0-625ce663bf7b",
+  "title": "Statice Provinzial Insurance Predictive Analytics",
+  "region": "国外",
+  "domain": "金融",
+  "organization": "Statice / Provinzial",
+  "usecase_category": [
+    "組織内データ共有"
+  ],
+  "technology_category": [
+    "synthetic_data"
+  ],
+  "review_status": "ai_generated",
+  "summary": "ドイツの保険会社Provinzialが、Staticeの合成データを用いて予測分析や「ネクストベストオファー」推薦エンジンのためのMLモデルを訓練。合成データの活用により、プライバシーリスク評価にかかる時間を3ヶ月短縮。",
+  "value_proposition": "合成データによりプライバシーリスク評価の工程を3ヶ月短縮し、予測分析モデルの開発を大幅に加速。保険業界におけるデータ活用とコンプライアンスの両立を実現。",
+  "privacy_enhancement_method": "合成データ生成による実データの代替",
+  "safety_assurance_method": "調査中",
+  "utility_evaluation_method": "調査中",
+  "tags": [
+    "Product",
+    "CDEI PETs Adoption Guide",
+    "Synthetic Data"
+  ],
+  "sources": [
+    {
+      "source_type": "web",
+      "title": "CDEI PETs Adoption Guide - Repository of Use Cases",
+      "url": "https://cdeiuk.github.io/pets-adoption-guide/repository/",
+      "note": "Centre for Data Ethics and Innovation (CDEI) PETs Adoption Guide"
+    },
+    {
+      "source_type": "web",
+      "title": "Statice case study",
+      "url": "https://www.statice.ai/case-study/provinzial-predictive-analytics-synthetic-insurance-data#get-case-study",
+      "note": ""
+    }
+  ],
+  "figures": [],
+  "occurred_at": "2023-06",
+  "status": "seed",
+  "created_at": "2026-03-21T07:12:31Z",
+  "updated_at": "2026-03-21T07:12:31Z"
+}

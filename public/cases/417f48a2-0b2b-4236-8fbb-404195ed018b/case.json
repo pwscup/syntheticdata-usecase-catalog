@@ -1,0 +1,43 @@
+{
+  "id": "417f48a2-0b2b-4236-8fbb-404195ed018b",
+  "title": "Statistics Canada Synthetic Data Hackathons",
+  "region": "国外",
+  "domain": "公共",
+  "organization": "Statistics Canada",
+  "usecase_category": [
+    "フィージビリティ検証"
+  ],
+  "technology_category": [
+    "synthetic_data"
+  ],
+  "review_status": "ai_generated",
+  "summary": "カナダ統計局が合成データをハッカソン参加用に試験的に提供。国勢調査・死亡登録データセットの分析価値を維持しつつ、開示リスクを低減。外部参加者にデータサイエンスの機会を提供。",
+  "value_proposition": "合成データにより統計データの開示リスクを低減しつつ、ハッカソンでの外部活用を実現。統計機関によるオープンイノベーション促進のためのPETs活用事例。",
+  "privacy_enhancement_method": "合成データ生成による統計データの安全な外部提供",
+  "safety_assurance_method": "調査中",
+  "utility_evaluation_method": "調査中",
+  "tags": [
+    "Pilot",
+    "CDEI PETs Adoption Guide",
+    "Synthetic Data"
+  ],
+  "sources": [
+    {
+      "source_type": "web",
+      "title": "CDEI PETs Adoption Guide - Repository of Use Cases",
+      "url": "https://cdeiuk.github.io/pets-adoption-guide/repository/",
+      "note": "Centre for Data Ethics and Innovation (CDEI) PETs Adoption Guide"
+    },
+    {
+      "source_type": "web",
+      "title": "UN PETs Case Study repository",
+      "url": "https://unstats.un.org/wiki/display/UGTTOPPT/10.+Statistics+Canada%3A+Trialling+the+use+of+synthetic+data",
+      "note": ""
+    }
+  ],
+  "figures": [],
+  "occurred_at": "2023-06",
+  "status": "seed",
+  "created_at": "2026-03-21T07:12:31Z",
+  "updated_at": "2026-03-21T07:12:31Z"
+}

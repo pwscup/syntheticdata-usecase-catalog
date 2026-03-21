@@ -1,0 +1,43 @@
+{
+  "id": "01cd7a48-123e-4efd-8896-c12c7cb19ac2",
+  "title": "Tsinghua University and Microsoft FedNER",
+  "region": "国外",
+  "domain": "医療",
+  "organization": "Tsinghua University / Microsoft",
+  "usecase_category": [
+    "フィージビリティ検証"
+  ],
+  "technology_category": [
+    "distributed_analytics"
+  ],
+  "review_status": "ai_generated",
+  "summary": "清華大学とMicrosoftが開発したFedNERは、連合学習により複数の医療プラットフォームにまたがる非構造化医療テキストから固有表現認識（NER）モデルを訓練。プライベートローカルモデルとグローバル共有モデルに分解し、データフォーマットの標準化なしに参加可能。",
+  "value_proposition": "連合学習によりデータフォーマットの異なる複数医療機関のデータを標準化なしに活用。参加障壁を下げつつ医療NLPモデルの精度向上を実現。",
+  "privacy_enhancement_method": "連合学習による分散NERモデル訓練（データ移動なし）",
+  "safety_assurance_method": "調査中",
+  "utility_evaluation_method": "調査中",
+  "tags": [
+    "Pilot",
+    "CDEI PETs Adoption Guide",
+    "Federated Analytics"
+  ],
+  "sources": [
+    {
+      "source_type": "web",
+      "title": "CDEI PETs Adoption Guide - Repository of Use Cases",
+      "url": "https://cdeiuk.github.io/pets-adoption-guide/repository/",
+      "note": "Centre for Data Ethics and Innovation (CDEI) PETs Adoption Guide"
+    },
+    {
+      "source_type": "web",
+      "title": "Research paper",
+      "url": "https://arxiv.org/pdf/2003.09288.pdf",
+      "note": ""
+    }
+  ],
+  "figures": [],
+  "occurred_at": "2021-07",
+  "status": "seed",
+  "created_at": "2026-03-21T07:12:31Z",
+  "updated_at": "2026-03-21T07:12:31Z"
+}

@@ -1,0 +1,43 @@
+{
+  "id": "a1f50b18-c986-4388-92d0-a9e761047fe8",
+  "title": "Privacy-Preserving Drone Software (Privaros)",
+  "region": "国外",
+  "domain": "モビリティ",
+  "organization": "Indian Institute of Science",
+  "usecase_category": [
+    "フィージビリティ検証"
+  ],
+  "technology_category": [
+    "secure_computation"
+  ],
+  "review_status": "ai_generated",
+  "summary": "インド科学研究所が開発したPrivarosは、TEE（信頼実行環境）を活用して商用ドローンが飛行空域のプライバシーポリシーに準拠することを保証するソフトウェア。レイテンシや消費電力の増加を最小限に抑えつつ、プライバシー保護を強制。",
+  "value_proposition": "TEEによりドローンのプライバシーポリシー準拠をハードウェアレベルで強制。ドローン物流・監視の普及に伴うプライバシー懸念に対する技術的解決策。",
+  "privacy_enhancement_method": "TEE（信頼実行環境）によるプライバシーポリシーの強制実行",
+  "safety_assurance_method": "調査中",
+  "utility_evaluation_method": "調査中",
+  "tags": [
+    "Proof of concept",
+    "CDEI PETs Adoption Guide",
+    "Trusted Execution Environment"
+  ],
+  "sources": [
+    {
+      "source_type": "web",
+      "title": "CDEI PETs Adoption Guide - Repository of Use Cases",
+      "url": "https://cdeiuk.github.io/pets-adoption-guide/repository/",
+      "note": "Centre for Data Ethics and Innovation (CDEI) PETs Adoption Guide"
+    },
+    {
+      "source_type": "web",
+      "title": "Times of India",
+      "url": "https://timesofindia.indiatimes.com/india/as-drones-get-ready-to-deliver-iisc-finds-way-to-aid-privacy/articleshow/80738756.cms",
+      "note": ""
+    }
+  ],
+  "figures": [],
+  "occurred_at": "2021-07",
+  "status": "seed",
+  "created_at": "2026-03-21T07:12:31Z",
+  "updated_at": "2026-03-21T07:12:31Z"
+}

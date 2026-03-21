@@ -1,0 +1,50 @@
+{
+  "id": "6a8d74ef-4f82-44f8-954f-5991b3ae28f1",
+  "title": "Financial Crime Detection Platform",
+  "region": "国外",
+  "domain": "金融",
+  "organization": "AUSTRAC",
+  "usecase_category": [
+    "R&D"
+  ],
+  "technology_category": [
+    "secure_computation"
+  ],
+  "review_status": "ai_generated",
+  "summary": "オーストラリアの金融情報機関AUSTRACが開発中の金融犯罪検出プラットフォーム。準同型暗号と秘密計算を用いて、28の金融機関にまたがる不審な口座接続を検出しつつ、一般顧客のプライバシーを保護する。",
+  "value_proposition": "準同型暗号と秘密計算により、複数金融機関間の不審取引を検出しながら一般顧客のプライバシーを保護。世界初のプライバシー保護型金融犯罪検出プラットフォームとして注目されている。",
+  "privacy_enhancement_method": "準同型暗号＋秘密計算による暗号化データ上の照合",
+  "safety_assurance_method": "調査中",
+  "utility_evaluation_method": "調査中",
+  "tags": [
+    "In development",
+    "CDEI PETs Adoption Guide",
+    "Homomorphic Encryption",
+    "Multi-party Computation"
+  ],
+  "sources": [
+    {
+      "source_type": "web",
+      "title": "CDEI PETs Adoption Guide - Repository of Use Cases",
+      "url": "https://cdeiuk.github.io/pets-adoption-guide/repository/",
+      "note": "Centre for Data Ethics and Innovation (CDEI) PETs Adoption Guide"
+    },
+    {
+      "source_type": "web",
+      "title": "LinkedIn",
+      "url": "https://www.linkedin.com/pulse/australia-unveils-world-first-privacy-preserving-fintel-nathan-lynch/",
+      "note": ""
+    },
+    {
+      "source_type": "web",
+      "title": "FFIS",
+      "url": "https://www.future-fis.com/uploads/3/7/9/4/3794525/ffis_innovation_and_discussion_paper_-_case_studies_of_the_use_of_privacy_preserving_analysis.pdf",
+      "note": ""
+    }
+  ],
+  "figures": [],
+  "occurred_at": "2021-07",
+  "status": "seed",
+  "created_at": "2026-03-21T07:12:31Z",
+  "updated_at": "2026-03-21T07:12:31Z"
+}

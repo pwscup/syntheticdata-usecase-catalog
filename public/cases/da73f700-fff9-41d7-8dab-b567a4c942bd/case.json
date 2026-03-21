@@ -1,0 +1,43 @@
+{
+  "id": "da73f700-fff9-41d7-8dab-b567a4c942bd",
+  "title": "Privacy-Preserving Fraud Investigation Queries",
+  "region": "国外",
+  "domain": "金融",
+  "organization": "Duality Technologies",
+  "usecase_category": [
+    "フィージビリティ検証"
+  ],
+  "technology_category": [
+    "secure_computation"
+  ],
+  "review_status": "ai_generated",
+  "summary": "Duality Technologiesが開発した、準同型暗号を用いたプライバシー保護型不正調査クエリシステム。外部の捜査機関がデータ保有者に検索パラメータを開示することなく、機密データに対してSQLライクなクエリを実行可能。",
+  "value_proposition": "準同型暗号により、調査対象の情報も検索パラメータもデータ保有者に開示せずに不正調査を実施。捜査の機密性とデータ保護を両立する革新的なアプローチ。",
+  "privacy_enhancement_method": "準同型暗号によるクエリパラメータ・結果の秘匿化",
+  "safety_assurance_method": "調査中",
+  "utility_evaluation_method": "調査中",
+  "tags": [
+    "Proof of concept",
+    "CDEI PETs Adoption Guide",
+    "Homomorphic Encryption"
+  ],
+  "sources": [
+    {
+      "source_type": "web",
+      "title": "CDEI PETs Adoption Guide - Repository of Use Cases",
+      "url": "https://cdeiuk.github.io/pets-adoption-guide/repository/",
+      "note": "Centre for Data Ethics and Innovation (CDEI) PETs Adoption Guide"
+    },
+    {
+      "source_type": "web",
+      "title": "RUSI-FFIS report (Chapter 7)",
+      "url": "https://www.gcffc.org/wp-content/uploads/2020/06/FFIS-Innovation-and-discussion-paper-Case-studies-of-the-use-of-privacy-preserving-analysis.pdf",
+      "note": ""
+    }
+  ],
+  "figures": [],
+  "occurred_at": "2021-07",
+  "status": "seed",
+  "created_at": "2026-03-21T07:12:31Z",
+  "updated_at": "2026-03-21T07:12:31Z"
+}

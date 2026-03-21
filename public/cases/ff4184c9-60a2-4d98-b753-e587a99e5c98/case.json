@@ -1,0 +1,57 @@
+{
+  "id": "ff4184c9-60a2-4d98-b753-e587a99e5c98",
+  "title": "Mobile Network Operator Data for Population Mobility Statistics",
+  "region": "国外",
+  "domain": "公共",
+  "organization": "Eurostat",
+  "usecase_category": [
+    "フィージビリティ検証"
+  ],
+  "technology_category": [
+    "secure_computation",
+    "synthetic_data"
+  ],
+  "review_status": "ai_generated",
+  "summary": "EurostatがTEE（信頼実行環境）内でモバイルネットワーク事業者のデータを分析し、個人を特定できない形で人口移動統計を作成。合成データも併用し、公式統計の精度とプライバシー保護を両立するアプローチを実証。",
+  "value_proposition": "TEEと合成データの組み合わせにより、モバイル通信データから個人を特定せずに人口移動統計を生成。公式統計機関によるPETs活用の先進事例。",
+  "privacy_enhancement_method": "TEE内でのデータ処理＋合成データ生成",
+  "safety_assurance_method": "調査中",
+  "utility_evaluation_method": "調査中",
+  "tags": [
+    "Proof of Concept",
+    "CDEI PETs Adoption Guide",
+    "Trusted Execution Environment",
+    "Synthetic Data"
+  ],
+  "sources": [
+    {
+      "source_type": "web",
+      "title": "CDEI PETs Adoption Guide - Repository of Use Cases",
+      "url": "https://cdeiuk.github.io/pets-adoption-guide/repository/",
+      "note": "Centre for Data Ethics and Innovation (CDEI) PETs Adoption Guide"
+    },
+    {
+      "source_type": "web",
+      "title": "UN PETs Case Study repository",
+      "url": "https://unstats.un.org/wiki/display/UGTTOPPT/3.+Eurostat%3A+Processing+of+longitudinal+mobile+network+operator+data",
+      "note": ""
+    },
+    {
+      "source_type": "web",
+      "title": "European Commission",
+      "url": "https://cros-legacy.ec.europa.eu/content/eurostat-cybernetica-project_en",
+      "note": ""
+    },
+    {
+      "source_type": "web",
+      "title": "Cybernetica blog",
+      "url": "https://cyber.ee/resources/news/cybernetica-and-eurostat-have-developed-a-new-privacy-preserving-approach-for-computing-statistics-from-sensitive-data/",
+      "note": ""
+    }
+  ],
+  "figures": [],
+  "occurred_at": "2023-06",
+  "status": "seed",
+  "created_at": "2026-03-21T07:12:31Z",
+  "updated_at": "2026-03-21T07:12:31Z"
+}
