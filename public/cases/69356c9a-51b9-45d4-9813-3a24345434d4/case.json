@@ -1,0 +1,43 @@
+{
+  "id": "69356c9a-51b9-45d4-9813-3a24345434d4",
+  "title": "Privacy-Preserving Customer Matching",
+  "region": "国外",
+  "domain": "金融",
+  "organization": "Enveil",
+  "usecase_category": [
+    "フィージビリティ検証"
+  ],
+  "technology_category": [
+    "secure_computation"
+  ],
+  "review_status": "ai_generated",
+  "summary": "Enveilが開発した、準同型暗号を用いた金融機関向けプライバシー保護型顧客マッチングシステム。外部データセットとの顧客情報照合を、データを開示することなく実施し、不審な活動の調査における機密性を維持。",
+  "value_proposition": "準同型暗号により、金融機関が外部データセットとの顧客マッチングを暗号化状態で実施。不正検知の精度向上とデータ保護を両立するコンプライアンス対応ソリューション。",
+  "privacy_enhancement_method": "準同型暗号による暗号化状態でのデータマッチング",
+  "safety_assurance_method": "調査中",
+  "utility_evaluation_method": "調査中",
+  "tags": [
+    "Proof of concept",
+    "CDEI PETs Adoption Guide",
+    "Homomorphic Encryption"
+  ],
+  "sources": [
+    {
+      "source_type": "web",
+      "title": "CDEI PETs Adoption Guide - Repository of Use Cases",
+      "url": "https://cdeiuk.github.io/pets-adoption-guide/repository/",
+      "note": "Centre for Data Ethics and Innovation (CDEI) PETs Adoption Guide"
+    },
+    {
+      "source_type": "web",
+      "title": "RUSI-FFIS report (Chapter 7)",
+      "url": "https://www.gcffc.org/wp-content/uploads/2020/06/FFIS-Innovation-and-discussion-paper-Case-studies-of-the-use-of-privacy-preserving-analysis.pdf",
+      "note": ""
+    }
+  ],
+  "figures": [],
+  "occurred_at": "2021-07",
+  "status": "seed",
+  "created_at": "2026-03-21T07:12:31Z",
+  "updated_at": "2026-03-21T07:12:31Z"
+}

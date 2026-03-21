@@ -1,0 +1,45 @@
+{
+  "id": "aee7ac75-f8f6-49c1-bfc1-5d0035761219",
+  "title": "NVIDIA and King's College London Brain Tumor Segmentation",
+  "region": "国外",
+  "domain": "医療",
+  "organization": "NVIDIA / King's College London",
+  "usecase_category": [
+    "フィージビリティ検証"
+  ],
+  "technology_category": [
+    "distributed_analytics",
+    "differential_privacy"
+  ],
+  "review_status": "ai_generated",
+  "summary": "NVIDIAとKing's College Londonが連合学習と差分プライバシーを用いて、13の分散データシャードにまたがる脳MRIスキャンから腫瘍セグメンテーション用ニューラルネットワークを訓練。プライバシーとモデル性能のトレードオフを検証。",
+  "value_proposition": "連合学習により医療画像データを移動させずに脳腫瘍セグメンテーションAIを訓練。差分プライバシーとの組み合わせにより、医療AI開発におけるプライバシー保護と性能のバランスを実証。",
+  "privacy_enhancement_method": "連合学習＋差分プライバシーによる分散データ上の学習",
+  "safety_assurance_method": "調査中",
+  "utility_evaluation_method": "調査中",
+  "tags": [
+    "Pilot",
+    "CDEI PETs Adoption Guide",
+    "Federated Analytics",
+    "Differential Privacy"
+  ],
+  "sources": [
+    {
+      "source_type": "web",
+      "title": "CDEI PETs Adoption Guide - Repository of Use Cases",
+      "url": "https://cdeiuk.github.io/pets-adoption-guide/repository/",
+      "note": "Centre for Data Ethics and Innovation (CDEI) PETs Adoption Guide"
+    },
+    {
+      "source_type": "web",
+      "title": "VentureBeat",
+      "url": "https://venturebeat.com/2019/10/13/nvidia-uses-federated-learning-to-create-medical-imaging-ai/",
+      "note": ""
+    }
+  ],
+  "figures": [],
+  "occurred_at": "2021-07",
+  "status": "seed",
+  "created_at": "2026-03-21T07:12:31Z",
+  "updated_at": "2026-03-21T07:12:31Z"
+}

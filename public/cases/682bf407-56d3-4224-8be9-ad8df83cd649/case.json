@@ -1,0 +1,51 @@
+{
+  "id": "682bf407-56d3-4224-8be9-ad8df83cd649",
+  "title": "Federated Learning for Siri Voice Recognition",
+  "region": "国外",
+  "domain": "IT",
+  "organization": "Apple",
+  "usecase_category": [
+    "組織内データ共有"
+  ],
+  "technology_category": [
+    "distributed_analytics",
+    "differential_privacy"
+  ],
+  "review_status": "ai_generated",
+  "summary": "AppleはiPhone上でローカルに連合学習を行い、Siriの音声認識モデルを訓練している。ローカルモデルの重みを中央サーバーに集約する際、差分プライバシーノイズを注入して再識別リスクを防止。ユーザーの音声データをデバイス外に送信することなくモデル精度を向上させている。",
+  "value_proposition": "連合学習と差分プライバシーの組み合わせにより、ユーザーの音声データをデバイス外に出さずに音声認識モデルを改善。プライバシー保護とAI性能向上を両立した製品レベルの実装例。",
+  "privacy_enhancement_method": "連合学習によるデバイス上学習＋差分プライバシーノイズ注入",
+  "safety_assurance_method": "調査中",
+  "utility_evaluation_method": "調査中",
+  "tags": [
+    "Product",
+    "CDEI PETs Adoption Guide",
+    "Federated Analytics",
+    "Differential Privacy"
+  ],
+  "sources": [
+    {
+      "source_type": "web",
+      "title": "CDEI PETs Adoption Guide - Repository of Use Cases",
+      "url": "https://cdeiuk.github.io/pets-adoption-guide/repository/",
+      "note": "Centre for Data Ethics and Innovation (CDEI) PETs Adoption Guide"
+    },
+    {
+      "source_type": "web",
+      "title": "MIT Tech Review",
+      "url": "https://www.technologyreview.com/2019/12/11/131629/apple-ai-personalizes-siri-federated-learning/",
+      "note": ""
+    },
+    {
+      "source_type": "web",
+      "title": "Apple: Learning with privacy at scale",
+      "url": "https://machinelearning.apple.com/research/learning-with-privacy-at-scale",
+      "note": ""
+    }
+  ],
+  "figures": [],
+  "occurred_at": "2021-07",
+  "status": "seed",
+  "created_at": "2026-03-21T07:12:31Z",
+  "updated_at": "2026-03-21T07:12:31Z"
+}
