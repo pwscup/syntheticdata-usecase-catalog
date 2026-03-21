@@ -1,0 +1,49 @@
+{
+  "id": "86168efd-b1e3-4f3f-b086-4cca231972c2",
+  "title": "Dutch Elderly Care System Data Analysis",
+  "region": "国外",
+  "domain": "医療",
+  "organization": "Data Sharing Coalition",
+  "usecase_category": [
+    "組織内データ共有"
+  ],
+  "technology_category": [
+    "secure_computation"
+  ],
+  "review_status": "ai_generated",
+  "summary": "オランダのData Sharing Coalitionが秘密計算を用いて、高齢者介護の提供状況とニーズを分析。官民の複数機関が保有する機微な健康データを、集約結果のみを開示する形で組み合わせ、高齢者介護の実態把握と改善に活用。",
+  "value_proposition": "秘密計算により官民複数機関の機微な健康データを安全に結合し、高齢者介護の実態を把握。データの集約なしに分析結果のみを共有する仕組みにより、従来不可能だった組織横断的な介護分析を実現。",
+  "privacy_enhancement_method": "秘密計算による複数機関データの安全な結合（集約結果のみ開示）",
+  "safety_assurance_method": "調査中",
+  "utility_evaluation_method": "調査中",
+  "tags": [
+    "Product",
+    "CDEI PETs Adoption Guide",
+    "Multi-party Computation"
+  ],
+  "sources": [
+    {
+      "source_type": "web",
+      "title": "CDEI PETs Adoption Guide - Repository of Use Cases",
+      "url": "https://cdeiuk.github.io/pets-adoption-guide/repository/",
+      "note": "Centre for Data Ethics and Innovation (CDEI) PETs Adoption Guide"
+    },
+    {
+      "source_type": "web",
+      "title": "Data Sharing Coalition use case poster",
+      "url": "https://datasharingcoalition.eu/app/uploads/2023/03/230306-linksight-article-visual.pdf",
+      "note": ""
+    },
+    {
+      "source_type": "web",
+      "title": "Data Sharing Coalition article",
+      "url": "https://datasharingcoalition.eu/use-cases/advancing-data-collaboration-for-monitoring-the-dutch-elderly-care-through-mpc-technology/",
+      "note": ""
+    }
+  ],
+  "figures": [],
+  "occurred_at": "2023-06",
+  "status": "seed",
+  "created_at": "2026-03-21T07:12:31Z",
+  "updated_at": "2026-03-21T07:12:31Z"
+}

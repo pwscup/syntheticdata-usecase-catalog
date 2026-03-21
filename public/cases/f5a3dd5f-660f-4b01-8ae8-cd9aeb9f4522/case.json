@@ -1,0 +1,44 @@
+{
+  "id": "f5a3dd5f-660f-4b01-8ae8-cd9aeb9f4522",
+  "title": "Cross-Border Machine Learning Model Training",
+  "region": "国外",
+  "domain": "金融",
+  "organization": "Inpher Inc.",
+  "usecase_category": [
+    "組織内データ共有"
+  ],
+  "technology_category": [
+    "secure_computation"
+  ],
+  "review_status": "ai_generated",
+  "summary": "Inpher社が準同型暗号と秘密計算を用いて、国際的な銀行子会社間でのデータ越境移転なしに販売予測モデルを構築。アナリストは出力結果のみを閲覧し、入力データは暗号化状態を維持したまま処理。",
+  "value_proposition": "準同型暗号と秘密計算により、データの越境移転規制を回避しつつ国際的なデータ分析を実現。GDPRなどのデータ保護規制下での金融機関のグローバル分析を可能にする。",
+  "privacy_enhancement_method": "準同型暗号＋秘密計算による暗号化状態でのモデル訓練",
+  "safety_assurance_method": "調査中",
+  "utility_evaluation_method": "調査中",
+  "tags": [
+    "Product",
+    "CDEI PETs Adoption Guide",
+    "Homomorphic Encryption",
+    "Multi-party Computation"
+  ],
+  "sources": [
+    {
+      "source_type": "web",
+      "title": "CDEI PETs Adoption Guide - Repository of Use Cases",
+      "url": "https://cdeiuk.github.io/pets-adoption-guide/repository/",
+      "note": "Centre for Data Ethics and Innovation (CDEI) PETs Adoption Guide"
+    },
+    {
+      "source_type": "web",
+      "title": "RUSI-FFIS report (Chapter 7)",
+      "url": "https://www.gcffc.org/wp-content/uploads/2020/06/FFIS-Innovation-and-discussion-paper-Case-studies-of-the-use-of-privacy-preserving-analysis.pdf",
+      "note": ""
+    }
+  ],
+  "figures": [],
+  "occurred_at": "2021-07",
+  "status": "seed",
+  "created_at": "2026-03-21T07:12:31Z",
+  "updated_at": "2026-03-21T07:12:31Z"
+}

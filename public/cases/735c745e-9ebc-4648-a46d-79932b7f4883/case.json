@@ -1,0 +1,51 @@
+{
+  "id": "735c745e-9ebc-4648-a46d-79932b7f4883",
+  "title": "United Nations PET Lab International Trade Verification",
+  "region": "国外",
+  "domain": "公共",
+  "organization": "United Nations PET Lab",
+  "usecase_category": [
+    "フィージビリティ検証"
+  ],
+  "technology_category": [
+    "differential_privacy",
+    "secure_computation"
+  ],
+  "review_status": "ai_generated",
+  "summary": "国連PETラボが秘密計算と差分プライバシーを活用して、国際貿易統計の検証パイロットを実施。OpenMinedのピアツーピアネットワークを通じて、各国の輸出入量を相互に検証しつつ個別データを保護。",
+  "value_proposition": "秘密計算と差分プライバシーにより、各国の貿易データを開示せずに輸出入統計の整合性を検証。国際的な統計品質向上におけるPETs活用の先駆的パイロット。",
+  "privacy_enhancement_method": "秘密計算＋差分プライバシーによる分散型データ検証",
+  "safety_assurance_method": "調査中",
+  "utility_evaluation_method": "調査中",
+  "tags": [
+    "Proof of Concept",
+    "CDEI PETs Adoption Guide",
+    "Differential Privacy",
+    "Multi-party Computation"
+  ],
+  "sources": [
+    {
+      "source_type": "web",
+      "title": "CDEI PETs Adoption Guide - Repository of Use Cases",
+      "url": "https://cdeiuk.github.io/pets-adoption-guide/repository/",
+      "note": "Centre for Data Ethics and Innovation (CDEI) PETs Adoption Guide"
+    },
+    {
+      "source_type": "web",
+      "title": "UN PETs Case Study repository",
+      "url": "https://unstats.un.org/wiki/display/UGTTOPPT/16.+United+Nations+PET+Lab%3A+International+Trade",
+      "note": ""
+    },
+    {
+      "source_type": "web",
+      "title": "Information Age article",
+      "url": "https://www.information-age.com/un-launches-privacy-lab-pilot-to-unlock-cross-border-data-sharing-benefits-19414/",
+      "note": ""
+    }
+  ],
+  "figures": [],
+  "occurred_at": "2023-06",
+  "status": "seed",
+  "created_at": "2026-03-21T07:12:31Z",
+  "updated_at": "2026-03-21T07:12:31Z"
+}

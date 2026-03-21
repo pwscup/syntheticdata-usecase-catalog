@@ -1,0 +1,43 @@
+{
+  "id": "04835375-9ffc-4a22-ad54-87ae391d02c2",
+  "title": "Privitar Financial Statistics Pilot",
+  "region": "国外",
+  "domain": "金融",
+  "organization": "Privitar",
+  "usecase_category": [
+    "フィージビリティ検証"
+  ],
+  "technology_category": [
+    "secure_computation"
+  ],
+  "review_status": "ai_generated",
+  "summary": "Privitarが部分準同型暗号を用いて、複数の金融機関がプライベート・パブリックデータセットから識別可能情報を収集せずに人口統計を学習するパイロットプロジェクトを実施。",
+  "value_proposition": "部分準同型暗号により、識別可能情報を収集せずに分散データソースから統計情報を導出。金融分野でのプライバシー保護型データ分析の実用性を検証。",
+  "privacy_enhancement_method": "部分準同型暗号による暗号化データからの統計学習",
+  "safety_assurance_method": "調査中",
+  "utility_evaluation_method": "調査中",
+  "tags": [
+    "Pilot",
+    "CDEI PETs Adoption Guide",
+    "Homomorphic Encryption"
+  ],
+  "sources": [
+    {
+      "source_type": "web",
+      "title": "CDEI PETs Adoption Guide - Repository of Use Cases",
+      "url": "https://cdeiuk.github.io/pets-adoption-guide/repository/",
+      "note": "Centre for Data Ethics and Innovation (CDEI) PETs Adoption Guide"
+    },
+    {
+      "source_type": "web",
+      "title": "RUSI-FFIS report",
+      "url": "https://www.gcffc.org/wp-content/uploads/2020/06/FFIS-Innovation-and-discussion-paper-Case-studies-of-the-use-of-privacy-preserving-analysis.pdf",
+      "note": ""
+    }
+  ],
+  "figures": [],
+  "occurred_at": "2021-07",
+  "status": "seed",
+  "created_at": "2026-03-21T07:12:31Z",
+  "updated_at": "2026-03-21T07:12:31Z"
+}

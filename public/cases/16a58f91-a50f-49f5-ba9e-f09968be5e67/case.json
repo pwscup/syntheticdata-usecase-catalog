@@ -1,0 +1,55 @@
+{
+  "id": "16a58f91-a50f-49f5-ba9e-f09968be5e67",
+  "title": "US Census Bureau 2020 Census Differential Privacy",
+  "region": "国外",
+  "domain": "公共",
+  "organization": "US Census Bureau",
+  "usecase_category": [
+    "R&D"
+  ],
+  "technology_category": [
+    "differential_privacy"
+  ],
+  "review_status": "ai_generated",
+  "summary": "米国国勢調査局が2020年国勢調査の統計公表にあたり差分プライバシーを適用。州レベルの人口は正確な値を維持しつつ、それ以下の地理的レベル（選挙区〜国勢調査ブロック）にノイズを注入して個人の識別リスクを最小化。プライバシー予算の設定やネイティブアメリカン部族への影響が議論の焦点に。",
+  "value_proposition": "世界最大規模の差分プライバシー実装として、3億人以上の国勢調査データの公表にDPを適用。プライバシー予算設定の実務的課題やマイノリティへの影響など、実装上の重要な教訓を提供。",
+  "privacy_enhancement_method": "差分プライバシーによる統計データへのノイズ注入",
+  "safety_assurance_method": "調査中",
+  "utility_evaluation_method": "調査中",
+  "tags": [
+    "In development",
+    "CDEI PETs Adoption Guide",
+    "Differential Privacy"
+  ],
+  "sources": [
+    {
+      "source_type": "web",
+      "title": "CDEI PETs Adoption Guide - Repository of Use Cases",
+      "url": "https://cdeiuk.github.io/pets-adoption-guide/repository/",
+      "note": "Centre for Data Ethics and Innovation (CDEI) PETs Adoption Guide"
+    },
+    {
+      "source_type": "web",
+      "title": "Royal Society report on PETs",
+      "url": "https://royalsociety.org/-/media/policy/projects/privacy-enhancing-technologies/privacy-enhancing-technologies-report.pdf",
+      "note": ""
+    },
+    {
+      "source_type": "web",
+      "title": "Report on issues encountered implementing DP",
+      "url": "https://arxiv.org/pdf/1809.02201.pdf",
+      "note": ""
+    },
+    {
+      "source_type": "web",
+      "title": "Explainer by the NCSL",
+      "url": "https://www.ncsl.org/research/redistricting/differential-privacy-for-census-data-explained.aspx",
+      "note": ""
+    }
+  ],
+  "figures": [],
+  "occurred_at": "2021-07",
+  "status": "seed",
+  "created_at": "2026-03-21T07:12:31Z",
+  "updated_at": "2026-03-21T07:12:31Z"
+}
