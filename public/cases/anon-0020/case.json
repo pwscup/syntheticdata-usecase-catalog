@@ -1,0 +1,56 @@
+{
+  "id": "anon-0020",
+  "title": "次世代医療基盤法に基づく匿名加工医療情報の製薬・研究向け提供",
+  "region": "国内",
+  "domain": "医療",
+  "domain_sub": "製薬・臨床研究",
+  "organization": "TOPPANホールディングス株式会社（DATuM IDEA®）",
+  "technology_category": ["anonymization"],
+  "usecase_category": ["データ販売", "外部分析者活用"],
+  "review_status": "ai_generated",
+  "summary": "医療機関が保有する電子カルテ・レセプトデータは個人情報保護の制約から二次利用が困難であった。DATuM IDEA®は次世代医療基盤法に基づき、認定匿名加工医療情報作成事業者（J-MIMO）が匿名加工を施したデータを取得し、製薬企業やアカデミアに対してWebツール・解析レポート・データセットとして提供している。がん診療連携拠点病院からのデータを多く含み、がんや希少疾患の治療データの分析を可能にしている。",
+  "value_proposition": "認定事業者による法的根拠に基づく匿名加工により、電子カルテ等のアウトカムデータを安全に二次利用可能にする。異なる施設や領域の情報を横断的につなげた匿名加工医療情報を、製薬企業やアカデミア・医療機関に提供する。",
+  "privacy_enhancement_method": "次世代医療基盤法（医療分野の研究開発に資するための匿名加工医療情報に関する法律）に基づき、国が認定した匿名加工医療情報作成事業者（J-MIMO：一般財団法人日本医師会医療情報管理機構）が匿名加工を実施。匿名加工の責任は認定事業者に帰属し、オプトアウト制度を採用している。",
+  "safety_assurance_method": "認定匿名加工医療情報作成事業者による法令遵守の匿名加工処理。匿名加工の責任は認定事業者に帰属。",
+  "utility_evaluation_method": "調査中",
+  "tags": ["次世代医療基盤法", "電子カルテ", "レセプト", "J-MIMO"],
+  "sources": [
+    {
+      "source_type": "web",
+      "title": "DATuM IDEA® データサービス",
+      "url": "https://datumidea.jp/service/data/",
+      "note": "サービス概要、データ種別、提供形態、法的根拠、対象顧客等の情報を参照"
+    }
+  ],
+  "figures": [
+    {
+      "type": "data_flow",
+      "title": "DATuM IDEA® 匿名加工医療情報提供フロー",
+      "data": {
+        "nodes": [
+          {"id": "s1", "label": "医療機関の電子カルテ・レセプトデータ", "category": "source"},
+          {"id": "s2", "label": "個人情報保護による二次利用の制約", "category": "constraint"},
+          {"id": "p1", "label": "J-MIMOによる匿名加工処理", "category": "process"},
+          {"id": "p2", "label": "DATuM IDEA®でデータ統合・提供", "category": "process"},
+          {"id": "a1", "label": "製薬企業向けWebツール・解析レポート", "category": "application"},
+          {"id": "a2", "label": "アカデミア向け研究データ検索", "category": "application"},
+          {"id": "a3", "label": "がん・希少疾患の治療データ分析が可能に", "category": "outcome"}
+        ],
+        "edges": [
+          {"from": "s1", "to": "p1", "label": "次世代医療基盤法に基づき収集"},
+          {"from": "s2", "to": "p1", "label": "法的根拠による解決"},
+          {"from": "p1", "to": "p2", "label": "匿名加工済みデータを提供"},
+          {"from": "p2", "to": "a1", "label": "データセット・解析提供"},
+          {"from": "p2", "to": "a2", "label": "研究用データ提供"},
+          {"from": "a1", "to": "a3", "label": "データ分析に活用"},
+          {"from": "a2", "to": "a3", "label": "研究に活用"}
+        ]
+      },
+      "note": ""
+    }
+  ],
+  "occurred_at": null,
+  "status": "seed",
+  "created_at": "2026-03-21",
+  "updated_at": "2026-03-21"
+}
