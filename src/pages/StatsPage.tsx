@@ -243,20 +243,24 @@ export default function StatsPage() {
         color: 'bg-purple-500',
       }))
 
-    // Timeline: cases by created_at year
+    // Timeline: cases by occurred_at year (null → "詳細不明")
     const yearCounts = new Map<string, number>()
     for (const c of cases) {
-      const year = c.created_at.slice(0, 4)
+      const year = c.occurred_at ? c.occurred_at.slice(0, 4) : '詳細不明'
       yearCounts.set(year, (yearCounts.get(year) ?? 0) + 1)
     }
     const timelineData = Array.from(yearCounts.entries())
-      .sort((a, b) => a[0].localeCompare(b[0]))
+      .sort((a, b) => {
+        if (a[0] === '詳細不明') return 1
+        if (b[0] === '詳細不明') return -1
+        return a[0].localeCompare(b[0])
+      })
       .map(([year, count]) => ({ year, count }))
 
-    // Tech timeline: cases by year and technology_category
+    // Tech timeline: cases by occurred_at year and technology_category
     const techYearCounts = new Map<string, Record<string, number>>()
     for (const c of cases) {
-      const year = c.created_at.slice(0, 4)
+      const year = c.occurred_at ? c.occurred_at.slice(0, 4) : '詳細不明'
       if (!techYearCounts.has(year)) techYearCounts.set(year, {})
       const yearMap = techYearCounts.get(year)!
       for (const tech of c.technology_category ?? []) {
@@ -264,7 +268,11 @@ export default function StatsPage() {
       }
     }
     const techTimelineData = Array.from(techYearCounts.entries())
-      .sort((a, b) => a[0].localeCompare(b[0]))
+      .sort((a, b) => {
+        if (a[0] === '詳細不明') return 1
+        if (b[0] === '詳細不明') return -1
+        return a[0].localeCompare(b[0])
+      })
       .map(([year, counts]) => ({ year, counts }))
 
     // Organization count
@@ -306,10 +314,10 @@ export default function StatsPage() {
       </div>
 
       {/* Tech timeline */}
-      <TechTimelineChart title="技術カテゴリ別 事例数の推移" data={stats.techTimelineData} />
+      <TechTimelineChart title="技術カテゴリ別 事例数の推移（発生時期ベース）" data={stats.techTimelineData} />
 
       {/* Timeline */}
-      <TimelineChart title="年別 事例追加数" data={stats.timelineData} />
+      <TimelineChart title="年別 事例数（発生時期ベース）" data={stats.timelineData} />
 
       {/* Charts grid */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">

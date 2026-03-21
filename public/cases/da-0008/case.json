@@ -92,6 +92,7 @@
     "出典URL（pht.health-ri.nl）がTLS証明書エラーでアクセス不能。出典差し替え必須"
   ],
   "status": "seed",
+  "occurred_at": null,
   "created_at": "2026-03-09T00:00:00.000Z",
   "updated_at": "2026-03-09T00:00:00.000Z"
 }

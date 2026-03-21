@@ -19,6 +19,7 @@ const mockCase: Case = {
   sources: [
     { source_type: 'web', title: '出典1', url: 'https://example.com', note: 'メモ' },
   ],
+  occurred_at: '2024-03',
   figures: [],
   status: 'user',
   created_at: '2026-01-01T00:00:00Z',
@@ -31,8 +32,16 @@ describe('CaseForm', () => {
 
     expect(screen.getByText('出典（必須）')).toBeInTheDocument()
     expect(screen.getByLabelText('分野')).toBeInTheDocument()
+    expect(screen.getByLabelText('発生時期')).toBeInTheDocument()
     expect(screen.getByText('カテゴリ（複数選択可）')).toBeInTheDocument()
     expect(screen.getByRole('button', { name: '作成' })).toBeInTheDocument()
+  })
+
+  it('発生時期フィールドにdefaultValuesがプリフィルされる', () => {
+    render(<CaseForm defaultValues={mockCase} onSubmit={() => {}} submitLabel="更新" />)
+
+    const occurredAtInput = screen.getByLabelText('発生時期') as HTMLInputElement
+    expect(occurredAtInput).toHaveValue('2024-03')
   })
 
   it('折りたたみセクションが存在する', () => {

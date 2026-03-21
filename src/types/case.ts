@@ -113,6 +113,7 @@ export interface Case {
   editorial_notes?: string[];
   sources: Source[];
   figures: Figure[];
+  occurred_at?: string | null;
   status: CaseStatus;
   created_at: string;
   updated_at: string;

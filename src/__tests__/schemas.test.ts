@@ -166,6 +166,36 @@ describe("caseSchema", () => {
     const input = validCaseInput({ review_status: "invalid_status" });
     expect(() => caseSchema.parse(input)).toThrow();
   });
+
+  it("occurred_atがnullでバリデーションが通る", () => {
+    const input = validCaseInput({ occurred_at: null });
+    const result = caseSchema.parse(input);
+    expect(result.occurred_at).toBeNull();
+  });
+
+  it("occurred_atが未指定でもデフォルト値nullで通る", () => {
+    const input = validCaseInput();
+    const result = caseSchema.parse(input);
+    expect(result.occurred_at).toBeNull();
+  });
+
+  it("occurred_atが'2023'でバリデーションが通る", () => {
+    const input = validCaseInput({ occurred_at: "2023" });
+    const result = caseSchema.parse(input);
+    expect(result.occurred_at).toBe("2023");
+  });
+
+  it("occurred_atが'2023-06'でバリデーションが通る", () => {
+    const input = validCaseInput({ occurred_at: "2023-06" });
+    const result = caseSchema.parse(input);
+    expect(result.occurred_at).toBe("2023-06");
+  });
+
+  it("occurred_atが'2023-06-15'でバリデーションが通る", () => {
+    const input = validCaseInput({ occurred_at: "2023-06-15" });
+    const result = caseSchema.parse(input);
+    expect(result.occurred_at).toBe("2023-06-15");
+  });
 });
 
 describe("figureSchema", () => {

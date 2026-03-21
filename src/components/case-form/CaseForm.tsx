@@ -54,6 +54,7 @@ export default function CaseForm({ defaultValues, onSubmit, submitLabel }: CaseF
       privacy_enhancement_method: defaultValues?.privacy_enhancement_method ?? '調査中',
       safety_assurance_method: defaultValues?.safety_assurance_method ?? '調査中',
       utility_evaluation_method: defaultValues?.utility_evaluation_method ?? '調査中',
+      occurred_at: defaultValues?.occurred_at ?? '',
       tags: defaultValues?.tags ?? [],
       sources: defaultValues?.sources ?? [{ source_type: 'web', title: '', url: '', note: '' }],
     },
@@ -77,6 +78,7 @@ export default function CaseForm({ defaultValues, onSubmit, submitLabel }: CaseF
       id: isEdit ? defaultValues!.id! : crypto.randomUUID(),
       technology_category: formData.technology_category ?? ['synthetic_data'],
       review_status: formData.review_status ?? 'ai_generated',
+      occurred_at: formData.occurred_at || null,
       figures: defaultValues?.figures ?? [],
       status: isEdit ? defaultValues!.status! : 'user',
       created_at: isEdit ? defaultValues!.created_at! : now,
@@ -119,6 +121,19 @@ export default function CaseForm({ defaultValues, onSubmit, submitLabel }: CaseF
             placeholder="例: 保険、COVID-19"
             className="mt-1 block w-full rounded border border-gray-300 px-3 py-2"
           />
+        </div>
+
+        {/* 発生時期（任意） */}
+        <div>
+          <label htmlFor="occurred_at" className="block text-sm font-medium">発生時期</label>
+          <input
+            id="occurred_at"
+            type="text"
+            {...methods.register('occurred_at')}
+            placeholder="例: 2023, 2023-06, 2023-06-15"
+            className="mt-1 block w-full rounded border border-gray-300 px-3 py-2"
+          />
+          <p className="mt-1 text-xs text-gray-500">YYYY, YYYY-MM, or YYYY-MM-DD format（空欄で詳細不明）</p>
         </div>
 
         {/* 技術カテゴリ */}

@@ -117,6 +117,7 @@ export const caseSchema = z.object({
   editorial_notes: z.array(z.string()).optional(),
   sources: z.array(sourceSchema).min(1),
   figures: z.array(figureSchema).default([]),
+  occurred_at: z.string().nullable().optional().default(null),
   status: z
     .enum(["seed", "user", "draft", "published", "archived"])
     .default("user"),
@@ -139,6 +140,7 @@ export const caseFormSchema = z.object({
   privacy_enhancement_method: z.string().default('調査中'),
   safety_assurance_method: z.string().default('調査中'),
   utility_evaluation_method: z.string().default('調査中'),
+  occurred_at: z.string().nullable().optional().default(null),
   tags: z.array(z.string()).default([]),
   sources: z.array(sourceFormSchema).min(1, '出典は最低1件必要です'),
 })
