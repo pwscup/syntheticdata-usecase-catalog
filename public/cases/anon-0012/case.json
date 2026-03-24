@@ -1,6 +1,6 @@
 {
   "id": "anon-0012",
-  "title": "MEIZ：仮名加工情報による業務改善・新規サービス研究開発",
+  "title": "MEIZ：個人データの安全な内部活用による業務改善・新規サービス開発",
   "region": "国内",
   "domain": "IT",
   "organization": "MEIZ",
@@ -33,11 +33,31 @@
       "title": "概要フロー",
       "data": {
         "nodes": [
-          {"id": "s1", "label": "業務データ・顧客データ", "category": "source"},
-          {"id": "s2", "label": "個人情報の社内利用に制約", "category": "constraint"},
-          {"id": "p1", "label": "仮名加工情報として社内活用", "category": "process"},
-          {"id": "a1", "label": "業務改善・新規サービス研究に活用", "category": "application"},
-          {"id": "a2", "label": "安全にデータ活用し業務効率化", "category": "outcome"}
+          {
+            "id": "s1",
+            "label": "業務データ・顧客データ",
+            "category": "source"
+          },
+          {
+            "id": "s2",
+            "label": "個人情報の社内利用に制約",
+            "category": "constraint"
+          },
+          {
+            "id": "p1",
+            "label": "仮名加工情報として社内活用",
+            "category": "process"
+          },
+          {
+            "id": "a1",
+            "label": "業務改善・新規サービス研究に活用",
+            "category": "application"
+          },
+          {
+            "id": "a2",
+            "label": "安全にデータ活用し業務効率化",
+            "category": "outcome"
+          }
         ],
         "edges": []
       },

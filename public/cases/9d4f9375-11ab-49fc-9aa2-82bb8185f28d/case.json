@@ -1,6 +1,6 @@
 {
   "id": "9d4f9375-11ab-49fc-9aa2-82bb8185f28d",
-  "title": "Secretarium/DANIE：秘密計算・TEEによる銀行コンソーシアムデータ分析",
+  "title": "Secretarium/DANIE：人間非介在での銀行コンソーシアム横断データ分析",
   "region": "国外",
   "domain": "金融",
   "organization": "Secretarium / DANIE",
@@ -36,7 +36,43 @@
       "note": ""
     }
   ],
-  "figures": [],
+  "figures": [
+    {
+      "type": "data_flow",
+      "title": "秘密計算・TEEによる銀行コンソーシアムデータ分析フロー",
+      "data": {
+        "nodes": [
+          {
+            "id": "s1",
+            "label": "銀行コンソーシアムの取引・顧客データ",
+            "category": "source"
+          },
+          {
+            "id": "s2",
+            "label": "人間がデータに直接アクセスせずに分析が必要",
+            "category": "constraint"
+          },
+          {
+            "id": "p1",
+            "label": "暗号化＋TEEでデータを保護したまま分析",
+            "category": "process"
+          },
+          {
+            "id": "a1",
+            "label": "DANIEプラットフォームで銀行間データ分析",
+            "category": "application"
+          },
+          {
+            "id": "a2",
+            "label": "人間非介在でのセキュアなデータ分析を実現",
+            "category": "outcome"
+          }
+        ],
+        "edges": []
+      },
+      "note": ""
+    }
+  ],
   "occurred_at": "2023-06",
   "status": "seed",
   "created_at": "2026-03-21T07:12:31Z",

@@ -1,6 +1,6 @@
 {
   "id": "da5c0215-a06c-43e3-82e7-91a731521f00",
-  "title": "インドネシア観光省：TEEによるモバイルデータを活用した越境観光統計",
+  "title": "インドネシア観光省：通信事業者の位置データ秘匿による越境観光統計の作成",
   "region": "国外",
   "domain": "小売",
   "organization": "Indonesia Ministry of Tourism",
@@ -41,7 +41,43 @@
       "note": ""
     }
   ],
-  "figures": [],
+  "figures": [
+    {
+      "type": "data_flow",
+      "title": "TEEによるモバイルデータを活用した越境観光統計フロー",
+      "data": {
+        "nodes": [
+          {
+            "id": "s1",
+            "label": "モバイル通信事業者の位置データ",
+            "category": "source"
+          },
+          {
+            "id": "s2",
+            "label": "個人の移動情報を直接開示不可",
+            "category": "constraint"
+          },
+          {
+            "id": "p1",
+            "label": "Sharemind TEE内で暗号化データを分析",
+            "category": "process"
+          },
+          {
+            "id": "a1",
+            "label": "越境観光統計を作成・公表",
+            "category": "application"
+          },
+          {
+            "id": "a2",
+            "label": "個人非特定で観光政策に有用な統計を実現",
+            "category": "outcome"
+          }
+        ],
+        "edges": []
+      },
+      "note": ""
+    }
+  ],
   "occurred_at": "2023-06",
   "status": "seed",
   "created_at": "2026-03-21T07:12:31Z",

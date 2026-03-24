@@ -1,6 +1,6 @@
 {
   "id": "6a8d74ef-4f82-44f8-954f-5991b3ae28f1",
-  "title": "AUSTRAC：秘密計算による金融犯罪検出プラットフォーム",
+  "title": "AUSTRAC：28金融機関のデータ秘匿による不審口座ネットワーク検出",
   "region": "国外",
   "domain": "金融",
   "organization": "AUSTRAC",
@@ -42,7 +42,43 @@
       "note": ""
     }
   ],
-  "figures": [],
+  "figures": [
+    {
+      "type": "data_flow",
+      "title": "秘密計算による金融犯罪検出プラットフォームフロー",
+      "data": {
+        "nodes": [
+          {
+            "id": "s1",
+            "label": "28金融機関の取引・口座データ",
+            "category": "source"
+          },
+          {
+            "id": "s2",
+            "label": "金融機関間で顧客データの直接共有は不可",
+            "category": "constraint"
+          },
+          {
+            "id": "p1",
+            "label": "準同型暗号＋秘密計算で暗号化状態のまま分析",
+            "category": "process"
+          },
+          {
+            "id": "a1",
+            "label": "金融機関横断の不審口座接続を検出",
+            "category": "application"
+          },
+          {
+            "id": "a2",
+            "label": "個別データ非開示のまま金融犯罪ネットワークを特定",
+            "category": "outcome"
+          }
+        ],
+        "edges": []
+      },
+      "note": ""
+    }
+  ],
   "occurred_at": "2021-07",
   "status": "seed",
   "created_at": "2026-03-21T07:12:31Z",

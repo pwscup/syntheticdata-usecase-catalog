@@ -1,6 +1,6 @@
 {
   "id": "eff8eb83-af54-4ade-a3fe-9b84a39a4cdc",
-  "title": "Google：GBoard連合学習による次単語予測",
+  "title": "Google：入力データをサーバーに送信しないGBoardの次単語予測改善",
   "region": "国外",
   "domain": "IT",
   "organization": "Google",
@@ -43,7 +43,43 @@
       "note": ""
     }
   ],
-  "figures": [],
+  "figures": [
+    {
+      "type": "data_flow",
+      "title": "GBoard連合学習による次単語予測フロー",
+      "data": {
+        "nodes": [
+          {
+            "id": "s1",
+            "label": "ユーザーのキーボード入力データ",
+            "category": "source"
+          },
+          {
+            "id": "s2",
+            "label": "入力テキストをサーバーに送信不可",
+            "category": "constraint"
+          },
+          {
+            "id": "p1",
+            "label": "端末上で連合学習＋セキュアアグリゲーションで集約",
+            "category": "process"
+          },
+          {
+            "id": "a1",
+            "label": "GBoardの次単語予測モデルを改善",
+            "category": "application"
+          },
+          {
+            "id": "a2",
+            "label": "入力データ非送信のまま予測精度を継続向上",
+            "category": "outcome"
+          }
+        ],
+        "edges": []
+      },
+      "note": ""
+    }
+  ],
   "occurred_at": "2021-07",
   "status": "seed",
   "created_at": "2026-03-21T07:12:31Z",

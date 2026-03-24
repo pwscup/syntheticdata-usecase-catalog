@@ -1,6 +1,6 @@
 {
   "id": "2dd8f5b6-99e5-485c-83ce-2983a4d8342e",
-  "title": "Google：準同型暗号による広告コンバージョン率のプライバシー保護計算",
+  "title": "Google：広告主・小売双方のデータ非開示によるコンバージョン率計測",
   "region": "国外",
   "domain": "IT",
   "organization": "Google",
@@ -35,7 +35,43 @@
       "note": ""
     }
   ],
-  "figures": [],
+  "figures": [
+    {
+      "type": "data_flow",
+      "title": "準同型暗号による広告コンバージョン率計算フロー",
+      "data": {
+        "nodes": [
+          {
+            "id": "s1",
+            "label": "広告表示リスト＋小売の購入リスト",
+            "category": "source"
+          },
+          {
+            "id": "s2",
+            "label": "双方の顧客データを互いに開示不可",
+            "category": "constraint"
+          },
+          {
+            "id": "p1",
+            "label": "準同型暗号ベースのPSIプロトコルで集合積を算出",
+            "category": "process"
+          },
+          {
+            "id": "a1",
+            "label": "データ非開示のまま広告コンバージョン率を計算",
+            "category": "application"
+          },
+          {
+            "id": "a2",
+            "label": "第三者Cookie不要の広告効果測定を実現",
+            "category": "outcome"
+          }
+        ],
+        "edges": []
+      },
+      "note": ""
+    }
+  ],
   "occurred_at": "2021-07",
   "status": "seed",
   "created_at": "2026-03-21T07:12:31Z",

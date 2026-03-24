@@ -1,6 +1,6 @@
 {
   "id": "dbf64338-c518-46d2-b6a0-7b3c07f3f9d7",
-  "title": "Signal：TEE（Intel SGX）によるプライバシー保護型連絡先検索",
+  "title": "Signal：サーバー側が閲覧できない状態での連絡先マッチング",
   "region": "国外",
   "domain": "IT",
   "organization": "Signal",
@@ -41,7 +41,43 @@
       "note": ""
     }
   ],
-  "figures": [],
+  "figures": [
+    {
+      "type": "data_flow",
+      "title": "TEEによるプライバシー保護型連絡先検索フロー",
+      "data": {
+        "nodes": [
+          {
+            "id": "s1",
+            "label": "ユーザーの連絡先情報",
+            "category": "source"
+          },
+          {
+            "id": "s2",
+            "label": "Signalサーバーが連絡先を閲覧不可",
+            "category": "constraint"
+          },
+          {
+            "id": "p1",
+            "label": "Intel SGX（TEE）内で連絡先照合を実行",
+            "category": "process"
+          },
+          {
+            "id": "a1",
+            "label": "登録済みユーザーとのマッチングを実施",
+            "category": "application"
+          },
+          {
+            "id": "a2",
+            "label": "サーバーに連絡先を開示せず検索を実現",
+            "category": "outcome"
+          }
+        ],
+        "edges": []
+      },
+      "note": ""
+    }
+  ],
   "occurred_at": "2021-07",
   "status": "seed",
   "created_at": "2026-03-21T07:12:31Z",

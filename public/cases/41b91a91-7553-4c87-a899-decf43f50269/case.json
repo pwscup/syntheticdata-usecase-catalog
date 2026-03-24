@@ -1,6 +1,6 @@
 {
   "id": "41b91a91-7553-4c87-a899-decf43f50269",
-  "title": "Hazy/Accenture：合成データによる脆弱顧客の早期識別",
+  "title": "Hazy/Accenture：金融機関の脆弱顧客早期識別プロトタイプの迅速構築",
   "region": "国外",
   "domain": "金融",
   "organization": "Hazy / Accenture",
@@ -35,7 +35,43 @@
       "note": ""
     }
   ],
-  "figures": [],
+  "figures": [
+    {
+      "type": "data_flow",
+      "title": "合成データによる脆弱顧客の早期識別フロー",
+      "data": {
+        "nodes": [
+          {
+            "id": "s1",
+            "label": "金融機関の顧客データ（高齢者・障害者等）",
+            "category": "source"
+          },
+          {
+            "id": "s2",
+            "label": "セキュリティ審査に数カ月を要する",
+            "category": "constraint"
+          },
+          {
+            "id": "p1",
+            "label": "Hazyの合成データで代替データセットを生成",
+            "category": "process"
+          },
+          {
+            "id": "a1",
+            "label": "脆弱顧客の早期識別プロトタイプを構築",
+            "category": "application"
+          },
+          {
+            "id": "a2",
+            "label": "開発期間を数カ月から数日に短縮",
+            "category": "outcome"
+          }
+        ],
+        "edges": []
+      },
+      "note": ""
+    }
+  ],
   "occurred_at": "2023-06",
   "status": "seed",
   "created_at": "2026-03-21T07:12:31Z",

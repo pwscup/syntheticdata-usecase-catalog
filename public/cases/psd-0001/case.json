@@ -1,18 +1,26 @@
 {
   "id": "psd-0001",
-  "title": "米国国勢調査局：SIPP Synthetic Betaによる家計・所得データの部分合成公開",
+  "title": "米国国勢調査局：家計・所得調査データの開示リスク低減付き研究向け公開（SIPP Synthetic Beta）",
   "region": "国外",
   "domain": "公共",
   "organization": "U.S. Census Bureau",
-  "usecase_category": ["公的利用"],
-  "technology_category": ["synthetic_data"],
+  "usecase_category": [
+    "公的利用"
+  ],
+  "technology_category": [
+    "synthetic_data"
+  ],
   "review_status": "ai_generated",
   "summary": "米国国勢調査局が、家計・所得・給付に関するSIPP調査データを税・給付の行政データと統合したうえで公開用に部分合成化（partially synthetic）した事例。機微な変数を合成値で置換し、研究利用可能性を高めている。",
   "value_proposition": "調査中",
   "privacy_enhancement_method": "調査中",
   "safety_assurance_method": "調査中",
   "utility_evaluation_method": "調査中",
-  "tags": ["部分合成データ", "公的統計", "行政データ"],
+  "tags": [
+    "部分合成データ",
+    "公的統計",
+    "行政データ"
+  ],
   "sources": [
     {
       "source_type": "web",
@@ -31,11 +39,31 @@
       "title": "概要フロー",
       "data": {
         "nodes": [
-          {"id": "s1", "label": "SIPP調査＋税・給付行政データ", "category": "source"},
-          {"id": "s2", "label": "機微な所得情報で公開困難", "category": "constraint"},
-          {"id": "p1", "label": "機微変数を合成値で部分置換", "category": "process"},
-          {"id": "a1", "label": "研究者向けに公開データ提供", "category": "application"},
-          {"id": "a2", "label": "プライバシー保護と研究利用を両立", "category": "outcome"}
+          {
+            "id": "s1",
+            "label": "SIPP調査＋税・給付行政データ",
+            "category": "source"
+          },
+          {
+            "id": "s2",
+            "label": "機微な所得情報で公開困難",
+            "category": "constraint"
+          },
+          {
+            "id": "p1",
+            "label": "機微変数を合成値で部分置換",
+            "category": "process"
+          },
+          {
+            "id": "a1",
+            "label": "研究者向けに公開データ提供",
+            "category": "application"
+          },
+          {
+            "id": "a2",
+            "label": "プライバシー保護と研究利用を両立",
+            "category": "outcome"
+          }
         ],
         "edges": []
       },

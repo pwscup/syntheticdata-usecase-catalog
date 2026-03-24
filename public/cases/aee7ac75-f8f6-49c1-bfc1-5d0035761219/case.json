@@ -1,6 +1,6 @@
 {
   "id": "aee7ac75-f8f6-49c1-bfc1-5d0035761219",
-  "title": "NVIDIA/King's College London：連合学習と差分プライバシーによる脳腫瘍セグメンテーション",
+  "title": "NVIDIA/King's College London：13施設の医療画像を共有せずに構築した脳腫瘍セグメンテーションモデル",
   "region": "国外",
   "domain": "医療",
   "organization": "NVIDIA / King's College London",
@@ -37,7 +37,43 @@
       "note": ""
     }
   ],
-  "figures": [],
+  "figures": [
+    {
+      "type": "data_flow",
+      "title": "連合学習と差分プライバシーによる脳腫瘍セグメンテーションフロー",
+      "data": {
+        "nodes": [
+          {
+            "id": "s1",
+            "label": "13施設の脳MRIスキャンデータ",
+            "category": "source"
+          },
+          {
+            "id": "s2",
+            "label": "医療画像データの施設外共有が困難",
+            "category": "constraint"
+          },
+          {
+            "id": "p1",
+            "label": "連合学習＋差分プライバシーで分散訓練",
+            "category": "process"
+          },
+          {
+            "id": "a1",
+            "label": "脳腫瘍のセグメンテーションモデルを構築",
+            "category": "application"
+          },
+          {
+            "id": "a2",
+            "label": "データ共有なしに多施設横断モデルを実現",
+            "category": "outcome"
+          }
+        ],
+        "edges": []
+      },
+      "note": ""
+    }
+  ],
   "occurred_at": "2021-07",
   "status": "seed",
   "created_at": "2026-03-21T07:12:31Z",

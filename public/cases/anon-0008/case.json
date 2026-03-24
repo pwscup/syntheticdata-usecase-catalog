@@ -1,6 +1,6 @@
 {
   "id": "anon-0008",
-  "title": "NEC：仮名加工情報を用いた健康行動変容AIの研究開発",
+  "title": "NEC：個人データの安全な内部活用による健康行動変容AIの研究開発",
   "region": "国内",
   "domain": "IT",
   "organization": "NEC",
@@ -40,11 +40,31 @@
       "title": "概要フロー",
       "data": {
         "nodes": [
-          {"id": "s1", "label": "健康ポイントアプリのライフログ", "category": "source"},
-          {"id": "s2", "label": "個人の健康情報は高い保護が必要", "category": "constraint"},
-          {"id": "p1", "label": "個人情報を仮名加工情報に変換", "category": "process"},
-          {"id": "a1", "label": "健康行動変容AIの研究開発", "category": "application"},
-          {"id": "a2", "label": "健康寿命延伸・医療費適正化に貢献", "category": "outcome"}
+          {
+            "id": "s1",
+            "label": "健康ポイントアプリのライフログ",
+            "category": "source"
+          },
+          {
+            "id": "s2",
+            "label": "個人の健康情報は高い保護が必要",
+            "category": "constraint"
+          },
+          {
+            "id": "p1",
+            "label": "個人情報を仮名加工情報に変換",
+            "category": "process"
+          },
+          {
+            "id": "a1",
+            "label": "健康行動変容AIの研究開発",
+            "category": "application"
+          },
+          {
+            "id": "a2",
+            "label": "健康寿命延伸・医療費適正化に貢献",
+            "category": "outcome"
+          }
         ],
         "edges": []
       },

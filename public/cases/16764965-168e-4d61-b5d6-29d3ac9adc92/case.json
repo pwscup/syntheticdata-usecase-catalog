@@ -1,6 +1,6 @@
 {
   "id": "16764965-168e-4d61-b5d6-29d3ac9adc92",
-  "title": "ボストン女性労働力協議会：秘密計算によるジェンダー賃金格差分析",
+  "title": "ボストン女性労働力協議会：123組織13万人の給与データ秘匿によるジェンダー賃金格差分析",
   "region": "国外",
   "domain": "公共",
   "organization": "Boston Women's Workforce Council (BWWC) / Boston University",
@@ -41,7 +41,43 @@
       "note": ""
     }
   ],
-  "figures": [],
+  "figures": [
+    {
+      "type": "data_flow",
+      "title": "秘密計算によるジェンダー賃金格差分析フロー",
+      "data": {
+        "nodes": [
+          {
+            "id": "s1",
+            "label": "123組織・136,437名の従業員給与データ",
+            "category": "source"
+          },
+          {
+            "id": "s2",
+            "label": "個別企業のデータを他社に開示不可",
+            "category": "constraint"
+          },
+          {
+            "id": "p1",
+            "label": "秘密計算で暗号化状態のまま統計分析",
+            "category": "process"
+          },
+          {
+            "id": "a1",
+            "label": "ジェンダー賃金格差の集計分析を実施",
+            "category": "application"
+          },
+          {
+            "id": "a2",
+            "label": "個別企業データを秘匿したまま格差を可視化",
+            "category": "outcome"
+          }
+        ],
+        "edges": []
+      },
+      "note": ""
+    }
+  ],
   "occurred_at": "2021-07",
   "status": "seed",
   "created_at": "2026-03-21T07:12:31Z",

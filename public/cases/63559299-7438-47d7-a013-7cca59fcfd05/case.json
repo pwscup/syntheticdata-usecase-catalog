@@ -1,5 +1,5 @@
 {
-  "title": "デジタルマーケティング分析高度化を目的とした統計合成データ活用",
+  "title": "デジタルマーケティング分析高度化のための安全なデータ活用基盤",
   "region": "国内",
   "domain": "通信",
   "domain_sub": "デジタルマーケティング",
@@ -28,7 +28,43 @@
     }
   ],
   "id": "63559299-7438-47d7-a013-7cca59fcfd05",
-  "figures": [],
+  "figures": [
+    {
+      "type": "data_flow",
+      "title": "秘密計算による金融統計パイロットフロー",
+      "data": {
+        "nodes": [
+          {
+            "id": "s1",
+            "label": "複数金融機関の顧客・取引データ",
+            "category": "source"
+          },
+          {
+            "id": "s2",
+            "label": "金融機関間での識別可能情報の共有は不可",
+            "category": "constraint"
+          },
+          {
+            "id": "p1",
+            "label": "部分準同型暗号でデータを暗号化したまま集計",
+            "category": "process"
+          },
+          {
+            "id": "a1",
+            "label": "プライベート・パブリックデータから人口統計を学習",
+            "category": "application"
+          },
+          {
+            "id": "a2",
+            "label": "識別情報を収集せずに金融統計分析を実現",
+            "category": "outcome"
+          }
+        ],
+        "edges": []
+      },
+      "note": ""
+    }
+  ],
   "editorial_notes": [
     "technology_categoryフィールドが欠落"
   ],

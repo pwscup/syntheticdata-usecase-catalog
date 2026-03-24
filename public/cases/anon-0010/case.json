@@ -1,6 +1,6 @@
 {
   "id": "anon-0010",
-  "title": "小野薬品工業：仮名加工情報を用いた医薬品研究開発・臨床試験",
+  "title": "小野薬品工業：患者データの安全活用による医薬品研究開発・臨床試験効率化",
   "region": "国内",
   "domain": "医療",
   "organization": "小野薬品工業",
@@ -34,11 +34,31 @@
       "title": "概要フロー",
       "data": {
         "nodes": [
-          {"id": "s1", "label": "患者の臨床・医療データ", "category": "source"},
-          {"id": "s2", "label": "個人情報保護法による利用制限", "category": "constraint"},
-          {"id": "p1", "label": "仮名加工情報として加工・管理", "category": "process"},
-          {"id": "a1", "label": "医薬品の研究開発・臨床試験に活用", "category": "application"},
-          {"id": "a2", "label": "プライバシー保護と研究開発を両立", "category": "outcome"}
+          {
+            "id": "s1",
+            "label": "患者の臨床・医療データ",
+            "category": "source"
+          },
+          {
+            "id": "s2",
+            "label": "個人情報保護法による利用制限",
+            "category": "constraint"
+          },
+          {
+            "id": "p1",
+            "label": "仮名加工情報として加工・管理",
+            "category": "process"
+          },
+          {
+            "id": "a1",
+            "label": "医薬品の研究開発・臨床試験に活用",
+            "category": "application"
+          },
+          {
+            "id": "a2",
+            "label": "プライバシー保護と研究開発を両立",
+            "category": "outcome"
+          }
         ],
         "edges": []
       },

@@ -1,6 +1,6 @@
 {
   "id": "01cd7a48-123e-4efd-8896-c12c7cb19ac2",
-  "title": "清華大学/Microsoft：連合学習による医療固有表現認識（FedNER）",
+  "title": "清華大学/Microsoft：複数医療機関の臨床テキストからの固有表現認識モデル共同構築",
   "region": "国外",
   "domain": "医療",
   "organization": "Tsinghua University / Microsoft",
@@ -35,7 +35,43 @@
       "note": ""
     }
   ],
-  "figures": [],
+  "figures": [
+    {
+      "type": "data_flow",
+      "title": "連合学習による医療固有表現認識モデル構築フロー",
+      "data": {
+        "nodes": [
+          {
+            "id": "s1",
+            "label": "複数医療プラットフォームの非構造化テキスト",
+            "category": "source"
+          },
+          {
+            "id": "s2",
+            "label": "医療テキストデータの施設間共有は困難",
+            "category": "constraint"
+          },
+          {
+            "id": "p1",
+            "label": "連合学習（FedNER）でデータ非移動のまま訓練",
+            "category": "process"
+          },
+          {
+            "id": "a1",
+            "label": "医療テキストから固有表現認識モデルを構築",
+            "category": "application"
+          },
+          {
+            "id": "a2",
+            "label": "施設横断的なNERモデルをプライバシー保護下で実現",
+            "category": "outcome"
+          }
+        ],
+        "edges": []
+      },
+      "note": ""
+    }
+  ],
   "occurred_at": "2021-07",
   "status": "seed",
   "created_at": "2026-03-21T07:12:31Z",

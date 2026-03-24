@@ -1,6 +1,6 @@
 {
   "id": "anon-0017",
-  "title": "日本NCR健康保険組合：匿名加工情報による他健保ベンチマーク分析と保健指導改善",
+  "title": "日本NCR健康保険組合：個人非特定データによる他健保ベンチマーク分析と保健指導改善",
   "region": "国内",
   "domain": "医療",
   "organization": "日本NCR健康保険組合",
@@ -35,11 +35,31 @@
       "title": "概要フロー",
       "data": {
         "nodes": [
-          {"id": "s1", "label": "レセプト・健診情報", "category": "source"},
-          {"id": "s2", "label": "他組合とのデータ比較に制約", "category": "constraint"},
-          {"id": "p1", "label": "匿名加工情報として第三者提供", "category": "process"},
-          {"id": "a1", "label": "他健保とのベンチマーク分析", "category": "application"},
-          {"id": "a2", "label": "保健指導・受診勧奨を改善", "category": "outcome"}
+          {
+            "id": "s1",
+            "label": "レセプト・健診情報",
+            "category": "source"
+          },
+          {
+            "id": "s2",
+            "label": "他組合とのデータ比較に制約",
+            "category": "constraint"
+          },
+          {
+            "id": "p1",
+            "label": "匿名加工情報として第三者提供",
+            "category": "process"
+          },
+          {
+            "id": "a1",
+            "label": "他健保とのベンチマーク分析",
+            "category": "application"
+          },
+          {
+            "id": "a2",
+            "label": "保健指導・受診勧奨を改善",
+            "category": "outcome"
+          }
         ],
         "edges": []
       },

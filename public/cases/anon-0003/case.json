@@ -1,6 +1,6 @@
 {
   "id": "anon-0003",
-  "title": "島津製作所：医用機器臨床データの匿名加工情報による研究開発活用",
+  "title": "島津製作所：医用機器臨床データの個人非特定での研究開発活用",
   "region": "国内",
   "domain": "医療",
   "organization": "島津製作所",
@@ -34,11 +34,31 @@
       "title": "概要フロー",
       "data": {
         "nodes": [
-          {"id": "s1", "label": "医療機関の臨床データ", "category": "source"},
-          {"id": "s2", "label": "患者個人情報の保護が必要", "category": "constraint"},
-          {"id": "p1", "label": "臨床データを匿名加工情報に変換", "category": "process"},
-          {"id": "a1", "label": "医療機器の研究開発・改良に活用", "category": "application"},
-          {"id": "a2", "label": "プライバシー保護と機器品質向上を両立", "category": "outcome"}
+          {
+            "id": "s1",
+            "label": "医療機関の臨床データ",
+            "category": "source"
+          },
+          {
+            "id": "s2",
+            "label": "患者個人情報の保護が必要",
+            "category": "constraint"
+          },
+          {
+            "id": "p1",
+            "label": "臨床データを匿名加工情報に変換",
+            "category": "process"
+          },
+          {
+            "id": "a1",
+            "label": "医療機器の研究開発・改良に活用",
+            "category": "application"
+          },
+          {
+            "id": "a2",
+            "label": "プライバシー保護と機器品質向上を両立",
+            "category": "outcome"
+          }
         ],
         "edges": []
       },

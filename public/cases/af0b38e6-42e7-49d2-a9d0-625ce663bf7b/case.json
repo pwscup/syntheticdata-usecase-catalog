@@ -1,6 +1,6 @@
 {
   "id": "af0b38e6-42e7-49d2-a9d0-625ce663bf7b",
-  "title": "Statice/Provinzial：合成データによる保険予測分析の高速化",
+  "title": "Statice/Provinzial：セキュリティ審査不要での保険予測分析・推薦エンジン開発の高速化",
   "region": "国外",
   "domain": "金融",
   "organization": "Statice / Provinzial",
@@ -35,7 +35,43 @@
       "note": ""
     }
   ],
-  "figures": [],
+  "figures": [
+    {
+      "type": "data_flow",
+      "title": "合成データによる保険予測分析の高速化フロー",
+      "data": {
+        "nodes": [
+          {
+            "id": "s1",
+            "label": "保険会社Provinzialの顧客データ",
+            "category": "source"
+          },
+          {
+            "id": "s2",
+            "label": "実データの利用にはセキュリティ審査が必要",
+            "category": "constraint"
+          },
+          {
+            "id": "p1",
+            "label": "Staticeの合成データ生成で代替データ作成",
+            "category": "process"
+          },
+          {
+            "id": "a1",
+            "label": "MLモデル訓練・推薦エンジン開発に活用",
+            "category": "application"
+          },
+          {
+            "id": "a2",
+            "label": "データ準備期間を短縮し予測分析を高速化",
+            "category": "outcome"
+          }
+        ],
+        "edges": []
+      },
+      "note": ""
+    }
+  ],
   "occurred_at": "2023-06",
   "status": "seed",
   "created_at": "2026-03-21T07:12:31Z",

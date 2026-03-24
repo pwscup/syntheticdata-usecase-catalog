@@ -1,6 +1,6 @@
 {
   "id": "rpt-0002",
-  "title": "SynthVAEによる模擬患者データの生成と評価手順の整備",
+  "title": "英国NHS向け模擬患者データの生成と評価手順の整備",
   "region": "国外",
   "domain": "医療",
   "organization": "NHS England",

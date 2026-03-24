@@ -1,6 +1,6 @@
 {
   "id": "682bf407-56d3-4224-8be9-ad8df83cd649",
-  "title": "Apple：連合学習によるSiri音声認識の改善",
+  "title": "Apple：ユーザー音声データを端末外に出さないSiri音声認識の改善",
   "region": "国外",
   "domain": "IT",
   "organization": "Apple",
@@ -43,7 +43,43 @@
       "note": ""
     }
   ],
-  "figures": [],
+  "figures": [
+    {
+      "type": "data_flow",
+      "title": "連合学習と差分プライバシーによるSiri音声認識改善フロー",
+      "data": {
+        "nodes": [
+          {
+            "id": "s1",
+            "label": "iPhone上のユーザー音声入力データ",
+            "category": "source"
+          },
+          {
+            "id": "s2",
+            "label": "ユーザーの音声データをサーバーに送信不可",
+            "category": "constraint"
+          },
+          {
+            "id": "p1",
+            "label": "端末上で連合学習＋差分プライバシーノイズを付加",
+            "category": "process"
+          },
+          {
+            "id": "a1",
+            "label": "モデル重みのみを中央サーバーに集約",
+            "category": "application"
+          },
+          {
+            "id": "a2",
+            "label": "プライバシー保護しつつSiri音声認識を継続改善",
+            "category": "outcome"
+          }
+        ],
+        "edges": []
+      },
+      "note": ""
+    }
+  ],
   "occurred_at": "2021-07",
   "status": "seed",
   "created_at": "2026-03-21T07:12:31Z",

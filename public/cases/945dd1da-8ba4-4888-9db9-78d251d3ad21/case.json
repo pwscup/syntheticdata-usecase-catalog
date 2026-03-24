@@ -1,6 +1,6 @@
 {
   "id": "945dd1da-8ba4-4888-9db9-78d251d3ad21",
-  "title": "Alan Turing Institute：差分プライバシーによるCOVID-19リスク推定用ヘルストークン",
+  "title": "Alan Turing Institute：個人健康状態の最小開示によるCOVID-19免疫パスポート",
   "region": "国外",
   "domain": "医療",
   "organization": "Alan Turing Institute",
@@ -35,7 +35,43 @@
       "note": ""
     }
   ],
-  "figures": [],
+  "figures": [
+    {
+      "type": "data_flow",
+      "title": "差分プライバシーによるCOVID-19免疫パスポートフロー",
+      "data": {
+        "nodes": [
+          {
+            "id": "s1",
+            "label": "個人のCOVID-19検査結果",
+            "category": "source"
+          },
+          {
+            "id": "s2",
+            "label": "個人の健康状態の開示を最小限に",
+            "category": "constraint"
+          },
+          {
+            "id": "p1",
+            "label": "差分プライバシーで検査結果をランダム化",
+            "category": "process"
+          },
+          {
+            "id": "a1",
+            "label": "ヘルストークンとして免疫状態を伝達",
+            "category": "application"
+          },
+          {
+            "id": "a2",
+            "label": "個人特定せずにCOVID-19リスク推定を実現",
+            "category": "outcome"
+          }
+        ],
+        "edges": []
+      },
+      "note": ""
+    }
+  ],
   "occurred_at": "2021-07",
   "status": "seed",
   "created_at": "2026-03-21T07:12:31Z",

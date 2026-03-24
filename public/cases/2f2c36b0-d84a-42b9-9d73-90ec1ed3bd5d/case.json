@@ -1,6 +1,6 @@
 {
   "id": "2f2c36b0-d84a-42b9-9d73-90ec1ed3bd5d",
-  "title": "Danisco：秘密計算による砂糖大根生産権の秘匿入札取引",
+  "title": "Danisco：農家の入札額を秘匿した砂糖大根生産権の再配分取引",
   "region": "国外",
   "domain": "公共",
   "organization": "Danisco / Association of Sugar Beet Growers",
@@ -35,7 +35,43 @@
       "note": ""
     }
   ],
-  "figures": [],
+  "figures": [
+    {
+      "type": "data_flow",
+      "title": "秘密計算による砂糖大根生産権の秘匿入札フロー",
+      "data": {
+        "nodes": [
+          {
+            "id": "s1",
+            "label": "農家の砂糖大根生産権の入札額",
+            "category": "source"
+          },
+          {
+            "id": "s2",
+            "label": "個々の農家の入札額を他者に非開示",
+            "category": "constraint"
+          },
+          {
+            "id": "p1",
+            "label": "秘密計算で入札額を暗号化したまま処理",
+            "category": "process"
+          },
+          {
+            "id": "a1",
+            "label": "需給に基づく生産割当の再配分を実施",
+            "category": "application"
+          },
+          {
+            "id": "a2",
+            "label": "世界初の秘密計算による実用秘匿入札を実現",
+            "category": "outcome"
+          }
+        ],
+        "edges": []
+      },
+      "note": ""
+    }
+  ],
   "occurred_at": "2021-07",
   "status": "seed",
   "created_at": "2026-03-21T07:12:31Z",

@@ -1,6 +1,6 @@
 {
   "id": "419ea0dd-10d6-4ac9-82e7-901242b13e49",
-  "title": "Replica Analytics：合成データによるアルバータ州の医療記録提供",
+  "title": "Replica Analytics：アルバータ州10万件の患者記録の研究・教育向け安全提供",
   "region": "国外",
   "domain": "医療",
   "organization": "Replica Analytics",
@@ -41,7 +41,43 @@
       "note": ""
     }
   ],
-  "figures": [],
+  "figures": [
+    {
+      "type": "data_flow",
+      "title": "合成データによる医療記録の研究・教育提供フロー",
+      "data": {
+        "nodes": [
+          {
+            "id": "s1",
+            "label": "アルバータ州100,000件の患者記録",
+            "category": "source"
+          },
+          {
+            "id": "s2",
+            "label": "患者プライバシー保護のため実データ提供が困難",
+            "category": "constraint"
+          },
+          {
+            "id": "p1",
+            "label": "Replica Analyticsで合成医療データを生成",
+            "category": "process"
+          },
+          {
+            "id": "a1",
+            "label": "研究者・学生にヘルスデータサイエンス教材として提供",
+            "category": "application"
+          },
+          {
+            "id": "a2",
+            "label": "プライバシー懸念なしにデータ活用教育を実現",
+            "category": "outcome"
+          }
+        ],
+        "edges": []
+      },
+      "note": ""
+    }
+  ],
   "occurred_at": "2023-06",
   "status": "seed",
   "created_at": "2026-03-21T07:12:31Z",

@@ -1,6 +1,6 @@
 {
   "id": "fl-0003",
-  "title": "NICT・神戸大学・エルテス・テラアクソン：3銀行による継続学習型の不正送金検知",
+  "title": "NICT・神戸大学・エルテス・テラアクソン：3銀行のデータ非共有による不正送金検知モデルの継続改善",
   "region": "国内",
   "domain": "金融",
   "organization": "NICT・神戸大学・エルテス・テラアクソン",
@@ -37,11 +37,31 @@
       "title": "概要フロー",
       "data": {
         "nodes": [
-          {"id": "s1", "label": "3銀行の送金データ", "category": "source"},
-          {"id": "s2", "label": "犯罪手口が日々変化", "category": "constraint"},
-          {"id": "p1", "label": "DeepProtect+eFL-Boostで継続学習", "category": "process"},
-          {"id": "a1", "label": "変化する不正送金の検知", "category": "application"},
-          {"id": "a2", "label": "再現率が平均18pt改善", "category": "outcome"}
+          {
+            "id": "s1",
+            "label": "3銀行の送金データ",
+            "category": "source"
+          },
+          {
+            "id": "s2",
+            "label": "犯罪手口が日々変化",
+            "category": "constraint"
+          },
+          {
+            "id": "p1",
+            "label": "DeepProtect+eFL-Boostで継続学習",
+            "category": "process"
+          },
+          {
+            "id": "a1",
+            "label": "変化する不正送金の検知",
+            "category": "application"
+          },
+          {
+            "id": "a2",
+            "label": "再現率が平均18pt改善",
+            "category": "outcome"
+          }
         ],
         "edges": []
       },

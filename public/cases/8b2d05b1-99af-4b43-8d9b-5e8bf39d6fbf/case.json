@@ -1,6 +1,6 @@
 {
   "id": "8b2d05b1-99af-4b43-8d9b-5e8bf39d6fbf",
-  "title": "エストニアCentAR：秘密計算による学生の就業・卒業データ連結分析",
+  "title": "エストニアCentAR：税務・教育データの秘匿連結による学生就業と卒業の関連分析",
   "region": "国外",
   "domain": "公共",
   "organization": "Estonian Center of Applied Research (CentAR)",
@@ -41,7 +41,43 @@
       "note": ""
     }
   ],
-  "figures": [],
+  "figures": [
+    {
+      "type": "data_flow",
+      "title": "秘密計算による学生の就業・卒業データ連結分析フロー",
+      "data": {
+        "nodes": [
+          {
+            "id": "s1",
+            "label": "1,000万件の税務記録＋6万件の教育記録",
+            "category": "source"
+          },
+          {
+            "id": "s2",
+            "label": "税務・教育データの直接的な結合は法的に困難",
+            "category": "constraint"
+          },
+          {
+            "id": "p1",
+            "label": "Sharemind秘密計算で暗号化状態のまま結合・分析",
+            "category": "process"
+          },
+          {
+            "id": "a1",
+            "label": "学生の就業状況と卒業の関連を分析",
+            "category": "application"
+          },
+          {
+            "id": "a2",
+            "label": "個人を特定せず教育政策への知見を獲得",
+            "category": "outcome"
+          }
+        ],
+        "edges": []
+      },
+      "note": ""
+    }
+  ],
   "occurred_at": "2023-06",
   "status": "seed",
   "created_at": "2026-03-21T07:12:31Z",

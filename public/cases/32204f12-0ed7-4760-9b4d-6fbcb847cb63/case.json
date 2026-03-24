@@ -1,6 +1,6 @@
 {
   "id": "32204f12-0ed7-4760-9b4d-6fbcb847cb63",
-  "title": "Duality Technologies：準同型暗号によるゲノムワイド関連解析",
+  "title": "Duality Technologies：25,000人超のゲノムデータを安全に用いた疾患関連解析",
   "region": "国外",
   "domain": "医療",
   "organization": "Duality Technologies",
@@ -41,7 +41,43 @@
       "note": ""
     }
   ],
-  "figures": [],
+  "figures": [
+    {
+      "type": "data_flow",
+      "title": "準同型暗号によるゲノムワイド関連解析フロー",
+      "data": {
+        "nodes": [
+          {
+            "id": "s1",
+            "label": "25,000人以上の加齢黄斑変性ゲノムデータ",
+            "category": "source"
+          },
+          {
+            "id": "s2",
+            "label": "ゲノムデータの直接的な共有はリスクが高い",
+            "category": "constraint"
+          },
+          {
+            "id": "p1",
+            "label": "準同型暗号で暗号化状態のままGWASを実行",
+            "category": "process"
+          },
+          {
+            "id": "a1",
+            "label": "疾患関連の遺伝的変異を安全に特定",
+            "category": "application"
+          },
+          {
+            "id": "a2",
+            "label": "ゲノムプライバシーを保護しつつ大規模解析を実現",
+            "category": "outcome"
+          }
+        ],
+        "edges": []
+      },
+      "note": ""
+    }
+  ],
   "occurred_at": "2021-07",
   "status": "seed",
   "created_at": "2026-03-21T07:12:31Z",

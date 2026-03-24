@@ -1,6 +1,6 @@
 {
   "id": "6716bd23-74af-44a7-9222-cd63c7f0e583",
-  "title": "NHS Digital/Privitar：準同型暗号による患者データの安全な連結",
+  "title": "NHS Digital/Privitar：識別子を開示しないNHS患者データの安全な連結",
   "region": "国外",
   "domain": "医療",
   "organization": "NHS Digital / Privitar",
@@ -31,7 +31,43 @@
       "note": "Centre for Data Ethics and Innovation (CDEI) PETs Adoption Guide"
     }
   ],
-  "figures": [],
+  "figures": [
+    {
+      "type": "data_flow",
+      "title": "準同型暗号による患者データの安全な連結フロー",
+      "data": {
+        "nodes": [
+          {
+            "id": "s1",
+            "label": "NHSの各ドメインの患者データ",
+            "category": "source"
+          },
+          {
+            "id": "s2",
+            "label": "生の識別子を開示せずにデータ連結が必要",
+            "category": "constraint"
+          },
+          {
+            "id": "p1",
+            "label": "トークン化（仮名化）＋部分準同型暗号で連結",
+            "category": "process"
+          },
+          {
+            "id": "a1",
+            "label": "NHSドメイン間の患者データを安全にリンク",
+            "category": "application"
+          },
+          {
+            "id": "a2",
+            "label": "識別子非開示のまま統合的な患者データ分析を実現",
+            "category": "outcome"
+          }
+        ],
+        "edges": []
+      },
+      "note": ""
+    }
+  ],
   "occurred_at": "2021-07",
   "status": "seed",
   "created_at": "2026-03-21T07:12:31Z",

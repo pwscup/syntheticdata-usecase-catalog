@@ -1,6 +1,6 @@
 {
   "id": "8fded89a-93da-4d84-ac65-79f155edc64e",
-  "title": "RegulAItion：分散分析による契約レビューアルゴリズムの共同開発",
+  "title": "RegulAItion：官民のデータ非集約での契約レビューアルゴリズム共同開発",
   "region": "国外",
   "domain": "公共",
   "organization": "RegulAItion",
@@ -33,7 +33,43 @@
       "note": "Centre for Data Ethics and Innovation (CDEI) PETs Adoption Guide"
     }
   ],
-  "figures": [],
+  "figures": [
+    {
+      "type": "data_flow",
+      "title": "分散分析による契約レビューアルゴリズム共同開発フロー",
+      "data": {
+        "nodes": [
+          {
+            "id": "s1",
+            "label": "官民参加者の契約データ",
+            "category": "source"
+          },
+          {
+            "id": "s2",
+            "label": "機密契約データの集約・共有は不可",
+            "category": "constraint"
+          },
+          {
+            "id": "p1",
+            "label": "分散分析＋差分プライバシー＋匿名化で処理",
+            "category": "process"
+          },
+          {
+            "id": "a1",
+            "label": "契約レビューアルゴリズムを共同開発",
+            "category": "application"
+          },
+          {
+            "id": "a2",
+            "label": "12週間で分散データからアルゴリズムを構築",
+            "category": "outcome"
+          }
+        ],
+        "edges": []
+      },
+      "note": ""
+    }
+  ],
   "occurred_at": "2021-07",
   "status": "seed",
   "created_at": "2026-03-21T07:12:31Z",

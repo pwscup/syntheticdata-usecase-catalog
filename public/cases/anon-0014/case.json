@@ -1,6 +1,6 @@
 {
   "id": "anon-0014",
-  "title": "新潟県後期高齢者医療広域連合：匿名加工情報によるデータヘルス計画の費用対効果分析",
+  "title": "新潟県後期高齢者医療広域連合：個人非特定データによるデータヘルス計画の費用対効果分析",
   "region": "国内",
   "domain": "医療",
   "organization": "新潟県後期高齢者医療広域連合",
@@ -35,11 +35,31 @@
       "title": "概要フロー",
       "data": {
         "nodes": [
-          {"id": "s1", "label": "レセプト・健診・介護データ", "category": "source"},
-          {"id": "s2", "label": "被保険者の個人情報保護が必要", "category": "constraint"},
-          {"id": "p1", "label": "匿名加工情報として第三者提供", "category": "process"},
-          {"id": "a1", "label": "データヘルス計画の費用対効果分析", "category": "application"},
-          {"id": "a2", "label": "データヘルス計画の費用対効果分析を実施", "category": "outcome"}
+          {
+            "id": "s1",
+            "label": "レセプト・健診・介護データ",
+            "category": "source"
+          },
+          {
+            "id": "s2",
+            "label": "被保険者の個人情報保護が必要",
+            "category": "constraint"
+          },
+          {
+            "id": "p1",
+            "label": "匿名加工情報として第三者提供",
+            "category": "process"
+          },
+          {
+            "id": "a1",
+            "label": "データヘルス計画の費用対効果分析",
+            "category": "application"
+          },
+          {
+            "id": "a2",
+            "label": "データヘルス計画の費用対効果分析を実施",
+            "category": "outcome"
+          }
         ],
         "edges": []
       },

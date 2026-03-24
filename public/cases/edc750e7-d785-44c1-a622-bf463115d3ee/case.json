@@ -1,6 +1,6 @@
 {
   "id": "edc750e7-d785-44c1-a622-bf463115d3ee",
-  "title": "Enveil/DeliverFund：準同型暗号による人身売買対策データベース検索",
+  "title": "Enveil/DeliverFund：捜査内容を秘匿した人身売買対策データベース検索",
   "region": "国外",
   "domain": "公共",
   "organization": "Enveil / DeliverFund",
@@ -35,7 +35,43 @@
       "note": ""
     }
   ],
-  "figures": [],
+  "figures": [
+    {
+      "type": "data_flow",
+      "title": "準同型暗号による人身売買対策データベース検索フロー",
+      "data": {
+        "nodes": [
+          {
+            "id": "s1",
+            "label": "DeliverFundの人身売買データベース",
+            "category": "source"
+          },
+          {
+            "id": "s2",
+            "label": "捜査内容（検索クエリ）の秘匿が必要",
+            "category": "constraint"
+          },
+          {
+            "id": "p1",
+            "label": "Enveilの準同型暗号で暗号化したまま照合",
+            "category": "process"
+          },
+          {
+            "id": "a1",
+            "label": "捜査機関が検索内容を開示せずにデータ検索",
+            "category": "application"
+          },
+          {
+            "id": "a2",
+            "label": "捜査の機密性を保ちながら人身売買対策を推進",
+            "category": "outcome"
+          }
+        ],
+        "edges": []
+      },
+      "note": ""
+    }
+  ],
   "occurred_at": "2021-07",
   "status": "seed",
   "created_at": "2026-03-21T07:12:31Z",

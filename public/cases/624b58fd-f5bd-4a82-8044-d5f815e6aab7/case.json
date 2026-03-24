@@ -1,5 +1,5 @@
 {
-  "title": "大学PBL講義における合成データ提供",
+  "title": "大学PBL講義への金融データの安全な教材提供",
   "region": "国内",
   "domain": "金融",
   "domain_sub": "学術",
@@ -32,7 +32,43 @@
     }
   ],
   "id": "624b58fd-f5bd-4a82-8044-d5f815e6aab7",
-  "figures": [],
+  "figures": [
+    {
+      "type": "data_flow",
+      "title": "大学PBL講義における合成データ提供フロー",
+      "data": {
+        "nodes": [
+          {
+            "id": "s1",
+            "label": "金融機関の実取引データ",
+            "category": "source"
+          },
+          {
+            "id": "s2",
+            "label": "プライバシーの観点から大学への実データ提供が困難",
+            "category": "constraint"
+          },
+          {
+            "id": "p1",
+            "label": "合成データを生成し分析特性を維持",
+            "category": "process"
+          },
+          {
+            "id": "a1",
+            "label": "大学PBL講義の教材データとして提供",
+            "category": "application"
+          },
+          {
+            "id": "a2",
+            "label": "実践的なデータサイエンス教育を安全に実現",
+            "category": "outcome"
+          }
+        ],
+        "edges": []
+      },
+      "note": ""
+    }
+  ],
   "editorial_notes": [
     "organizationに日本総合研究所・一橋大学が欠落"
   ],

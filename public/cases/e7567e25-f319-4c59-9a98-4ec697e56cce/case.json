@@ -1,5 +1,5 @@
 {
-  "title": "製薬企業の全社横断医療データ二次利用基盤における匿名加工・仮名加工活用",
+  "title": "小野薬品工業：全社横断医療データ二次利用基盤「OASIS」によるデータ活用促進",
   "region": "国内",
   "domain": "医療",
   "domain_sub": "製薬",
@@ -33,7 +33,43 @@
     }
   ],
   "id": "e7567e25-f319-4c59-9a98-4ec697e56cce",
-  "figures": [],
+  "figures": [
+    {
+      "type": "data_flow",
+      "title": "全社横断医療データ二次利用基盤における匿名加工活用フロー",
+      "data": {
+        "nodes": [
+          {
+            "id": "s1",
+            "label": "部門ごとに分散したヘルスケアデータ",
+            "category": "source"
+          },
+          {
+            "id": "s2",
+            "label": "個人情報保護要件とデータサイロ化",
+            "category": "constraint"
+          },
+          {
+            "id": "p1",
+            "label": "匿名加工＋仮名加工＋合成データで二次利用可能に",
+            "category": "process"
+          },
+          {
+            "id": "a1",
+            "label": "全社データ活用基盤「OASIS」で提供",
+            "category": "application"
+          },
+          {
+            "id": "a2",
+            "label": "部門横断的なデータ活用とプライバシー保護を両立",
+            "category": "outcome"
+          }
+        ],
+        "edges": []
+      },
+      "note": ""
+    }
+  ],
   "status": "user",
   "created_at": "2026-03-21T06:09:36.912Z",
   "updated_at": "2026-03-21T06:09:36.912Z"

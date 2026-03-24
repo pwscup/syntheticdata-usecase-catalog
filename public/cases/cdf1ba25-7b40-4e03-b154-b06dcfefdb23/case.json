@@ -1,6 +1,6 @@
 {
   "id": "cdf1ba25-7b40-4e03-b154-b06dcfefdb23",
-  "title": "IQVIA：秘密計算・匿名化によるゲノムデータの安全な解析",
+  "title": "IQVIA：Genomics Englandのゲノムバリアントデータの安全な解析基盤",
   "region": "国外",
   "domain": "医療",
   "organization": "IQVIA",
@@ -43,7 +43,43 @@
       "note": ""
     }
   ],
-  "figures": [],
+  "figures": [
+    {
+      "type": "data_flow",
+      "title": "秘密計算・匿名化によるゲノムデータの安全な解析フロー",
+      "data": {
+        "nodes": [
+          {
+            "id": "s1",
+            "label": "Genomics Englandのゲノムバリアントデータ",
+            "category": "source"
+          },
+          {
+            "id": "s2",
+            "label": "ゲノムデータの直接的な共有はリスクが高い",
+            "category": "constraint"
+          },
+          {
+            "id": "p1",
+            "label": "トークン化＋秘密計算＋セルサイズルールで保護",
+            "category": "process"
+          },
+          {
+            "id": "a1",
+            "label": "IQVIA E360プラットフォームで安全に解析",
+            "category": "application"
+          },
+          {
+            "id": "a2",
+            "label": "ゲノムプライバシーを保護しつつ医学研究を推進",
+            "category": "outcome"
+          }
+        ],
+        "edges": []
+      },
+      "note": ""
+    }
+  ],
   "occurred_at": "2021-07",
   "status": "seed",
   "created_at": "2026-03-21T07:12:31Z",

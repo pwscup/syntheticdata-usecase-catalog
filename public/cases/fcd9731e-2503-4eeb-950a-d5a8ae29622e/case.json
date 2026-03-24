@@ -1,6 +1,6 @@
 {
   "id": "fcd9731e-2503-4eeb-950a-d5a8ae29622e",
-  "title": "Owkin：連合学習によるCOVID-19重症度予測AIモデル",
+  "title": "Owkin：複数病院のCTスキャンを共有せずに構築したCOVID-19重症度予測AIモデル",
   "region": "国外",
   "domain": "医療",
   "organization": "Owkin",
@@ -41,7 +41,43 @@
       "note": ""
     }
   ],
-  "figures": [],
+  "figures": [
+    {
+      "type": "data_flow",
+      "title": "連合学習によるCOVID-19重症度予測AIモデルフロー",
+      "data": {
+        "nodes": [
+          {
+            "id": "s1",
+            "label": "複数病院のCT肺スキャンデータ",
+            "category": "source"
+          },
+          {
+            "id": "s2",
+            "label": "病院間での患者画像データの共有は不可",
+            "category": "constraint"
+          },
+          {
+            "id": "p1",
+            "label": "連合学習（秘密計算活用）で分散訓練",
+            "category": "process"
+          },
+          {
+            "id": "a1",
+            "label": "COVID-19重症度を予測するAIモデルを構築",
+            "category": "application"
+          },
+          {
+            "id": "a2",
+            "label": "公開ベンチマークを上回る予測性能を達成",
+            "category": "outcome"
+          }
+        ],
+        "edges": []
+      },
+      "note": ""
+    }
+  ],
   "occurred_at": "2021-07",
   "status": "seed",
   "created_at": "2026-03-21T07:12:31Z",

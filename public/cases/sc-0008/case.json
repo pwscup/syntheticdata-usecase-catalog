@@ -1,19 +1,30 @@
 {
   "id": "sc-0008",
-  "title": "名古屋大学病院 × Acompany：秘密計算によるDPCデータの病院経営指標分析",
+  "title": "名古屋大学病院 × Acompany：DPCデータの秘匿分析による病院経営指標の把握",
   "region": "国内",
   "domain": "医療",
   "organization": "名古屋大学病院・Acompany",
-  "usecase_category": ["組織間データ共有"],
-  "technology_category": ["secure_computation"],
+  "usecase_category": [
+    "組織間データ共有"
+  ],
+  "technology_category": [
+    "secure_computation"
+  ],
   "review_status": "ai_generated",
-  "editorial_notes": ["出典では『仮想医療機関の擬似DPCデータ』を使用"],
+  "editorial_notes": [
+    "出典では『仮想医療機関の擬似DPCデータ』を使用"
+  ],
   "summary": "複数病院間のDPCデータについて、診療科ごとの人数・売上・コスト・粗利の統計値を、SMPCで秘匿したまま算出。各病院は他院の生データを見ずに、全体の統計値や自院の相対的位置を把握できる設計。",
   "value_proposition": "地域医療活性化や病院経営改善に使える指標を、機密性を壊さずに取得可能に。病院ごとの経営状態が外部に見えてしまう懸念を抑えつつ、ベンチマーク分析を実現",
   "privacy_enhancement_method": "調査中",
   "safety_assurance_method": "調査中",
   "utility_evaluation_method": "調査中",
-  "tags": ["秘密計算", "MPC", "DPC", "病院経営"],
+  "tags": [
+    "秘密計算",
+    "MPC",
+    "DPC",
+    "病院経営"
+  ],
   "sources": [
     {
       "source_type": "web",
@@ -27,11 +38,31 @@
       "title": "概要フロー",
       "data": {
         "nodes": [
-          {"id": "s1", "label": "複数病院のDPCデータ", "category": "source"},
-          {"id": "s2", "label": "病院間で経営データの開示が困難", "category": "constraint"},
-          {"id": "p1", "label": "SMPCで秘匿したまま統計値を算出", "category": "process"},
-          {"id": "a1", "label": "診療科別の経営指標を比較分析", "category": "application"},
-          {"id": "a2", "label": "機密性を保ちつつベンチマーク分析を実現", "category": "outcome"}
+          {
+            "id": "s1",
+            "label": "複数病院のDPCデータ",
+            "category": "source"
+          },
+          {
+            "id": "s2",
+            "label": "病院間で経営データの開示が困難",
+            "category": "constraint"
+          },
+          {
+            "id": "p1",
+            "label": "SMPCで秘匿したまま統計値を算出",
+            "category": "process"
+          },
+          {
+            "id": "a1",
+            "label": "診療科別の経営指標を比較分析",
+            "category": "application"
+          },
+          {
+            "id": "a2",
+            "label": "機密性を保ちつつベンチマーク分析を実現",
+            "category": "outcome"
+          }
         ],
         "edges": []
       },

@@ -1,6 +1,6 @@
 {
   "id": "16a58f91-a50f-49f5-ba9e-f09968be5e67",
-  "title": "米国国勢調査局：2020年国勢調査への差分プライバシー適用",
+  "title": "米国国勢調査局：2020年国勢調査の回答者保護と統計公表の両立",
   "region": "国外",
   "domain": "公共",
   "organization": "US Census Bureau",
@@ -47,7 +47,43 @@
       "note": ""
     }
   ],
-  "figures": [],
+  "figures": [
+    {
+      "type": "data_flow",
+      "title": "2020年国勢調査への差分プライバシー適用フロー",
+      "data": {
+        "nodes": [
+          {
+            "id": "s1",
+            "label": "米国国勢調査の個人回答データ",
+            "category": "source"
+          },
+          {
+            "id": "s2",
+            "label": "個人の回答内容の再特定リスク防止",
+            "category": "constraint"
+          },
+          {
+            "id": "p1",
+            "label": "差分プライバシー（離散ガウスメカニズム）でノイズ注入",
+            "category": "process"
+          },
+          {
+            "id": "a1",
+            "label": "州〜国勢調査ブロックレベルの統計を公表",
+            "category": "application"
+          },
+          {
+            "id": "a2",
+            "label": "州レベル人口は正確値を維持しつつプライバシー保護",
+            "category": "outcome"
+          }
+        ],
+        "edges": []
+      },
+      "note": ""
+    }
+  ],
   "occurred_at": "2021-07",
   "status": "seed",
   "created_at": "2026-03-21T07:12:31Z",

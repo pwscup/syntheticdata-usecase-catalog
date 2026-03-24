@@ -1,6 +1,6 @@
 {
   "id": "anon-0006",
-  "title": "個人情報保護委員会：匿名加工情報の利活用事例集",
+  "title": "個人情報保護委員会：個人非特定データの利活用事例集",
   "region": "国内",
   "domain": "公共",
   "organization": "個人情報保護委員会",
@@ -34,11 +34,31 @@
       "title": "概要フロー",
       "data": {
         "nodes": [
-          {"id": "s1", "label": "POS・決済・処方箋・レセプト等", "category": "source"},
-          {"id": "s2", "label": "多業種の個人情報保護が必要", "category": "constraint"},
-          {"id": "p1", "label": "各業種データを匿名加工情報に変換", "category": "process"},
-          {"id": "a1", "label": "公的事例集として利活用方法を整理", "category": "application"},
-          {"id": "a2", "label": "匿名加工の実務指針を社会に提供", "category": "outcome"}
+          {
+            "id": "s1",
+            "label": "POS・決済・処方箋・レセプト等",
+            "category": "source"
+          },
+          {
+            "id": "s2",
+            "label": "多業種の個人情報保護が必要",
+            "category": "constraint"
+          },
+          {
+            "id": "p1",
+            "label": "各業種データを匿名加工情報に変換",
+            "category": "process"
+          },
+          {
+            "id": "a1",
+            "label": "公的事例集として利活用方法を整理",
+            "category": "application"
+          },
+          {
+            "id": "a2",
+            "label": "匿名加工の実務指針を社会に提供",
+            "category": "outcome"
+          }
         ],
         "edges": []
       },

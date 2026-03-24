@@ -1,6 +1,6 @@
 {
   "id": "da73f700-fff9-41d7-8dab-b567a4c942bd",
-  "title": "Duality Technologies：準同型暗号による不正調査クエリの秘匿化",
+  "title": "Duality Technologies：捜査機関の検索内容を秘匿した不正調査データ照合",
   "region": "国外",
   "domain": "金融",
   "organization": "Duality Technologies",
@@ -35,7 +35,43 @@
       "note": ""
     }
   ],
-  "figures": [],
+  "figures": [
+    {
+      "type": "data_flow",
+      "title": "準同型暗号による不正調査クエリの秘匿化フロー",
+      "data": {
+        "nodes": [
+          {
+            "id": "s1",
+            "label": "データ保有者の業務データベース",
+            "category": "source"
+          },
+          {
+            "id": "s2",
+            "label": "捜査機関の検索パラメータを開示不可",
+            "category": "constraint"
+          },
+          {
+            "id": "p1",
+            "label": "準同型暗号でクエリを暗号化したまま検索",
+            "category": "process"
+          },
+          {
+            "id": "a1",
+            "label": "捜査クエリを秘匿しつつ不正データを照合",
+            "category": "application"
+          },
+          {
+            "id": "a2",
+            "label": "捜査の機密性保持とデータ活用を両立",
+            "category": "outcome"
+          }
+        ],
+        "edges": []
+      },
+      "note": ""
+    }
+  ],
   "occurred_at": "2021-07",
   "status": "seed",
   "created_at": "2026-03-21T07:12:31Z",

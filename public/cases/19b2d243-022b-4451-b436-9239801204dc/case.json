@@ -1,6 +1,6 @@
 {
   "id": "19b2d243-022b-4451-b436-9239801204dc",
-  "title": "韓国統計庁：複数PETsによる統計データハブプラットフォーム構築",
+  "title": "韓国統計庁：省庁横断の政府データ安全連結による統計データハブ構築",
   "region": "国外",
   "domain": "公共",
   "organization": "Statistics Korea",
@@ -44,7 +44,43 @@
       "note": ""
     }
   ],
-  "figures": [],
+  "figures": [
+    {
+      "type": "data_flow",
+      "title": "複数PETsによる統計データハブプラットフォーム構築フロー",
+      "data": {
+        "nodes": [
+          {
+            "id": "s1",
+            "label": "省庁間に分散した政府統計データ",
+            "category": "source"
+          },
+          {
+            "id": "s2",
+            "label": "中小企業の機密データ等の保護が必要",
+            "category": "constraint"
+          },
+          {
+            "id": "p1",
+            "label": "準同型暗号＋秘密計算＋差分プライバシーで連結",
+            "category": "process"
+          },
+          {
+            "id": "a1",
+            "label": "クラウドベースの統計データハブで提供",
+            "category": "application"
+          },
+          {
+            "id": "a2",
+            "label": "省庁横断的なデータ活用と機密性保護を両立",
+            "category": "outcome"
+          }
+        ],
+        "edges": []
+      },
+      "note": ""
+    }
+  ],
   "occurred_at": "2023-06",
   "status": "seed",
   "created_at": "2026-03-21T07:12:31Z",

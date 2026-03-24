@@ -1,6 +1,6 @@
 {
   "id": "735c745e-9ebc-4648-a46d-79932b7f4883",
-  "title": "国連PETラボ：秘密計算・差分プライバシーによる国際貿易統計の検証",
+  "title": "国連PETラボ：各国の機密貿易データを開示しない国際貿易統計の相互検証",
   "region": "国外",
   "domain": "公共",
   "organization": "United Nations PET Lab",
@@ -43,7 +43,43 @@
       "note": ""
     }
   ],
-  "figures": [],
+  "figures": [
+    {
+      "type": "data_flow",
+      "title": "秘密計算・差分プライバシーによる国際貿易統計検証フロー",
+      "data": {
+        "nodes": [
+          {
+            "id": "s1",
+            "label": "各国の輸出入量データ",
+            "category": "source"
+          },
+          {
+            "id": "s2",
+            "label": "各国の貿易データは機密で直接共有不可",
+            "category": "constraint"
+          },
+          {
+            "id": "p1",
+            "label": "秘密計算＋差分プライバシーで暗号化状態のまま検証",
+            "category": "process"
+          },
+          {
+            "id": "a1",
+            "label": "P2Pネットワーク経由で国際貿易統計を相互検証",
+            "category": "application"
+          },
+          {
+            "id": "a2",
+            "label": "機密データ非開示のまま貿易統計の信頼性向上",
+            "category": "outcome"
+          }
+        ],
+        "edges": []
+      },
+      "note": ""
+    }
+  ],
   "occurred_at": "2023-06",
   "status": "seed",
   "created_at": "2026-03-21T07:12:31Z",

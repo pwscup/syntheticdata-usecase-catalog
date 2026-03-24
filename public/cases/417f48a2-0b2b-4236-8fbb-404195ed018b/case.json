@@ -1,6 +1,6 @@
 {
   "id": "417f48a2-0b2b-4236-8fbb-404195ed018b",
-  "title": "カナダ統計局：合成データによるハッカソン用統計データ提供",
+  "title": "カナダ統計局：国勢調査データのハッカソン向け安全提供",
   "region": "国外",
   "domain": "公共",
   "organization": "Statistics Canada",
@@ -35,7 +35,43 @@
       "note": ""
     }
   ],
-  "figures": [],
+  "figures": [
+    {
+      "type": "data_flow",
+      "title": "合成データによるハッカソン用統計データ提供フロー",
+      "data": {
+        "nodes": [
+          {
+            "id": "s1",
+            "label": "カナダ国勢調査・死亡登録データ",
+            "category": "source"
+          },
+          {
+            "id": "s2",
+            "label": "機密統計データの外部提供は開示リスク",
+            "category": "constraint"
+          },
+          {
+            "id": "p1",
+            "label": "合成データを生成し分析価値を維持",
+            "category": "process"
+          },
+          {
+            "id": "a1",
+            "label": "ハッカソン参加者にデータを試験提供",
+            "category": "application"
+          },
+          {
+            "id": "a2",
+            "label": "開示リスク低減しつつ外部のデータ活用を促進",
+            "category": "outcome"
+          }
+        ],
+        "edges": []
+      },
+      "note": ""
+    }
+  ],
   "occurred_at": "2023-06",
   "status": "seed",
   "created_at": "2026-03-21T07:12:31Z",

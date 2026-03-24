@@ -1,6 +1,6 @@
 {
   "id": "04835375-9ffc-4a22-ad54-87ae391d02c2",
-  "title": "Privitar：準同型暗号による金融統計パイロット",
+  "title": "Privitar：複数金融機関のデータ非開示による人口統計分析パイロット",
   "region": "国外",
   "domain": "金融",
   "organization": "Privitar",
@@ -35,7 +35,43 @@
       "note": ""
     }
   ],
-  "figures": [],
+  "figures": [
+    {
+      "type": "data_flow",
+      "title": "準同型暗号による金融統計パイロットフロー",
+      "data": {
+        "nodes": [
+          {
+            "id": "s1",
+            "label": "複数金融機関のプライベート・パブリックデータ",
+            "category": "source"
+          },
+          {
+            "id": "s2",
+            "label": "識別可能情報の収集なしに統計を取得したい",
+            "category": "constraint"
+          },
+          {
+            "id": "p1",
+            "label": "部分準同型暗号で暗号化したまま人口統計を計算",
+            "category": "process"
+          },
+          {
+            "id": "a1",
+            "label": "金融機関横断の人口統計情報を取得",
+            "category": "application"
+          },
+          {
+            "id": "a2",
+            "label": "識別情報なしに金融統計分析を実現",
+            "category": "outcome"
+          }
+        ],
+        "edges": []
+      },
+      "note": ""
+    }
+  ],
   "occurred_at": "2021-07",
   "status": "seed",
   "created_at": "2026-03-21T07:12:31Z",

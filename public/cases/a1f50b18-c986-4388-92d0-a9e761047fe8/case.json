@@ -1,6 +1,6 @@
 {
   "id": "a1f50b18-c986-4388-92d0-a9e761047fe8",
-  "title": "インド科学研究所：TEEによるドローンプライバシー保護ソフトウェアPrivaros",
+  "title": "インド科学研究所：飛行空域プライバシーポリシー自動準拠ドローンソフトウェアPrivaros",
   "region": "国外",
   "domain": "モビリティ",
   "organization": "Indian Institute of Science",
@@ -35,7 +35,43 @@
       "note": ""
     }
   ],
-  "figures": [],
+  "figures": [
+    {
+      "type": "data_flow",
+      "title": "TEEによるドローンプライバシー保護フロー",
+      "data": {
+        "nodes": [
+          {
+            "id": "s1",
+            "label": "ドローンが収集する映像・センサーデータ",
+            "category": "source"
+          },
+          {
+            "id": "s2",
+            "label": "飛行空域のプライバシーポリシーへの準拠が必要",
+            "category": "constraint"
+          },
+          {
+            "id": "p1",
+            "label": "TEE内でプライバシーポリシーの適合判定を実行",
+            "category": "process"
+          },
+          {
+            "id": "a1",
+            "label": "Privarosソフトウェアでドローンに実装",
+            "category": "application"
+          },
+          {
+            "id": "a2",
+            "label": "プライバシーポリシー違反を自動検出・防止",
+            "category": "outcome"
+          }
+        ],
+        "edges": []
+      },
+      "note": ""
+    }
+  ],
   "occurred_at": "2021-07",
   "status": "seed",
   "created_at": "2026-03-21T07:12:31Z",

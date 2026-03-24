@@ -1,6 +1,6 @@
 {
   "id": "69356c9a-51b9-45d4-9813-3a24345434d4",
-  "title": "Enveil：準同型暗号による金融機関の顧客マッチング",
+  "title": "Enveil：顧客データ非開示での金融機関の外部データセット照合",
   "region": "国外",
   "domain": "金融",
   "organization": "Enveil",
@@ -35,7 +35,43 @@
       "note": ""
     }
   ],
-  "figures": [],
+  "figures": [
+    {
+      "type": "data_flow",
+      "title": "準同型暗号による金融機関の顧客マッチングフロー",
+      "data": {
+        "nodes": [
+          {
+            "id": "s1",
+            "label": "金融機関の顧客情報",
+            "category": "source"
+          },
+          {
+            "id": "s2",
+            "label": "顧客データの外部開示は規制上不可",
+            "category": "constraint"
+          },
+          {
+            "id": "p1",
+            "label": "Enveilの準同型暗号で暗号化したまま照合",
+            "category": "process"
+          },
+          {
+            "id": "a1",
+            "label": "外部データセットとの顧客マッチングを実施",
+            "category": "application"
+          },
+          {
+            "id": "a2",
+            "label": "データ非開示のまま顧客照合を実現",
+            "category": "outcome"
+          }
+        ],
+        "edges": []
+      },
+      "note": ""
+    }
+  ],
   "occurred_at": "2021-07",
   "status": "seed",
   "created_at": "2026-03-21T07:12:31Z",

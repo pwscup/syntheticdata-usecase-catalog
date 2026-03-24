@@ -1,6 +1,6 @@
 {
   "id": "ff4184c9-60a2-4d98-b753-e587a99e5c98",
-  "title": "Eurostat：TEEによるモバイル通信データからの人口移動統計作成",
+  "title": "Eurostat：通信事業者データの秘匿分析による人口移動統計の作成",
   "region": "国外",
   "domain": "公共",
   "organization": "Eurostat",
@@ -49,7 +49,43 @@
       "note": ""
     }
   ],
-  "figures": [],
+  "figures": [
+    {
+      "type": "data_flow",
+      "title": "TEEによるモバイル通信データからの人口移動統計作成フロー",
+      "data": {
+        "nodes": [
+          {
+            "id": "s1",
+            "label": "モバイル通信事業者の位置データ",
+            "category": "source"
+          },
+          {
+            "id": "s2",
+            "label": "個人の移動情報を第三者に開示不可",
+            "category": "constraint"
+          },
+          {
+            "id": "p1",
+            "label": "TEE内でデータを分析＋合成データ生成",
+            "category": "process"
+          },
+          {
+            "id": "a1",
+            "label": "個人非特定の人口移動統計を作成",
+            "category": "application"
+          },
+          {
+            "id": "a2",
+            "label": "公式統計の精度とプライバシー保護を両立",
+            "category": "outcome"
+          }
+        ],
+        "edges": []
+      },
+      "note": ""
+    }
+  ],
   "occurred_at": "2023-06",
   "status": "seed",
   "created_at": "2026-03-21T07:12:31Z",

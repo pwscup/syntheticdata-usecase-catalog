@@ -1,6 +1,6 @@
 {
   "id": "bf9bf5f4-399c-4de0-89cf-2dc6d74c383e",
-  "title": "Keyless：秘密計算による分散型パスワードレス認証",
+  "title": "Keyless：認証情報を一箇所に集約しない分散型パスワードレス認証",
   "region": "国外",
   "domain": "IT",
   "organization": "Keyless",
@@ -35,7 +35,43 @@
       "note": ""
     }
   ],
-  "figures": [],
+  "figures": [
+    {
+      "type": "data_flow",
+      "title": "秘密計算による分散型パスワードレス認証フロー",
+      "data": {
+        "nodes": [
+          {
+            "id": "s1",
+            "label": "ユーザーの生体情報・認証データ",
+            "category": "source"
+          },
+          {
+            "id": "s2",
+            "label": "認証情報を一箇所に集約するリスク",
+            "category": "constraint"
+          },
+          {
+            "id": "p1",
+            "label": "秘密計算で分散クラウドサーバー上で認証処理",
+            "category": "process"
+          },
+          {
+            "id": "a1",
+            "label": "パスワードレス認証プラットフォームとして提供",
+            "category": "application"
+          },
+          {
+            "id": "a2",
+            "label": "単一障害点なしの安全な認証を実現",
+            "category": "outcome"
+          }
+        ],
+        "edges": []
+      },
+      "note": ""
+    }
+  ],
   "occurred_at": "2021-07",
   "status": "seed",
   "created_at": "2026-03-21T07:12:31Z",

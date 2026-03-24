@@ -1,6 +1,6 @@
 {
   "id": "anon-0015",
-  "title": "全国健康保険協会宮城支部：匿名加工情報による睡眠・職域特性を踏まえた保健事業設計",
+  "title": "全国健康保険協会宮城支部：加入者データの安全活用による睡眠・職域特性を踏まえた保健事業設計",
   "region": "国内",
   "domain": "医療",
   "organization": "全国健康保険協会 宮城支部",
@@ -35,11 +35,31 @@
       "title": "概要フロー",
       "data": {
         "nodes": [
-          {"id": "s1", "label": "健診・睡眠・職域アンケートデータ", "category": "source"},
-          {"id": "s2", "label": "加入者の個人情報保護が必要", "category": "constraint"},
-          {"id": "p1", "label": "匿名加工情報として大学へ提供", "category": "process"},
-          {"id": "a1", "label": "睡眠・職域特性を踏まえた分析", "category": "application"},
-          {"id": "a2", "label": "多角的な分析を可能にする", "category": "outcome"}
+          {
+            "id": "s1",
+            "label": "健診・睡眠・職域アンケートデータ",
+            "category": "source"
+          },
+          {
+            "id": "s2",
+            "label": "加入者の個人情報保護が必要",
+            "category": "constraint"
+          },
+          {
+            "id": "p1",
+            "label": "匿名加工情報として大学へ提供",
+            "category": "process"
+          },
+          {
+            "id": "a1",
+            "label": "睡眠・職域特性を踏まえた分析",
+            "category": "application"
+          },
+          {
+            "id": "a2",
+            "label": "多角的な分析を可能にする",
+            "category": "outcome"
+          }
         ],
         "edges": []
       },

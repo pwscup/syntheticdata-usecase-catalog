@@ -1,6 +1,6 @@
 {
   "id": "1ab5b01d-7937-4f55-a669-fb145c0b306c",
-  "title": "Apple/Google：プライバシー保護型COVID-19接触追跡API",
+  "title": "Apple/Google：個人情報を集約しないCOVID-19接触追跡API",
   "region": "国外",
   "domain": "医療",
   "organization": "Apple/Google",
@@ -43,7 +43,43 @@
       "note": ""
     }
   ],
-  "figures": [],
+  "figures": [
+    {
+      "type": "data_flow",
+      "title": "プライバシー保護型COVID-19接触追跡フロー",
+      "data": {
+        "nodes": [
+          {
+            "id": "s1",
+            "label": "Bluetoothによる端末間の近接情報",
+            "category": "source"
+          },
+          {
+            "id": "s2",
+            "label": "個人の位置情報・接触情報の集中管理を回避",
+            "category": "constraint"
+          },
+          {
+            "id": "p1",
+            "label": "端末間でランダム識別子を交換＋端末上で照合",
+            "category": "process"
+          },
+          {
+            "id": "a1",
+            "label": "陽性者との接触を端末上で判定・通知",
+            "category": "application"
+          },
+          {
+            "id": "a2",
+            "label": "中央サーバーに個人情報を送信せず接触追跡を実現",
+            "category": "outcome"
+          }
+        ],
+        "edges": []
+      },
+      "note": ""
+    }
+  ],
   "occurred_at": "2021-07",
   "status": "seed",
   "created_at": "2026-03-21T07:12:31Z",

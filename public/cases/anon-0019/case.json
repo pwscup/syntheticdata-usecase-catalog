@@ -1,6 +1,6 @@
 {
   "id": "anon-0019",
-  "title": "理化学研究所：次世代医療基盤法に基づく仮名加工医療情報によるAI予測医学研究",
+  "title": "理化学研究所：医療情報の安全な二次利用によるAI予測医学研究",
   "region": "国内",
   "domain": "医療",
   "organization": "理化学研究所",
@@ -35,11 +35,31 @@
       "title": "概要フロー",
       "data": {
         "nodes": [
-          {"id": "s1", "label": "健康・医療データ（認定作成事業者）", "category": "source"},
-          {"id": "s2", "label": "詳細な医療データの研究利用に制約", "category": "constraint"},
-          {"id": "p1", "label": "仮名加工医療情報として安全に提供", "category": "process"},
-          {"id": "a1", "label": "AI予測医学・データ駆動型研究", "category": "application"},
-          {"id": "a2", "label": "先端研究と医療の高度化が期待される", "category": "outcome"}
+          {
+            "id": "s1",
+            "label": "健康・医療データ（認定作成事業者）",
+            "category": "source"
+          },
+          {
+            "id": "s2",
+            "label": "詳細な医療データの研究利用に制約",
+            "category": "constraint"
+          },
+          {
+            "id": "p1",
+            "label": "仮名加工医療情報として安全に提供",
+            "category": "process"
+          },
+          {
+            "id": "a1",
+            "label": "AI予測医学・データ駆動型研究",
+            "category": "application"
+          },
+          {
+            "id": "a2",
+            "label": "先端研究と医療の高度化が期待される",
+            "category": "outcome"
+          }
         ],
         "edges": []
       },

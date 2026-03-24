@@ -1,18 +1,27 @@
 {
   "id": "sc-0006",
-  "title": "DAC × Acompany：秘密計算によるプライバシー保護マーケティングデータ分析実証",
+  "title": "DAC × Acompany：広告主・メディアのデータ非開示によるマーケティング分析実証",
   "region": "国内",
   "domain": "IT",
   "organization": "デジタル・アドバタイジング・コンソーシアム（DAC）・Acompany",
-  "usecase_category": ["組織間データ共有"],
-  "technology_category": ["secure_computation"],
+  "usecase_category": [
+    "組織間データ共有"
+  ],
+  "technology_category": [
+    "secure_computation"
+  ],
   "review_status": "ai_generated",
   "summary": "DAC顧客企業のアンケート結果データと、DACのDMP「AudienceOne」の属性・コンバージョンデータを、QuickMPC（秘密分散MPC）で暗号化したまま突合・相関分析。対象件数は数十万〜数百万点規模で実施。",
   "value_proposition": "暗号化から分析完了までが数分、平均絶対誤差は0.001未満で、マーケティング分析が実務レベルで成立することを実証。プライバシーを守りながら、顧客データとメディア側データを結合分析できる価値を実現",
   "privacy_enhancement_method": "調査中",
   "safety_assurance_method": "調査中",
   "utility_evaluation_method": "調査中",
-  "tags": ["秘密計算", "MPC", "マーケティング", "プライバシー保護データ分析"],
+  "tags": [
+    "秘密計算",
+    "MPC",
+    "マーケティング",
+    "プライバシー保護データ分析"
+  ],
   "sources": [
     {
       "source_type": "web",
@@ -26,11 +35,31 @@
       "title": "概要フロー",
       "data": {
         "nodes": [
-          {"id": "s1", "label": "顧客アンケート＋DMP属性データ", "category": "source"},
-          {"id": "s2", "label": "企業間でプライバシーデータ共有不可", "category": "constraint"},
-          {"id": "p1", "label": "秘密計算(MPC)で暗号化突合・分析", "category": "process"},
-          {"id": "a1", "label": "マーケティング相関分析", "category": "application"},
-          {"id": "a2", "label": "高精度かつプライバシー保護の分析", "category": "outcome"}
+          {
+            "id": "s1",
+            "label": "顧客アンケート＋DMP属性データ",
+            "category": "source"
+          },
+          {
+            "id": "s2",
+            "label": "企業間でプライバシーデータ共有不可",
+            "category": "constraint"
+          },
+          {
+            "id": "p1",
+            "label": "秘密計算(MPC)で暗号化突合・分析",
+            "category": "process"
+          },
+          {
+            "id": "a1",
+            "label": "マーケティング相関分析",
+            "category": "application"
+          },
+          {
+            "id": "a2",
+            "label": "高精度かつプライバシー保護の分析",
+            "category": "outcome"
+          }
         ],
         "edges": []
       },

@@ -1,6 +1,6 @@
 {
   "id": "anon-0007",
-  "title": "個人情報保護委員会：ICカード乗降履歴の匿名加工による商圏分析事例",
+  "title": "個人情報保護委員会：ICカード乗降履歴の個人非特定化による商圏分析",
   "region": "国内",
   "domain": "モビリティ",
   "organization": "個人情報保護委員会",
@@ -34,11 +34,31 @@
       "title": "概要フロー",
       "data": {
         "nodes": [
-          {"id": "s1", "label": "ICカード乗降履歴データ", "category": "source"},
-          {"id": "s2", "label": "個人の移動パターンはプライバシー情報", "category": "constraint"},
-          {"id": "p1", "label": "乗降履歴を匿名加工情報に変換", "category": "process"},
-          {"id": "a1", "label": "商圏分析・ターゲティング広告", "category": "application"},
-          {"id": "a2", "label": "人流データ活用によるビジネス創出", "category": "outcome"}
+          {
+            "id": "s1",
+            "label": "ICカード乗降履歴データ",
+            "category": "source"
+          },
+          {
+            "id": "s2",
+            "label": "個人の移動パターンはプライバシー情報",
+            "category": "constraint"
+          },
+          {
+            "id": "p1",
+            "label": "乗降履歴を匿名加工情報に変換",
+            "category": "process"
+          },
+          {
+            "id": "a1",
+            "label": "商圏分析・ターゲティング広告",
+            "category": "application"
+          },
+          {
+            "id": "a2",
+            "label": "人流データ活用によるビジネス創出",
+            "category": "outcome"
+          }
         ],
         "edges": []
       },

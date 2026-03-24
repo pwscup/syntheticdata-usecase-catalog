@@ -1,6 +1,6 @@
 {
   "id": "86168efd-b1e3-4f3f-b086-4cca231972c2",
-  "title": "Data Sharing Coalition：秘密計算によるオランダ高齢者介護データ分析",
+  "title": "Data Sharing Coalition：官民の健康データ秘匿連結によるオランダ高齢者介護分析",
   "region": "国外",
   "domain": "医療",
   "organization": "Data Sharing Coalition",
@@ -41,7 +41,43 @@
       "note": ""
     }
   ],
-  "figures": [],
+  "figures": [
+    {
+      "type": "data_flow",
+      "title": "秘密計算によるオランダ高齢者介護データ分析フロー",
+      "data": {
+        "nodes": [
+          {
+            "id": "s1",
+            "label": "官民複数機関の高齢者健康・介護データ",
+            "category": "source"
+          },
+          {
+            "id": "s2",
+            "label": "機微な健康データの集約・共有は不可",
+            "category": "constraint"
+          },
+          {
+            "id": "p1",
+            "label": "秘密計算でデータを暗号化したまま分析",
+            "category": "process"
+          },
+          {
+            "id": "a1",
+            "label": "高齢者介護の提供状況とニーズを分析",
+            "category": "application"
+          },
+          {
+            "id": "a2",
+            "label": "データ集約なしに介護政策への知見を獲得",
+            "category": "outcome"
+          }
+        ],
+        "edges": []
+      },
+      "note": ""
+    }
+  ],
   "occurred_at": "2023-06",
   "status": "seed",
   "created_at": "2026-03-21T07:12:31Z",

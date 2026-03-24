@@ -1,6 +1,6 @@
 {
   "id": "7d906d64-2357-473b-a64e-abfdded0c9b9",
-  "title": "Facebook：差分プライバシーによる選挙・民主主義研究データ提供",
+  "title": "Facebook：個人保護下でのソーシャルメディアデータの選挙研究向け提供",
   "region": "国外",
   "domain": "IT",
   "organization": "Facebook (Meta)",
@@ -41,7 +41,43 @@
       "note": ""
     }
   ],
-  "figures": [],
+  "figures": [
+    {
+      "type": "data_flow",
+      "title": "差分プライバシーによる選挙・民主主義研究データ提供フロー",
+      "data": {
+        "nodes": [
+          {
+            "id": "s1",
+            "label": "Facebook上の公開リンク共有データ",
+            "category": "source"
+          },
+          {
+            "id": "s2",
+            "label": "個人ユーザーのプライバシー保護が必要",
+            "category": "constraint"
+          },
+          {
+            "id": "p1",
+            "label": "差分プライバシーでノイズを注入",
+            "category": "process"
+          },
+          {
+            "id": "a1",
+            "label": "60名の研究者にデータアクセスを提供",
+            "category": "application"
+          },
+          {
+            "id": "a2",
+            "label": "選挙・民主主義への影響に関する学術研究を支援",
+            "category": "outcome"
+          }
+        ],
+        "edges": []
+      },
+      "note": ""
+    }
+  ],
   "occurred_at": "2021-07",
   "status": "seed",
   "created_at": "2026-03-21T07:12:31Z",

@@ -1,6 +1,6 @@
 {
   "id": "70c76c4f-59a0-4829-945d-c2b2e6784f6b",
-  "title": "Google：差分プライバシーによるCOVID-19人口移動レポート",
+  "title": "Google：個人特定不可のCOVID-19パンデミック下の人口移動レポート",
   "region": "国外",
   "domain": "医療",
   "organization": "Google",
@@ -41,7 +41,43 @@
       "note": ""
     }
   ],
-  "figures": [],
+  "figures": [
+    {
+      "type": "data_flow",
+      "title": "差分プライバシーによるCOVID-19人口移動レポートフロー",
+      "data": {
+        "nodes": [
+          {
+            "id": "s1",
+            "label": "Googleユーザーのオプトイン位置情報",
+            "category": "source"
+          },
+          {
+            "id": "s2",
+            "label": "個人の位置詳細・訪問回数の保護が必要",
+            "category": "constraint"
+          },
+          {
+            "id": "p1",
+            "label": "差分プライバシーで位置データにノイズを付加",
+            "category": "process"
+          },
+          {
+            "id": "a1",
+            "label": "COVID-19人口移動レポートとして公開",
+            "category": "application"
+          },
+          {
+            "id": "a2",
+            "label": "個人特定せずにパンデミック下の移動傾向を可視化",
+            "category": "outcome"
+          }
+        ],
+        "edges": []
+      },
+      "note": ""
+    }
+  ],
   "occurred_at": "2021-07",
   "status": "seed",
   "created_at": "2026-03-21T07:12:31Z",

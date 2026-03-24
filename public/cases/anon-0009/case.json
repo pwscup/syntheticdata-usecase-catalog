@@ -1,6 +1,6 @@
 {
   "id": "anon-0009",
-  "title": "三井住友銀行：decileサービスにおける仮名加工情報の分析活用",
+  "title": "三井住友銀行：安全なデータ分析基盤による企業向けマーケティング支援「decile」",
   "region": "国内",
   "domain": "金融",
   "organization": "三井住友銀行",
@@ -34,11 +34,31 @@
       "title": "概要フロー",
       "data": {
         "nodes": [
-          {"id": "s1", "label": "decileサービス利用者情報", "category": "source"},
-          {"id": "s2", "label": "顧客の属性情報は個人情報", "category": "constraint"},
-          {"id": "p1", "label": "利用者情報を仮名加工情報に変換", "category": "process"},
-          {"id": "a1", "label": "性別・住所・年齢等による分析", "category": "application"},
-          {"id": "a2", "label": "プロダクト改善の意思決定を支援", "category": "outcome"}
+          {
+            "id": "s1",
+            "label": "decileサービス利用者情報",
+            "category": "source"
+          },
+          {
+            "id": "s2",
+            "label": "顧客の属性情報は個人情報",
+            "category": "constraint"
+          },
+          {
+            "id": "p1",
+            "label": "利用者情報を仮名加工情報に変換",
+            "category": "process"
+          },
+          {
+            "id": "a1",
+            "label": "性別・住所・年齢等による分析",
+            "category": "application"
+          },
+          {
+            "id": "a2",
+            "label": "プロダクト改善の意思決定を支援",
+            "category": "outcome"
+          }
         ],
         "edges": []
       },

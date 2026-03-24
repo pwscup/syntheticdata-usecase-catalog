@@ -1,6 +1,6 @@
 {
   "id": "f74fc73e-512a-4420-be60-ed5ea2aab0e4",
-  "title": "Frontier Development Lab/Intel：連合学習による宇宙放射線と癌リスクの研究",
+  "title": "Frontier Development Lab/Intel：複数機関のデータ非共有による宇宙放射線と癌リスクの研究",
   "region": "国外",
   "domain": "医療",
   "organization": "Frontier Development Lab / Intel",
@@ -41,7 +41,43 @@
       "note": ""
     }
   ],
-  "figures": [],
+  "figures": [
+    {
+      "type": "data_flow",
+      "title": "連合学習による宇宙放射線と癌リスクの研究フロー",
+      "data": {
+        "nodes": [
+          {
+            "id": "s1",
+            "label": "NASA・メイヨー・クリニック等の宇宙飛行士健康データ",
+            "category": "source"
+          },
+          {
+            "id": "s2",
+            "label": "複数機関間でのデータ共有が困難",
+            "category": "constraint"
+          },
+          {
+            "id": "p1",
+            "label": "連合学習でデータを移動させずにモデル訓練",
+            "category": "process"
+          },
+          {
+            "id": "a1",
+            "label": "宇宙放射線と癌リスクの相関分析に活用",
+            "category": "application"
+          },
+          {
+            "id": "a2",
+            "label": "機関横断的な研究をデータ共有なしに実現",
+            "category": "outcome"
+          }
+        ],
+        "edges": []
+      },
+      "note": ""
+    }
+  ],
   "occurred_at": "2023-06",
   "status": "seed",
   "created_at": "2026-03-21T07:12:31Z",

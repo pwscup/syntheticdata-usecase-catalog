@@ -1,6 +1,6 @@
 {
   "id": "f5a3dd5f-660f-4b01-8ae8-cd9aeb9f4522",
-  "title": "Inpher：準同型暗号・秘密計算による国際間の販売予測モデル構築",
+  "title": "Inpher：データ越境移転なしでの国際銀行間販売予測モデル構築",
   "region": "国外",
   "domain": "金融",
   "organization": "Inpher Inc.",
@@ -36,7 +36,43 @@
       "note": ""
     }
   ],
-  "figures": [],
+  "figures": [
+    {
+      "type": "data_flow",
+      "title": "準同型暗号・秘密計算による国際間販売予測モデル構築フロー",
+      "data": {
+        "nodes": [
+          {
+            "id": "s1",
+            "label": "国際的な銀行子会社の販売データ",
+            "category": "source"
+          },
+          {
+            "id": "s2",
+            "label": "データ越境移転規制により集約不可",
+            "category": "constraint"
+          },
+          {
+            "id": "p1",
+            "label": "準同型暗号＋秘密計算で暗号化状態のまま訓練",
+            "category": "process"
+          },
+          {
+            "id": "a1",
+            "label": "アナリストは出力結果のみ閲覧",
+            "category": "application"
+          },
+          {
+            "id": "a2",
+            "label": "越境移転なしに国際的な販売予測モデルを構築",
+            "category": "outcome"
+          }
+        ],
+        "edges": []
+      },
+      "note": ""
+    }
+  ],
   "occurred_at": "2021-07",
   "status": "seed",
   "created_at": "2026-03-21T07:12:31Z",

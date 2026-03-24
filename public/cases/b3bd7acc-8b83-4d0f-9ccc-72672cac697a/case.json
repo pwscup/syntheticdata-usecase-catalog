@@ -1,6 +1,6 @@
 {
   "id": "b3bd7acc-8b83-4d0f-9ccc-72672cac697a",
-  "title": "エストニアITL：秘密計算による通信業界の財務指標分析",
+  "title": "エストニアITL：競合17社の財務指標を秘匿したまま行う通信業界ベンチマーク",
   "region": "国外",
   "domain": "公共",
   "organization": "Estonian Association of Information Technology and Telecommunications (ITL)",
@@ -41,7 +41,43 @@
       "note": ""
     }
   ],
-  "figures": [],
+  "figures": [
+    {
+      "type": "data_flow",
+      "title": "秘密計算による通信業界の財務指標分析フロー",
+      "data": {
+        "nodes": [
+          {
+            "id": "s1",
+            "label": "通信業界17社の財務指標データ",
+            "category": "source"
+          },
+          {
+            "id": "s2",
+            "label": "競合企業間で個別データの開示は不可",
+            "category": "constraint"
+          },
+          {
+            "id": "p1",
+            "label": "Sharemind秘密計算で暗号化状態のまま分析",
+            "category": "process"
+          },
+          {
+            "id": "a1",
+            "label": "業界全体の財務指標を集計・比較",
+            "category": "application"
+          },
+          {
+            "id": "a2",
+            "label": "競合他社にデータを開示せず業界ベンチマークを実現",
+            "category": "outcome"
+          }
+        ],
+        "edges": []
+      },
+      "note": ""
+    }
+  ],
   "occurred_at": "2021-07",
   "status": "seed",
   "created_at": "2026-03-21T07:12:31Z",

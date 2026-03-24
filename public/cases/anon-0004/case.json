@@ -1,6 +1,6 @@
 {
   "id": "anon-0004",
-  "title": "MSD健康保険組合：レセプト・健診データの匿名加工情報による保健事業評価",
+  "title": "MSD健康保険組合：レセプト・健診データの個人非特定での保健事業評価",
   "region": "国内",
   "domain": "医療",
   "organization": "MSD健康保険組合",
@@ -34,11 +34,31 @@
       "title": "概要フロー",
       "data": {
         "nodes": [
-          {"id": "s1", "label": "健診・レセプト・保健事業データ", "category": "source"},
-          {"id": "s2", "label": "被保険者の個人情報保護が必要", "category": "constraint"},
-          {"id": "p1", "label": "各種データを匿名加工情報に変換", "category": "process"},
-          {"id": "a1", "label": "他組合比較による保健事業評価", "category": "application"},
-          {"id": "a2", "label": "データに基づく保健事業の改善", "category": "outcome"}
+          {
+            "id": "s1",
+            "label": "健診・レセプト・保健事業データ",
+            "category": "source"
+          },
+          {
+            "id": "s2",
+            "label": "被保険者の個人情報保護が必要",
+            "category": "constraint"
+          },
+          {
+            "id": "p1",
+            "label": "各種データを匿名加工情報に変換",
+            "category": "process"
+          },
+          {
+            "id": "a1",
+            "label": "他組合比較による保健事業評価",
+            "category": "application"
+          },
+          {
+            "id": "a2",
+            "label": "データに基づく保健事業の改善",
+            "category": "outcome"
+          }
         ],
         "edges": []
       },

@@ -1,6 +1,6 @@
 {
   "id": "4e50a636-676a-4d97-9535-518871638531",
-  "title": "RegulAItion：分散分析による保険リスクモデルの精度向上",
+  "title": "RegulAItion：データ非共有での労働力・保険請求データ相関分析によるリスクモデル改善",
   "region": "国外",
   "domain": "公共",
   "organization": "RegulAItion",
@@ -33,7 +33,43 @@
       "note": "Centre for Data Ethics and Innovation (CDEI) PETs Adoption Guide"
     }
   ],
-  "figures": [],
+  "figures": [
+    {
+      "type": "data_flow",
+      "title": "分散分析による保険リスクモデル精度向上フロー",
+      "data": {
+        "nodes": [
+          {
+            "id": "s1",
+            "label": "労働力データ＋保険請求データ",
+            "category": "source"
+          },
+          {
+            "id": "s2",
+            "label": "データ提供者間でのデータ共有は不可",
+            "category": "constraint"
+          },
+          {
+            "id": "p1",
+            "label": "分散分析＋差分プライバシー＋匿名化で処理",
+            "category": "process"
+          },
+          {
+            "id": "a1",
+            "label": "労働力と保険請求の相関をデータ非共有で分析",
+            "category": "application"
+          },
+          {
+            "id": "a2",
+            "label": "保険リスクモデルの精度向上を実現",
+            "category": "outcome"
+          }
+        ],
+        "edges": []
+      },
+      "note": ""
+    }
+  ],
   "occurred_at": "2021-07",
   "status": "seed",
   "created_at": "2026-03-21T07:12:31Z",

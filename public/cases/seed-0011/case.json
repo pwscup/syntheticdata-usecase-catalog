@@ -1,5 +1,5 @@
 {
-  "title": "COVID-19診療データの合成データによる外部共有と有用性検証",
+  "title": "COVID-19診療データの安全な外部共有と有用性検証",
   "region": "国外",
   "domain": "医療",
   "organization": "米ワシントン大学（記事内でMDClone関連として紹介）",
@@ -41,11 +41,31 @@
       "title": "概要フロー",
       "data": {
         "nodes": [
-          {"id": "s1", "label": "COVID-19の診療データ", "category": "source"},
-          {"id": "s2", "label": "患者プライバシーで外部共有が困難", "category": "constraint"},
-          {"id": "p1", "label": "合成データを生成し外部配布用に変換", "category": "process"},
-          {"id": "a1", "label": "入院リスク予測や流行曲線予測に活用", "category": "application"},
-          {"id": "a2", "label": "実データとほぼ同等の分析結果を確認", "category": "outcome"}
+          {
+            "id": "s1",
+            "label": "COVID-19の診療データ",
+            "category": "source"
+          },
+          {
+            "id": "s2",
+            "label": "患者プライバシーで外部共有が困難",
+            "category": "constraint"
+          },
+          {
+            "id": "p1",
+            "label": "合成データを生成し外部配布用に変換",
+            "category": "process"
+          },
+          {
+            "id": "a1",
+            "label": "入院リスク予測や流行曲線予測に活用",
+            "category": "application"
+          },
+          {
+            "id": "a2",
+            "label": "実データとほぼ同等の分析結果を確認",
+            "category": "outcome"
+          }
         ],
         "edges": []
       },

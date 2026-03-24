@@ -1,6 +1,6 @@
 {
   "id": "48b29eb5-7222-4c6a-97cf-c592a27af069",
-  "title": "OpenMined/Twitter：連合学習によるアルゴリズム透明性監査",
+  "title": "OpenMined/Twitter：データ非開示でのソーシャルメディアアルゴリズム透明性監査",
   "region": "国外",
   "domain": "IT",
   "organization": "OpenMined / Twitter",
@@ -45,7 +45,43 @@
       "note": ""
     }
   ],
-  "figures": [],
+  "figures": [
+    {
+      "type": "data_flow",
+      "title": "連合学習によるアルゴリズム透明性監査フロー",
+      "data": {
+        "nodes": [
+          {
+            "id": "s1",
+            "label": "Twitter（X）のソーシャルメディアデータ",
+            "category": "source"
+          },
+          {
+            "id": "s2",
+            "label": "研究者にデータへの直接アクセスは不可",
+            "category": "constraint"
+          },
+          {
+            "id": "p1",
+            "label": "連合学習＋リモート実行でデータ非移動のまま分析",
+            "category": "process"
+          },
+          {
+            "id": "a1",
+            "label": "アルゴリズムの偏りや影響を外部研究者が監査",
+            "category": "application"
+          },
+          {
+            "id": "a2",
+            "label": "データ非開示でプラットフォームの透明性を確保",
+            "category": "outcome"
+          }
+        ],
+        "edges": []
+      },
+      "note": ""
+    }
+  ],
   "occurred_at": "2023-06",
   "status": "seed",
   "created_at": "2026-03-21T07:12:31Z",

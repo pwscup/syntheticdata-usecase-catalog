@@ -1,6 +1,6 @@
 {
   "id": "anon-0001",
-  "title": "日産自動車：NissanConnect車両データの匿名加工によるVICS交通情報サービス提供",
+  "title": "日産自動車：NissanConnect車両データの個人非特定化によるVICS交通情報サービス提供",
   "region": "国内",
   "domain": "モビリティ",
   "organization": "日産自動車",
@@ -36,11 +36,31 @@
       "title": "概要フロー",
       "data": {
         "nodes": [
-          {"id": "s1", "label": "NissanConnect車両の位置・時刻情報", "category": "source"},
-          {"id": "s2", "label": "個人の移動履歴はプライバシー情報", "category": "constraint"},
-          {"id": "p1", "label": "位置・時刻情報を匿名加工し統計化", "category": "process"},
-          {"id": "a1", "label": "VICSへ交通情報として提供", "category": "application"},
-          {"id": "a2", "label": "渋滞回避ルートで運転時間短縮", "category": "outcome"}
+          {
+            "id": "s1",
+            "label": "NissanConnect車両の位置・時刻情報",
+            "category": "source"
+          },
+          {
+            "id": "s2",
+            "label": "個人の移動履歴はプライバシー情報",
+            "category": "constraint"
+          },
+          {
+            "id": "p1",
+            "label": "位置・時刻情報を匿名加工し統計化",
+            "category": "process"
+          },
+          {
+            "id": "a1",
+            "label": "VICSへ交通情報として提供",
+            "category": "application"
+          },
+          {
+            "id": "a2",
+            "label": "渋滞回避ルートで運転時間短縮",
+            "category": "outcome"
+          }
         ],
         "edges": []
       },

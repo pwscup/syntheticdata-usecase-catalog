@@ -1,6 +1,6 @@
 {
   "id": "anon-0016",
-  "title": "愛媛県×協会けんぽ愛媛支部：匿名加工情報によるビッグデータ活用県民健康づくり事業",
+  "title": "愛媛県×協会けんぽ愛媛支部：医療ビッグデータの安全活用による県民健康づくり事業",
   "region": "国内",
   "domain": "医療",
   "organization": "愛媛県・全国健康保険協会 愛媛支部",
@@ -46,11 +46,31 @@
       "title": "概要フロー",
       "data": {
         "nodes": [
-          {"id": "s1", "label": "健診・レセプトデータ（複数保険者）", "category": "source"},
-          {"id": "s2", "label": "保険者間のデータ共有に制約", "category": "constraint"},
-          {"id": "p1", "label": "匿名加工情報として県へ継続提供", "category": "process"},
-          {"id": "a1", "label": "ビッグデータ一元分析で課題特定", "category": "application"},
-          {"id": "a2", "label": "高血圧対策・減塩施策へ展開", "category": "outcome"}
+          {
+            "id": "s1",
+            "label": "健診・レセプトデータ（複数保険者）",
+            "category": "source"
+          },
+          {
+            "id": "s2",
+            "label": "保険者間のデータ共有に制約",
+            "category": "constraint"
+          },
+          {
+            "id": "p1",
+            "label": "匿名加工情報として県へ継続提供",
+            "category": "process"
+          },
+          {
+            "id": "a1",
+            "label": "ビッグデータ一元分析で課題特定",
+            "category": "application"
+          },
+          {
+            "id": "a2",
+            "label": "高血圧対策・減塩施策へ展開",
+            "category": "outcome"
+          }
         ],
         "edges": []
       },

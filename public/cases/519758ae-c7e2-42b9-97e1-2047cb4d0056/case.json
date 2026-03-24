@@ -1,6 +1,6 @@
 {
   "id": "519758ae-c7e2-42b9-97e1-2047cb4d0056",
-  "title": "OpenSAFELY：分散分析による大規模電子カルテの安全な研究利用",
+  "title": "OpenSAFELY：数百万件の電子カルテへのデータ移動なしの安全な研究アクセス基盤",
   "region": "国外",
   "domain": "医療",
   "organization": "OpenSAFELY",
@@ -43,7 +43,43 @@
       "note": ""
     }
   ],
-  "figures": [],
+  "figures": [
+    {
+      "type": "data_flow",
+      "title": "分散分析による大規模電子カルテの安全な研究利用フロー",
+      "data": {
+        "nodes": [
+          {
+            "id": "s1",
+            "label": "数百万件の電子カルテデータ",
+            "category": "source"
+          },
+          {
+            "id": "s2",
+            "label": "患者データをデータセンター外へ移動不可",
+            "category": "constraint"
+          },
+          {
+            "id": "p1",
+            "label": "研究者のコードをデータセンター内で実行（分散分析）",
+            "category": "process"
+          },
+          {
+            "id": "a1",
+            "label": "OpenSAFELYプラットフォームで研究者に提供",
+            "category": "application"
+          },
+          {
+            "id": "a2",
+            "label": "データ移動なしに大規模カルテの研究利用を実現",
+            "category": "outcome"
+          }
+        ],
+        "edges": []
+      },
+      "note": ""
+    }
+  ],
   "occurred_at": "2021-07",
   "status": "seed",
   "created_at": "2026-03-21T07:12:31Z",

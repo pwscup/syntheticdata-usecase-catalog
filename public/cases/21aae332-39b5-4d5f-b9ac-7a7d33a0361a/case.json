@@ -1,6 +1,6 @@
 {
   "id": "21aae332-39b5-4d5f-b9ac-7a7d33a0361a",
-  "title": "TNO：秘密計算・準同型暗号による心不全リスク患者の特定",
+  "title": "TNO：病院の生活習慣データと保険データの秘匿連結による心不全リスク患者特定",
   "region": "国外",
   "domain": "医療",
   "organization": "Netherlands Organisation for Applied Scientific Research (TNO)",
@@ -44,7 +44,43 @@
       "note": ""
     }
   ],
-  "figures": [],
+  "figures": [
+    {
+      "type": "data_flow",
+      "title": "秘密計算・準同型暗号による心不全リスク患者特定フロー",
+      "data": {
+        "nodes": [
+          {
+            "id": "s1",
+            "label": "病院の生活習慣データ＋保険のヘルスケアデータ",
+            "category": "source"
+          },
+          {
+            "id": "s2",
+            "label": "医療データと保険データの直接的な結合は不可",
+            "category": "constraint"
+          },
+          {
+            "id": "p1",
+            "label": "MPC＋準同型暗号でデータを安全に連結",
+            "category": "process"
+          },
+          {
+            "id": "a1",
+            "label": "心不全リスク患者の特定に活用",
+            "category": "application"
+          },
+          {
+            "id": "a2",
+            "label": "データ秘匿のまま医療・保険データの連携を実現",
+            "category": "outcome"
+          }
+        ],
+        "edges": []
+      },
+      "note": ""
+    }
+  ],
   "occurred_at": "2021-07",
   "status": "seed",
   "created_at": "2026-03-21T07:12:31Z",

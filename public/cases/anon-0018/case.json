@@ -1,6 +1,6 @@
 {
   "id": "anon-0018",
-  "title": "アストラゼネカ：次世代医療基盤法に基づく仮名加工医療情報による医薬品開発加速",
+  "title": "アストラゼネカ：医療情報の安全な二次利用による医薬品開発の加速",
   "region": "国内",
   "domain": "医療",
   "organization": "アストラゼネカ",
@@ -36,11 +36,31 @@
       "title": "概要フロー",
       "data": {
         "nodes": [
-          {"id": "s1", "label": "患者の詳細な医療データ", "category": "source"},
-          {"id": "s2", "label": "匿名加工では検査値等が欠落", "category": "constraint"},
-          {"id": "p1", "label": "仮名加工医療情報として詳細保持", "category": "process"},
-          {"id": "a1", "label": "リアルワールドデータ構築・薬事承認", "category": "application"},
-          {"id": "a2", "label": "医薬品開発・個別化医療の加速が期待される", "category": "outcome"}
+          {
+            "id": "s1",
+            "label": "患者の詳細な医療データ",
+            "category": "source"
+          },
+          {
+            "id": "s2",
+            "label": "匿名加工では検査値等が欠落",
+            "category": "constraint"
+          },
+          {
+            "id": "p1",
+            "label": "仮名加工医療情報として詳細保持",
+            "category": "process"
+          },
+          {
+            "id": "a1",
+            "label": "リアルワールドデータ構築・薬事承認",
+            "category": "application"
+          },
+          {
+            "id": "a2",
+            "label": "医薬品開発・個別化医療の加速が期待される",
+            "category": "outcome"
+          }
         ],
         "edges": []
       },

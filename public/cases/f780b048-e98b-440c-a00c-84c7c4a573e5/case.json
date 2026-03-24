@@ -1,6 +1,6 @@
 {
   "id": "f780b048-e98b-440c-a00c-84c7c4a573e5",
-  "title": "Microsoft：TEEによるConfidential Consortiumブロックチェーン基盤",
+  "title": "Microsoft：取引の機密性を保証するコンソーシアムブロックチェーン基盤（CCF）",
   "region": "国外",
   "domain": "IT",
   "organization": "Microsoft",
@@ -41,7 +41,43 @@
       "note": ""
     }
   ],
-  "figures": [],
+  "figures": [
+    {
+      "type": "data_flow",
+      "title": "TEEによるConfidential Consortiumブロックチェーン基盤フロー",
+      "data": {
+        "nodes": [
+          {
+            "id": "s1",
+            "label": "コンソーシアム参加者の取引データ",
+            "category": "source"
+          },
+          {
+            "id": "s2",
+            "label": "参加者間の取引の機密性確保が必要",
+            "category": "constraint"
+          },
+          {
+            "id": "p1",
+            "label": "TEE内でトランザクションを処理（CCF）",
+            "category": "process"
+          },
+          {
+            "id": "a1",
+            "label": "機密性を保ったブロックチェーン基盤として提供",
+            "category": "application"
+          },
+          {
+            "id": "a2",
+            "label": "透明性と機密性を両立したコンソーシアム運営を実現",
+            "category": "outcome"
+          }
+        ],
+        "edges": []
+      },
+      "note": ""
+    }
+  ],
   "occurred_at": "2021-07",
   "status": "seed",
   "created_at": "2026-03-21T07:12:31Z",
