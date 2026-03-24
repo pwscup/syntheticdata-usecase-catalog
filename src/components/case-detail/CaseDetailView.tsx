@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
-import type { Case } from '../../types'
+import type { Case, DataFlowData } from '../../types'
 import FigureRenderer from '../figures/FigureRenderer'
 import { TECHNOLOGY_CATEGORY_LABELS, REVIEW_STATUS_LABELS } from '../../constants/categories'
 
@@ -11,9 +11,19 @@ function TechValue({ value }: { value: string }) {
   return <span>{value}</span>
 }
 
+function getDataFlowKeywords(caseData: Case): { constraint?: string; outcome?: string } {
+  const df = caseData.figures.find((f) => f.type === 'data_flow')
+  if (!df) return {}
+  const data = df.data as DataFlowData
+  const constraint = data.nodes.find((n) => n.category === 'constraint')
+  const outcome = data.nodes.find((n) => n.category === 'outcome')
+  return { constraint: constraint?.label, outcome: outcome?.label }
+}
+
 export default function CaseDetailView({ caseData }: { caseData: Case }) {
   const [techOpen, setTechOpen] = useState(false)
   const [modalFigure, setModalFigure] = useState<number | null>(null)
+  const keywords = getDataFlowKeywords(caseData)
 
   return (
     <>
@@ -100,6 +110,13 @@ export default function CaseDetailView({ caseData }: { caseData: Case }) {
                 <span className="inline-block w-1 h-5 bg-slate-800 rounded-full" />
                 課題と解決
               </h2>
+              {keywords.constraint && (
+                <p className="mb-1.5" data-testid="keyword-constraint">
+                  <span className="inline-flex items-center gap-1 text-xs font-medium bg-amber-50 border border-amber-200 text-amber-800 px-2.5 py-0.5 rounded">
+                    課題 | {keywords.constraint}
+                  </span>
+                </p>
+              )}
               <p className="text-sm text-gray-700 leading-relaxed">{caseData.summary}</p>
             </section>
 
@@ -109,6 +126,13 @@ export default function CaseDetailView({ caseData }: { caseData: Case }) {
                 <span className="inline-block w-1 h-5 bg-slate-800 rounded-full" />
                 得られた価値
               </h2>
+              {keywords.outcome && (
+                <p className="mb-1.5" data-testid="keyword-outcome">
+                  <span className="inline-flex items-center gap-1 text-xs font-medium bg-emerald-50 border border-emerald-200 text-emerald-800 px-2.5 py-0.5 rounded">
+                    成果 | {keywords.outcome}
+                  </span>
+                </p>
+              )}
               <p className="text-sm text-gray-700 leading-relaxed">{caseData.value_proposition}</p>
             </section>
 

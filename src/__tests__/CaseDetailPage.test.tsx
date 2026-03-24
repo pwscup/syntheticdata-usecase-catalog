@@ -137,6 +137,37 @@ describe('CaseDetailPage', () => {
     expect(editLink.closest('a')).toHaveAttribute('href', '/cases/case-001/edit')
   })
 
+  it('data_flow図がある場合、constraintキーワードが「課題と解決」に表示される', () => {
+    const caseWithFigure: Case = {
+      ...mockCase,
+      figures: [{
+        type: 'data_flow' as const,
+        title: 'テストフロー',
+        data: {
+          nodes: [
+            { id: 's1', label: 'テスト元データ', category: 'source' },
+            { id: 's2', label: 'テスト制約', category: 'constraint' },
+            { id: 'p1', label: 'テスト処理', category: 'process' },
+            { id: 'a1', label: 'テスト活用', category: 'application' },
+            { id: 'a2', label: 'テスト成果', category: 'outcome' },
+          ],
+          edges: [],
+        },
+        note: '',
+      }],
+    }
+    mockedUseCases.mockReturnValue({ cases: [caseWithFigure], loading: false, error: null })
+    renderWithRoute('case-001')
+    expect(screen.getByTestId('keyword-constraint')).toHaveTextContent('テスト制約')
+    expect(screen.getByTestId('keyword-outcome')).toHaveTextContent('テスト成果')
+  })
+
+  it('data_flow図がない場合、キーワードチップが表示されない', () => {
+    renderWithRoute('case-001')
+    expect(screen.queryByTestId('keyword-constraint')).not.toBeInTheDocument()
+    expect(screen.queryByTestId('keyword-outcome')).not.toBeInTheDocument()
+  })
+
   it('review_statusバッジが表示される', () => {
     renderWithRoute('case-001')
     expect(screen.getByTestId('review-status-badge')).toBeInTheDocument()
