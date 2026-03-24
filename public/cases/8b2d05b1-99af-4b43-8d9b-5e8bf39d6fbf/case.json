@@ -1,6 +1,6 @@
 {
   "id": "8b2d05b1-99af-4b43-8d9b-5e8bf39d6fbf",
-  "title": "エストニアCentAR：税務・教育データの秘匿連結による学生就業と卒業の関連分析",
+  "title": "CentAR：学生の就業と卒業の関連分析への秘密計算活用",
   "region": "国外",
   "domain": "公共",
   "organization": "Estonian Center of Applied Research (CentAR)",
@@ -11,8 +11,8 @@
     "secure_computation"
   ],
   "review_status": "ai_generated",
-  "summary": "エストニアのCentARがSharemind秘密計算を用いて、1,000万件の税務記録と6万件の教育記録を暗号化状態のまま結合・分析。学生の就業状況と卒業の関連を、元データを一切復号せずに統計的に明らかにした大規模研究。",
-  "value_proposition": "秘密計算によりプライバシーを保護した暗号化状態のまま、大規模な税務・教育データを結合分析。暗号化データに対する統計分析の実用性を示した世界最大級の事例。",
+  "summary": "学生の就業状況と卒業の関連を統計的に分析するには、税務記録と教育記録を結合する必要があったが、これらは異なる機関が管理する機密データであり、個人を特定できる形での共有は許可されていなかった。1,000万件の税務記録と6万件の教育記録という大規模データの安全な結合が課題だった。",
+  "value_proposition": "Sharemind秘密計算を用いて、1,000万件の税務記録と6万件の教育記録を暗号化状態のまま結合・分析し、元データを一切復号せずに学生の就業と卒業の関連を統計的に明らかにした。暗号化データに対する大規模統計分析の実用性を示した世界最大級の事例となった。",
   "privacy_enhancement_method": "Sharemind MPCによるデータの暗号化状態での結合・分析（復号なし）",
   "safety_assurance_method": "調査中",
   "utility_evaluation_method": "調査中",

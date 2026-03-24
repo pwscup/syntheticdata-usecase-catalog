@@ -1,6 +1,6 @@
 {
   "id": "b3bd7acc-8b83-4d0f-9ccc-72672cac697a",
-  "title": "エストニアITL：競合17社の財務指標を秘匿したまま行う通信業界ベンチマーク",
+  "title": "エストニアITL：秘密計算による通信業界の競合間財務指標分析",
   "region": "国外",
   "domain": "公共",
   "organization": "Estonian Association of Information Technology and Telecommunications (ITL)",
@@ -11,8 +11,8 @@
     "secure_computation"
   ],
   "review_status": "ai_generated",
-  "summary": "エストニアのITL（情報通信協会）がSharemind秘密計算プラットフォームを活用し、通信業界17社の財務指標を機密を保ちながら共有・分析。競合企業間でも個別データを開示せずに業界全体の指標分析を実現。",
-  "value_proposition": "秘密計算により競合企業間で財務データを秘匿したまま業界統計を算出。企業の機密情報保護と業界全体のベンチマーク分析を両立する商用実装例。",
+  "summary": "通信業界では業界全体の動向把握のために各社の財務指標を集約・分析したいが、競合他社に自社の財務データを開示することは営業機密上できず、業界横断の統計分析が困難であった。",
+  "value_proposition": "Sharemind秘密計算プラットフォームを活用し、通信業界17社の財務データを各社に秘匿したまま業界全体の統計指標を算出した。競合企業間でも個別データを開示せずにベンチマーク分析を実現した商用実装例である。",
   "privacy_enhancement_method": "Sharemind秘密計算プラットフォームによるデータ分散処理",
   "safety_assurance_method": "調査中",
   "utility_evaluation_method": "調査中",

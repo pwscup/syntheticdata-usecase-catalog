@@ -1,6 +1,6 @@
 {
   "id": "da73f700-fff9-41d7-8dab-b567a4c942bd",
-  "title": "Duality Technologies：捜査機関の検索内容を秘匿した不正調査データ照合",
+  "title": "Duality Technologies：準同型暗号を用いた不正調査クエリの秘匿化",
   "region": "国外",
   "domain": "金融",
   "organization": "Duality Technologies",
@@ -11,8 +11,8 @@
     "secure_computation"
   ],
   "review_status": "ai_generated",
-  "summary": "Duality Technologiesが開発した、準同型暗号を用いたプライバシー保護型不正調査クエリシステム。外部の捜査機関がデータ保有者に検索パラメータを開示することなく、機密データに対してSQLライクなクエリを実行可能。",
-  "value_proposition": "準同型暗号により、調査対象の情報も検索パラメータもデータ保有者に開示せずに不正調査を実施。捜査の機密性とデータ保護を両立する革新的なアプローチ。",
+  "summary": "金融犯罪の調査では、捜査機関がデータ保有者（金融機関等）の機密データに対して検索を行う必要があるが、検索パラメータ自体が捜査情報を含むため、データ保有者に開示できないという課題があった。一方で、データ保有者側も顧客情報の保護義務があり、捜査機関にデータを直接提供することが困難だった。",
+  "value_proposition": "準同型暗号を用いることで、検索パラメータをデータ保有者に開示せずにSQLライクなクエリを実行できるシステムを開発した。捜査の機密性と顧客データ保護を両立し、概念実証を通じてその実現可能性を示した。",
   "privacy_enhancement_method": "準同型暗号によるクエリパラメータ・結果の秘匿化",
   "safety_assurance_method": "調査中",
   "utility_evaluation_method": "調査中",

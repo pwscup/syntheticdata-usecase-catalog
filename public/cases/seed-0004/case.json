@@ -1,6 +1,6 @@
 {
   "id": "seed-0004",
-  "title": "Fintech連携テスト用データの承認プロセス短縮（6カ月→3日）",
+  "title": "Nationwide：Fintech連携テストの迅速化を目的とした合成データの活用",
   "region": "国外",
   "domain": "金融",
   "organization": "Nationwide",
@@ -11,8 +11,8 @@
     "synthetic_data"
   ],
   "review_status": "human_reviewed",
-  "summary": "Fintech連携のテスト時、実データを第三者に提供するには煩雑な準備・承認プロセスが必要で最大6カ月を要していた。Nationwideは合成データをテスト用データとして活用し、承認プロセスの簡略化を検討している。",
-  "value_proposition": "データ準備・承認期間を最大6カ月から3日に短縮。",
+  "summary": "Fintech企業との連携テストでは実データを第三者に提供する必要があるが、煩雑な準備・承認プロセスが必要で最大6カ月を要していた。テスト開始までの長いリードタイムが、連携推進の障壁となっていた。",
+  "value_proposition": "合成データをテスト用データとして活用し、データ準備・承認期間を最大6カ月から3日に短縮した。統計情報と複雑な関係性を保持した合成データにより、実データと同等のテスト環境を実現した。",
   "privacy_enhancement_method": "統計情報と複雑な関係を学習し、元情報を含まない合成データセットを作成（手法名は調査中）",
   "safety_assurance_method": "調査中",
   "utility_evaluation_method": "調査中",

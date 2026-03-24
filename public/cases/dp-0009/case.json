@@ -11,8 +11,8 @@
     "differential_privacy"
   ],
   "review_status": "ai_generated",
-  "summary": "大学・専攻・学位別の卒業後の就業・所得データを対象に、教育データと雇用データを結び付けた実験的集計表を差分プライバシーで保護して公開している。Post-Secondary Employment Outcomes（PSEO）として2019年以降継続更新されている。",
-  "value_proposition": "学生は進学先や専攻選択の参考にでき、州政府や企業は人材供給の把握に使える。高感度な就業・所得情報でも公表可能な形に変換できている。",
+  "summary": "大学・専攻・学位別の卒業後の就業状況や所得水準は、学生の進学先選択や州政府の人材政策に有用な情報だが、教育データと雇用データを結びつけた詳細な集計表は個人の所得情報が特定されるリスクが高い。高感度な就業・所得情報を含む統計を安全に公開する手法が必要とされていた。",
+  "value_proposition": "Post-Secondary Employment Outcomes（PSEO）として、差分プライバシーで保護した大学・専攻・学位別の就業・所得集計表を2019年以降継続的に公開している。学生の進学先選択や州政府・企業の人材供給把握に活用でき、高感度な所得情報を安全に公表する仕組みを実現した。",
   "privacy_enhancement_method": "調査中",
   "safety_assurance_method": "調査中",
   "utility_evaluation_method": "調査中",

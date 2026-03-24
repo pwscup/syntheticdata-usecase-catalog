@@ -1,6 +1,6 @@
 {
   "id": "f74fc73e-512a-4420-be60-ed5ea2aab0e4",
-  "title": "Frontier Development Lab/Intel：複数機関のデータ非共有による宇宙放射線と癌リスクの研究",
+  "title": "FDL／Intel：宇宙放射線と癌リスク研究のための連合学習によるデータ連携",
   "region": "国外",
   "domain": "医療",
   "organization": "Frontier Development Lab / Intel",
@@ -11,8 +11,8 @@
     "federated_learning"
   ],
   "review_status": "ai_generated",
-  "summary": "Frontier Development LabとIntelが連合学習を活用し、NASA、メイヨー・クリニック、NASAジーンラボが保有する宇宙飛行士の健康データに、データ転送なしでアクセス。宇宙放射線と癌リスクの関連を、各機関のデータを移動させずにモデル訓練。",
-  "value_proposition": "連合学習により、高度に保護された宇宙飛行士の健康データを移動させずに研究を実施。データ転送の法的・技術的障壁を回避しながら、宇宙医学研究を推進。",
+  "summary": "宇宙放射線が宇宙飛行士の癌リスクに与える影響を解明するには、NASA、メイヨー・クリニック、NASAジーンラボなど複数機関が保有する健康データや遺伝子データを横断的に分析する必要があった。しかし、宇宙飛行士の健康データは高度に保護されており、プライバシー上の制約から機関間でのデータ共有が困難で、研究推進の大きな障壁となっていた。",
+  "value_proposition": "連合学習（Intel OpenFL）を活用し、各機関のデータを外部に移動させることなく機械学習モデルを共同訓練できる仕組みを構築した。これにより、放射線被曝に関連する複数の遺伝子（癌進行・免疫応答に関与）の特定や、齧歯類の放射線実験データがヒトへの影響予測に活用できる可能性の検証に成功した。",
   "privacy_enhancement_method": "連合学習による分散データ上でのモデル訓練（データ転送なし）",
   "safety_assurance_method": "調査中",
   "utility_evaluation_method": "調査中",

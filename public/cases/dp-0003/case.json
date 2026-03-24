@@ -11,8 +11,8 @@
     "differential_privacy"
   ],
   "review_status": "ai_generated",
-  "summary": "よく訪れる場所で撮影された写真の種類に関する情報を対象に、差分プライバシーを用いて群集レベルの傾向を学習し、PhotosのMemoriesやPlacesで代表写真を選定している。個人の写真や行動をデバイス外に出さない設計としている。",
-  "value_proposition": "個人の写真や行動を直接外部に出さずに、群集レベルの傾向を学習し、写真体験を改善できる。",
+  "summary": "PhotosアプリのMemoriesやPlaces機能では、特定の場所で撮影される写真の傾向を学習して代表写真を選定する必要がある。しかし、個々のユーザーがどこで何を撮影したかという情報は極めてプライベートであり、そのままサーバーに送信することはプライバシー上の問題があった。",
+  "value_proposition": "差分プライバシーを用いて、個人の写真や行動をデバイス外に出さずに群集レベルの撮影傾向を学習する仕組みを実現した。これにより、よく訪れる場所で撮影される写真の種類を把握し、MemoriesやPlacesにおける代表写真の選定精度を向上させている。",
   "privacy_enhancement_method": "調査中",
   "safety_assurance_method": "調査中",
   "utility_evaluation_method": "調査中",

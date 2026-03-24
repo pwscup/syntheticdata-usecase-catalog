@@ -1,6 +1,6 @@
 {
   "id": "af0b38e6-42e7-49d2-a9d0-625ce663bf7b",
-  "title": "Statice/Provinzial：セキュリティ審査不要での保険予測分析・推薦エンジン開発の高速化",
+  "title": "Provinzial：保険予測分析の迅速化のための合成データ活用",
   "region": "国外",
   "domain": "金融",
   "organization": "Statice / Provinzial",
@@ -11,8 +11,8 @@
     "synthetic_data"
   ],
   "review_status": "ai_generated",
-  "summary": "ドイツの保険会社Provinzialが、Staticeの合成データを用いて予測分析や「ネクストベストオファー」推薦エンジンのためのMLモデルを訓練。合成データの活用により、プライバシーリスク評価にかかる時間を3ヶ月短縮。",
-  "value_proposition": "合成データによりプライバシーリスク評価の工程を3ヶ月短縮し、予測分析モデルの開発を大幅に加速。保険業界におけるデータ活用とコンプライアンスの両立を実現。",
+  "summary": "ドイツの保険会社Provinzialでは、予測分析や「ネクストベストオファー」推薦エンジンのためのMLモデル開発に実データを使用する際、プライバシーリスク評価に長期間を要していた。コンプライアンス対応の負荷がモデル開発のスピードを制約する課題があった。",
+  "value_proposition": "Staticeの合成データを用いてMLモデルを訓練することで、プライバシーリスク評価にかかる時間を3ヶ月短縮し、予測分析モデルの開発を大幅に加速した。保険業界におけるデータ活用とコンプライアンスの両立を実現している。",
   "privacy_enhancement_method": "合成データ生成による実データの代替",
   "safety_assurance_method": "調査中",
   "utility_evaluation_method": "調査中",

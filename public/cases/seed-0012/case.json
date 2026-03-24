@@ -1,5 +1,5 @@
 {
-  "title": "がん臨床データの安全な配布による審査不要の研究準備迅速化",
+  "title": "NHS Digital：がん臨床研究の迅速化を目的とした合成データの配布",
   "region": "国外",
   "domain": "医療",
   "domain_sub": "がん臨床",
@@ -13,8 +13,8 @@
     "synthetic_data"
   ],
   "review_status": "human_reviewed",
-  "summary": "がん臨床データの利用には申請・審査が必要で、研究企画の検討やプログラム開発の着手までに時間がかかっていた。NHS Digitalは100万人超の合成データを配布し、審査不要で即座に研究準備に取り掛かれる環境を提供した。",
-  "value_proposition": "申請・審査不要で研究準備に着手可能に。分析プログラムの作成を迅速化。",
+  "summary": "がん臨床データの利用には申請・審査プロセスが必要で、研究企画の検討や分析プログラムの開発着手までに長い時間がかかっていた。データアクセスまでのリードタイムが、がん研究の迅速な推進を妨げていた。",
+  "value_proposition": "100万人超のがん臨床合成データ（Simulacrum）を一般配布し、申請・審査不要で即座に研究準備に着手できる環境を提供した。研究者は分析プログラムの作成やフィージビリティ検証を迅速に開始できるようになった。",
   "privacy_enhancement_method": "調査中（https://simulacrum.healthdatainsight.org.uk/wp/wp-content/uploads/2018/11/Methodology-Overview-Nov18.pdf）",
   "safety_assurance_method": "調査中",
   "utility_evaluation_method": "調査中",

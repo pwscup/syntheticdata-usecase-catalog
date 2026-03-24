@@ -1,6 +1,6 @@
 {
   "id": "945dd1da-8ba4-4888-9db9-78d251d3ad21",
-  "title": "Alan Turing Institute：個人健康状態の最小開示によるCOVID-19免疫パスポート",
+  "title": "Alan Turing Institute：COVID-19リスク推計のための差分プライバシー型ヘルストークン",
   "region": "国外",
   "domain": "医療",
   "organization": "Alan Turing Institute",
@@ -11,8 +11,8 @@
     "differential_privacy"
   ],
   "review_status": "ai_generated",
-  "summary": "Alan Turing Instituteが提案した、差分プライバシーを用いたCOVID-19免疫パスポート「ヘルストークン」の研究。個人の検査結果をランダム化しつつ、集団レベルのリスク推計を可能にすることで、差別リスクを軽減しながらパンデミック対策に貢献する仕組み。",
-  "value_proposition": "差分プライバシーにより個人の検査結果を保護しながら、集団レベルのリスク推計を実現。COVID-19パスポートの社会実装における差別リスク軽減に貢献する。",
+  "summary": "COVID-19パンデミック下で免疫パスポートの導入が検討されたが、個人の検査結果を直接利用すると、感染歴や免疫状態に基づく差別が生じるリスクがあった。個人の健康状態を保護しつつ、集団レベルでのリスク評価を可能にする仕組みが求められていた。",
+  "value_proposition": "差分プライバシーを用いた「ヘルストークン」の仕組みを提案し、個人の検査結果をランダム化しつつ集団レベルのリスク推計を可能にした。COVID-19パスポートの社会実装における差別リスク軽減の技術的アプローチを示した研究成果である。",
   "privacy_enhancement_method": "差分プライバシーによる個人検査結果のランダム化",
   "safety_assurance_method": "調査中",
   "utility_evaluation_method": "調査中",

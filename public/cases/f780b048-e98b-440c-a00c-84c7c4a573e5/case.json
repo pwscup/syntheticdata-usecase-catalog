@@ -1,6 +1,6 @@
 {
   "id": "f780b048-e98b-440c-a00c-84c7c4a573e5",
-  "title": "Microsoft：取引の機密性を保証するコンソーシアムブロックチェーン基盤（CCF）",
+  "title": "Microsoft：TEEを活用した機密ブロックチェーン基盤CCFの開発",
   "region": "国外",
   "domain": "IT",
   "organization": "Microsoft",
@@ -11,8 +11,8 @@
     "secure_computation"
   ],
   "review_status": "ai_generated",
-  "summary": "MicrosoftがTEE（信頼実行環境）を用いたブロックチェーン向け機密性フレームワーク「Confidential Consortium Framework（CCF）」を開発。暗号化されたトランザクションをTEE内で処理し、公開検証可能性を維持しながら秒間50,000以上のトランザクションを実現。",
-  "value_proposition": "TEEによりブロックチェーンのトランザクション機密性と公開検証可能性を両立。高スループットを維持しながらエンタープライズ向けの機密ブロックチェーン基盤を提供。",
+  "summary": "企業向けブロックチェーンでは、トランザクション内容の機密性を確保しつつ、公開的な検証可能性を維持する必要があった。従来のブロックチェーンではトランザクション内容が参加者全員に公開されるため、企業間の機密取引への適用が困難であった。",
+  "value_proposition": "TEE（信頼実行環境）内でトランザクションを処理するConfidential Consortium Framework（CCF）を開発し、機密性と公開検証可能性を両立した。秒間50,000以上のトランザクション処理を実現し、エンタープライズ向けの機密ブロックチェーン基盤を提供した。",
   "privacy_enhancement_method": "TEE内でのトランザクション処理＋公開検証可能な証明",
   "safety_assurance_method": "調査中",
   "utility_evaluation_method": "調査中",

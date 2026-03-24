@@ -1,6 +1,6 @@
 {
   "id": "seed-0008",
-  "title": "COVID-19分析における安全なデータ活用と実データ同等の結果確認",
+  "title": "MDClone：COVID-19分析におけるプライバシー保護を目的とした合成データの活用",
   "region": "国外",
   "domain": "医療",
   "organization": "MDClone",
@@ -11,8 +11,8 @@
     "synthetic_data"
   ],
   "review_status": "human_reviewed",
-  "summary": "COVID-19の分析では迅速なデータ共有が求められたが、患者の診療データは厳しいプライバシー保護の対象だった。MDCloneの合成データを使用して分析を行い、実データとほぼ同等の分析結果が得られることを確認した。",
-  "value_proposition": "合成データによる分析結果が実データとほぼ同等であることを確認。",
+  "summary": "COVID-19のパンデミック下では迅速なデータ共有と分析が求められたが、患者の診療データは厳しいプライバシー保護の対象であり、研究者間での迅速な共有が困難だった。",
+  "value_proposition": "MDCloneの合成データを使用してCOVID-19の分析を実施し、合成データによる分析結果が実データとほぼ同等であることを確認した。プライバシーを保護しつつ、迅速なデータ共有と分析を両立する手法を示した。",
   "privacy_enhancement_method": "カーネル密度推定（ベンダ一覧に記載）",
   "safety_assurance_method": "差分プライバシー（ベンダ一覧に記載）",
   "utility_evaluation_method": "実データとの分析結果比較（同等と記載）",

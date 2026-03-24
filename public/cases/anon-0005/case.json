@@ -11,8 +11,8 @@
     "anonymization"
   ],
   "review_status": "ai_generated",
-  "summary": "JCBグループが発行するクレジットカード会員の属性・決済情報を個人が特定できないよう統計化（匿名加工）し、消費指数「JCB消費NOW」として有償提供。匿名加工に基づくデータ提供サービスの事例。",
-  "value_proposition": "調査中",
+  "summary": "リアルタイムの消費動向を把握するには大規模な決済データの活用が有効だが、クレジットカードの決済情報は個人の購買行動に直結するプライバシー情報であり、そのまま外部に公開・提供することはできなかった。",
+  "value_proposition": "クレジットカード会員の属性・決済情報を匿名加工し統計化することで、消費指数「JCB消費NOW」として一般に公開している。個人を特定できない形でのデータ公開により、社会全体の消費動向把握に貢献する公開型サービスを実現した。",
   "privacy_enhancement_method": "調査中",
   "safety_assurance_method": "調査中",
   "utility_evaluation_method": "調査中",

@@ -1,6 +1,6 @@
 {
   "id": "edc750e7-d785-44c1-a622-bf463115d3ee",
-  "title": "Enveil/DeliverFund：捜査内容を秘匿した人身売買対策データベース検索",
+  "title": "Enveil／DeliverFund：人身売買対策データベースへの秘匿検索の実現",
   "region": "国外",
   "domain": "公共",
   "organization": "Enveil / DeliverFund",
@@ -11,8 +11,8 @@
     "secure_computation"
   ],
   "review_status": "ai_generated",
-  "summary": "EnveilとDeliverFundが準同型暗号を活用して、人身売買データベースへの安全なアクセスを実現。捜査機関が検索内容を開示することなくデータの照合・検索を行え、データベースのセキュリティも維持される。",
-  "value_proposition": "準同型暗号により、人身売買対策の捜査情報を保護しつつデータベース検索を可能に。捜査の秘密性とデータ保護を両立し、犯罪対策におけるPETs活用の先進事例。",
+  "summary": "人身売買の捜査において、捜査機関がデータベースを検索する際に検索内容自体が漏洩するリスクがあった。捜査対象の情報を開示せずにデータベースと照合する手段がなく、捜査の秘密性とデータ活用の両立が困難であった。",
+  "value_proposition": "Enveil社の準同型暗号技術を活用し、検索クエリと結果を暗号化したままデータベース照合を実現した。捜査機関は検索内容を開示することなく人身売買データベースとの照合が可能となり、捜査の秘密性とデータ保護を両立した。",
   "privacy_enhancement_method": "準同型暗号による検索クエリ・結果の秘匿化",
   "safety_assurance_method": "調査中",
   "utility_evaluation_method": "調査中",

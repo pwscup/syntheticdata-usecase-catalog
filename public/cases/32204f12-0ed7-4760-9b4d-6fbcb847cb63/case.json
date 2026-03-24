@@ -1,6 +1,6 @@
 {
   "id": "32204f12-0ed7-4760-9b4d-6fbcb847cb63",
-  "title": "Duality Technologies：25,000人超のゲノムデータを安全に用いた疾患関連解析",
+  "title": "Duality Technologies：準同型暗号によるプライバシー保護型ゲノムワイド関連解析",
   "region": "国外",
   "domain": "医療",
   "organization": "Duality Technologies",
@@ -11,8 +11,8 @@
     "secure_computation"
   ],
   "review_status": "ai_generated",
-  "summary": "Duality Technologiesが準同型暗号を用いて、25,000人以上の加齢黄斑変性データに対するゲノムワイド関連解析（GWAS）を安全に実施するフレームワークを開発。既存のMPCベースの手法と比較して約30倍高速に処理可能。",
-  "value_proposition": "準同型暗号により、ゲノムデータを復号することなくGWASを実施。既存手法比30倍の高速化により、大規模ゲノム研究におけるプライバシー保護型解析の実用性を大幅に向上。",
+  "summary": "ゲノムワイド関連解析（GWAS）は疾患の遺伝的要因の解明に不可欠だが、ゲノムデータは究極の個人情報であり、大規模なデータ共有や集約にはプライバシー上の強い制約がある。既存のプライバシー保護型解析手法は処理速度が遅く、大規模データセットへの適用が実用的ではなかった。",
+  "value_proposition": "準同型暗号を用いたフレームワークにより、25,000人以上の加齢黄斑変性データに対するGWASを、ゲノムデータを復号することなく安全に実施した。既存のMPCベース手法と比較して約30倍の高速化を達成し、大規模ゲノム研究におけるプライバシー保護型解析の実用性を大幅に向上させた。",
   "privacy_enhancement_method": "準同型暗号によるゲノムデータの暗号化状態での解析",
   "safety_assurance_method": "調査中",
   "utility_evaluation_method": "調査中",

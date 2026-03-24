@@ -11,8 +11,8 @@
     "anonymization"
   ],
   "review_status": "ai_generated",
-  "summary": "仮名加工情報を業務の改善・効率化・提供役務の向上、および新たな役務や研究開発に向けた分析に活用。制度を前提にした社内活用方針の事例。",
-  "value_proposition": "調査中",
+  "summary": "業務改善や新規サービスの研究開発のために顧客データや業務データを分析したいが、個人情報をそのまま社内の分析用途に転用することには法的・運用上の制約があった。",
+  "value_proposition": "個人情報を仮名加工情報として加工することで、個人情報保護法に準拠しつつ、業務の改善・効率化・提供役務の向上、および新規サービスの研究開発に向けたデータ分析を可能にした。",
   "privacy_enhancement_method": "調査中",
   "safety_assurance_method": "調査中",
   "utility_evaluation_method": "調査中",

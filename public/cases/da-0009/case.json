@@ -1,6 +1,6 @@
 {
   "id": "da-0009",
-  "title": "PHT-meDIC：ドイツ医療情報イニシアティブのデータ非移動型解析基盤",
+  "title": "ドイツMII：大学病院ネットワークにおける分散型臨床研究基盤の構築",
   "region": "国外",
   "domain": "医療",
   "organization": "Medical Informatics Initiative Germany (MII)",
@@ -11,8 +11,8 @@
     "distributed_analytics"
   ],
   "review_status": "ai_generated",
-  "summary": "ドイツの医療情報イニシアティブ（MII）は、全国の大学病院ネットワークにPHT-meDIC基盤を導入。FHIRベースのデータ統合層と分散解析基盤を組み合わせ、各病院のデータを移動させることなく全国規模の臨床研究を実施可能にした。COVID-19パンデミック対応でも迅速なデータ活用に貢献した。",
-  "value_proposition": "ドイツ全国の大学病院データに対しデータ移動なしの分散解析を実現し、パンデミック対応の迅速化に貢献",
+  "summary": "ドイツでは全国の大学病院に臨床データが分散しており、多施設共同の臨床研究を行うにはデータの集約が必要だったが、患者データの施設外移動には厳格な規制があった。特にCOVID-19パンデミック時には、迅速に全国規模のデータ分析を行う必要性が高まったが、従来の枠組みでは対応が困難だった。",
+  "value_proposition": "医療情報イニシアティブ（MII）はPHT-meDIC基盤を導入し、データ統合層と分散解析基盤を組み合わせることで、各病院のデータを移動させずに全国規模の臨床研究を実施可能にした。COVID-19パンデミック対応においても、分散解析により迅速なデータ活用に貢献した。",
   "privacy_enhancement_method": "PHT-meDIC（FHIRベース分散解析基盤）",
   "safety_assurance_method": "各大学病院のデータ統合センターでデータ管理、解析コンテナのみ移動",
   "utility_evaluation_method": "多施設共同研究の実施実績と再現性評価",

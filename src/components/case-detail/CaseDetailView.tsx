@@ -104,11 +104,11 @@ export default function CaseDetailView({ caseData }: { caseData: Case }) {
 
           {/* --- Left column --- */}
           <div className="p-5 space-y-5">
-            {/* 課題と解決 */}
+            {/* 課題 */}
             <section>
               <h2 className="flex items-center gap-2 text-base font-bold mb-2">
                 <span className="inline-block w-1 h-5 bg-slate-800 rounded-full" />
-                課題と解決
+                {keywords.constraint ? `課題：${keywords.constraint}` : '課題'}
               </h2>
               {keywords.constraint && (
                 <p className="mb-1.5" data-testid="keyword-constraint">
@@ -120,11 +120,11 @@ export default function CaseDetailView({ caseData }: { caseData: Case }) {
               <p className="text-sm text-gray-700 leading-relaxed">{caseData.summary}</p>
             </section>
 
-            {/* 得られた価値 */}
+            {/* PETs適用により得られた価値 */}
             <section>
               <h2 className="flex items-center gap-2 text-base font-bold mb-2">
                 <span className="inline-block w-1 h-5 bg-slate-800 rounded-full" />
-                得られた価値
+                {keywords.outcome ? `PETs適用により得られた価値：${keywords.outcome}` : 'PETs適用により得られた価値'}
               </h2>
               {keywords.outcome && (
                 <p className="mb-1.5" data-testid="keyword-outcome">

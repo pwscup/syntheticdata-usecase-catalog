@@ -1,6 +1,6 @@
 {
   "id": "rpt-0002",
-  "title": "英国NHS向け模擬患者データの生成と評価手順の整備",
+  "title": "NHS England：SynthVAEによる模擬患者データ生成と再利用可能な評価手順の整備",
   "region": "国外",
   "domain": "医療",
   "organization": "NHS England",
@@ -11,8 +11,8 @@
     "synthetic_data"
   ],
   "review_status": "flagged",
-  "summary": "NHS Englandが、SynthVAE（変分オートエンコーダベースの合成データ生成手法）を使って模擬患者データを生成し、その評価方法や再利用可能な手順を整備した事例。生成・評価・文書化までの一連のプロセスを公開しており、他機関での再現が可能な実務的な取り組み。",
-  "value_proposition": "合成患者データの生成から品質評価、文書化までの一連の手順を再利用可能な形で整備。他の医療機関やNHS内の組織が同様の取り組みを実施する際のテンプレートとして活用できる。",
+  "summary": "NHS Englandでは、患者データのプライバシーを保護しつつ研究や分析に活用するための模擬データが必要であったが、合成患者データの生成・評価・文書化に関する標準的な手順が整備されておらず、各組織が個別に対応していた。",
+  "value_proposition": "SynthVAE（変分オートエンコーダベース）を用いた模擬患者データの生成から、SDVの評価指標による品質評価、文書化までの一連の手順を再利用可能な形で整備・公開した。他の医療機関やNHS内の組織が同様の取り組みを行う際のテンプレートとして活用できる。",
   "privacy_enhancement_method": "SynthVAE（変分オートエンコーダ: VAEベース）をPyTorchで実装し、MIMIC-III（公開病院治療記録）で検証。オプションで差分プライバシー（Opacus）を適用可能。QuantumBlackのKedroフレームワークでパイプライン化し、データ生成からモデル学習、合成データ生成、評価までを単一コマンドで実行可能。",
   "safety_assurance_method": "差分プライバシーをVAE学習時に適用可能。合成データと実データに同一レコードが存在しないことを確認。メンバーシップ推論攻撃による情報漏洩リスクも評価。再識別リスクの低減を確認するが、完全な排除ではないことも明示。",
   "utility_evaluation_method": "Synthetic Data Vault（SDV）の評価指標（SVCDetection、GMLogLikelihood、CSTest、KSTestExtended、KLダイバージェンス）を使用。有用性（Utility）、品質（Quality）、プライバシー（Privacy）の3次元で評価。Webベースのレポートで視覚的な比較も提供。",

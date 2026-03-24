@@ -1,6 +1,6 @@
 {
   "id": "fcd9731e-2503-4eeb-950a-d5a8ae29622e",
-  "title": "Owkin：複数病院のCTスキャンを共有せずに構築したCOVID-19重症度予測AIモデル",
+  "title": "Owkin：連合学習による複数病院のCTデータを用いたCOVID-19重症度予測",
   "region": "国外",
   "domain": "医療",
   "organization": "Owkin",
@@ -11,8 +11,8 @@
     "secure_computation"
   ],
   "review_status": "ai_generated",
-  "summary": "Owkinが連合学習（秘密計算活用）により、複数の病院のCT肺スキャンデータからCOVID-19重症度を予測するAIモデルを訓練。公開ベンチマークを上回る性能を達成し、病院のリソース管理を支援。",
-  "value_proposition": "連合学習により複数病院のCTスキャンデータを共有せずにAIモデルを訓練し、COVID-19重症度予測で最高水準の性能を実現。医療AIにおけるプライバシー保護型学習の有効性を実証。",
+  "summary": "COVID-19パンデミックにおいて、患者の重症度を早期に予測し病院のリソース配分を最適化する必要があったが、各病院のCTスキャンデータは患者プライバシーの観点から外部共有が困難であった。単一病院のデータだけでは十分な精度の予測モデルを構築できなかった。",
+  "value_proposition": "Owkinの連合学習プラットフォームにより、複数病院のCT肺スキャンデータを共有せずにAIモデルを訓練し、公開ベンチマークを上回るCOVID-19重症度予測性能を達成した。医療AIにおけるプライバシー保護型学習の有効性を実証した。",
   "privacy_enhancement_method": "連合学習（秘密計算ベース）による分散モデル訓練",
   "safety_assurance_method": "調査中",
   "utility_evaluation_method": "調査中",
