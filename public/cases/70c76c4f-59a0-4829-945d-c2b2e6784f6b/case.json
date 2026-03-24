@@ -1,6 +1,6 @@
 {
   "id": "70c76c4f-59a0-4829-945d-c2b2e6784f6b",
-  "title": "COVID-19 Community Mobility Reports",
+  "title": "Google：COVID-19対策のための差分プライバシー適用人口移動レポート",
   "region": "国外",
   "domain": "医療",
   "organization": "Google",
@@ -11,8 +11,8 @@
     "differential_privacy"
   ],
   "review_status": "ai_generated",
-  "summary": "GoogleがCOVID-19パンデミック中にオプトインの位置情報データから差分プライバシーを適用して人口移動レポートを公開。個人の位置詳細や訪問回数を保護しつつ、集団レベルの移動変化を可視化して公衆衛生対策を支援。",
-  "value_proposition": "差分プライバシーにより個人の行動を保護しながら、COVID-19パンデミック下の人口移動パターンを公開。公衆衛生上の意思決定を支援する大規模なプライバシー保護型データ公開の実例。",
+  "summary": "COVID-19パンデミック下で、公衆衛生当局は感染拡大防止のために人々の移動パターンの変化を把握する必要があった。しかし、位置情報データは個人のプライバシーに直結するため、個人の行動や訪問先が特定されるリスクなしにデータを公開することが課題だった。",
+  "value_proposition": "差分プライバシーを適用したオプトイン位置情報データから、集団レベルの移動変化を可視化した「Community Mobility Reports」を公開した。個人の位置詳細や訪問回数を保護しつつ、世界各地の公衆衛生上の意思決定を支援するデータ提供を実現した。",
   "privacy_enhancement_method": "差分プライバシーによる位置情報の集計データへのノイズ注入",
   "safety_assurance_method": "調査中",
   "utility_evaluation_method": "調査中",

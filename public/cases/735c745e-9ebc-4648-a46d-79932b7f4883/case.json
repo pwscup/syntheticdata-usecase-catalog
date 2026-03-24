@@ -1,6 +1,6 @@
 {
   "id": "735c745e-9ebc-4648-a46d-79932b7f4883",
-  "title": "United Nations PET Lab International Trade Verification",
+  "title": "国連PETラボ：国際貿易統計の整合性検証への秘密計算活用",
   "region": "国外",
   "domain": "公共",
   "organization": "United Nations PET Lab",
@@ -12,8 +12,8 @@
     "secure_computation"
   ],
   "review_status": "ai_generated",
-  "summary": "国連PETラボが秘密計算と差分プライバシーを活用して、国際貿易統計の検証パイロットを実施。OpenMinedのピアツーピアネットワークを通じて、各国の輸出入量を相互に検証しつつ個別データを保護。",
-  "value_proposition": "秘密計算と差分プライバシーにより、各国の貿易データを開示せずに輸出入統計の整合性を検証。国際的な統計品質向上におけるPETs活用の先駆的パイロット。",
+  "summary": "国際貿易統計では、ある国の輸出量と相手国の輸入量が一致するか検証することが統計品質の向上に重要だが、各国の貿易データは機密性が高く、相互に開示して突合することが困難だった。データの非開示と統計整合性の検証を両立する手段が求められていた。",
+  "value_proposition": "秘密計算と差分プライバシーを組み合わせ、OpenMinedのピアツーピアネットワークを通じて各国の輸出入量を相互検証するパイロットを実施した。各国の個別データを一切開示せずに統計の整合性を確認でき、国際統計品質向上におけるPETs活用の実現可能性を示した。",
   "privacy_enhancement_method": "秘密計算＋差分プライバシーによる分散型データ検証",
   "safety_assurance_method": "調査中",
   "utility_evaluation_method": "調査中",

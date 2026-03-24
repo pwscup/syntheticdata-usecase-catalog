@@ -1,6 +1,6 @@
 {
   "id": "2f2c36b0-d84a-42b9-9d73-90ec1ed3bd5d",
-  "title": "Confidential Sugar Beet Production Rights Trading",
+  "title": "デンマーク砂糖大根生産者協会：秘密計算による機密入札型生産権取引",
   "region": "国外",
   "domain": "公共",
   "organization": "Danisco / Association of Sugar Beet Growers",
@@ -11,8 +11,8 @@
     "secure_computation"
   ],
   "review_status": "ai_generated",
-  "summary": "デンマークの砂糖大根生産権取引において、秘密計算を用いた機密入札システムを導入。個々の農家の入札額を秘匿したまま、需給に基づく生産割当の再配分を実現する世界初の商用秘密計算アプリケーションの一つ。",
-  "value_proposition": "秘密計算により農家の入札戦略を完全に秘匿しつつ、公正な市場価格に基づく生産権の再配分を実現。商用MPC実装の先駆的事例として学術的にも注目されている。",
+  "summary": "デンマークの砂糖大根生産権の取引では、各農家の入札額が他の参加者に知られると、価格操作や不公正な取引が生じるリスクがあった。公正な市場メカニズムに基づく生産権の再配分を行うために、入札戦略を完全に秘匿できる仕組みが必要とされていた。",
+  "value_proposition": "秘密計算を用いた機密入札システムにより、個々の農家の入札額を計算過程で一切公開することなく、需給に基づく公正な生産権の再配分を実現した。世界初の商用秘密計算アプリケーションの一つとして、MPC技術の実用性を示した先駆的事例である。",
   "privacy_enhancement_method": "秘密計算による秘匿入札（入札額は計算過程で一切公開されない）",
   "safety_assurance_method": "調査中",
   "utility_evaluation_method": "調査中",

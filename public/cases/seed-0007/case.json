@@ -1,6 +1,6 @@
 {
   "id": "seed-0007",
-  "title": "ゲノム分析における合成データセットを用いた研究",
+  "title": "Gretel.ai：ゲノム研究データの共有を目的とした合成データの活用",
   "region": "国外",
   "domain": "医療",
   "organization": "Gretel.ai",
@@ -11,8 +11,8 @@
     "synthetic_data"
   ],
   "review_status": "human_reviewed",
-  "summary": "ゲノムデータは機密性が高く、研究目的でもデータ共有が制限される。Gretel.aiの合成データ生成ツールを用い、マウスのゲノム分析において合成データセットでの研究を実施した。",
-  "value_proposition": "調査中",
+  "summary": "ゲノムデータは個人の遺伝情報を含むため機密性が極めて高く、研究目的であってもデータ共有が厳しく制限される。データアクセスの制約が、ゲノム研究の進展を妨げる要因となっていた。",
+  "value_proposition": "Gretel.aiの合成データ生成ツールを用いてマウスのゲノム分析用の合成データセットを作成し、研究に活用した。",
   "privacy_enhancement_method": "Timeseries DGAN（ベンダ一覧に記載）",
   "safety_assurance_method": "差分プライバシー／過剰適合防止／類似性フィルター／外れ値フィルター（ベンダ一覧に記載）",
   "utility_evaluation_method": "調査中",

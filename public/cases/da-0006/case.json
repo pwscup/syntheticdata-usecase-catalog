@@ -1,6 +1,6 @@
 {
   "id": "da-0006",
-  "title": "DataSHIELD/SOPHIA：肥満研究の連合データベース",
+  "title": "SOPHIA：複数施設の肥満コホートデータを活用した大規模層別化研究",
   "region": "国外",
   "domain": "医療",
   "organization": "SOPHIA project / DataSHIELD consortium",
@@ -11,8 +11,8 @@
     "distributed_analytics"
   ],
   "review_status": "flagged",
-  "summary": "EU Horizon 2020の肥満研究プロジェクトSOPHIAは、DataSHIELD基盤を用いて複数の肥満コホートデータを仮想的に統合。各施設にRサーバーを設置し、個人レベルデータを移動させず統計解析コマンドを分散実行する方式で、大規模な肥満の層別化・バイオマーカー研究を実現した。",
-  "value_proposition": "複数の肥満コホートデータを個人データ移動なしに仮想統合し、大規模な層別化研究を可能にした",
+  "summary": "肥満研究では、複数の医療機関や研究施設に分散するコホートデータを統合的に解析する必要があるが、個人レベルの医療データを施設間で移動させることは倫理的・法的に困難だった。単施設のデータだけでは十分なサンプルサイズが確保できず、肥満の層別化やバイオマーカー発見の検出力に限界があった。",
+  "value_proposition": "DataSHIELD基盤を用いて各施設にRサーバーを設置し、個人データを移動させずに統計解析コマンドを分散実行する方式を採用した。これにより、複数の肥満コホートデータを仮想的に統合し、大規模な層別化・バイオマーカー研究を実施可能にした。",
   "privacy_enhancement_method": "DataSHIELD（Rベース分散解析フレームワーク）",
   "safety_assurance_method": "各施設のRサーバーでローカル実行、要約統計のみ返送",
   "utility_evaluation_method": "従来の単施設研究との比較によるサンプルサイズ・検出力の向上",

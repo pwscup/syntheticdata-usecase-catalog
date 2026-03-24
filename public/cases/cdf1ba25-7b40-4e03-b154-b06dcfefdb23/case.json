@@ -1,6 +1,6 @@
 {
   "id": "cdf1ba25-7b40-4e03-b154-b06dcfefdb23",
-  "title": "Secure Genomic Data Computation (E360 Genomics)",
+  "title": "IQVIA E360 Genomics：秘密計算と匿名化を組合せたゲノムデータ解析",
   "region": "国外",
   "domain": "医療",
   "organization": "IQVIA",
@@ -12,8 +12,8 @@
     "anonymization"
   ],
   "review_status": "ai_generated",
-  "summary": "IQVIAのE360 Genomicsプラットフォームを活用し、Genomics Englandがトークン化・秘密計算・セルサイズルールを組み合わせてゲノムバリアント解析を安全に実施。複数のPETsを組み合わせたゲノムデータの保護。",
-  "value_proposition": "トークン化・秘密計算・匿名化手法の組み合わせにより、高度に機微なゲノムデータの安全な分析を実現。複数PETsの組み合わせによる多層防御アプローチの実例。",
+  "summary": "ゲノムデータは個人を特定しうる高度に機微な情報であり、バリアント解析等の研究利用にはプライバシー保護上の厳しい制約がある。単一の保護手法では十分なセキュリティと有用性の両立が難しいという課題があった。",
+  "value_proposition": "IQVIAのE360 Genomicsプラットフォーム上で、トークン化・秘密計算・セルサイズルール（k-匿名性）を組み合わせた多層防御アプローチにより、Genomics Englandのゲノムバリアント解析を安全に実現した。複数のPETsの組み合わせによるゲノムデータ保護の実例である。",
   "privacy_enhancement_method": "トークン化＋秘密計算＋セルサイズルール（k-匿名性）の組み合わせ",
   "safety_assurance_method": "調査中",
   "utility_evaluation_method": "調査中",

@@ -1,6 +1,6 @@
 {
   "id": "6716bd23-74af-44a7-9222-cd63c7f0e583",
-  "title": "NHS Digital Patient Data Linking System",
+  "title": "NHS Digital／Privitar：患者データ連結のための仮名化・準同型暗号の活用",
   "region": "国外",
   "domain": "医療",
   "organization": "NHS Digital / Privitar",
@@ -12,8 +12,8 @@
     "anonymization"
   ],
   "review_status": "ai_generated",
-  "summary": "NHS DigitalとPrivitarが、トークン化による仮名化と部分準同型暗号を用いてNHSの各ドメイン間の患者データを連結。生の識別子を開示せずにデータリンケージを実現し、NHSの医療記録統合を支援。",
-  "value_proposition": "仮名化と準同型暗号の組み合わせにより、NHSの大規模な患者データ連結をプライバシー保護の下で実現。国家レベルの医療データ基盤におけるPETs実装の代表例。",
+  "summary": "英国NHSでは複数の医療ドメインにまたがって患者データが分散管理されており、統合的な医療記録の構築にはデータの連結が不可欠だった。しかし、連結処理の際に患者の生の識別子（氏名・NHS番号等）を開示することはプライバシー上の大きなリスクとなっていた。",
+  "value_proposition": "トークン化による仮名化と部分準同型暗号を組み合わせ、生の識別子を開示せずにNHSの各ドメイン間の患者データ連結を実現した。国家レベルの医療データ基盤においてPETsを実装し、プライバシー保護と医療記録統合を両立した代表的な事例である。",
   "privacy_enhancement_method": "トークン化による仮名化＋部分準同型暗号によるデータリンケージ",
   "safety_assurance_method": "調査中",
   "utility_evaluation_method": "調査中",

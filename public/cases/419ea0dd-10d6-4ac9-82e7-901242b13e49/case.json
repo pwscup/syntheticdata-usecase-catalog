@@ -1,6 +1,6 @@
 {
   "id": "419ea0dd-10d6-4ac9-82e7-901242b13e49",
-  "title": "Replica Analytics Alberta Synthetic Health Records",
+  "title": "Replica Analytics：アルバータ州の医療データ研究・教育向け合成データ提供",
   "region": "国外",
   "domain": "医療",
   "organization": "Replica Analytics",
@@ -11,8 +11,8 @@
     "synthetic_data"
   ],
   "review_status": "ai_generated",
-  "summary": "Replica Analyticsがアルバータ州の100,000件の患者記録から合成医療データを生成。研究者や学生がプライバシーの懸念なしにヘルスデータサイエンスのプロジェクトを実施できる環境を提供。",
-  "value_proposition": "合成データにより実データのプライバシーリスクを排除しつつ、研究・教育用の高品質な医療データを提供。医療データサイエンス人材育成の障壁を大幅に低減。",
+  "summary": "医療データサイエンスの研究・教育には実際の患者データが不可欠だが、プライバシー規制により研究者や学生が実データにアクセスすることは極めて困難だった。データ利用の承認プロセスに長い時間がかかり、人材育成や研究の迅速な推進が妨げられていた。",
+  "value_proposition": "アルバータ州の100,000件の患者記録から合成医療データを生成し、実データのプライバシーリスクを排除しつつ統計的特性を保持したデータセットを提供した。研究者や学生がプライバシーの懸念なしにヘルスデータサイエンスのプロジェクトに取り組める環境を実現し、人材育成の障壁を大幅に低減した。",
   "privacy_enhancement_method": "合成データ生成による実患者データの代替",
   "safety_assurance_method": "調査中",
   "utility_evaluation_method": "調査中",

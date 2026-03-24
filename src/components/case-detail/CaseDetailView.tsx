@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
-import type { Case } from '../../types'
+import type { Case, DataFlowData } from '../../types'
 import FigureRenderer from '../figures/FigureRenderer'
 import { TECHNOLOGY_CATEGORY_LABELS, REVIEW_STATUS_LABELS } from '../../constants/categories'
 
@@ -11,9 +11,19 @@ function TechValue({ value }: { value: string }) {
   return <span>{value}</span>
 }
 
+function getDataFlowKeywords(caseData: Case): { constraint?: string; outcome?: string } {
+  const df = caseData.figures.find((f) => f.type === 'data_flow')
+  if (!df) return {}
+  const data = df.data as DataFlowData
+  const constraint = data.nodes.find((n) => n.category === 'constraint')
+  const outcome = data.nodes.find((n) => n.category === 'outcome')
+  return { constraint: constraint?.label, outcome: outcome?.label }
+}
+
 export default function CaseDetailView({ caseData }: { caseData: Case }) {
   const [techOpen, setTechOpen] = useState(false)
   const [modalFigure, setModalFigure] = useState<number | null>(null)
+  const keywords = getDataFlowKeywords(caseData)
 
   return (
     <>
@@ -94,20 +104,20 @@ export default function CaseDetailView({ caseData }: { caseData: Case }) {
 
           {/* --- Left column --- */}
           <div className="p-5 space-y-5">
-            {/* 課題と解決 */}
+            {/* 課題 */}
             <section>
               <h2 className="flex items-center gap-2 text-base font-bold mb-2">
                 <span className="inline-block w-1 h-5 bg-slate-800 rounded-full" />
-                課題と解決
+                {keywords.constraint ? `課題：${keywords.constraint}` : '課題'}
               </h2>
               <p className="text-sm text-gray-700 leading-relaxed">{caseData.summary}</p>
             </section>
 
-            {/* 得られた価値 */}
+            {/* PETs適用により得られた価値 */}
             <section>
               <h2 className="flex items-center gap-2 text-base font-bold mb-2">
                 <span className="inline-block w-1 h-5 bg-slate-800 rounded-full" />
-                得られた価値
+                {keywords.outcome ? `PETs適用により得られた価値：${keywords.outcome}` : 'PETs適用により得られた価値'}
               </h2>
               <p className="text-sm text-gray-700 leading-relaxed">{caseData.value_proposition}</p>
             </section>

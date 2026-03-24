@@ -1,6 +1,6 @@
 {
   "id": "aee7ac75-f8f6-49c1-bfc1-5d0035761219",
-  "title": "NVIDIA and King's College London Brain Tumor Segmentation",
+  "title": "NVIDIA／King's College London：脳腫瘍セグメンテーションAIの連合学習による訓練",
   "region": "国外",
   "domain": "医療",
   "organization": "NVIDIA / King's College London",
@@ -12,8 +12,8 @@
     "differential_privacy"
   ],
   "review_status": "ai_generated",
-  "summary": "NVIDIAとKing's College Londonが連合学習と差分プライバシーを用いて、13の分散データシャードにまたがる脳MRIスキャンから腫瘍セグメンテーション用ニューラルネットワークを訓練。プライバシーとモデル性能のトレードオフを検証。",
-  "value_proposition": "連合学習により医療画像データを移動させずに脳腫瘍セグメンテーションAIを訓練。差分プライバシーとの組み合わせにより、医療AI開発におけるプライバシー保護と性能のバランスを実証。",
+  "summary": "脳腫瘍セグメンテーション用AIの訓練には大量の脳MRIスキャンデータが必要だが、医療画像データは患者プライバシーや規制上の制約から施設間での共有が困難だった。13の分散データシャードにまたがるデータを活用しつつ、データを移動させない学習手法が求められていた。",
+  "value_proposition": "連合学習と差分プライバシーを組み合わせ、13の分散データシャードの脳MRIスキャンデータを移動させずに腫瘍セグメンテーション用ニューラルネットワークを訓練した。医療AI開発におけるプライバシー保護とモデル性能のトレードオフを検証し、実用性を確認した。",
   "privacy_enhancement_method": "連合学習＋差分プライバシーによる分散データ上の学習",
   "safety_assurance_method": "調査中",
   "utility_evaluation_method": "調査中",

@@ -11,8 +11,8 @@
     "anonymization"
   ],
   "review_status": "ai_generated",
-  "summary": "サービス利用者情報から仮名加工情報を作成し、性別・住所・年齢等の情報を用いた分析を実施。プロダクト改善・分析用途の制度活用例。",
-  "value_proposition": "調査中",
+  "summary": "decileサービスの利用者情報には性別・住所・年齢等の個人情報が含まれており、プロダクト改善のための分析に活用したいが、個人情報保護の観点から取扱いに制約があった。",
+  "value_proposition": "利用者情報を仮名加工情報として加工することで、個人情報保護法の規制に対応しつつ、性別・住所・年齢等の属性情報を用いたプロダクト改善のための分析を実現した。",
   "privacy_enhancement_method": "調査中",
   "safety_assurance_method": "調査中",
   "utility_evaluation_method": "調査中",

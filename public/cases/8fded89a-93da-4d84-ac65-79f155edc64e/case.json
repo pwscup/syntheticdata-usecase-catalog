@@ -1,6 +1,6 @@
 {
   "id": "8fded89a-93da-4d84-ac65-79f155edc64e",
-  "title": "RegulAItion Contract Review Algorithm Development",
+  "title": "RegulAItion：契約レビューAI共同開発のための分散分析活用",
   "region": "国外",
   "domain": "公共",
   "organization": "RegulAItion",
@@ -13,8 +13,8 @@
     "anonymization"
   ],
   "review_status": "ai_generated",
-  "summary": "RegulAItionが分散分析・差分プライバシー・匿名化を活用し、官民の参加者がデータを共有・集約せずに契約レビューアルゴリズムを共同開発。12週間で分散データセットにまたがるアルゴリズムの展開を完了。",
-  "value_proposition": "分散分析により官民のデータを移動させずにAIアルゴリズムを共同開発。12週間での迅速な展開を実現し、プライバシー保護型協調学習の実用性を実証。",
+  "summary": "契約レビューAIの開発には、官民の参加者が保有する契約データを学習に利用する必要があったが、機密性の高い契約情報を一箇所に集約・共有することは許容されなかった。データを移動させずに複数組織のデータセットを活用したアルゴリズム開発が求められていた。",
+  "value_proposition": "分散分析・差分プライバシー・匿名化を組み合わせ、官民のデータを移動させずに契約レビューAIアルゴリズムを共同開発した。12週間で分散データセットにまたがるアルゴリズムの展開を完了し、プライバシー保護型協調学習の実用性を実証した。",
   "privacy_enhancement_method": "分散分析＋差分プライバシー＋匿名化の組み合わせ",
   "safety_assurance_method": "調査中",
   "utility_evaluation_method": "調査中",

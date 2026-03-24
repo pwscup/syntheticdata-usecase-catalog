@@ -1,6 +1,6 @@
 {
   "id": "f83c2a3c-6f2f-4998-8d40-3661d631063a",
-  "title": "Microsoft Edge Password Monitor",
+  "title": "Microsoft：準同型暗号によるEdgeブラウザのパスワード漏洩チェック機能",
   "region": "国外",
   "domain": "IT",
   "organization": "Microsoft",
@@ -11,8 +11,8 @@
     "secure_computation"
   ],
   "review_status": "ai_generated",
-  "summary": "Microsoft Edgeのパスワードモニター機能は、準同型暗号を用いてユーザーのパスワードを復号せずに漏洩データベースとの照合を実施。パスワードが侵害された場合にユーザーに通知するプライバシー保護型セキュリティ機能。",
-  "value_proposition": "準同型暗号によりMicrosoftがユーザーのパスワードを知ることなく漏洩チェックを実施。プライバシーを保護しつつセキュリティを強化する消費者向け製品の実装例。",
+  "summary": "ユーザーのパスワードが過去のデータ漏洩事件で流出していないかを確認するサービスでは、確認のためにパスワードをサーバーに送信する必要があり、サービス提供者にパスワードが知られるリスクがあった。",
+  "value_proposition": "Microsoft Edgeのパスワードモニター機能において、準同型暗号を用いてパスワードを復号せずに漏洩データベースとの照合を実現した。Microsoftがユーザーのパスワードを知ることなく漏洩チェックを行う消費者向けプライバシー保護機能として実装された。",
   "privacy_enhancement_method": "準同型暗号による暗号化状態でのパスワード照合",
   "safety_assurance_method": "調査中",
   "utility_evaluation_method": "調査中",

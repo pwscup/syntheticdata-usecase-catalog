@@ -1,6 +1,6 @@
 {
   "id": "eff8eb83-af54-4ade-a3fe-9b84a39a4cdc",
-  "title": "GBoard Federated Learning for Next-Word Prediction",
+  "title": "Google：GBoardの予測変換改善を目的とした連合学習の大規模商用実装",
   "region": "国外",
   "domain": "IT",
   "organization": "Google",
@@ -12,8 +12,8 @@
     "distributed_analytics"
   ],
   "review_status": "ai_generated",
-  "summary": "GoogleのキーボードアプリGBoardで連合学習を活用した次単語予測。端末上でローカルにモデルを訓練し、セキュアアグリゲーションを介して重みを中央サーバーに送信。ユーザーの入力データを端末外に出さずにモデルを改善。",
-  "value_proposition": "連合学習とセキュアアグリゲーションの組み合わせにより、数十億台の端末上のユーザー入力データを収集せずに予測変換モデルを継続的に改善。プライバシー保護型機械学習の大規模商用実装の先駆け。",
+  "summary": "GoogleのキーボードアプリGBoardでは、予測変換モデルの改善にユーザーの入力データが必要であったが、数十億台の端末からテキスト入力データを中央サーバーに収集することはプライバシー上大きな問題であった。",
+  "value_proposition": "連合学習とセキュアアグリゲーションを組み合わせ、ユーザーの入力データを端末外に送出せずに予測変換モデルを継続的に改善する仕組みを実現した。プライバシー保護型機械学習の大規模商用実装の先駆的事例となった。",
   "privacy_enhancement_method": "連合学習＋セキュアアグリゲーションによるモデル更新の秘匿化",
   "safety_assurance_method": "調査中",
   "utility_evaluation_method": "調査中",

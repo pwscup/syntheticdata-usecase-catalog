@@ -1,6 +1,6 @@
 {
   "id": "2dd8f5b6-99e5-485c-83ce-2983a4d8342e",
-  "title": "Privacy-Preserving Advertising Conversion Rate Computation",
+  "title": "Google：広告コンバージョン率測定のためのプライバシー保護型集合積計算",
   "region": "国外",
   "domain": "IT",
   "organization": "Google",
@@ -11,8 +11,8 @@
     "secure_computation"
   ],
   "review_status": "ai_generated",
-  "summary": "Googleが準同型暗号ベースのプライバシー保護型集合積集合（PSI）プロトコルを用いて、広告表示リストと購入リストの交差サイズを算出し、広告のコンバージョン率を計算。双方のデータを開示せずに広告効果を測定。",
-  "value_proposition": "準同型暗号によるPSIプロトコルで、広告主と小売業者がそれぞれの顧客データを開示せずにコンバージョン率を算出。デジタル広告における第三者Cookie代替の先進事例。",
+  "summary": "デジタル広告の効果測定では、広告を閲覧したユーザーと実際に商品を購入したユーザーの突合が必要だが、広告主と小売業者はそれぞれの顧客リストを互いに開示したくないという課題があった。第三者Cookieの廃止が進む中、プライバシーを保護しつつ広告効果を正確に測定する手法が求められていた。",
+  "value_proposition": "準同型暗号ベースのPrivate Set Intersection（PSI）プロトコルにより、広告表示リストと購入リストの交差サイズを双方のデータを開示せずに算出し、コンバージョン率を計測できるようにした。第三者Cookieに依存しないプライバシー保護型の広告効果測定手法として実用化された。",
   "privacy_enhancement_method": "準同型暗号ベースのPrivate Set Intersection（PSI）プロトコル",
   "safety_assurance_method": "調査中",
   "utility_evaluation_method": "調査中",

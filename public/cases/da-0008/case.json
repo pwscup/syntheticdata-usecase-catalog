@@ -1,6 +1,6 @@
 {
   "id": "da-0008",
-  "title": "Personal Health Train：オランダの医療データ分散解析",
+  "title": "Health-RI：FAIR原則に基づく医療データ分散解析基盤の構築",
   "region": "国外",
   "domain": "医療",
   "organization": "Health-RI / GO FAIR",
@@ -11,8 +11,8 @@
     "distributed_analytics"
   ],
   "review_status": "flagged",
-  "summary": "オランダのPersonal Health Train（PHT）は、データを移動させる代わりに解析タスク（「列車」）をデータのある場所（「駅」）に送るアーキテクチャを採用。FAIR原則に基づきデータのメタデータを公開しつつ、実データは各施設に保持したまま機械学習モデルの学習や統計解析を分散実行する。",
-  "value_proposition": "「データではなくアルゴリズムを移動させる」パラダイムにより、FAIR原則と個人情報保護を両立した医療データ分析を実現",
+  "summary": "オランダでは医療データが複数の施設に分散しており、研究目的でデータを一箇所に集約することはプライバシーや法規制の観点から困難だった。一方で、FAIR原則に基づくデータの発見可能性・再利用性の向上も求められており、プライバシー保護とデータ活用の両立が課題となっていた。",
+  "value_proposition": "Personal Health Train（PHT）は、データを移動させる代わりに解析タスク（「列車」）をデータのある場所（「駅」）に送るアーキテクチャを採用した。FAIR原則に基づきメタデータを公開しつつ実データは各施設に保持したまま、機械学習モデルの学習や統計解析を分散実行することで、個人情報保護とデータ活用を両立した。",
   "privacy_enhancement_method": "Personal Health Train（解析タスクをデータに送る分散アーキテクチャ）",
   "safety_assurance_method": "データは各施設の「駅」に保持、FAIRメタデータのみ公開",
   "utility_evaluation_method": "従来のデータ集約型研究との解析精度比較",

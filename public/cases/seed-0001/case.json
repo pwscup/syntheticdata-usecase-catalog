@@ -1,6 +1,6 @@
 {
   "id": "seed-0001",
-  "title": "銀行アプリ開発における顧客データの合成データ代替",
+  "title": "Accenture：銀行アプリ開発を目的とした合成データによる顧客データ代替",
   "region": "国外",
   "domain": "金融",
   "organization": "Accenture",
@@ -11,8 +11,8 @@
     "synthetic_data"
   ],
   "review_status": "human_reviewed",
-  "summary": "銀行向けアプリケーション開発では、本番相当の顧客データが必要だがプライバシー上の制約で入手が困難だった。Accentureは合成データを顧客データの代替として活用し、個人情報を含まないデータでアプリ開発を推進した。",
-  "value_proposition": "調査中",
+  "summary": "銀行向けアプリケーションの開発・テストでは本番相当の顧客データが必要だが、プライバシー上の制約から実データの入手が困難だった。開発用データの不足がアプリ開発の進行を妨げる要因となっていた。",
+  "value_proposition": "合成データを顧客データの代替として活用し、個人情報を含まないデータでアプリの開発・テストを推進した。",
   "privacy_enhancement_method": "調査中",
   "safety_assurance_method": "調査中",
   "utility_evaluation_method": "調査中",

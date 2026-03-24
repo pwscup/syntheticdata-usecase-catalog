@@ -1,6 +1,6 @@
 {
   "id": "da-0011",
-  "title": "AMED CANNDs：バイオバンク横断ゲノムデータ分散処理基盤",
+  "title": "AMED CANNDs：バイオバンク横断のゲノムデータ分散解析基盤の構築",
   "region": "国内",
   "domain": "医療",
   "organization": "AMED / 東北大学ToMMo / 理化学研究所",
@@ -11,8 +11,8 @@
     "distributed_analytics"
   ],
   "review_status": "flagged",
-  "summary": "AMED事業CANNDs（Cross-cutting Advanced Network for Next-generation Data Science）は、バイオバンク・ジャパン（BBJ）、東北メディカル・メガバンク（ToMMo）等の大規模ゲノムコホートを対象に、ゲノムデータを各バイオバンクに保持したまま横断的な分散処理解析を実施する基盤を構築。データを移動させずに数十万人規模のゲノム解析を可能にしている。",
-  "value_proposition": "日本の主要バイオバンクのゲノムデータに対し移動なしの分散処理を実現し、大規模ゲノム研究を加速",
+  "summary": "日本にはバイオバンク・ジャパン（BBJ）や東北メディカル・メガバンク（ToMMo）など大規模なゲノムコホートが複数存在するが、ゲノムデータは極めて機微性が高く施設間での移動が制限されている。横断的な解析には大規模なサンプルサイズが不可欠だが、各バイオバンクの個別解析では検出力に限界があった。",
+  "value_proposition": "AMED事業CANNDsは、ゲノムデータを各バイオバンクに保持したまま横断的な分散処理解析を実施する基盤を構築した。データを移動させずに数十万人規模のゲノムワイド関連研究を実施可能にし、大規模ゲノム研究の加速に貢献している。",
   "privacy_enhancement_method": "分散処理基盤（各バイオバンクでのローカル解析実行）",
   "safety_assurance_method": "ゲノムデータは各バイオバンク内に保持、解析結果のみ共有",
   "utility_evaluation_method": "横断解析によるゲノムワイド関連研究の検出力向上",

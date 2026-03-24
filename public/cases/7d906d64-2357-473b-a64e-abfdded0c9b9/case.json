@@ -1,6 +1,6 @@
 {
   "id": "7d906d64-2357-473b-a64e-abfdded0c9b9",
-  "title": "Election and Democracy Research Data Access",
+  "title": "Meta：選挙・民主主義研究のための差分プライバシー適用データ提供",
   "region": "国外",
   "domain": "IT",
   "organization": "Facebook (Meta)",
@@ -11,8 +11,8 @@
     "differential_privacy"
   ],
   "review_status": "ai_generated",
-  "summary": "Facebook（Meta）が差分プライバシーを適用して、60名の研究者にFacebook上の公開リンク共有データへのアクセスを提供。個人のプライバシーを保護しながら、ソーシャルメディアが選挙・民主主義に与える影響の学術研究を支援。",
-  "value_proposition": "差分プライバシーにより個人ユーザーを保護しつつ、大規模ソーシャルメディアデータの学術研究利用を実現。プラットフォームの透明性と研究促進に貢献。",
+  "summary": "ソーシャルメディアが選挙や民主主義に与える影響を研究するには大規模なプラットフォームデータが必要だが、個人ユーザーのプライバシーを保護しながら外部研究者にデータを提供する方法がなかった。プラットフォームの透明性向上と利用者保護の両立が課題だった。",
+  "value_proposition": "差分プライバシーを適用したFacebook上の公開リンク共有データを60名の研究者に提供し、個人ユーザーを保護しつつ大規模ソーシャルメディアデータの学術研究利用を実現した。プラットフォームの透明性向上と研究促進に貢献している。",
   "privacy_enhancement_method": "差分プライバシーによるデータセットへのノイズ注入",
   "safety_assurance_method": "調査中",
   "utility_evaluation_method": "調査中",

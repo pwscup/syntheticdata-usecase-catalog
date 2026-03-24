@@ -1,6 +1,6 @@
 {
   "id": "ff4184c9-60a2-4d98-b753-e587a99e5c98",
-  "title": "Mobile Network Operator Data for Population Mobility Statistics",
+  "title": "Eurostat：モバイル通信データを用いた人口移動統計作成の実証",
   "region": "国外",
   "domain": "公共",
   "organization": "Eurostat",
@@ -12,8 +12,8 @@
     "synthetic_data"
   ],
   "review_status": "ai_generated",
-  "summary": "EurostatがTEE（信頼実行環境）内でモバイルネットワーク事業者のデータを分析し、個人を特定できない形で人口移動統計を作成。合成データも併用し、公式統計の精度とプライバシー保護を両立するアプローチを実証。",
-  "value_proposition": "TEEと合成データの組み合わせにより、モバイル通信データから個人を特定せずに人口移動統計を生成。公式統計機関によるPETs活用の先進事例。",
+  "summary": "公式統計機関がモバイルネットワーク事業者の位置情報データを人口移動統計に活用したいニーズがあったが、個人の行動を追跡できるセンシティブなデータであるため、直接的な分析にはプライバシー上の大きな課題があった。",
+  "value_proposition": "TEE（信頼実行環境）内でモバイル通信データを処理し、合成データも併用することで、個人を特定できない形で人口移動統計を作成するアプローチを実証した。公式統計機関によるPETs活用の先進的な取り組みとなった。",
   "privacy_enhancement_method": "TEE内でのデータ処理＋合成データ生成",
   "safety_assurance_method": "調査中",
   "utility_evaluation_method": "調査中",

@@ -1,6 +1,6 @@
 {
   "id": "21aae332-39b5-4d5f-b9ac-7a7d33a0361a",
-  "title": "TNO BigMedilytics Heart Failure Risk Identification",
+  "title": "オランダTNO：心不全リスク予測のための秘密計算による医療・保険データ連携",
   "region": "国外",
   "domain": "医療",
   "organization": "Netherlands Organisation for Applied Scientific Research (TNO)",
@@ -12,8 +12,8 @@
     "anonymization"
   ],
   "review_status": "ai_generated",
-  "summary": "オランダTNOがMPC（秘密計算）と準同型暗号を用いて、Erasmus MC病院の生活習慣データとZilverin Kruis保険のヘルスケア利用データを安全に結合。心不全リスクの高い患者を特定する回帰モデルを、データを開示せずに構築。",
-  "value_proposition": "秘密計算と準同型暗号により、病院と保険会社のデータを安全に結合して心不全リスク予測モデルを構築。医療・保険分野の組織間データ連携におけるPETs活用の実証例。",
+  "summary": "心不全リスクの高い患者を早期に特定するには、病院が持つ生活習慣データと保険会社が持つヘルスケア利用データを組み合わせた分析が有効だが、医療データのプライバシー規制や組織間の機密性の壁により、これらのデータを直接共有して分析することは困難だった。",
+  "value_proposition": "秘密計算と準同型暗号を用いて、Erasmus MC病院の生活習慣データとZilveren Kruis保険のヘルスケア利用データを、互いにデータを開示せずに安全に結合し、心不全リスク予測のための回帰モデルを構築した。医療・保険分野における組織間データ連携のPETs活用を実証した。",
   "privacy_enhancement_method": "MPC＋準同型暗号によるデータの安全な結合＋匿名化",
   "safety_assurance_method": "調査中",
   "utility_evaluation_method": "調査中",

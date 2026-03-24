@@ -1,6 +1,6 @@
 {
   "id": "519758ae-c7e2-42b9-97e1-2047cb4d0056",
-  "title": "OpenSAFELY Secure Health Analytics Platform",
+  "title": "OpenSAFELY：大規模電子カルテのプライバシー保護型分析プラットフォーム",
   "region": "国外",
   "domain": "医療",
   "organization": "OpenSAFELY",
@@ -12,8 +12,8 @@
     "anonymization"
   ],
   "review_status": "ai_generated",
-  "summary": "OpenSAFELYは、数百万件の電子カルテに対して分散分析を行うセキュアな分析プラットフォーム。研究者のコードをデータセンター内で実行し、データを移動させずに分析。COVID-19研究で広く活用された。",
-  "value_proposition": "分散分析と匿名化により、数百万件規模の電子カルテを安全に研究利用。データ移動なしでの大規模医療データ分析プラットフォームとして、COVID-19パンデミック対応に貢献。",
+  "summary": "COVID-19パンデミック下で大規模な電子カルテデータの迅速な疫学研究が求められたが、数百万件規模の患者データを研究者に直接提供することはプライバシー上不可能だった。従来のデータ利用申請・匿名化プロセスでは、パンデミック対応に必要な研究速度を確保できなかった。",
+  "value_proposition": "研究者の分析コードをデータセンター内で実行し、データを移動させずに分散分析を行うプラットフォームを構築した。数百万件の電子カルテに対する匿名化されたセキュアな分析環境を提供し、COVID-19の疫学研究を迅速に支援した。",
   "privacy_enhancement_method": "分散分析（コード移動型）＋匿名化",
   "safety_assurance_method": "調査中",
   "utility_evaluation_method": "調査中",

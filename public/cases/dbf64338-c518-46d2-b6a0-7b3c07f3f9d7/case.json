@@ -1,6 +1,6 @@
 {
   "id": "dbf64338-c518-46d2-b6a0-7b3c07f3f9d7",
-  "title": "Signal Contact Discovery Service",
+  "title": "Signal：TEEを用いたプライバシー保護型連絡先検索サービスの実装",
   "region": "国外",
   "domain": "IT",
   "organization": "Signal",
@@ -11,8 +11,8 @@
     "secure_computation"
   ],
   "review_status": "ai_generated",
-  "summary": "Signalがインテル SGX（TEE）を用いた連絡先検索サービスを実装。ユーザーの連絡先情報をSignalのサーバーが閲覧できない状態で、登録済みユーザーとのマッチングを実現。",
-  "value_proposition": "TEEにより、メッセージングプラットフォーム運営者自身がユーザーの連絡先データにアクセスできない連絡先検索を実現。プライバシー最優先のサービス設計における先駆的実装。",
+  "summary": "メッセージングアプリでは、ユーザーの連絡先リストからサービス登録済みの知人を見つける機能が求められる。しかし、連絡先情報をサーバーにアップロードすると、プラットフォーム運営者がユーザーの人間関係を把握できてしまうプライバシー上の懸念があった。",
+  "value_proposition": "Intel SGX（TEE）を用いて、Signal自身のサーバーがユーザーの連絡先情報を閲覧できない状態で登録済みユーザーとのマッチングを実現した。プライバシー最優先のサービス設計における先駆的な実装として、オープンソースで公開されている。",
   "privacy_enhancement_method": "Intel SGX（TEE）内での連絡先マッチング処理",
   "safety_assurance_method": "調査中",
   "utility_evaluation_method": "調査中",

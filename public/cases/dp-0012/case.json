@@ -11,8 +11,8 @@
     "differential_privacy"
   ],
   "review_status": "ai_generated",
-  "summary": "広告問い合わせ、コンテンツ分析、プロフィール閲覧、InMail分析などの行動データを対象に、advertiser queriesに対して差分プライバシー付き回答を返す仕組みを導入している。LinkedIn側もproduction deploymentのanalytics/reporting基盤PriPeARLを公開し、閲覧・検索・クリックなどのprivate actionsを保護している。",
-  "value_proposition": "広告主や利用部門は、個票を露出させずに有用な分析結果を得られる。大規模行動ログを扱うサービスで、分析価値と利用者保護の両立を実現している。",
+  "summary": "LinkedInでは広告問い合わせ、コンテンツ分析、プロフィール閲覧、InMail分析など多岐にわたる行動データを扱っている。広告主への分析結果提供や社内でのレポーティングにおいて、個々のユーザーの閲覧・検索・クリックなどの行動が再識別されるリスクへの対処が求められていた。",
+  "value_proposition": "差分プライバシー付きの回答を返す仕組みを導入し、広告主や社内部門が個票を露出させずに有用な分析結果を得られるようにした。analytics/reporting基盤PriPeARLを本番環境に展開し、大規模行動ログにおける分析価値と利用者保護の両立を実現している。",
   "privacy_enhancement_method": "調査中",
   "safety_assurance_method": "調査中",
   "utility_evaluation_method": "調査中",

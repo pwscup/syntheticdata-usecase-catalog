@@ -31,7 +31,7 @@ export default function BasicFields() {
       </div>
 
       <div>
-        <label htmlFor="value_proposition" className="block text-sm font-medium">合成データで得られた価値</label>
+        <label htmlFor="value_proposition" className="block text-sm font-medium">PETs適用により得られた価値</label>
         <textarea id="value_proposition" rows={3} {...register('value_proposition')} className="mt-1 block w-full rounded border border-gray-300 px-3 py-2" />
       </div>
     </div>

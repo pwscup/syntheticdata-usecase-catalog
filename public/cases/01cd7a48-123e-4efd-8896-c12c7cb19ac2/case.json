@@ -1,6 +1,6 @@
 {
   "id": "01cd7a48-123e-4efd-8896-c12c7cb19ac2",
-  "title": "Tsinghua University and Microsoft FedNER",
+  "title": "清華大学／Microsoft：医療テキストからの固有表現認識における連合学習の活用",
   "region": "国外",
   "domain": "医療",
   "organization": "Tsinghua University / Microsoft",
@@ -11,8 +11,8 @@
     "distributed_analytics"
   ],
   "review_status": "ai_generated",
-  "summary": "清華大学とMicrosoftが開発したFedNERは、連合学習により複数の医療プラットフォームにまたがる非構造化医療テキストから固有表現認識（NER）モデルを訓練。プライベートローカルモデルとグローバル共有モデルに分解し、データフォーマットの標準化なしに参加可能。",
-  "value_proposition": "連合学習によりデータフォーマットの異なる複数医療機関のデータを標準化なしに活用。参加障壁を下げつつ医療NLPモデルの精度向上を実現。",
+  "summary": "医療分野では複数の機関に非構造化テキストデータが分散しており、データフォーマットも統一されていないため、固有表現認識（NER）モデルの訓練に必要なデータを一箇所に集約することが困難だった。各機関がプライバシーやデータ管理上の理由からデータ共有に消極的であることも、医療NLPの精度向上を妨げる要因となっていた。",
+  "value_proposition": "連合学習フレームワーク「FedNER」により、各医療機関のデータを移動させずに、フォーマットの標準化も不要な形でNERモデルを共同訓練できる仕組みを構築した。プライベートローカルモデルとグローバル共有モデルに分解するアーキテクチャにより、参加障壁を下げつつ医療NLPモデルの精度向上を実現した。",
   "privacy_enhancement_method": "連合学習による分散NERモデル訓練（データ移動なし）",
   "safety_assurance_method": "調査中",
   "utility_evaluation_method": "調査中",

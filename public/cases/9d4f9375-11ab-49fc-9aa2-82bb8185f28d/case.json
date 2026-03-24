@@ -1,6 +1,6 @@
 {
   "id": "9d4f9375-11ab-49fc-9aa2-82bb8185f28d",
-  "title": "Secretarium DANIE Banking Data Platform",
+  "title": "Secretarium/DANIE：銀行コンソーシアム向け不正検知のためのTEE活用データ分析基盤",
   "region": "国外",
   "domain": "金融",
   "organization": "Secretarium / DANIE",
@@ -11,8 +11,8 @@
     "secure_computation"
   ],
   "review_status": "ai_generated",
-  "summary": "SecretariumとDANIEが暗号化とTEEを活用した銀行コンソーシアム向けデータ分析プラットフォームを構築。人間がデータに直接アクセスすることなく、データ品質改善・マネーロンダリング防止・不正検知を実施。",
-  "value_proposition": "暗号化とTEEの組み合わせにより、銀行コンソーシアムが基盤データに人間がアクセスせずに不正検知・AML分析を実施。金融犯罪対策におけるプライバシー保護型データ共有の実装例。",
+  "summary": "銀行コンソーシアムにおけるマネーロンダリング防止や不正検知には、複数銀行のデータを統合した分析が必要だが、機密性の高い顧客データに人間が直接アクセスする形での共有はセキュリティ・プライバシー上許容されなかった。データ品質の改善も含め、安全な分析基盤が求められていた。",
+  "value_proposition": "暗号化とTEE（信頼実行環境）を組み合わせたデータ分析プラットフォームを構築し、人間がデータに直接アクセスすることなくマネーロンダリング防止・不正検知を実施できる仕組みを実現した。銀行コンソーシアムにおけるプライバシー保護型データ共有の実装例として稼働している。",
   "privacy_enhancement_method": "秘密計算＋TEEによるデータへの人間のアクセス排除",
   "safety_assurance_method": "調査中",
   "utility_evaluation_method": "調査中",

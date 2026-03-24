@@ -1,6 +1,6 @@
 {
   "id": "48b29eb5-7222-4c6a-97cf-c592a27af069",
-  "title": "OpenMined and Twitter Algorithmic Transparency",
+  "title": "OpenMined／Twitter：アルゴリズム透明性のためのプライバシー保護型第三者監査の実証",
   "region": "国外",
   "domain": "IT",
   "organization": "OpenMined / Twitter",
@@ -13,8 +13,8 @@
     "distributed_analytics"
   ],
   "review_status": "ai_generated",
-  "summary": "OpenMinedとTwitter（X）のパイロットプロジェクト。連合学習とリモート実行により、研究者がソーシャルメディアのアルゴリズムに直接データアクセスせずにコードを実行。アルゴリズム透明性をプライバシー保護の下で実現。",
-  "value_proposition": "連合学習とリモート実行により、プラットフォームのアルゴリズムを外部研究者が監査可能に。データアクセスなしでの第三者監査という新たなパラダイムを実証。",
+  "summary": "Twitterの研究透明性チームは、政治的コンテンツのアルゴリズム増幅に関する研究結果の再現性を外部研究者に提供したいと考えていたが、プライバシー上の懸念から数百万ユーザーの生データを共有できず、第三者による検証が困難だった。アルゴリズムの透明性と説明責任が社会的に求められる一方で、ユーザーの個人情報保護との両立が大きな課題となっていた。",
+  "value_proposition": "OpenMinedのPySyftを用いたリモート実行環境により、外部研究者がデータに直接アクセスせずにコードを送信・実行し、差分プライバシーで統計ノイズを付加した結果のみを取得できる仕組みの概念実証を行った。ユーザーのプライバシーを保護しながら、アルゴリズムの透明性に関する第三者検証を可能にするアプローチの実現可能性を示し、プラットフォーム企業の説明責任とプライバシー保護を両立する道筋を提示した。",
   "privacy_enhancement_method": "連合学習＋差分プライバシーによるリモートコード実行",
   "safety_assurance_method": "調査中",
   "utility_evaluation_method": "調査中",

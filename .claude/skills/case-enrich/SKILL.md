@@ -32,6 +32,7 @@ URL が指定された場合は WebFetch で取得する。テキストが直接
 `src/constants/prompts.ts` の `generateEnrichPrompt()` に定義された作業ルールに従い、既存の case.json を更新する。主なルール:
 
 - **すべての項目が改善対象**: 「調査中」の項目だけでなく、より正確・詳細・具体的にできる項目も更新する
+- **summary と value_proposition の役割分担**: summary は課題の背景・状況（PETsの解決策には触れない）、value_proposition はPETs適用による解決と成果を記述する
 - **sources の追加**: 追加文献を sources 配列に追記する（既存の source は削除しない）
 - **推測しない**: 文献に明記されていない情報は既存の記載を維持する
 - **data_flow の改善**: ノードの label をより具体的にできる場合は更新する（手法名、数値など）

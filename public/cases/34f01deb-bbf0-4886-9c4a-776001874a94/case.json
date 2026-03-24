@@ -1,6 +1,6 @@
 {
   "id": "34f01deb-bbf0-4886-9c4a-776001874a94",
-  "title": "Microsoft Viva Insights",
+  "title": "Microsoft：従業員体験分析プラットフォームにおける差分プライバシーの組込み",
   "region": "国外",
   "domain": "IT",
   "organization": "Microsoft",
@@ -12,8 +12,8 @@
     "anonymization"
   ],
   "review_status": "ai_generated",
-  "summary": "Microsoftの従業員体験プラットフォーム「Viva Insights」は、デフォルトで匿名化と差分プライバシーを適用。組織の働き方指標をパーソナライズして提供しつつ、個人の業務行動データのプライバシーを保護。",
-  "value_proposition": "差分プライバシーと匿名化をデフォルト組み込みで、従業員の働き方データ分析を安全に実施。プライバシー・バイ・デザインの商用製品としての実装例。",
+  "summary": "企業が従業員の働き方データを分析して組織改善に活用したいニーズがある一方、個人の業務行動（メール頻度・会議時間等）が監視に使われるのではないかという従業員の懸念が根強い。働き方の可視化と個人プライバシーの保護を両立させることが課題だった。",
+  "value_proposition": "従業員体験プラットフォーム「Viva Insights」に差分プライバシーと匿名化をデフォルトで組み込み、個人の業務行動データを保護しながら組織の働き方指標を提供する仕組みを実現した。プライバシー・バイ・デザインを商用製品として実装した代表的な事例である。",
   "privacy_enhancement_method": "差分プライバシー＋匿名化のデフォルト適用",
   "safety_assurance_method": "調査中",
   "utility_evaluation_method": "調査中",

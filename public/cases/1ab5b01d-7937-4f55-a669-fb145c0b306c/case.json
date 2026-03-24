@@ -1,6 +1,6 @@
 {
   "id": "1ab5b01d-7937-4f55-a669-fb145c0b306c",
-  "title": "Apple/Google COVID-19 Contact Tracing API",
+  "title": "Apple／Google：プライバシー保護型COVID-19接触追跡APIの開発",
   "region": "国外",
   "domain": "医療",
   "organization": "Apple/Google",
@@ -12,8 +12,8 @@
     "anonymization"
   ],
   "review_status": "ai_generated",
-  "summary": "Apple/GoogleがBluetooth近接通信を利用して開発したプライバシー保護型COVID-19接触追跡API。端末間でランダム識別子を交換し、陽性者のデータのみを保健当局にアップロードして、接触者に通知する分散型アーキテクチャ。",
-  "value_proposition": "分散型アーキテクチャにより個人の位置情報を中央サーバーに集約せず、Bluetooth近接情報のみで接触追跡を実現。世界中の公衆衛生機関が採用可能なプラットフォームとして展開された。",
+  "summary": "COVID-19パンデミック下で感染拡大防止のために接触追跡が求められたが、個人の位置情報や行動履歴を中央サーバーに集約する方式はプライバシー侵害の懸念が大きく、市民の利用率低下を招く恐れがあった。感染追跡の有効性とプライバシー保護を両立する技術基盤が急務だった。",
+  "value_proposition": "Bluetooth近接通信とランダム識別子の定期変更による分散型アーキテクチャを採用し、個人の位置情報を中央サーバーに集約せずに接触追跡を実現した。陽性者のデータのみを保健当局にアップロードする仕組みにより、世界中の公衆衛生機関が採用可能なプライバシー保護型プラットフォームとして展開された。",
   "privacy_enhancement_method": "ランダム識別子の定期変更による匿名化＋分散型データ処理",
   "safety_assurance_method": "調査中",
   "utility_evaluation_method": "調査中",

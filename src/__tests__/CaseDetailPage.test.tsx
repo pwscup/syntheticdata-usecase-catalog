@@ -64,15 +64,15 @@ describe('CaseDetailPage', () => {
     expect(screen.getByText('テスト病院')).toBeInTheDocument()
   })
 
-  it('左カラムにsummaryが「課題と解決」として表示される', () => {
+  it('左カラムにsummaryが「課題」として表示される', () => {
     renderWithRoute('case-001')
-    expect(screen.getByText('課題と解決')).toBeInTheDocument()
+    expect(screen.getByText('課題')).toBeInTheDocument()
     expect(screen.getByText('テスト概要の内容です')).toBeInTheDocument()
   })
 
-  it('左カラムにvalue_propositionが「得られた価値」として表示される', () => {
+  it('左カラムにvalue_propositionが「PETs適用により得られた価値」として表示される', () => {
     renderWithRoute('case-001')
-    expect(screen.getByText('得られた価値')).toBeInTheDocument()
+    expect(screen.getByText('PETs適用により得られた価値')).toBeInTheDocument()
     expect(screen.getByText('テスト成果の内容です')).toBeInTheDocument()
   })
 
