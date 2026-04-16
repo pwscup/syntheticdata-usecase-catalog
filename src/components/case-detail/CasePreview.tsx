@@ -7,13 +7,25 @@ import CaseDetailView from './CaseDetailView'
 
 const GITHUB_REPO_URL = 'https://github.com/pwscup/syntheticdata-usecase-catalog'
 
-export default function CasePreview({ caseData, onBack }: { caseData: Case; onBack: () => void }) {
+export default function CasePreview({
+  caseData,
+  onBack,
+  mode = 'new',
+}: {
+  caseData: Case
+  onBack: () => void
+  mode?: 'new' | 'edit'
+}) {
   const navigate = useNavigate()
   const [showGitHubGuide, setShowGitHubGuide] = useState(false)
   const [showDownloadGuide, setShowDownloadGuide] = useState(false)
   const { copied, markCopied } = useCopiedState(3000)
 
   const suggestedPath = `public/cases/${caseData.id}/case.json`
+  const githubUrl =
+    mode === 'edit'
+      ? `${GITHUB_REPO_URL}/edit/main/${suggestedPath}`
+      : `${GITHUB_REPO_URL}/new/main?filename=${suggestedPath}`
 
   const handleGitHub = async () => {
     const json = JSON.stringify(caseData, null, 2)
@@ -88,12 +100,19 @@ export default function CasePreview({ caseData, onBack }: { caseData: Case; onBa
             <li>
               下の<strong>「GitHubを開く」</strong>ボタンをクリックして、GitHubリポジトリを新しいタブで開きます
             </li>
+            {mode === 'edit' ? (
+              <li>
+                既存ファイル <code className="bg-white px-1.5 py-0.5 rounded border border-gray-200 text-xs">{suggestedPath}</code>
+                {' '}の編集画面が開きます
+              </li>
+            ) : (
+              <li>
+                ファイルパス <code className="bg-white px-1.5 py-0.5 rounded border border-gray-200 text-xs">{suggestedPath}</code>
+                {' '}が自動入力されています
+              </li>
+            )}
             <li>
-              ファイルパス <code className="bg-white px-1.5 py-0.5 rounded border border-gray-200 text-xs">{suggestedPath}</code>
-              {' '}が自動入力されています
-            </li>
-            <li>
-              エディタの入力欄にクリップボードの内容をペーストしてください（<kbd className="bg-white border border-gray-300 rounded px-1 py-0.5 text-xs">Ctrl+V</kbd> / <kbd className="bg-white border border-gray-300 rounded px-1 py-0.5 text-xs">Cmd+V</kbd>）
+              エディタの入力欄の内容を全選択して削除し、クリップボードの内容をペーストしてください（<kbd className="bg-white border border-gray-300 rounded px-1 py-0.5 text-xs">Ctrl+V</kbd> / <kbd className="bg-white border border-gray-300 rounded px-1 py-0.5 text-xs">Cmd+V</kbd>）
             </li>
             <li>
               右上の<strong>「Commit changes...」</strong>ボタンをクリックします
@@ -109,7 +128,7 @@ export default function CasePreview({ caseData, onBack }: { caseData: Case; onBa
           <div className="flex flex-wrap gap-3 pt-1">
             <button
               type="button"
-              onClick={() => window.open(`${GITHUB_REPO_URL}/new/main?filename=${suggestedPath}`, '_blank')}
+              onClick={() => window.open(githubUrl, '_blank')}
               className="rounded bg-gray-800 px-4 py-2 text-sm font-medium text-white hover:bg-gray-900"
             >
               GitHubを開く
