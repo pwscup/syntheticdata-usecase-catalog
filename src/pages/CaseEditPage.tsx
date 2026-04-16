@@ -21,7 +21,7 @@ export default function CaseEditPage() {
   }
 
   if (previewData) {
-    return <CasePreview caseData={previewData} onBack={() => setPreviewData(null)} />
+    return <CasePreview caseData={previewData} onBack={() => setPreviewData(null)} mode="edit" />
   }
 
   return (
