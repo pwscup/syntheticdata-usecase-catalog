@@ -145,12 +145,18 @@ Status: OK / CONCERN / NEEDS_FIX
 
 ### Suggested Improvements
 (Optional quality improvements. Not blockers.)
+
+### Recommended review_status transition
+- Current: `{current review_status}`
+- Recommended: `human_reviewed` | `flagged` | (keep as is)
+- Rationale: (one line on why)
+- Remember to bump `updated_at` to the current ISO8601 timestamp when updating `review_status`.
 ```
 
-Verdict criteria:
-- **PASS**: All five perspectives return OK. Sources accessible, no factual errors, no overclaim, all claims traceable.
-- **NEEDS_REVISION**: Any perspective returns CONCERN or NEEDS_FIX with correctable issues — minor inaccuracies, missing fields, overclaim in wording, untraceable claims that can be fixed.
-- **FAIL**: Major factual errors, inaccessible sources with no alternatives, fabricated relationships, fundamentally promotional framing that cannot be grounded, or structurally flawed case.
+Verdict criteria and recommended `review_status`:
+- **PASS** → recommend `human_reviewed`. All five perspectives return OK. Sources accessible, no factual errors, no overclaim, all claims traceable.
+- **NEEDS_REVISION** → recommend `human_reviewed` after the suggested fixes are applied. Any perspective returns CONCERN or NEEDS_FIX with correctable issues — minor inaccuracies, missing fields, overclaim in wording, untraceable claims that can be fixed.
+- **FAIL** → recommend `flagged`. Major factual errors, inaccessible sources with no alternatives, fabricated relationships, fundamentally promotional framing that cannot be grounded, or structurally flawed case.
 
 # Workflow
 

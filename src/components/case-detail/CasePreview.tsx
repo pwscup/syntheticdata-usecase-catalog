@@ -1,31 +1,50 @@
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
-import type { Case } from '../../types'
+import type { Case, ReviewStatus } from '../../types'
 import { exportCases } from '../../lib/export-import'
 import { useCopiedState } from '../../hooks/useCopiedState'
+import { REVIEW_STATUS_LABELS } from '../../constants/categories'
 import CaseDetailView from './CaseDetailView'
 
 const GITHUB_REPO_URL = 'https://github.com/pwscup/syntheticdata-usecase-catalog'
+
+function reviewTransitionCommitMessage(caseData: Case, transition: { from: ReviewStatus; to: ReviewStatus }): string {
+  const titleShort = caseData.title.length > 40 ? caseData.title.slice(0, 40) + '…' : caseData.title
+  const fromLabel = REVIEW_STATUS_LABELS[transition.from] ?? transition.from
+  const toLabel = REVIEW_STATUS_LABELS[transition.to] ?? transition.to
+  return `review: ${titleShort} を ${fromLabel} → ${toLabel} に更新`
+}
 
 export default function CasePreview({
   caseData,
   onBack,
   mode = 'new',
+  originalReviewStatus,
 }: {
   caseData: Case
   onBack: () => void
   mode?: 'new' | 'edit'
+  originalReviewStatus?: ReviewStatus
 }) {
   const navigate = useNavigate()
   const [showGitHubGuide, setShowGitHubGuide] = useState(false)
   const [showDownloadGuide, setShowDownloadGuide] = useState(false)
   const { copied, markCopied } = useCopiedState(3000)
 
+  const reviewTransition =
+    originalReviewStatus && originalReviewStatus !== caseData.review_status
+      ? { from: originalReviewStatus, to: caseData.review_status }
+      : null
+
   const suggestedPath = `public/cases/${caseData.id}/case.json`
   const githubUrl =
     mode === 'edit'
       ? `${GITHUB_REPO_URL}/edit/main/${suggestedPath}`
       : `${GITHUB_REPO_URL}/new/main?filename=${suggestedPath}`
+
+  const suggestedCommitMessage = reviewTransition
+    ? reviewTransitionCommitMessage(caseData, reviewTransition)
+    : null
 
   const handleGitHub = async () => {
     const json = JSON.stringify(caseData, null, 2)
@@ -46,6 +65,28 @@ export default function CasePreview({
       <h1 className="text-2xl font-bold mb-6">プレビュー</h1>
 
       <CaseDetailView caseData={caseData} />
+
+      {/* Review status transition banner */}
+      {reviewTransition && (
+        <div
+          className="mt-4 rounded-lg border border-emerald-300 bg-emerald-50 p-4 text-sm"
+          data-testid="review-transition-banner"
+        >
+          <p className="font-bold text-emerald-900">
+            レビュー状況の変更: {REVIEW_STATUS_LABELS[reviewTransition.from]} → {REVIEW_STATUS_LABELS[reviewTransition.to]}
+          </p>
+          <p className="text-gray-700 mt-1">
+            この提出には <code className="bg-white px-1 py-0.5 rounded border border-gray-200 text-xs">review_status</code> の変更が含まれます。
+            GitHub でコミットする際は、コミットメッセージを下記の形式にすることを推奨します:
+          </p>
+          <pre
+            className="mt-2 bg-white border border-gray-200 rounded p-2 text-xs overflow-x-auto"
+            data-testid="review-transition-commit-message"
+          >
+            {suggestedCommitMessage}
+          </pre>
+        </div>
+      )}
 
       {/* Action area */}
       <div className="mt-6 rounded-lg border border-gray-200 bg-white p-6 space-y-4">

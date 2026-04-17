@@ -61,10 +61,11 @@ e2e/                 # Playwright E2Eテスト
 
 ## 事例の追加・レビューフロー
 
-1. 文献から事例を作成: `/case-create <URL>` または UIのAIアシストパネル
+1. 文献から事例を作成: `/case-create <URL>` または UIのAIアシストパネル（初期 `review_status` は `ai_generated`）
 2. 既存事例の補完: `/case-enrich <case-id> <URL>` または UIの編集画面
-3. レビュー: case-reviewer エージェントで品質チェック
+3. レビュー: `/case-review <id>`（case-reviewer エージェント）で公開情報との整合性チェック
 4. バリデーション: `npm run validate` でスキーマ検証
+5. レビュー結果を踏まえて `review_status` を `human_reviewed` or `flagged` に更新し、PRで `develop` にマージ（手順は `docs/REVIEW_WORKFLOW.md`）
 
 ## 注意事項
 

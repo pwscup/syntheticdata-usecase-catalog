@@ -10,6 +10,7 @@ import SourceFields from './SourceFields'
 import TagInput from './TagInput'
 import CategoryCheckboxes from './CategoryCheckboxes'
 import AiAssistPanel from './AiAssistPanel'
+import ReviewStatusField from './ReviewStatusField'
 
 function CollapsibleSection({ title, badge, children }: { title: string; badge?: string; children: React.ReactNode }) {
   const [open, setOpen] = useState(false)
@@ -96,6 +97,9 @@ export default function CaseForm({ defaultValues, onSubmit, submitLabel }: CaseF
           currentCaseJson={currentCaseJson}
           onImport={handleAiImport}
         />
+
+        {/* レビュー状況（編集時のみ表示） */}
+        {isEdit && <ReviewStatusField originalStatus={defaultValues?.review_status} />}
 
         {/* 出典（必須） */}
         <SourceFields />

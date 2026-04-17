@@ -139,6 +139,10 @@ npm run test:watch   # 変更監視で自動実行
    ```
 3. PRを `develop` ブランチ向けに作成する
 
+## 事例レビュー
+
+AI生成された事例（`review_status: "ai_generated"`）を人手レビュー済み（`human_reviewed`）に昇格させる手順は [REVIEW_WORKFLOW.md](./REVIEW_WORKFLOW.md) を参照。
+
 ### デプロイ
 
 `main` ブランチにpushすると GitHub Actions で自動的に GitHub Pages にデプロイされます。

@@ -3,6 +3,7 @@ export type {
   SourceType,
   FigureType,
   CaseStatus,
+  ReviewStatus,
   Source,
   DataFlowNode,
   DataFlowEdge,
