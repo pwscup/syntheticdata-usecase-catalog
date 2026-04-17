@@ -1,7 +1,7 @@
 import { defineConfig } from 'vitest/config'
 import react from '@vitejs/plugin-react'
 import tailwindcss from '@tailwindcss/vite'
-import generateCaseIndex from './plugins/generate-case-index'
+import generateCaseIndex from './tooling/vite-plugins/generate-case-index'
 
 export default defineConfig({
   plugins: [react(), tailwindcss(), generateCaseIndex()],
