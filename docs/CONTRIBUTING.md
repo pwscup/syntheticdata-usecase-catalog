@@ -80,6 +80,65 @@ public/cases/           # 事例データ（JSONファイル）
 └── <id>/case.json      #   各事例のデータ
 ```
 
+## ディレクトリ責務
+
+リポジトリ全体のディレクトリ責務を以下に定義する。新規ファイル追加時はこの表に従って配置する。
+
+| ディレクトリ | 役割 |
+|------------|------|
+| `src/` | アプリケーション本体（ページ・コンポーネント・ロジック） |
+| `public/cases/` | 事例データ（1ディレクトリ = 1事例）。`index.json` はビルド時に自動生成 |
+| `tests/unit/` | ロジックの単体テスト（Vitest） |
+| `tests/component/` | React コンポーネントテスト（Vitest + Testing Library） |
+| `tests/integration/` | I/O・結合テスト（将来用） |
+| `tests/e2e/` | Playwright による E2E テスト |
+| `tests/setup/` | Vitest 用 setup ファイル（jest-dom 拡張等） |
+| `tooling/vite-plugins/` | Vite dev/build パイプラインに組み込むプラグイン |
+| `tooling/lib/` | Plugin と CLI スクリプトで共用する純粋ロジック |
+| `scripts/ops/` | 継続運用スクリプト（CI・日常作業で恒常的に使う） |
+| `scripts/oneoff/` | 一回限りのデータ移行・初期投入スクリプト（原則CI非依存、書き捨て前提） |
+| `docs/` | 開発者向けドキュメント |
+| `docs/data-migrations/` | one-off スクリプトの実行履歴・手順書 |
+
+> 現在この構成への移行中。詳細は Issue #102 および関連する Phase Issue (#108, #109, #110, #111) を参照。
+
+### テスト配置規約
+
+新しいテストを追加するときは、以下に従って配置する。
+
+| 種別 | 配置先 | 対象 |
+|------|--------|------|
+| Unit | `tests/unit/` | 純粋ロジック、ユーティリティ、データ変換 |
+| Component | `tests/component/` | React コンポーネント（レンダリング・ユーザー操作） |
+| Integration | `tests/integration/` | 複数レイヤーにまたがる結合テスト |
+| E2E | `tests/e2e/` | Playwright による E2E（ユーザー動線） |
+| Setup | `tests/setup/` | Vitest setup ファイル |
+
+- `src/` 配下にはテストを置かない（アプリ本体と検証コードの境界を保つ）
+- `tests/` 配下のサブディレクトリ構成は `src/` のそれを反映させてよい（例: `tests/component/case-list/CaseCard.test.tsx`）
+
+### tooling の定義
+
+`tooling/` は「アプリ機能」ではなく「ビルド・開発時のパイプライン処理」を担う層。
+
+- `tooling/vite-plugins/`: dev/build 時に派生ファイル生成や監視を行う Vite プラグイン
+- `tooling/lib/`: plugin と CLI の両方から使う純粋関数
+
+補足: 純粋ロジックを `tooling/lib/` に切り出しておくと、I/O 副作用を含む plugin 本体とは別にテストしやすくなる。
+
+### scripts の使い分け
+
+| ディレクトリ | 用途 | package.json 公開 | CI依存 |
+|------------|------|----------------|-------|
+| `scripts/ops/` | 継続運用（日常・CI） | する | してよい |
+| `scripts/oneoff/` | 一回限りの作業 | しない | しない |
+
+運用ルール:
+- `scripts/ops/` は `package.json` の `scripts` 経由で公開し、CI からも呼び出してよい
+- `scripts/oneoff/` は `YYYY-MM-<用途>.py`（または `.ts`）のように日付付きで命名する
+- `scripts/oneoff/` を実行したら `docs/data-migrations/YYYY-MM-<用途>.md` に手順・実績を残す
+- 履歴が残っていれば `scripts/oneoff/` 内のスクリプト本体は将来削除してよい
+
 ## アーキテクチャのポイント
 
 ### データの流れ
@@ -115,11 +174,12 @@ SummaryPanelの凡例固定化や、FilterPanelの選択肢表示に使われる
 
 ## テスト
 
-テストは `src/__tests__/` にコンポーネントと同名で配置しています。
+テストは `tests/` 配下に種別ごとに配置する。配置方針は「[テスト配置規約](#テスト配置規約)」を参照。
 
 ```bash
 npm run test         # 全テスト実行
 npm run test:watch   # 変更監視で自動実行
+npm run test:e2e     # Playwright E2E
 ```
 
 テスト環境:
@@ -127,6 +187,8 @@ npm run test:watch   # 変更監視で自動実行
 - `@testing-library/react` でレンダリング
 - `@testing-library/user-event` でユーザー操作
 - `useFilter` のロジックは純粋関数を直接テスト
+
+> 現在 `src/__tests__/`, `plugins/__tests__/`, `src/test/` に残っているテストは Issue #109 (Phase 2) で `tests/` へ移設予定。
 
 ## コントリビューション
 
