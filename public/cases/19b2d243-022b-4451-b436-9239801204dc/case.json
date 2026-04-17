@@ -35,13 +35,13 @@
       "source_type": "web",
       "title": "UN PETs Case Study repository",
       "url": "https://unstats.un.org/wiki/display/UGTTOPPT/11.+Statistics+Korea%3A+Developing+a+privacy-preserving+Statistical+Data+Hub+Platform",
-      "note": ""
+      "note": "UN統計委員会 PETs ケーススタディリポジトリ（韓国統計庁事例の紹介）"
     },
     {
       "source_type": "web",
       "title": "Kostat",
       "url": "https://kostat.go.kr/menu.es?mid=b10302010300",
-      "note": ""
+      "note": "韓国統計庁（KOSTAT）の公式Webサイト"
     }
   ],
   "figures": [
@@ -84,5 +84,5 @@
   "occurred_at": "2023-06",
   "status": "seed",
   "created_at": "2026-03-21T07:12:31Z",
-  "updated_at": "2026-03-21T07:12:31Z"
+  "updated_at": "2026-04-17T00:00:00Z"
 }

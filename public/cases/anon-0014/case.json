@@ -26,7 +26,8 @@
     {
       "source_type": "web",
       "title": "匿名加工情報の作成及び第三者への提供について",
-      "url": "https://www.niigata-kouiki.jp/news/001306.html"
+      "url": "https://www.niigata-kouiki.jp/news/001306.html",
+      "note": "新潟県後期高齢者医療広域連合 公式ニュースリリース（個人非特定データを用いたデータヘルス計画の費用対効果分析）"
     }
   ],
   "figures": [
@@ -69,5 +70,5 @@
   "status": "seed",
   "occurred_at": null,
   "created_at": "2026-03-08T00:00:00+09:00",
-  "updated_at": "2026-03-08T00:00:00+09:00"
+  "updated_at": "2026-04-17T00:00:00Z"
 }

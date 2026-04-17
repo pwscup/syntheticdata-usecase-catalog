@@ -28,7 +28,8 @@
     {
       "source_type": "web",
       "title": "プライバシー保護連合学習技術「DeepProtect」「eFL-Boost」を活用した不正送金検知の実証実験を実施",
-      "url": "https://www.nict.go.jp/press/2025/07/22-1.html"
+      "url": "https://www.nict.go.jp/press/2025/07/22-1.html",
+      "note": "NICT プレスリリース：DeepProtect・eFL-Boost による3銀行参加の不正送金検知実証実験（2025年7月22日）"
     }
   ],
   "figures": [
@@ -71,5 +72,5 @@
   "status": "seed",
   "occurred_at": "2025",
   "created_at": "2025-07-22T00:00:00+09:00",
-  "updated_at": "2026-03-07T00:00:00+09:00"
+  "updated_at": "2026-04-17T00:00:00Z"
 }

@@ -32,7 +32,7 @@
       "source_type": "web",
       "title": "Statice case study",
       "url": "https://www.statice.ai/case-study/provinzial-predictive-analytics-synthetic-insurance-data#get-case-study",
-      "note": ""
+      "note": "Statice による Provinzial 向け合成データ活用のベンダー事例紹介ページ（フォーム経由で全文PDF）"
     }
   ],
   "figures": [
@@ -75,5 +75,5 @@
   "occurred_at": "2023-06",
   "status": "seed",
   "created_at": "2026-03-21T07:12:31Z",
-  "updated_at": "2026-03-21T07:12:31Z"
+  "updated_at": "2026-04-17T00:00:00Z"
 }

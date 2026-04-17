@@ -35,13 +35,13 @@
       "source_type": "web",
       "title": "Youtube",
       "url": "https://www.youtube.com/watch?v=hvBb80eXuZg&feature=youtu.be",
-      "note": ""
+      "note": "TNO による MPC を用いた心不全リスク予測プロジェクトの解説動画（YouTube）"
     },
     {
       "source_type": "web",
       "title": "Medium blog",
       "url": "https://medium.com/applied-mpc/identifying-heart-failure-patients-at-high-risk-using-mpc-ab8900e75295",
-      "note": ""
+      "note": "Applied MPC による TNO・Erasmus MC・Zilveren Kruis 連携事例の解説記事（Medium）"
     }
   ],
   "figures": [
@@ -84,5 +84,5 @@
   "occurred_at": "2021-07",
   "status": "seed",
   "created_at": "2026-03-21T07:12:31Z",
-  "updated_at": "2026-03-21T07:12:31Z"
+  "updated_at": "2026-04-17T00:00:00Z"
 }

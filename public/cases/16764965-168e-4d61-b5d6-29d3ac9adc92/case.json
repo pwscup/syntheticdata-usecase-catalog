@@ -32,13 +32,13 @@
       "source_type": "web",
       "title": "BWWC",
       "url": "https://thebwwc.org/mpc",
-      "note": ""
+      "note": "BWWC（ボストン女性労働力協議会）によるMPCを活用した給与格差分析プロジェクトの公式ページ"
     },
     {
       "source_type": "web",
       "title": "IEEE Conference Paper",
       "url": "https://ieeexplore.ieee.org/abstract/document/7839796",
-      "note": ""
+      "note": "Boston UniversityとBWWCによる、MPCを用いた男女賃金格差分析の学術論文（IEEE）"
     }
   ],
   "figures": [
@@ -81,5 +81,5 @@
   "occurred_at": "2021-07",
   "status": "seed",
   "created_at": "2026-03-21T07:12:31Z",
-  "updated_at": "2026-03-21T07:12:31Z"
+  "updated_at": "2026-04-17T00:00:00Z"
 }

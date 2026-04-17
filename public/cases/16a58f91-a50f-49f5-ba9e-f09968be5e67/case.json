@@ -32,19 +32,19 @@
       "source_type": "web",
       "title": "Royal Society report on PETs",
       "url": "https://royalsociety.org/-/media/policy/projects/privacy-enhancing-technologies/privacy-enhancing-technologies-report.pdf",
-      "note": ""
+      "note": "Royal Society による PETs 報告書（差分プライバシーを含む概観）"
     },
     {
       "source_type": "web",
       "title": "Report on issues encountered implementing DP",
       "url": "https://arxiv.org/pdf/1809.02201.pdf",
-      "note": ""
+      "note": "米国国勢調査局における差分プライバシー実装の課題を論じた Garfinkel et al. (arXiv, 2018)"
     },
     {
       "source_type": "web",
       "title": "Explainer by the NCSL",
       "url": "https://www.ncsl.org/research/redistricting/differential-privacy-for-census-data-explained.aspx",
-      "note": ""
+      "note": "NCSL（全米州議会議員協議会）による2020年国勢調査における差分プライバシー適用の解説"
     }
   ],
   "figures": [
@@ -87,5 +87,5 @@
   "occurred_at": "2021-07",
   "status": "seed",
   "created_at": "2026-03-21T07:12:31Z",
-  "updated_at": "2026-03-21T07:12:31Z"
+  "updated_at": "2026-04-17T00:00:00Z"
 }
