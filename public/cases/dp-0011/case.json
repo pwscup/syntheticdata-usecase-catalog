@@ -10,7 +10,7 @@
   "technology_category": [
     "differential_privacy"
   ],
-  "review_status": "ai_generated",
+  "review_status": "human_reviewed",
   "summary": "企業の管理者はチームの働き方やコラボレーションの傾向を把握したいが、個人単位のメール・会議・チャットの利用状況が過度に可視化されると、従業員の監視につながるプライバシー上の懸念があった。組織マネジメントに必要な傾向把握と個人のプライバシー保護の両立が課題だった。",
   "value_proposition": "Viva Insights（旧Workplace Analytics）では、チーム単位のコラボレーションデータに差分プライバシーを適用し、People Manager向けに個人を特定せずチームの働き方傾向を把握できる集計インサイトを提供している。エンタープライズ領域で差分プライバシーを実用化した事例である。",
   "privacy_enhancement_method": "調査中",
@@ -71,5 +71,5 @@
   "status": "seed",
   "occurred_at": "2020",
   "created_at": "2026-03-08T00:00:00+09:00",
-  "updated_at": "2026-03-08T00:00:00+09:00"
+  "updated_at": "2026-04-17T00:00:00Z"
 }

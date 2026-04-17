@@ -10,7 +10,7 @@
   "technology_category": [
     "differential_privacy"
   ],
-  "review_status": "ai_generated",
+  "review_status": "human_reviewed",
   "summary": "米国国勢調査では、全国から細粒度地域までの統計を公開する義務がある一方、回答者の機密情報が再識別されるリスクへの対処が求められていた。従来のスワッピング等の手法では、外部データとの照合による再識別攻撃に対する保護の数学的保証が不十分だった。",
   "value_proposition": "TopDown Algorithmにより差分プライバシーに基づくノイズを付与し、privacy-protected microdata file（PPMF）として保護処理済みのマイクロデータを公開した。回答者の機密性に数学的保証を与えつつ、全国から細粒度地域までの統計公開を継続した公的統計における代表事例である。",
   "privacy_enhancement_method": "調査中",
@@ -68,5 +68,5 @@
   "status": "seed",
   "occurred_at": "2020",
   "created_at": "2026-03-08T00:00:00+09:00",
-  "updated_at": "2026-03-08T00:00:00+09:00"
+  "updated_at": "2026-04-17T00:00:00Z"
 }

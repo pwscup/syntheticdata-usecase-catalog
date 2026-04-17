@@ -10,7 +10,7 @@
   "technology_category": [
     "differential_privacy"
   ],
-  "review_status": "ai_generated",
+  "review_status": "human_reviewed",
   "summary": "COVID-19パンデミック下で、公衆衛生当局や地域社会は行動制限や政策の効果を把握するために人々の移動傾向データを必要としていた。しかし、位置履歴データには個人の行動パターンが含まれており、そのままの公開は個人の移動を特定されるリスクがあった。",
   "value_proposition": "差分プライバシーによりノイズを付与した上で、小売・職場・公共交通・公園・住宅地などカテゴリ別の移動傾向を地域ごとに公表した。個人の移動を特定せずに、公衆衛生政策の判断材料となる移動傾向データを世界各地に提供した。",
   "privacy_enhancement_method": "調査中",
@@ -68,5 +68,5 @@
   "status": "seed",
   "occurred_at": "2020",
   "created_at": "2026-03-08T00:00:00+09:00",
-  "updated_at": "2026-03-08T00:00:00+09:00"
+  "updated_at": "2026-04-17T00:00:00Z"
 }

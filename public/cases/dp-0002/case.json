@@ -10,7 +10,7 @@
   "technology_category": [
     "differential_privacy"
   ],
-  "review_status": "ai_generated",
+  "review_status": "human_reviewed",
   "summary": "iOS/macOSのプロダクト改善には、QuickType候補や絵文字候補、Safariのクラッシュドメインなどの利用傾向を把握する必要があるが、個々のユーザーの行動や入力内容がサーバー側で特定されるリスクがあった。大規模なユーザーベースから有用な傾向データを収集しつつ、個人のプライバシーを確保する方法が求められていた。",
   "value_proposition": "ローカル差分プライバシーを採用し、端末側でノイズを付与したイベントデータのみを収集する設計とした。識別子やIPアドレスを保持しない運用により、多数ユーザーの利用傾向を把握しつつ個人単位の行動をサーバー側で特定できない形でプロダクト改善を実現している。",
   "privacy_enhancement_method": "調査中",
@@ -68,5 +68,5 @@
   "status": "seed",
   "occurred_at": null,
   "created_at": "2026-03-08T00:00:00+09:00",
-  "updated_at": "2026-03-08T00:00:00+09:00"
+  "updated_at": "2026-04-17T00:00:00Z"
 }
