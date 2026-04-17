@@ -1,28 +1,10 @@
-import { describe, it, expect, beforeEach, afterEach, vi } from 'vitest'
-import { mkdtempSync, mkdirSync, writeFileSync, readFileSync, existsSync, rmSync } from 'node:fs'
-import { join } from 'node:path'
+import { describe, it, expect, beforeEach, afterEach } from 'vitest'
+import { mkdtempSync, mkdirSync, writeFileSync, existsSync, rmSync, readdirSync } from 'node:fs'
+import { join, resolve } from 'node:path'
 import { tmpdir } from 'node:os'
+import { listCaseIds, buildIndexContent } from '../../../tooling/lib/case-index'
 
-// generate() のロジックを直接テストするためにヘルパーを抽出
-// プラグインは resolve('public/cases') を使うため、
-// ここではプラグインの generate ロジックを再現してテスト
-
-function generateIndex(casesDir: string): { cases: string[] } | null {
-  if (!existsSync(casesDir)) return null
-
-  const { readdirSync } = require('node:fs')
-  const ids = readdirSync(casesDir, { withFileTypes: true })
-    .filter(
-      (d: { isDirectory: () => boolean; name: string }) =>
-        d.isDirectory() && existsSync(join(casesDir, d.name, 'case.json'))
-    )
-    .map((d: { name: string }) => d.name)
-    .sort()
-
-  return { cases: ids }
-}
-
-describe('generate-case-index ロジック', () => {
+describe('listCaseIds', () => {
   let tempDir: string
 
   beforeEach(() => {
@@ -34,20 +16,14 @@ describe('generate-case-index ロジック', () => {
   })
 
   it('case.json を持つディレクトリのみをリストアップする', () => {
-    // case.json あり
     mkdirSync(join(tempDir, 'seed-0001'))
     writeFileSync(join(tempDir, 'seed-0001', 'case.json'), '{}')
     mkdirSync(join(tempDir, 'rpt-0001'))
     writeFileSync(join(tempDir, 'rpt-0001', 'case.json'), '{}')
-
-    // case.json なし（無視されるべき）
     mkdirSync(join(tempDir, 'empty-dir'))
-
-    // ファイル（ディレクトリではない）
     writeFileSync(join(tempDir, 'not-a-dir.txt'), '')
 
-    const result = generateIndex(tempDir)
-    expect(result).toEqual({ cases: ['rpt-0001', 'seed-0001'] })
+    expect(listCaseIds(tempDir)).toEqual(['rpt-0001', 'seed-0001'])
   })
 
   it('ディレクトリがソートされて返される', () => {
@@ -56,42 +32,43 @@ describe('generate-case-index ロジック', () => {
       writeFileSync(join(tempDir, id, 'case.json'), '{}')
     }
 
-    const result = generateIndex(tempDir)
-    expect(result?.cases).toEqual(['fpf-0002', 'rpt-0010', 'seed-0001', 'seed-0003'])
+    expect(listCaseIds(tempDir)).toEqual(['fpf-0002', 'rpt-0010', 'seed-0001', 'seed-0003'])
   })
 
   it('空のディレクトリでは空配列を返す', () => {
-    const result = generateIndex(tempDir)
-    expect(result).toEqual({ cases: [] })
+    expect(listCaseIds(tempDir)).toEqual([])
   })
 
-  it('存在しないディレクトリではnullを返す', () => {
-    const result = generateIndex(join(tempDir, 'nonexistent'))
-    expect(result).toBeNull()
+  it('存在しないディレクトリでは null を返す', () => {
+    expect(listCaseIds(join(tempDir, 'nonexistent'))).toBeNull()
   })
 
-  it('全事例がindex.jsonに含まれることを検証（回帰テスト）', () => {
-    // 実際の public/cases/ を読み取って、index生成ロジックと一致するか確認
-    const { resolve } = require('node:path')
+  it('全事例が含まれることを検証（回帰テスト）', () => {
     const realCasesDir = resolve(__dirname, '../../../public/cases')
-    if (!existsSync(realCasesDir)) return // CI等で存在しない場合はスキップ
+    if (!existsSync(realCasesDir)) return
 
-    const result = generateIndex(realCasesDir)
-    expect(result).not.toBeNull()
+    const ids = listCaseIds(realCasesDir)
+    expect(ids).not.toBeNull()
 
-    // 各ディレクトリに対応するcase.jsonが存在することを確認
-    for (const id of result!.cases) {
-      const casePath = join(realCasesDir, id, 'case.json')
-      expect(existsSync(casePath)).toBe(true)
+    for (const id of ids!) {
+      expect(existsSync(join(realCasesDir, id, 'case.json'))).toBe(true)
     }
 
-    // ディレクトリ数と一致することを確認（漏れがないか）
-    const { readdirSync } = require('node:fs')
-    const allDirs = readdirSync(realCasesDir, { withFileTypes: true })
-      .filter(
-        (d: { isDirectory: () => boolean; name: string }) =>
-          d.isDirectory() && existsSync(join(realCasesDir, d.name, 'case.json'))
-      )
-    expect(result!.cases.length).toBe(allDirs.length)
+    const allDirs = readdirSync(realCasesDir, { withFileTypes: true }).filter(
+      (d) => d.isDirectory() && existsSync(join(realCasesDir, d.name, 'case.json'))
+    )
+    expect(ids!.length).toBe(allDirs.length)
+  })
+})
+
+describe('buildIndexContent', () => {
+  it('ids を JSON 文字列にし末尾改行を付ける', () => {
+    const out = buildIndexContent(['a', 'b', 'c'])
+    expect(out).toBe(JSON.stringify({ cases: ['a', 'b', 'c'] }, null, 2) + '\n')
+    expect(out.endsWith('\n')).toBe(true)
+  })
+
+  it('空配列でも JSON を出力', () => {
+    expect(buildIndexContent([])).toBe('{\n  "cases": []\n}\n')
   })
 })
