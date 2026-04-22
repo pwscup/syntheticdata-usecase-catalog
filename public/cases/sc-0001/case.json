@@ -10,10 +10,10 @@
   "technology_category": [
     "secure_computation"
   ],
-  "review_status": "ai_generated",
+  "review_status": "human_reviewed",
   "summary": "臨床研究においては、患者の機微な臨床データを研究者に直接開示することにプライバシー上の課題があり、多施設研究や外部委託分析の推進が難しかった。約1,000症例・800項目規模の臨床データを安全に統計解析する手段が求められていた。",
   "value_proposition": "秘密計算技術により、データを暗号化したまま平均・分散・中央値・t検定・Kaplan-Meier法などの医療統計を実行できることを世界で初めて実証した。平均・分散は1秒以内、中央値は5秒以内、t検定も3秒以内で処理でき、秘密計算でも医療統計が実用速度で動作することを確認した。",
-  "privacy_enhancement_method": "調査中",
+  "privacy_enhancement_method": "マルチパーティ計算（MPC）による汎用型秘密計算システムを使用。臨床データを秘密分散して複数サーバに配置し、データを復元せずに医療統計処理（平均・分散・中央値・t検定・Kaplan-Meier法）を実行する。",
   "safety_assurance_method": "調査中",
   "utility_evaluation_method": "調査中",
   "tags": [
@@ -69,5 +69,5 @@
   "status": "seed",
   "occurred_at": "2012",
   "created_at": "2026-03-08T00:00:00+09:00",
-  "updated_at": "2026-03-08T00:00:00+09:00"
+  "updated_at": "2026-04-22T13:25:49Z"
 }

@@ -1,8 +1,8 @@
 {
   "id": "rpt-0015",
   "title": "鹿島建設：スマートビルのデータ活用効率化を目的とした合成データによる同意要件の簡素化",
-  "region": "国外",
-  "domain": "通信",
+  "region": "国内",
+  "domain": "製造",
   "domain_sub": "建設/IoT",
   "organization": "鹿島建設 / Betterdata",
   "usecase_category": [
@@ -11,7 +11,7 @@
   "technology_category": [
     "synthetic_data"
   ],
-  "review_status": "ai_generated",
+  "review_status": "human_reviewed",
   "summary": "鹿島建設のスマートビル領域では、建物利用者のセンサーデータやIoTデータを活用する際に個別の同意取得が必要で、その負荷が大きくデータ活用が非効率になっていた。規制準拠を維持しながらデータ活用のスピードと効率性を改善する方法が求められていた。",
   "value_proposition": "Betterdata社のセルフサービス型合成データ生成プラットフォームを導入し、実在の利用者情報を含まない合成データの活用により個別同意を不要化した。運用コストを60%削減しながら規制準拠を維持し、データ活用の効率性を大幅に改善した。",
   "privacy_enhancement_method": "Betterdata社のセルフサービス型合成データ生成プラットフォームを使用。スマートビルのセンサー・利用者データの統計的特性を保持した合成データを生成。",
@@ -74,5 +74,5 @@
   "status": "draft",
   "occurred_at": null,
   "created_at": "2026-03-06T00:00:00+09:00",
-  "updated_at": "2026-03-06T00:00:00+09:00"
+  "updated_at": "2026-04-22T13:25:49Z"
 }

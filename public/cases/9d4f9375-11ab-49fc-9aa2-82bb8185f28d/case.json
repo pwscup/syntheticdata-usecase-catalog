@@ -5,12 +5,12 @@
   "domain": "金融",
   "organization": "Secretarium / DANIE",
   "usecase_category": [
-    "組織内データ共有"
+    "組織間データ共有"
   ],
   "technology_category": [
     "secure_computation"
   ],
-  "review_status": "ai_generated",
+  "review_status": "human_reviewed",
   "summary": "銀行コンソーシアムにおけるマネーロンダリング防止や不正検知には、複数銀行のデータを統合した分析が必要だが、機密性の高い顧客データに人間が直接アクセスする形での共有はセキュリティ・プライバシー上許容されなかった。データ品質の改善も含め、安全な分析基盤が求められていた。",
   "value_proposition": "暗号化とTEE（信頼実行環境）を組み合わせたデータ分析プラットフォームを構築し、人間がデータに直接アクセスすることなくマネーロンダリング防止・不正検知を実施できる仕組みを実現した。銀行コンソーシアムにおけるプライバシー保護型データ共有の実装例として稼働している。",
   "privacy_enhancement_method": "秘密計算＋TEEによるデータへの人間のアクセス排除",
@@ -73,8 +73,8 @@
       "note": ""
     }
   ],
-  "occurred_at": "2023-06",
+  "occurred_at": "2020",
   "status": "seed",
   "created_at": "2026-03-21T07:12:31Z",
-  "updated_at": "2026-03-21T07:12:31Z"
+  "updated_at": "2026-04-22T13:25:49Z"
 }
