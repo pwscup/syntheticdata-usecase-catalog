@@ -70,9 +70,9 @@ describe('CaseDetailPage', () => {
     expect(screen.getByText('テスト概要の内容です')).toBeInTheDocument()
   })
 
-  it('左カラムにvalue_propositionが「PETs適用により得られた価値」として表示される', () => {
+  it('左カラムにvalue_propositionが「価値」として表示される', () => {
     renderWithRoute('case-001')
-    expect(screen.getByText('PETs適用により得られた価値')).toBeInTheDocument()
+    expect(screen.getByTestId('section-heading-outcome')).toHaveTextContent(/^価値$/)
     expect(screen.getByText('テスト成果の内容です')).toBeInTheDocument()
   })
 
@@ -159,13 +159,13 @@ describe('CaseDetailPage', () => {
     mockedUseCases.mockReturnValue({ cases: [caseWithFigure], loading: false, error: null })
     renderWithRoute('case-001')
     expect(screen.getByTestId('section-heading-constraint')).toHaveTextContent('課題：テスト制約')
-    expect(screen.getByTestId('section-heading-outcome')).toHaveTextContent('PETs適用により得られた価値：テスト成果')
+    expect(screen.getByTestId('section-heading-outcome')).toHaveTextContent('価値：テスト成果')
   })
 
   it('data_flow図がない場合、見出しはキーワード付きでない汎用表記になる', () => {
     renderWithRoute('case-001')
     expect(screen.getByTestId('section-heading-constraint')).toHaveTextContent(/^課題$/)
-    expect(screen.getByTestId('section-heading-outcome')).toHaveTextContent(/^PETs適用により得られた価値$/)
+    expect(screen.getByTestId('section-heading-outcome')).toHaveTextContent(/^価値$/)
   })
 
   it('review_statusバッジが表示される', () => {

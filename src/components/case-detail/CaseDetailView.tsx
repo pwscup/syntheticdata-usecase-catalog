@@ -113,11 +113,11 @@ export default function CaseDetailView({ caseData }: { caseData: Case }) {
               <p className="text-sm text-gray-700 leading-relaxed">{caseData.summary}</p>
             </section>
 
-            {/* PETs適用により得られた価値 */}
+            {/* 価値 */}
             <section>
               <h2 className="flex items-center gap-2 text-base font-bold mb-2" data-testid="section-heading-outcome">
                 <span className="inline-block w-1 h-5 bg-slate-800 rounded-full" />
-                {keywords.outcome ? `PETs適用により得られた価値：${keywords.outcome}` : 'PETs適用により得られた価値'}
+                {keywords.outcome ? `価値：${keywords.outcome}` : '価値'}
               </h2>
               <p className="text-sm text-gray-700 leading-relaxed">{caseData.value_proposition}</p>
             </section>
