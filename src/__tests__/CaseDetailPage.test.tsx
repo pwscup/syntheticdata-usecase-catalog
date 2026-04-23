@@ -195,20 +195,14 @@ describe('CaseDetailPage', () => {
     expect(screen.getByText('合成データ')).toBeInTheDocument()
   })
 
-  it('ai_generated の場合「レビュー済みとして編集・提出」ボタンが表示される', () => {
-    renderWithRoute('case-001')
-    const cta = screen.getByTestId('review-cta')
-    expect(cta).toBeInTheDocument()
-    expect(cta).toHaveAttribute('href', '/cases/case-001/edit')
-  })
-
-  it('human_reviewed の場合「レビュー済みとして編集・提出」ボタンは表示されない', () => {
+  it('review_status に関わらず「編集」ボタンは1つだけ表示される', () => {
     mockedUseCases.mockReturnValue({
       cases: [{ ...mockCase, review_status: 'human_reviewed' }],
       loading: false,
       error: null,
     })
     renderWithRoute('case-001')
+    expect(screen.getAllByText('編集')).toHaveLength(1)
     expect(screen.queryByTestId('review-cta')).not.toBeInTheDocument()
   })
 })

@@ -28,23 +28,13 @@ export default function CaseDetailPage() {
       <CaseDetailView caseData={caseData} />
 
       {/* Edit link */}
-      <div className="mt-4 mb-6 flex flex-wrap gap-2">
+      <div className="mt-4 mb-6">
         <Link
           to={`/cases/${caseData.id}/edit`}
           className="inline-block rounded bg-blue-600 px-4 py-2 text-sm text-white hover:bg-blue-700"
         >
           編集
         </Link>
-        {caseData.review_status === 'ai_generated' && (
-          <Link
-            to={`/cases/${caseData.id}/edit`}
-            className="inline-block rounded border border-emerald-600 bg-white px-4 py-2 text-sm text-emerald-700 hover:bg-emerald-50"
-            data-testid="review-cta"
-            title="編集画面でレビュー状況を 'レビュー済' に変更し、GitHubで提出できます"
-          >
-            レビュー済みとして編集・提出
-          </Link>
-        )}
       </div>
 
       <p className="text-xs text-gray-400 mb-6">
