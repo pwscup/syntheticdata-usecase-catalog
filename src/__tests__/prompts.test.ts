@@ -65,6 +65,10 @@ describe('generateCreatePrompt', () => {
   it('不明項目は「調査中」とする指示を含む', () => {
     expect(prompt).toContain('調査中')
   })
+
+  it('data_flow のカテゴリ順序ルールを含む', () => {
+    expect(prompt).toContain('source → constraint → process → application → outcome')
+  })
 })
 
 describe('generateEnrichPrompt', () => {
@@ -109,5 +113,10 @@ describe('generateEnrichPrompt', () => {
   it('occurred_at の補完ルールを含む', () => {
     const prompt = generateEnrichPrompt('{}')
     expect(prompt).toContain('occurred_at')
+  })
+
+  it('data_flow のカテゴリ順序ルールを含む', () => {
+    const prompt = generateEnrichPrompt('{}')
+    expect(prompt).toContain('source → constraint → process → application → outcome')
   })
 })

@@ -11,6 +11,7 @@ import TagInput from './TagInput'
 import CategoryCheckboxes from './CategoryCheckboxes'
 import AiAssistPanel from './AiAssistPanel'
 import ReviewStatusField from './ReviewStatusField'
+import FiguresField, { normalizeFigures } from './FiguresField'
 
 function CollapsibleSection({ title, badge, children }: { title: string; badge?: string; children: React.ReactNode }) {
   const [open, setOpen] = useState(false)
@@ -58,6 +59,22 @@ export default function CaseForm({ defaultValues, onSubmit, submitLabel }: CaseF
       occurred_at: defaultValues?.occurred_at ?? '',
       tags: defaultValues?.tags ?? [],
       sources: defaultValues?.sources ?? [{ source_type: 'web', title: '', url: '', note: '' }],
+      figures: (defaultValues?.figures ?? []).map((f) => ({
+        type: f.type,
+        title: f.title ?? '',
+        // data_flow のみフォームで編集。非 data_flow は undefined にし、submit時に原データを復元
+        data: f.type === 'data_flow'
+          ? {
+              nodes: (f.data as { nodes?: Array<{ id?: string; label?: string; category?: string }> }).nodes?.map((n) => ({
+                id: n.id ?? '',
+                label: n.label ?? '',
+                category: n.category ?? '',
+              })) ?? [],
+              edges: (f.data as { edges?: Array<{ from: string; to: string; label: string }> }).edges ?? [],
+            }
+          : undefined,
+        note: f.note ?? '',
+      })),
     },
   })
 
@@ -74,13 +91,14 @@ export default function CaseForm({ defaultValues, onSubmit, submitLabel }: CaseF
 
   function handleSubmit(formData: CaseFormData) {
     const now = new Date().toISOString()
+    const normalizedFigures = normalizeFigures(formData.figures, defaultValues?.figures)
     const fullCase: Case = {
       ...formData,
       id: isEdit ? defaultValues!.id! : crypto.randomUUID(),
       technology_category: formData.technology_category ?? ['synthetic_data'],
       review_status: formData.review_status ?? 'ai_generated',
       occurred_at: formData.occurred_at || null,
-      figures: defaultValues?.figures ?? [],
+      figures: normalizedFigures as Case['figures'],
       status: isEdit ? defaultValues!.status! : 'user',
       created_at: isEdit ? defaultValues!.created_at! : now,
       updated_at: now,
@@ -182,6 +200,11 @@ export default function CaseForm({ defaultValues, onSubmit, submitLabel }: CaseF
         {/* 折りたたみ: タグ */}
         <CollapsibleSection title="タグ" badge="任意">
           <TagInput />
+        </CollapsibleSection>
+
+        {/* 折りたたみ: 図表 */}
+        <CollapsibleSection title="図表" badge="任意">
+          <FiguresField />
         </CollapsibleSection>
 
         <div>

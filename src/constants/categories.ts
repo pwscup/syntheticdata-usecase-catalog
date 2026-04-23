@@ -30,6 +30,34 @@ export const TECHNOLOGY_CATEGORY_LABELS: Record<string, string> = {
   distributed_analytics: '分散データ分析',
 }
 
+// data_flow 図のノードカテゴリ。並び順が「source → constraint → process → application → outcome」の流れを表す
+export const DATA_FLOW_NODE_CATEGORIES = [
+  'source',
+  'constraint',
+  'process',
+  'application',
+  'outcome',
+] as const
+
+export type DataFlowNodeCategory = typeof DATA_FLOW_NODE_CATEGORIES[number]
+
+export const DATA_FLOW_NODE_CATEGORY_LABELS: Record<DataFlowNodeCategory, string> = {
+  source: 'source（元データ）',
+  constraint: 'constraint（課題・制約）',
+  process: 'process（PETs手法）',
+  application: 'application（活用先）',
+  outcome: 'outcome（成果）',
+}
+
+// カテゴリ → ノードIDのプレフィックス（既存JSONの命名規則に準拠）
+export const DATA_FLOW_NODE_ID_PREFIX: Record<DataFlowNodeCategory, string> = {
+  source: 's',
+  constraint: 's',
+  process: 'p',
+  application: 'a',
+  outcome: 'a',
+}
+
 export const REVIEW_STATUS_OPTIONS = [
   'ai_generated',
   'human_reviewed',

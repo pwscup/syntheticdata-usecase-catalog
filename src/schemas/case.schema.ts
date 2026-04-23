@@ -125,6 +125,29 @@ export const caseSchema = z.object({
   updated_at: z.string().min(1),
 });
 
+// Figure schema for form (everything optional; empty entries are filtered/normalized on submit)
+const dataFlowNodeFormSchema = z.object({
+  id: z.string().default(""),
+  label: z.string().default(""),
+  category: z.string().default(""),
+});
+
+const dataFlowDataFormSchema = z.object({
+  nodes: z.array(dataFlowNodeFormSchema).default([]),
+  edges: z.array(dataFlowEdgeSchema).default([]),
+});
+
+export const figureFormSchema = z.object({
+  type: z
+    .enum(["data_flow", "risk_matrix", "utility_chart"])
+    .default("data_flow"),
+  title: z.string().default(""),
+  // フォーム上は data_flow 用の緩いスキーマを使う。非 data_flow 型の data は
+  // CaseForm 側で undefined にし、submit時に defaultValues から透過復元する
+  data: dataFlowDataFormSchema.optional(),
+  note: z.string().default(""),
+});
+
 // Form schema (only source URL is required, everything else optional)
 export const caseFormSchema = z.object({
   title: z.string().default(''),
@@ -143,6 +166,7 @@ export const caseFormSchema = z.object({
   occurred_at: z.string().nullable().optional().default(null),
   tags: z.array(z.string()).default([]),
   sources: z.array(sourceFormSchema).min(1, '出典は最低1件必要です'),
+  figures: z.array(figureFormSchema).default([]),
 })
 
 export type CaseFormData = z.infer<typeof caseFormSchema>

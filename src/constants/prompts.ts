@@ -165,7 +165,9 @@ ${regionList}
 - 数値があれば盛り込む（例:「有用性97%を達成」「6カ月→3日に短縮」）
 - **constraint ノードの label は「課題と解決」セクションの見出しキーワードとして表示される。課題の核心を端的に表現すること**
 - **outcome ノードの label は「得られた価値」セクションの見出しキーワードとして表示される。成果のハイライトを端的に表現すること**
-- ノードIDは s1, s2（source列）、p1, p2（process列）、a1, a2（application/outcome列）の命名規則
+- **category は以下の5値のみを使用する: \`source\`, \`constraint\`, \`process\`, \`application\`, \`outcome\`**
+- **ノードはカテゴリ順（source → constraint → process → application → outcome）で配列に並べる**
+- ノードIDは s1, s2（source/constraint列）、p1, p2（process列）、a1, a2（application/outcome列）の命名規則
 
 ### 情報が不明な場合
 - 文献から読み取れない項目は「調査中」と記入する（空欄にしない）
@@ -230,6 +232,9 @@ ${currentJson}
 - ノードの追加・分割も、情報が充実した場合は積極的に行ってください
 
 **重要**: constraint / outcome ノードの label は詳細画面の見出しキーワードとしても使われるため、非技術者にも分かりやすい簡潔な表現にしてください
+
+**category は以下の5値のみを使用する**: \`source\`, \`constraint\`, \`process\`, \`application\`, \`outcome\`
+**ノードはカテゴリ順（source → constraint → process → application → outcome）で配列に並べる**
 
 ## 出力形式
 
